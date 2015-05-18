@@ -310,7 +310,7 @@ public class GWorld : MonoBehaviour
 			"TestSceneDay",		//Dawn
 			"TestSceneDay",		//Day
 			"TestSceneDay",		//Dusk
-			"TestSceneDay"	//Night
+			"TestSceneNight"	//Night
 		};
 		sceneLoadTable.Add (scene, sceneArray);
 
@@ -319,7 +319,7 @@ public class GWorld : MonoBehaviour
 			"TestScene2Day",	//Dawn
 			"TestScene2Day",	//Day
 			"TestScene2Day",	//Dusk
-			"TestScene2Day"	//Night
+			"TestScene2Night"	//Night
 		};
 
 		sceneLoadTable.Add (scene2, sceneArray2);
@@ -328,13 +328,15 @@ public class GWorld : MonoBehaviour
 
 	public static void LoadScene( ZoneBase scene )
 	{
-		Debug.Log (scene);
+		if (scene == currentZone) 
+		{
+			lastZoneExit = ZoneExit.None;
+		}
 
 		string[] sceneArray = (string[]) sceneLoadTable[scene];
 		string sceneToLoad = sceneArray [(int) timeOfTheDay];
 
 		currentZone = scene;
-		lastZoneExit = ZoneExit.None;
 		Application.LoadLevel (sceneToLoad);
 
 	}

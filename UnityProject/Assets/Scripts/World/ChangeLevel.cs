@@ -11,7 +11,6 @@ public class ChangeLevel : MonoBehaviour {
 	{
 		if( other.CompareTag("Player") )
  		{
-			Debug.Log ("ZoneUsed: " + zoneExit);
 			GWorld.SetLastUsedExit(zoneExit);
 			GWorld.LoadScene(LevelToLoad);
 
