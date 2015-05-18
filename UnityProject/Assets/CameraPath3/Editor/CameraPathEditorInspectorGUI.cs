@@ -1102,7 +1102,7 @@ public class CameraPathEditorInspectorGUI
     {
         EditorGUILayout.Space();
         EditorGUILayout.BeginVertical("box");
-        Texture2D cpLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/CameraPath3/Icons/logoDual400.png", typeof(Texture2D));
+        Texture2D cpLogo = Resources.Load<Texture2D>("Icons/logoDual400");
         GUILayout.Label(cpLogo, GUILayout.Width(400), GUILayout.Height(72));
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Version " + _cameraPath.version);
@@ -1683,8 +1683,10 @@ public class CameraPathEditorInspectorGUI
 
     private static void ExportXML()
     {
-        string defaultName = _cameraPath.name;
-        defaultName.Replace(" ", "_");
+        string[] currentScene = EditorApplication.currentScene.Split(char.Parse("/"));
+        currentScene = currentScene[currentScene.Length-1].Split(char.Parse("."));
+        string defaultName = string.Format("{0}_{1}", currentScene[0], _cameraPath.name);
+        defaultName = defaultName.Replace(" ", "_");
         string filepath = EditorUtility.SaveFilePanel("Export Camera Path Animator to XML", "Assets/CameraPath3", defaultName, "xml");
 
         if(filepath != "")
