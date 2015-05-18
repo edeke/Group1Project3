@@ -2,8 +2,7 @@
 //	Do not modify this file, it will be overwritten by Dialoguer.
 public enum DialoguerDialogues{
 	BeachDialogueNPC1 = 0,
-	Dialogue1 = 1,
+	The_Beach = 1,
 	Dialogue2 = 2,
 	Dialogue3 = 3,
-	Dialogue4 = 4,
 }
