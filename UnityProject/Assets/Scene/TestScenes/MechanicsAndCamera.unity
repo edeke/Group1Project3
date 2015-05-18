@@ -86,7 +86,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: 36f586117b044da4591e09317f9a49fc, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 49cf81212bbf4be40b9902d7b4b6d61d, type: 2}
 --- !u!1 &20473128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fefddcb3a7b35047a477d4c3c110aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: TestScene2
+  LevelToLoad: 0
   zoneExit: 1
 --- !u!1 &691561647
 GameObject:
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fefddcb3a7b35047a477d4c3c110aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: TestScene2
+  LevelToLoad: 0
   zoneExit: 0
 --- !u!65 &1169770069
 BoxCollider:
@@ -2663,6 +2663,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1087953179}
   m_RootOrder: 19
+--- !u!1 &1216709759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1828103593}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1216709760}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216709760
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1828103593}
+  m_GameObject: {fileID: 1216709759}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &1286540577
 GameObject:
   m_ObjectHideFlags: 0
@@ -9599,6 +9626,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1576247208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 925615395}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1576247209}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576247209
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 925615395}
+  m_GameObject: {fileID: 1576247208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &1644596029
 GameObject:
   m_ObjectHideFlags: 0
