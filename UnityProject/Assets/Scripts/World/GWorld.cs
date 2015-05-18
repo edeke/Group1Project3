@@ -211,7 +211,7 @@ public class GWorld : MonoBehaviour
 
 	public static void SpawnPlayer(Transform location)
 	{
-		Debug.Log ("Spawning Player");
+		//Debug.Log ("Spawning Player");
 
 		if (!myPlayer) 
 		{
@@ -307,7 +307,7 @@ public class GWorld : MonoBehaviour
 	{
 		ZoneBase scene = ZoneBase.Testscene1;
 		string[] sceneArray = {
-			"TestSceneDay",		//Dawn
+			"TestSceneNight",	//Dawn
 			"TestSceneDay",		//Day
 			"TestSceneDay",		//Dusk
 			"TestSceneNight"	//Night
@@ -316,7 +316,7 @@ public class GWorld : MonoBehaviour
 
 		ZoneBase scene2 = ZoneBase.Testscene2;
 		string[] sceneArray2 = {
-			"TestScene2Day",	//Dawn
+			"TestScene2Night",	//Dawn
 			"TestScene2Day",	//Day
 			"TestScene2Day",	//Dusk
 			"TestScene2Night"	//Night
