@@ -17,7 +17,7 @@ MonoBehaviour:
     - id: 0
       name: BeachDialogueNPC1
       startPage: 0
-      scrollPosition: {x: 483.619965, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 0
@@ -218,44 +218,13 @@ MonoBehaviour:
         selection: 0
     - id: 1
       name: Pirate on Beach
-      startPage: 0
-      scrollPosition: {x: 0, y: 0}
+      startPage: 1
+      scrollPosition: {x: 1475, y: 0}
       phases:
       - id: 0
-        type: 0
-        theme: 
-        position: {x: 196, y: 23}
-        outs: 02000000
-        advanced: 0
-        metadata: 
-        text: hej hej
-        name: 
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 1
         type: 6
         theme: 
-        position: {x: 879, y: 52}
+        position: {x: 875, y: 224}
         outs: 
         advanced: 0
         metadata: 
@@ -283,14 +252,334 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
+      - id: 1
+        type: 1
+        theme: 
+        position: {x: 189, y: 10}
+        outs: 0200000003000000
+        advanced: 0
+        metadata: 
+        text: 'Pirate: Stop right there stranger!'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - "Main Character: Please don\u2019t hurt me sir! I come in peace!"
+        - 'Main Character: Take it easy old man! I have no quarrel with you.'
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
       - id: 2
         type: 0
         theme: 
-        position: {x: 545, y: 31}
-        outs: 01000000
+        position: {x: 540, y: 49}
+        outs: ffffffff
+        advanced: 0
+        metadata: 
+        text: 'Pirate: Who are you and what is your business here!?'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 3
+        type: 0
+        theme: 
+        position: {x: 537, y: 210}
+        outs: 00000000
+        advanced: 0
+        metadata: 
+        text: "Pirate: Don\u2019t tell me to take it easy! Get out of here ya ugly
+          little grunt!"
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 4
+        type: 0
+        theme: 
+        position: {x: 865, y: 49}
+        outs: 05000000
+        advanced: 0
+        metadata: 
+        text: "Main Character: My name is [\u2026] and I just woke up here.. "
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 5
+        type: 0
+        theme: 
+        position: {x: 1182, y: 51}
+        outs: 06000000
+        advanced: 0
+        metadata: 
+        text: 'Main Character: Where am I?'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 6
+        type: 1
+        theme: 
+        position: {x: 1491, y: 50}
+        outs: 0700000008000000
+        advanced: 0
+        metadata: 
+        text: 'Pirate: This is the .... Islands.'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - 'Main Character: Let me through Pirate! Or...'
+        - 'Main Character: Can I please enter?'
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 7
+        type: 0
+        theme: 
+        position: {x: 1807, y: 53}
+        outs: 09000000
+        advanced: 0
+        metadata: 
+        text: 'Pirate: Or what!? What are ya gonna do!? Get outta here and stop pestering
+          me...'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 8
+        type: 0
+        theme: 
+        position: {x: 1809, y: 197}
+        outs: 0a000000
+        advanced: 0
+        metadata: 
+        text: "Pirate: Sure thing. Here ya go me friend. MOHAHAHAhahahaha! I don\u2019t
+          think so pal. There are no free lunches in this world. If you wanna pass,
+          it\u2019ll cost ya. "
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 9
+        type: 6
+        theme: 
+        position: {x: 2132, y: 80}
+        outs: 
         advanced: 0
         metadata: 
         text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 10
+        type: 0
+        theme: 
+        position: {x: 2129, y: 197}
+        outs: 0b000000
+        advanced: 0
+        metadata: 
+        text: 'Main character: How much do you want for letting me through?'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 11
+        type: 0
+        theme: 
+        position: {x: 2439, y: 197}
+        outs: ffffffff
+        advanced: 0
+        metadata: 
+        text: "Pirate: I have a slight problem you see. I have lost me wedding ring
+          and I need it back before the old daggle-tail notices that it\u2019s gone.
+          Bring it to me and I\u2019ll let ya through."
         name: 
         portrait: 
         audio: 
