@@ -1,0 +1,108 @@
+﻿using UnityEngine;
+using System.Collections;
+
+
+public class CombineData
+{
+	public EItem item1;
+	public EItem item2;
+	public string newItemHashValue;
+	public AudioClip playOnCombine;
+}
+
+
+static public class ItemDatabase 
+{
+	static Hashtable items;
+	static ArrayList combineItemsList;
+
+	static ItemDatabase()
+	{
+		items = new Hashtable ();
+		combineItemsList = new ArrayList ();
+
+		//Add Item to Itemdb
+		ItemStruct banan = new ItemStruct ();
+
+		string path = "Textures/ItemTextures/Banana";
+		Texture newTex = (Texture)Resources.Load(path,typeof(Texture));
+
+		if (!newTex)
+		{
+			Debug.Log("Item Database : Unable to load texture - " + path);
+		}
+
+		banan.itemType = EItem.Banana;
+		banan.itemTexture = newTex;
+		banan.numberOfItemsInStack = 5;
+		banan.onDragParticle = null;
+		banan.onPickupParticle = null;
+		banan.onUseParticle = null;
+		banan.soundOnPickup = null;
+		banan.soundOnUse = null;
+		items.Add ("Banana", banan );
+
+		//Add combine data to array
+		path = "SFX/ItemSounds/EnemyLaugh2";
+		AudioClip newAudio = (AudioClip)Resources.Load(path,typeof(AudioClip));
+
+		if (!newAudio)
+		{
+			Debug.Log("Item Database : Unable to load Audio - " + path);
+		}
+
+		CombineData newCombine = new CombineData ();
+		newCombine.item1 = EItem.Apple;
+		newCombine.item2 = EItem.Pear;
+		newCombine.newItemHashValue = "Banana";
+		newCombine.playOnCombine = newAudio;
+
+		if (newAudio == null) 
+		{
+			Debug.Log ("Audio Not Loaded");
+		}
+
+		combineItemsList.Add ( newCombine );
+
+	}
+
+	static public ItemStruct GetItem(string index)
+	{
+		return (ItemStruct)items [index];
+	}
+
+	static public bool TryCombineItems( EItem item1, EItem item2, ref ItemStruct newItemData, ref CombineData combineData)
+	{
+		foreach (CombineData itr in combineItemsList) 
+		{
+			if( itr.item1 == item1 )
+			{
+				if(itr.item2 == item2)
+				{
+					newItemData = GetItem (itr.newItemHashValue);
+					combineData = itr;
+
+					return true;
+				}
+			}
+
+			//Make sure the placement of the items dont matter
+			if( itr.item1 == item2 )
+			{
+				if(itr.item2 == item1)
+				{
+					newItemData = GetItem (itr.newItemHashValue);
+					combineData = itr;
+
+					return true;
+				}
+			}
+
+		}
+
+		return false;
+
+	}
+
+
+}
