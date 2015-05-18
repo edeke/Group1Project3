@@ -1077,10 +1077,10 @@ public class CameraPath : MonoBehaviour
             float pointAPercentage = pointPercentage * i;
             float pointBPercentage = pointPercentage * (i+1);
             float arcPercentage = pointBPercentage - pointAPercentage;
-            Vector3 arcCentre = (pointA.worldPosition + pointB.worldPosition) * 0.5f;
+            Vector3 arcCentre = Vector3.Lerp(pointA.worldPosition, pointB.worldPosition, 0.5f);
             float arcLength = StoredArcLength(GetCurveIndex(pointA.index));
             float arcDistance = Vector3.Distance(sceneCamera.transform.position, arcCentre);
-            int arcPoints = Mathf.RoundToInt(arcLength * (40 / Mathf.Max(arcDistance, 20)));
+            int arcPoints = Mathf.CeilToInt(Mathf.Min(arcLength, 50) / (Mathf.Max(arcDistance, 20)/2000));//Mathf.RoundToInt(arcLength * (40 / Mathf.Max(arcDistance, 20)));
             float arcTime = 1.0f / arcPoints;
 
             float endLoop = 1.0f - arcTime;
@@ -1179,7 +1179,7 @@ public class CameraPath : MonoBehaviour
                 storedPoints.Add(pB);
                 float cPercent = Mathf.Clamp(normalisePercent + normilisePercentAmount, 0, 1);
                 pC = GetPathPosition(cPercent, true);
-                Vector3 pointDireciton = (((pB - pA) + (pB - pC))).normalized;
+                Vector3 pointDireciton = ((pB - pA) + (pC - pB)).normalized;
                 storedDirections.Add(pointDireciton);
 
                 storedArcLengths.Add(currentLength);
