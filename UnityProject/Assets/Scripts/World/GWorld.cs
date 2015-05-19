@@ -36,7 +36,7 @@ public class GWorld : MonoBehaviour
 	private const int DUSK_START = HOUR * 20;
 	private const int NIGHT_START = HOUR * 22;
 
-	static int currentTimeInMin;
+	static int currentTimeInMin = HOUR * 10 + 22;
 	public static TimeOfDay timeOfTheDay = 0;
 
 

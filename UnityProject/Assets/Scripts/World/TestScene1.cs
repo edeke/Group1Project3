@@ -9,7 +9,6 @@ public class TestScene1 : MonoBehaviour {
 
 	void Awake()
 	{
-		Debug.Log ("Test1 : " + GWorld.currentZone);
 
 		switch (GWorld.currentZone) 
 		{
@@ -28,8 +27,6 @@ public class TestScene1 : MonoBehaviour {
 		}
 
 		GWorld.currentZone = ZoneBase.Testscene1;
-
-		Debug.Log ("Test1 Post: " + GWorld.currentZone);
 
 	}
 
