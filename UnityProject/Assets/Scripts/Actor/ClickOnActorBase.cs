@@ -6,6 +6,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 {
 
 	SpeechBubbleController speech;
+	public DialoguerDialogues dialog;
 	public string actorName;
 
 	void Awake()
@@ -30,7 +31,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	public void OnAction()
 	{
 
-		Dialoguer.StartDialogue (DialoguerDialogues.Pirate_on_Beach);
+		Dialoguer.StartDialogue (dialog);
 
 		/*if (speech != null)
 		{
