@@ -1,15 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ZoneExit
-{
-	None,
-	TestsceneLeft,
-	TestsceneRight,
-	Testscene2Left,
-	Testscene2Right
-}
-
 public enum TimeOfDay
 {
 	Dawn,
@@ -20,6 +11,7 @@ public enum TimeOfDay
 
 public enum ZoneBase
 {
+	None,
 	Testscene1,
 	Testscene2
 }
@@ -58,10 +50,8 @@ public class GWorld : MonoBehaviour
 
 	static Hashtable eventTable = new Hashtable();
 	static Hashtable sceneLoadTable = new Hashtable();
-	
-	static public ZoneExit lastZoneExit = ZoneExit.TestsceneLeft;
-	static ZoneBase currentZone;
 
+	static public ZoneBase currentZone;
 
 	void Start()
 	{
@@ -117,13 +107,12 @@ public class GWorld : MonoBehaviour
 		}
 
 		CalcTimeOfDay ();
-
-
 	}
 
 	void Update () 
 	{
-		//Debug.Log ( GetTimeOfTheDay () );
+
+		//Debug.Log (currentZone);
 
 		currentTime += Time.deltaTime;
 
@@ -138,9 +127,6 @@ public class GWorld : MonoBehaviour
 				currentTimeInMin -= DAY;
 			}
 		}
-
-		//Debug.Log ("Seconds : " + currentTime);
-		//Debug.Log ("Min : " + currentTimeInMin);
 
 	}
 
@@ -200,13 +186,6 @@ public class GWorld : MonoBehaviour
 	static public TimeOfDay GetTimeOfTheDay()
 	{
 		return timeOfTheDay;
-	}
-
-	public static void SetLastUsedExit(ZoneExit zoneExit)
-	{
-
-		lastZoneExit = zoneExit;
-
 	}
 
 	public static void SpawnPlayer(Transform location)
@@ -328,15 +307,10 @@ public class GWorld : MonoBehaviour
 
 	public static void LoadScene( ZoneBase scene )
 	{
-		if (scene == currentZone) 
-		{
-			lastZoneExit = ZoneExit.None;
-		}
 
 		string[] sceneArray = (string[]) sceneLoadTable[scene];
 		string sceneToLoad = sceneArray [(int) timeOfTheDay];
 
-		currentZone = scene;
 		Application.LoadLevel (sceneToLoad);
 
 	}
