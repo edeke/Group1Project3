@@ -7,10 +7,15 @@ public class PauseMenu : MonoBehaviour {
 
 	private GameObject UI;
 
+	private GameObject PauseUI;
+
 	// Use this for initialization
 	void Start () {
 	
 		UI = GameObject.Find("MainUI(Clone)");
+		PauseUI = GameObject.Find ("PauseMenu");
+
+		PauseUI.SetActive (false);
 
 	}
 	
@@ -19,21 +24,44 @@ public class PauseMenu : MonoBehaviour {
 	
 		if (Input.GetKeyDown (KeyCode.Escape) && isPaused == false) {
 
-			isPaused = true; 
-			Time.timeScale = 0.0f;
-			Debug.Log("Game is paused!");
-
-			UI.SetActive(false);
+			PauseGame();
 
 		} else if (Input.GetKeyDown (KeyCode.Escape) && isPaused == true) {
 
-			isPaused = false;
-			Time.timeScale = 1.0f;
-			Debug.Log("Game is NOT paused!");
-
-			UI.SetActive(true);
-
+			UnpauseGame();
+	
 		}
 
 	}
+
+	public void PauseGame (){
+
+		isPaused = true; 
+		Time.timeScale = 0.0f;
+		Debug.Log("Game is paused!");
+		
+		UI.SetActive(false);
+
+		PauseUI.SetActive (true);
+
+	}
+
+	public void UnpauseGame (){
+
+		isPaused = false;
+		Time.timeScale = 1.0f;
+		Debug.Log("Game is NOT paused!");
+		
+		UI.SetActive(true);
+
+		PauseUI.SetActive (false);
+
+	}
+
+	public void QuitGame (){
+
+		Application.Quit();
+
+	}
+
 }
