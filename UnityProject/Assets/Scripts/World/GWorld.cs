@@ -110,6 +110,10 @@ public class GWorld : MonoBehaviour
 			else
 			{
 				isInvEnabled = true;
+
+				InventoryOpenButton button = mainUI.GetComponentInChildren<InventoryOpenButton>();
+				button.ShowButton();
+
 			}
 			
 		}
@@ -117,9 +121,6 @@ public class GWorld : MonoBehaviour
 
 	void Update () 
 	{
-
-		//Debug.Log (currentZone);
-
 		currentTime += Time.deltaTime;
 
 		if ( currentTime >= SECONDS_PER_MIN ) 

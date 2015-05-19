@@ -5,6 +5,8 @@ public class MainUI : MonoBehaviour {
 
 	static MainUI mainUI;
 
+	static GameObject invOpenButton; 
+
 	void Awake ()
 	{
 		if (!mainUI) 
@@ -16,4 +18,5 @@ public class MainUI : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
+
 }
