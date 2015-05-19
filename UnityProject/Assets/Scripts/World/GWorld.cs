@@ -46,7 +46,7 @@ public class GWorld : MonoBehaviour
 	static GWorld currentWorld;
 
 	static GameObject myInv;
-	static GameObject mainUI;
+	public static GameObject mainUI;
 	static GameObject myPlayer;
 
 	static Hashtable eventTable = new Hashtable();
