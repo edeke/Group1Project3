@@ -30,7 +30,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	public void OnAction()
 	{
 
-		Dialoguer.StartDialogue (DialoguerDialogues.BeachDialogueNPC1);
+		Dialoguer.StartDialogue (DialoguerDialogues.Pirate_on_Beach);
 
 		/*if (speech != null)
 		{

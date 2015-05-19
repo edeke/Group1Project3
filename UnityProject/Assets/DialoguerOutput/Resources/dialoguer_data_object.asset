@@ -218,13 +218,13 @@ MonoBehaviour:
         selection: 0
     - id: 1
       name: Pirate on Beach
-      startPage: 1
-      scrollPosition: {x: 1475, y: 0}
+      startPage: 16
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 6
         theme: 
-        position: {x: 875, y: 224}
+        position: {x: 3159, y: 647}
         outs: 
         advanced: 0
         metadata: 
@@ -255,7 +255,7 @@ MonoBehaviour:
       - id: 1
         type: 1
         theme: 
-        position: {x: 189, y: 10}
+        position: {x: 1119, y: 146}
         outs: 0200000003000000
         advanced: 0
         metadata: 
@@ -288,8 +288,8 @@ MonoBehaviour:
       - id: 2
         type: 0
         theme: 
-        position: {x: 540, y: 49}
-        outs: ffffffff
+        position: {x: 1454, y: 49}
+        outs: 04000000
         advanced: 0
         metadata: 
         text: 'Pirate: Who are you and what is your business here!?'
@@ -319,8 +319,8 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 537, y: 210}
-        outs: 00000000
+        position: {x: 2445, y: 491}
+        outs: 0d000000
         advanced: 0
         metadata: 
         text: "Pirate: Don\u2019t tell me to take it easy! Get out of here ya ugly
@@ -351,7 +351,7 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 865, y: 49}
+        position: {x: 1783, y: 47}
         outs: 05000000
         advanced: 0
         metadata: 
@@ -382,7 +382,7 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 1182, y: 51}
+        position: {x: 2109, y: 49}
         outs: 06000000
         advanced: 0
         metadata: 
@@ -413,7 +413,7 @@ MonoBehaviour:
       - id: 6
         type: 1
         theme: 
-        position: {x: 1491, y: 50}
+        position: {x: 2437, y: 44}
         outs: 0700000008000000
         advanced: 0
         metadata: 
@@ -446,8 +446,8 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 1807, y: 53}
-        outs: 09000000
+        position: {x: 3406, y: 29}
+        outs: 15000000
         advanced: 0
         metadata: 
         text: 'Pirate: Or what!? What are ya gonna do!? Get outta here and stop pestering
@@ -478,7 +478,7 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 1809, y: 197}
+        position: {x: 2773, y: 350}
         outs: 0a000000
         advanced: 0
         metadata: 
@@ -511,7 +511,7 @@ MonoBehaviour:
       - id: 9
         type: 6
         theme: 
-        position: {x: 2132, y: 80}
+        position: {x: 4121, y: 152}
         outs: 
         advanced: 0
         metadata: 
@@ -542,7 +542,7 @@ MonoBehaviour:
       - id: 10
         type: 0
         theme: 
-        position: {x: 2129, y: 197}
+        position: {x: 3099, y: 344}
         outs: 0b000000
         advanced: 0
         metadata: 
@@ -573,8 +573,8 @@ MonoBehaviour:
       - id: 11
         type: 0
         theme: 
-        position: {x: 2439, y: 197}
-        outs: ffffffff
+        position: {x: 3416, y: 344}
+        outs: 0f000000
         advanced: 0
         metadata: 
         text: "Pirate: I have a slight problem you see. I have lost me wedding ring
@@ -602,6 +602,347 @@ MonoBehaviour:
         variableSetValue: 
         variableGetEquation: 0
         variableGetValue: 
+        messageName: 
+      - id: 12
+        type: 4
+        theme: 
+        position: {x: 791, y: 53}
+        outs: 0e00000001000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 13
+        type: 3
+        theme: 
+        position: {x: 2775, y: 490}
+        outs: 00000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 14
+        type: 0
+        theme: 
+        position: {x: 1119.29993, y: 10}
+        outs: 02000000
+        advanced: 0
+        metadata: 
+        text: "You: Please don\u2019t hurt me sir! I come in peace!"
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 15
+        type: 3
+        theme: 
+        position: {x: 3759, y: 344}
+        outs: 13000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 1
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 16
+        type: 4
+        theme: 
+        position: {x: 99, y: 106}
+        outs: 1100000016000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 1
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 17
+        type: 0
+        theme: 
+        position: {x: 434, y: 36}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: 'Pirate: I really need my ring back...'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 6
+        theme: 
+        position: {x: 802, y: 15}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 19
+        type: 6
+        theme: 
+        position: {x: 4126.66846, y: 483}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 20
+        type: 0
+        theme: 
+        position: {x: 2446.06982, y: 351}
+        outs: 08000000
+        advanced: 0
+        metadata: 
+        text: 'You: Can I please enter?'
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 21
+        type: 3
+        theme: 
+        position: {x: 3756.92285, y: 24}
+        outs: 09000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 22
+        type: 4
+        theme: 
+        position: {x: 443, y: 199}
+        outs: 140000000c000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 2
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: false
+        variableGetEquation: 0
+        variableGetValue: true
         messageName: 
       floats:
         variables: []
@@ -766,8 +1107,17 @@ MonoBehaviour:
         selection: 0
     globals:
       booleans:
-        variables: []
-        selection: 0
+        variables:
+        - name: Talked to pirate
+          variable: false
+          id: 0
+        - name: Finished with pirate on beach
+          variable: false
+          id: 1
+        - name: Being a douche
+          variable: false
+          id: 2
+        selection: 2
       floats:
         variables: []
         selection: 0
