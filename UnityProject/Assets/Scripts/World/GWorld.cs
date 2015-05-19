@@ -53,6 +53,8 @@ public class GWorld : MonoBehaviour
 	static Hashtable sceneLoadTable = new Hashtable();
 
 	static public ZoneBase currentZone;
+	static public bool isInvEnabled = false;
+
 
 	void Start()
 	{
@@ -74,22 +76,6 @@ public class GWorld : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-		if (!myInv) 
-		{
-			string path = "Prefabs/Inventory/InventoryController";
-			myInv = (GameObject) Instantiate(Resources.Load(path));
-
-			if(!myInv)
-			{
-				Debug.Log ("GWorld Failed to Load Inventory - " + path);
-			}
-			else
-			{
-				//Debug.Log ("Inventor Loaded");
-			}
-
-		}
-
 		if (!mainUI) 
 		{
 			string path = "Prefabs/UI/MainUI";
@@ -108,6 +94,25 @@ public class GWorld : MonoBehaviour
 		}
 
 		CalcTimeOfDay ();
+	}
+
+	static public void EnableInventory()
+	{
+		if (!myInv) 
+		{
+			string path = "Prefabs/Inventory/InventoryController";
+			myInv = (GameObject) Instantiate(Resources.Load(path));
+			
+			if(!myInv)
+			{
+				Debug.Log ("GWorld Failed to Load Inventory - " + path);
+			}
+			else
+			{
+				isInvEnabled = true;
+			}
+			
+		}
 	}
 
 	void Update () 

@@ -14,23 +14,30 @@ public class InventoryOpenButton : MonoBehaviour {
 		panel = GameObject.FindGameObjectWithTag("MainPanel");
 
 		panel.SetActive (false);
+
+		/*if (GWorld.isInvEnabled == false) 
+		{
+			gameObject.SetActive (false);
+		}*/
 	
 	}
 
 	public void OnClick()
 	{
-
-		if (active) 
+		if (GWorld.isInvEnabled == true) 
 		{
-			panel.SetActive (false);
-			active = false;
+			if (active) 
+			{
+				panel.SetActive (false);
+				active = false;
 
-		} 
-		else 
-		{
-			panel.SetActive (true);
-			active = true;
-		
+			} 
+			else 
+			{
+				panel.SetActive (true);
+				active = true;
+			
+			}
 		}
 
 	}

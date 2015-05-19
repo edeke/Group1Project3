@@ -29,10 +29,19 @@ public class PlayerInput : MonoBehaviour
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
-
-			if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+			if( GWorld.isInvEnabled )
 			{
-				TryUseActionOnObject( hitInfo.collider.gameObject );
+				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+				{
+					TryUseActionOnObject( hitInfo.collider.gameObject );
+				}
+			}
+			else
+			{	
+				if( traceHit && dragging == false )
+				{
+					TryUseActionOnObject( hitInfo.collider.gameObject );
+				}
 			}
 
 		}
@@ -61,10 +70,20 @@ public class PlayerInput : MonoBehaviour
 			{
 				dragging = true;
 			}
-			
-			if (Inventory.myInv.CurrentSelectedItem == -1 && Physics.Raycast (mouseRay, out hitInfo))
+
+			if(GWorld.isInvEnabled == true)
 			{
-				TryDragOnObject( hitInfo.collider.gameObject );
+				if (Inventory.myInv.CurrentSelectedItem == -1 && Physics.Raycast (mouseRay, out hitInfo))
+				{
+					TryDragOnObject( hitInfo.collider.gameObject );
+				}
+			}
+			else
+			{
+				if (Physics.Raycast (mouseRay, out hitInfo))
+				{
+					TryDragOnObject( hitInfo.collider.gameObject );
+				}
 			}
 			
 			mouseClicked = true;
@@ -82,30 +101,50 @@ public class PlayerInput : MonoBehaviour
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
 			//try talk or onclick funtions on hit actor
-			if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+			if(GWorld.isInvEnabled == true)
 			{
-				if(! TryInspectOnObject( hitInfo.collider.gameObject ))
+				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					//if no interface on object and pointer is not over a UI element
-					if( EventSystem.current.IsPointerOverGameObject() == false )
+					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
 					{
-						Debug.Log ( "Not over gameObject");
-
-						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						//if no interface on object and pointer is not over a UI element
+						if( EventSystem.current.IsPointerOverGameObject() == false )
 						{
-							movementScript.TrySetMoveToLocationState(hitInfo.point);
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}
+
 						}
 
 					}
 
 				}
-
+				//try use item on actor
+				else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
+				{
+					TryUseItemOnObject( hitInfo.collider.gameObject );	
+				}
 			}
-
-			//try use item on actor
-			else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
+			else // No Inventory
 			{
-				TryUseItemOnObject( hitInfo.collider.gameObject );	
+				if ( traceHit && dragging == false )
+				{
+					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
+					{
+						//if no interface on object and pointer is not over a UI element
+						if( EventSystem.current.IsPointerOverGameObject() == false )
+						{
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}
+							
+						}
+						
+					}
+					
+				}
 			}
 
 			mouseClicked = false;

@@ -60,16 +60,18 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 
 	public void OnAction ( )
 	{
-
-		if (Inventory.myInv.AddItem (itemData, transform.position))
+		if (GWorld.isInvEnabled == true) 
 		{
-			GWorld.MarkEventDone(eventID);
-			Destroy (gameObject);
+			if (Inventory.myInv.AddItem (itemData, transform.position)) {
+				GWorld.MarkEventDone (eventID);
+				Destroy (gameObject);
+			} 
 		} 
-		else
+		else 
 		{
-			//error message
+			Debug.Log ( "Need inventory to pickup item");
 		}
+
 	}
 
 }
