@@ -8,7 +8,6 @@ public class TestScene2 : MonoBehaviour {
 	
 	void Awake()
 	{
-		Debug.Log ("Test2 : " + GWorld.currentZone);
 
 		//check the last zone player was in
 		switch (GWorld.currentZone) 
@@ -29,7 +28,6 @@ public class TestScene2 : MonoBehaviour {
 		
 		GWorld.currentZone = ZoneBase.Testscene2;
 
-		Debug.Log ("Test2 Post: " + GWorld.currentZone);
 		
 	}
 	
