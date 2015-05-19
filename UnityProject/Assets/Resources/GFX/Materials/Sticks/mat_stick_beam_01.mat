@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_box_01
-  m_Shader: {fileID: 4800000, guid: 29c01339fb27403479d7b19602bfac66, type: 3}
-  m_ShaderKeywords: _AUTOTILETOSCALE_ON
+  m_Name: mat_stick_beam_01
+  m_Shader: {fileID: 4800000, guid: 9f796bced76d70a4fb0c5f2c1a79996a, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -81,49 +81,14 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Texture: {fileID: 2800000, guid: 1abdd3316e56f404ebae2dc8c9cb87c6, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normals
         second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Texture: {fileID: 2800000, guid: 03f4dea692d40f441a7efe84dc264df7, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -134,7 +99,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .134000003
+        second: .109999999
       data:
         first:
           name: _SrcBlend
@@ -202,7 +167,7 @@ Material:
       data:
         first:
           name: _Autotiletoscale
-        second: 1
+        second: 0
       data:
         first:
           name: _BaseScale
