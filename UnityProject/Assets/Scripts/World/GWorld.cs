@@ -13,7 +13,8 @@ public enum ZoneBase
 {
 	None,
 	Testscene1,
-	Testscene2
+	Testscene2,
+	Testscene3
 }
 
 public struct EventData
