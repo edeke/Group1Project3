@@ -9,11 +9,14 @@ public class PauseMenu : MonoBehaviour {
 
 	private GameObject PauseUI;
 
+	private GameObject rpgGUI;
+
 	// Use this for initialization
 	void Start () {
 	
 		UI = GameObject.Find("MainUI(Clone)");
 		PauseUI = GameObject.Find ("PauseMenu");
+		rpgGUI = GameObject.Find ("ClassicRpgGui");
 
 		PauseUI.SetActive (false);
 
@@ -38,11 +41,12 @@ public class PauseMenu : MonoBehaviour {
 
 		isPaused = true; 
 		Time.timeScale = 0.0f;
-		Debug.Log("Game is paused!");
-		
+				
 		UI.SetActive(false);
 
 		PauseUI.SetActive (true);
+
+		rpgGUI.SetActive (false);
 
 	}
 
@@ -50,11 +54,12 @@ public class PauseMenu : MonoBehaviour {
 
 		isPaused = false;
 		Time.timeScale = 1.0f;
-		Debug.Log("Game is NOT paused!");
-		
+				
 		UI.SetActive(true);
 
 		PauseUI.SetActive (false);
+
+		rpgGUI.SetActive (true);
 
 	}
 
