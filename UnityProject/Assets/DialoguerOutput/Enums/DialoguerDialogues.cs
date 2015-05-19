@@ -3,6 +3,4 @@
 public enum DialoguerDialogues{
 	BeachDialogueNPC1 = 0,
 	Pirate_on_Beach = 1,
-	Dialogue2 = 2,
-	Dialogue3 = 3,
 }

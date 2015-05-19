@@ -3,39 +3,33 @@ using System.Collections;
 
 public class TestScene2 : MonoBehaviour {
 
-
-	public GameObject spawn1;
-	public GameObject spawn2;
-
-
+	public GameObject SpawnFromTest1;
+	
+	
 	void Awake()
 	{
 
-		switch (GWorld.lastZoneExit) 
+		//check the last zone player was in
+		switch (GWorld.currentZone) 
 		{
-			case ZoneExit.TestsceneLeft :
-				//Debug.Log ("Scene Left");
-				GWorld.SpawnPlayer(  spawn2.transform  );
+		case ZoneBase.Testscene1 :
+			GWorld.SpawnPlayer(  SpawnFromTest1.transform  );
 			break;
-
-			case ZoneExit.TestsceneRight :
-				//Debug.Log ("Scene Right");
-				GWorld.SpawnPlayer(  spawn1.transform  );
+			
+		case ZoneBase.Testscene2  :
+			//Leave the player at the same location if the same zone as we already are in
 			break;
-
-			case ZoneExit.None :
-				//Debug.Log ("Scene None");
-				//Used on sleep should remain empty to let the player keep his current location
+			
+		default :
+			GWorld.SpawnPlayer(  SpawnFromTest1.transform  );
 			break;
-
-			default :
-				
-				GWorld.SpawnPlayer(  spawn1.transform  );
-			break;
-
+			
 		}
+		
+		GWorld.currentZone = ZoneBase.Testscene2;
 
+		
 	}
-
-
+	
+	
 }
