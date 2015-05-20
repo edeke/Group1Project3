@@ -6,7 +6,9 @@ using System.Collections.Generic;
 public enum EItem {
 	Apple,
 	Pear,
-	Banana
+	Banana,
+	PirateRing,
+	MetalPipe
 };
 
 public class ItemStruct
