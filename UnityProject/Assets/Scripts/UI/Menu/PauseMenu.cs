@@ -20,6 +20,8 @@ public class PauseMenu : MonoBehaviour {
 
 		PauseUI.SetActive (false);
 
+		UnpauseGame();
+
 	}
 	
 	// Update is called once per frame
