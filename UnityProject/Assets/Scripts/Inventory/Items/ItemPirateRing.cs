@@ -54,7 +54,7 @@ public class ItemPirateRing : Item {
 		} 
 		else 
 		{
-			ShowMessage ("There is a large rock on it");
+			DisplayComment ("There is a large rock on it");
 		}
 
 	}
