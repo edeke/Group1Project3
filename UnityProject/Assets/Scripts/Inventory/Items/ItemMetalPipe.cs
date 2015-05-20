@@ -31,7 +31,7 @@ public class ItemMetalPipe : Item {
 		} 
 		else 
 		{
-			ShowMessage("Need inventory to pickup item");
+			DisplayComment("Need inventory to pickup item");
 		}
 
 	}

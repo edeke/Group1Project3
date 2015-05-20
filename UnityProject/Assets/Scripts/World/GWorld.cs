@@ -48,6 +48,7 @@ public class GWorld : MonoBehaviour
 	static GWorld currentWorld;
 
 	static GameObject myInv;
+	static GameObject mainDialog;
 	public static GameObject mainUI;
 	static GameObject myPlayer;
 
@@ -91,6 +92,23 @@ public class GWorld : MonoBehaviour
 			else
 			{
 				//Debug.Log ("MainUI Loaded");
+			}
+
+		}
+
+		if (!mainDialog) 
+		{
+			string path = "Prefabs/UI/Dialog/NextGenRpgGui";
+			mainDialog = (GameObject) Instantiate(Resources.Load(path));
+			DontDestroyOnLoad(mainDialog);
+			
+			if(!mainUI)
+			{
+				Debug.Log ("Dialog Failed to Load - " + path);
+			}
+			else
+			{
+				//Debug.Log ("mainDialog Loaded");
 			}
 
 		}

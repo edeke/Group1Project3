@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class ItemPirateRing : Item {
-
-	bool isRockMoved = false;
+	
 	string EventIDRockMoved = "RockOnBeachMoved";
 
 	void Start () 
@@ -11,11 +10,6 @@ public class ItemPirateRing : Item {
 
 		EventData tempData = new EventData();
 		GWorld.FindEvent(EventIDRockMoved,ref tempData);
-			
-		if(tempData.hasEventOccured)
-		{
-			isRockMoved = true;
-		}
 			
 		Item callBaseClass = (Item)this;
 		callBaseClass.Start ();
@@ -54,7 +48,7 @@ public class ItemPirateRing : Item {
 		} 
 		else 
 		{
-			ShowMessage ("There is a large rock on it");
+			DisplayComment ("There is a large rock on it");
 		}
 
 	}
