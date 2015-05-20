@@ -3,7 +3,24 @@ using System.Collections;
 
 public class ItemPirateRing : Item {
 
+	bool isRockMoved = false;
+	string EventIDRockMoved = "RockOnBeachMoved";
 
+	void Start () 
+	{
+
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventIDRockMoved,ref tempData);
+			
+		if(tempData.hasEventOccured)
+		{
+			isRockMoved = true;
+		}
+			
+		Item callBaseClass = (Item)this;
+		callBaseClass.Start ();
+		
+	}
 
 
 	override public void OnInspect()
@@ -20,18 +37,24 @@ public class ItemPirateRing : Item {
 
 	override public void OnAction( ) 
 	{
-
-		if (GWorld.isInvEnabled == true) 
+		EventData rockMovedEvent = new EventData();
+		GWorld.FindEvent(EventIDRockMoved,ref rockMovedEvent);
+		
+		if (rockMovedEvent.hasEventOccured) 
 		{
-			if (Inventory.myInv.AddItem (itemData, transform.position)) 
+			if (GWorld.isInvEnabled == true) 
 			{
-				GWorld.MarkEventDone (eventID);
-				Destroy (gameObject);
+				if (Inventory.myInv.AddItem (itemData, transform.position)) 
+				{
+					GWorld.MarkEventDone (eventID);
+					Destroy (gameObject);
+				} 
 			} 
+
 		} 
 		else 
 		{
-			ShowMessage("Need inventory to pickup item");
+			ShowMessage ("There is a large rock on it");
 		}
 
 	}

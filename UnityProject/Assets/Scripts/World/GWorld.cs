@@ -21,6 +21,8 @@ public struct EventData
 {
 	public string description;
 	public bool hasEventOccured;
+	public Vector3 position;
+	public Quaternion rotation;
 }
 
 
@@ -223,7 +225,7 @@ public class GWorld : MonoBehaviour
 		if (eventTable [eventHash] == null) {
 			//Debug.Log ("No event found  - Creating Event for Hash : " + eventHash);
 
-			EventData newData;
+			EventData newData = new EventData();
 
 			newData.description = description;
 			newData.hasEventOccured = false;
@@ -248,7 +250,6 @@ public class GWorld : MonoBehaviour
 	public static bool MarkEventDone( string eventHash )
 	{
 
-		
 		if (eventTable [eventHash] == null) 
 		{
 			//Debug.Log ("No event found  - for Hash : " + eventHash);
@@ -264,6 +265,29 @@ public class GWorld : MonoBehaviour
 			eventTable.Add(eventHash, newData);
 
 			//Debug.Log ("Event found settings event to occured : " + eventHash);
+			
+			return true;
+		}
+	}
+
+	public static bool StorePositionForEvent( string eventHash , Vector3 newPosition, Quaternion newRotation )
+	{
+		
+		
+		if (eventTable [eventHash] == null) 
+		{
+			//Debug.Log ("No event found  - for Hash : " + eventHash);
+			
+			return false;
+		} 
+		else 
+		{
+			EventData newData = (EventData)eventTable[eventHash];
+			newData.position = newPosition;
+			newData.rotation = newRotation;
+
+			eventTable.Remove(eventHash);
+			eventTable.Add(eventHash, newData);
 			
 			return true;
 		}
