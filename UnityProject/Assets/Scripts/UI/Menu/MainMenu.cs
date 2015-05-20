@@ -28,15 +28,13 @@ public class MainMenu : MonoBehaviour {
 
 	void Update (){
 
-		chosenName = playerName.text;
-
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			BackButton();
 		}
 
 		Debug.Log (PlayerPrefs.GetString("Player Name"));
 
-		if (playerName.text.Length > 0) {
+		if (playerName.text.Length > 0 && playerName.text.Length < 8) {
 
 			acceptButton.interactable = true;
 						
@@ -88,6 +86,42 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 
+	public void setFastestQuality () {
+
+		QualitySettings.SetQualityLevel (0, true);
+
+	}
+
+	public void setFastQuality () {
+	
+		QualitySettings.SetQualityLevel (1, true);
+
+	}
+
+	public void setSimpleQuality () {
+
+		QualitySettings.SetQualityLevel (2, true);
+
+	}
+
+	public void setGoodQuality () {
+
+		QualitySettings.SetQualityLevel (3, true);
+
+	}
+
+	public void setBeautifulQuality () {
+
+		QualitySettings.SetQualityLevel (4, true);
+
+	}
+
+	public void setFantasticQuality () {
+
+		QualitySettings.SetQualityLevel (5, true);
+
+	}
+
 	public void BackButton(){
 
 		main.gameObject.SetActive (true);
@@ -100,6 +134,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void AcceptName(){
 
+		chosenName = playerName.text;
 		PlayerPrefs.SetString ("Player Name", chosenName);
 		Application.LoadLevel("MechanicsAndCamera");
 

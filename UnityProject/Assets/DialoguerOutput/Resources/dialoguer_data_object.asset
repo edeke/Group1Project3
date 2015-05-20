@@ -219,7 +219,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 16
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 747.390198, y: 0}
       phases:
       - id: 0
         type: 6
@@ -259,8 +259,8 @@ MonoBehaviour:
         outs: 0200000003000000
         advanced: 0
         metadata: 
-        text: 'Pirate: Stop right there stranger!'
-        name: 
+        text: Stop right there stranger!
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -292,8 +292,8 @@ MonoBehaviour:
         outs: 04000000
         advanced: 0
         metadata: 
-        text: 'Pirate: Who are you and what is your business here!?'
-        name: 
+        text: Who are you and what is your business here!?
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -323,9 +323,9 @@ MonoBehaviour:
         outs: 0d000000
         advanced: 0
         metadata: 
-        text: "Pirate: Don\u2019t tell me to take it easy! Get out of here ya ugly
-          little grunt!"
-        name: 
+        text: "Don\u2019t tell me to take it easy! Get out of here ya ugly little
+          grunt!"
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -355,8 +355,8 @@ MonoBehaviour:
         outs: 05000000
         advanced: 0
         metadata: 
-        text: "Main Character: My name is [\u2026] and I just woke up here.. "
-        name: 
+        text: "My name is [\u2026] and I just woke up here.. "
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -386,8 +386,8 @@ MonoBehaviour:
         outs: 06000000
         advanced: 0
         metadata: 
-        text: 'Main Character: Where am I?'
-        name: 
+        text: Where am I?
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -413,12 +413,12 @@ MonoBehaviour:
       - id: 6
         type: 1
         theme: 
-        position: {x: 2437, y: 44}
+        position: {x: 2446, y: 66}
         outs: 0700000008000000
         advanced: 0
         metadata: 
-        text: 'Pirate: This is the .... Islands.'
-        name: 
+        text: This is the .... Islands.
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -450,9 +450,8 @@ MonoBehaviour:
         outs: 15000000
         advanced: 0
         metadata: 
-        text: 'Pirate: Or what!? What are ya gonna do!? Get outta here and stop pestering
-          me...'
-        name: 
+        text: Or what!? What are ya gonna do!? Get outta here and stop pestering me...
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -478,14 +477,14 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 2773, y: 350}
+        position: {x: 2777, y: 346}
         outs: 0a000000
         advanced: 0
         metadata: 
-        text: "Pirate: Sure thing. Here ya go me friend. MOHAHAHAhahahaha! I don\u2019t
-          think so pal. There are no free lunches in this world. If you wanna pass,
-          it\u2019ll cost ya. "
-        name: 
+        text: "Sure thing. Here ya go me friend. MOHAHAHAhahahaha! I don\u2019t think
+          so pal. There are no free lunches in this world. If you wanna pass, it\u2019ll
+          cost ya. "
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -546,8 +545,8 @@ MonoBehaviour:
         outs: 0b000000
         advanced: 0
         metadata: 
-        text: 'Main character: How much do you want for letting me through?'
-        name: 
+        text: How much do you want for letting me through?
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -577,10 +576,10 @@ MonoBehaviour:
         outs: 0f000000
         advanced: 0
         metadata: 
-        text: "Pirate: I have a slight problem you see. I have lost me wedding ring
-          and I need it back before the old daggle-tail notices that it\u2019s gone.
-          Bring it to me and I\u2019ll let ya through."
-        name: 
+        text: "I have a slight problem you see. I have lost me wedding ring and I
+          need it back before the old daggle-tail notices that it\u2019s gone. Bring
+          it to me and I\u2019ll let ya through."
+        name: Pirate
         portrait: 
         audio: 
         audioDelay: 0
@@ -672,8 +671,8 @@ MonoBehaviour:
         outs: 02000000
         advanced: 0
         metadata: 
-        text: "You: Please don\u2019t hurt me sir! I come in peace!"
-        name: 
+        text: "Please don\u2019t hurt me sir! I come in peace!"
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -761,12 +760,12 @@ MonoBehaviour:
       - id: 17
         type: 0
         theme: 
-        position: {x: 434, y: 36}
+        position: {x: 443, y: 61}
         outs: 12000000
         advanced: 0
         metadata: 
-        text: 'Pirate: I really need my ring back...'
-        name: 
+        text: I really need my ring back...
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -854,12 +853,12 @@ MonoBehaviour:
       - id: 20
         type: 0
         theme: 
-        position: {x: 2446.06982, y: 351}
+        position: {x: 2445.06982, y: 343}
         outs: 08000000
         advanced: 0
         metadata: 
-        text: 'You: Can I please enter?'
-        name: 
+        text: Can I please enter?
+        name: Player
         portrait: 
         audio: 
         audioDelay: 0
@@ -965,13 +964,13 @@ MonoBehaviour:
         - name: Being a douche
           variable: false
           id: 2
-        selection: 2
+        selection: 0
       floats:
         variables: []
         selection: 0
       strings:
         variables: []
-        selection: 0
+        selection: -1
     themes:
       themes: []
       selection: 0
