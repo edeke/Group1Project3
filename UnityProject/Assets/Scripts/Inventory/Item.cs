@@ -75,9 +75,14 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 		} 
 		else 
 		{
-			Debug.Log ( "Need inventory to pickup item");
+			ShowMessage("Need inventory to pickup item");
 		}
 
+	}
+
+	public void ShowMessage(string text)
+	{
+		Debug.Log ( text );
 	}
 
 }

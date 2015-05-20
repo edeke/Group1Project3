@@ -27,6 +27,7 @@ public class CommentController : MonoBehaviour {
 	Vector2 sizeOfText;
 	GUIStyle myStyle;
 
+	Vector3 screenLocation;
 
 
 	void Start()
@@ -90,7 +91,14 @@ public class CommentController : MonoBehaviour {
 
 	public void SetPosition()
 	{
-		Vector3 screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
+		//if object is deleted when  we pick it up then stop following but use same position
+		if (objectToFollow == null) 
+		{
+			gameObject.transform.position = screenLocation;
+			return;
+		}
+
+		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
 
 
 		int offsetY = Mathf.FloorToInt(Screen.height * 0.1f);

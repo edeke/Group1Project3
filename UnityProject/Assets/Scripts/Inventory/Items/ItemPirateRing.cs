@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemMetalPipe : Item {
+public class ItemPirateRing : Item {
 
 
 

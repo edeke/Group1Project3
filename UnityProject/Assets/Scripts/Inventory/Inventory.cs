@@ -7,7 +7,7 @@ public enum EItem {
 	Apple,
 	Pear,
 	Banana,
-	Ring,
+	PirateRing,
 	MetalPipe
 };
 
