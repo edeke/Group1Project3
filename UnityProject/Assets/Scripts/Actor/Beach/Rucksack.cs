@@ -33,12 +33,6 @@ public class Rucksack : CommentActorBase
 
 	}
 
-	void Update()
-	{
-		GWorld.StorePositionForEvent (EventIDPosition, transform.position, transform.rotation);
-
-	}
-
 	override public void OnInspect()
 	{	
 
@@ -58,6 +52,12 @@ public class Rucksack : CommentActorBase
 	void DestroyObject()
 	{
 		Destroy (gameObject);
+	}
+
+	void OnDestroy()
+	{
+		//store position of object befor changing scene or quiting
+		GWorld.StorePositionForEvent (EventIDPosition, transform.position, transform.rotation);
 	}
 
 }
