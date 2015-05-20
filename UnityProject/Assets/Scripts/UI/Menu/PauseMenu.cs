@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		UI = GameObject.Find("MainUI(Clone)");
+		UI = GWorld.mainUI;
 		PauseUI = GameObject.Find ("PauseMenu");
 		rpgGUI = GameObject.Find ("ClassicRpgGui");
 
@@ -61,6 +61,10 @@ public class PauseMenu : MonoBehaviour {
 
 		rpgGUI.SetActive (true);
 
+	}
+
+	public void MainMenu(){
+		Application.LoadLevel ("MainMenu");
 	}
 
 	public void QuitGame (){

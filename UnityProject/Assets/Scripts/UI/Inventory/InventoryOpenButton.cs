@@ -5,6 +5,7 @@ using System.Collections;
 public class InventoryOpenButton : MonoBehaviour {
 
 	GameObject panel;
+	Image rend;
 
 	bool active = false;
 
@@ -12,25 +13,35 @@ public class InventoryOpenButton : MonoBehaviour {
 	void Start () {
 
 		panel = GameObject.FindGameObjectWithTag("MainPanel");
-
 		panel.SetActive (false);
+
+		rend = GetComponent<Image> ();
+		rend.enabled = false;
+
 	
+	}
+
+	public void ShowButton()
+	{
+		rend.enabled = true;
 	}
 
 	public void OnClick()
 	{
-
-		if (active) 
+		if (GWorld.isInvEnabled == true) 
 		{
-			panel.SetActive (false);
-			active = false;
+			if (active) 
+			{
+				panel.SetActive (false);
+				active = false;
 
-		} 
-		else 
-		{
-			panel.SetActive (true);
-			active = true;
-		
+			} 
+			else 
+			{
+				panel.SetActive (true);
+				active = true;
+			
+			}
 		}
 
 	}

@@ -29,34 +29,22 @@ public class PlayerInput : MonoBehaviour
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
-
-			if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+			if( GWorld.isInvEnabled )
 			{
-				selectedObject = hitInfo.collider.gameObject;
-
-				IAction onAction = selectedObject.GetComponent<IAction> ();
-
-				if(onAction != null)
+				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					movementScript.TrySetActionOnObject(selectedObject);
+					TryUseActionOnObject( hitInfo.collider.gameObject );
 				}
-				else
-				{
-
-					//movementScript.TrySetMoveToLocationState(hitInfo.point);
-				}
-
 			}
-			else if (traceHit)
-			{
-	
-				//movementScript.TrySetMoveToLocationState(hitInfo.point);
-
+			else
+			{	
+				if( traceHit && dragging == false )
+				{
+					TryUseActionOnObject( hitInfo.collider.gameObject );
+				}
 			}
 
 		}
-
-
 
 		//on left mouse click
 		if (Input.GetMouseButtonDown (0)) 
@@ -82,17 +70,19 @@ public class PlayerInput : MonoBehaviour
 			{
 				dragging = true;
 			}
-			
-			if (Inventory.myInv.CurrentSelectedItem == -1 && Physics.Raycast (mouseRay, out hitInfo)) {
-				selectedObject = hitInfo.collider.gameObject;
-				IInspectInterface canClick = selectedObject.GetComponent<IInspectInterface> ();
-				
-				if (canClick != null) {
 
-					Vector3 mouseLocation = Input.mousePosition;
-					Vector3 deltaMouseLocation = mouseLocation - mouseLocationPrevFrame;
-
-					canClick.OnDragOver( deltaMouseLocation );
+			if(GWorld.isInvEnabled == true)
+			{
+				if (Inventory.myInv.CurrentSelectedItem == -1 && Physics.Raycast (mouseRay, out hitInfo))
+				{
+					TryDragOnObject( hitInfo.collider.gameObject );
+				}
+			}
+			else
+			{
+				if (Physics.Raycast (mouseRay, out hitInfo))
+				{
+					TryDragOnObject( hitInfo.collider.gameObject );
 				}
 			}
 			
@@ -111,55 +101,140 @@ public class PlayerInput : MonoBehaviour
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
 			//try talk or onclick funtions on hit actor
-			if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+			if(GWorld.isInvEnabled == true)
 			{
-				selectedObject = hitInfo.collider.gameObject;
-				IInspectInterface canClick = selectedObject.GetComponent<IInspectInterface> ();
-
-				
-				if (canClick != null)
+				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					canClick.OnInspect ();
-				}
-
-				//if no interface on object and pointer is not over a UI element
-				else if ( !EventSystem.current.IsPointerOverGameObject())
-				{
-
-					if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
 					{
-						movementScript.TrySetMoveToLocationState(hitInfo.point);
+						//if no interface on object and pointer is not over a UI element
+						if( EventSystem.current.IsPointerOverGameObject() == false )
+						{
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}
+
+						}
+
 					}
 
 				}
-
+				//try use item on actor
+				else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
+				{
+					TryUseItemOnObject( hitInfo.collider.gameObject );	
+				}
 			}
-
-			//try use item on actor
-			else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
+			else // No Inventory
 			{
-
-				selectedObject = hitInfo.collider.gameObject;
-				IUseItem canUseItem = selectedObject.GetComponent<IUseItem> ();
-
-				if ( traceHit && canUseItem != null)
+				if ( traceHit && dragging == false )
 				{
+					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
+					{
+						//if no interface on object and pointer is not over a UI element
+						if( EventSystem.current.IsPointerOverGameObject() == false )
+						{
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}
+							
+						}
+						
+					}
 					
-					GameObject hitActor = hitInfo.collider.gameObject;
-
-					movementScript.TrySetUseItemOnObject( Inventory.myInv.CurrentSelectedItem,  hitActor );
-					
-					Inventory.myInv.DeselectItem();
 				}
-				else
-				{
-					Inventory.myInv.DeselectItem();
-				}
-				
 			}
 
 			mouseClicked = false;
 
+		}
+	}
+
+	bool TryUseActionOnObject(GameObject actionObject)
+	{
+		//store object for later
+		selectedObject = actionObject;
+		
+		IAction onAction = actionObject.GetComponent<IAction> ();
+		
+		if(onAction != null)
+		{
+			movementScript.TrySetActionOnObject(actionObject);
+			return true;
+		}
+		else
+		{
+			//movementScript.TrySetMoveToLocationState(hitInfo.point);
+			return false;
+		}
+	}
+
+	bool TryDragOnObject(GameObject inspectObject)
+	{
+		//store object for later
+		selectedObject = inspectObject;
+		IInspectInterface canClick = inspectObject.GetComponent<IInspectInterface> ();
+		
+		if (canClick != null) 
+		{
+			Vector3 mouseLocation = Input.mousePosition;
+			Vector3 deltaMouseLocation = mouseLocation - mouseLocationPrevFrame;
+			
+			canClick.OnDragOver (deltaMouseLocation);
+
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+
+	}
+
+	bool TryInspectOnObject(GameObject inspectObject)
+	{
+		//store object for later
+		selectedObject = inspectObject;
+		IInspectInterface canClick = inspectObject.GetComponent<IInspectInterface> ();
+		
+		if (canClick != null) 
+		{
+			Vector3 mouseLocation = Input.mousePosition;
+			Vector3 deltaMouseLocation = mouseLocation - mouseLocationPrevFrame;
+			
+			canClick.OnInspect();
+			
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+		
+	}
+
+	bool TryUseItemOnObject(GameObject actorToUseOn)
+	{
+		//store object for later
+		selectedObject = actorToUseOn;
+		IUseItem canUseItem = selectedObject.GetComponent<IUseItem> ();
+		
+		if ( canUseItem != null	)
+		{
+			
+			movementScript.TrySetUseItemOnObject( Inventory.myInv.CurrentSelectedItem,  actorToUseOn );
+			
+			Inventory.myInv.DeselectItem();
+
+			return true;
+		}
+		else
+		{
+			Inventory.myInv.DeselectItem();
+
+			return false;
 		}
 	}
 }

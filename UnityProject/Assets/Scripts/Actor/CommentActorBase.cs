@@ -32,6 +32,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface
 
 		if (comment != null) 
 		{
+			GWorld.EnableInventory();
 			comment.SetText("\"This rock looks <b>suspicious</b> and <color=#008000ff><b>delicious</b></color> !\"", 40);
 
 		}
