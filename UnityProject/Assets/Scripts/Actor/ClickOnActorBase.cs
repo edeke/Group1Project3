@@ -5,7 +5,7 @@ using System.Collections;
 public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAction
 {
 
-	SpeechBubbleController speech;
+	protected SpeechBubbleController speech;
 	public DialoguerDialogues dialog;
 	public string actorName;
 
@@ -28,7 +28,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 
 	}
 
-	public void OnAction()
+	virtual public void OnAction()
 	{
 
 		Dialoguer.StartDialogue (dialog);
@@ -40,7 +40,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 
 	}
 
-	public void OnInspect()
+	virtual public void OnInspect()
 	{		
 		if (speech != null) 
 		{
@@ -52,12 +52,12 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 		}
 	}
 
-	public void OnDragOver( Vector3 deltaMousePosition )
+	virtual public void OnDragOver( Vector3 deltaMousePosition )
 	{
 
 	}
 	
-	public bool UseItemOnObject(EItem itemType)
+	virtual public bool UseItemOnObject(EItem itemType)
 	{
 		switch ( itemType )
 		{

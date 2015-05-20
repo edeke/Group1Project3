@@ -12,7 +12,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	public GameObject onPickupParticle;
 	public int numberOfItemsInStack = 1;
 	
-	public string eventID;
+	protected string eventID;
 	
 	public ItemStruct itemData = new ItemStruct();
 
@@ -29,24 +29,27 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 		itemData.onUseParticle = onUseParticle;
 		itemData.onPickupParticle = onPickupParticle;
 
-		GWorld.TryRegisterEvent (eventID, "Hello" );
 
 	}
 
-	public void OnInspect()
+	virtual public void OnInspect()
 	{
 
 
 	}
 
 
-	public void OnDragOver( Vector3 deltaMousePosition )
+	virtual public void OnDragOver( Vector3 deltaMousePosition )
 	{
 
 	}
 
 	public void Awake()
 	{
+		eventID = this.gameObject.name;
+		GWorld.TryRegisterEvent (eventID, "Hello" );
+
+
 		EventData newData = new EventData();
 
 		if (GWorld.FindEvent (eventID, ref newData)) 
@@ -56,22 +59,30 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 				Destroy(gameObject);
 			}
 		}
+
 	}
 
-	public void OnAction ( )
+	virtual public void OnAction ( )
 	{
+
 		if (GWorld.isInvEnabled == true) 
 		{
-			if (Inventory.myInv.AddItem (itemData, transform.position)) {
+			if (Inventory.myInv.AddItem (itemData, transform.position)) 
+			{
 				GWorld.MarkEventDone (eventID);
 				Destroy (gameObject);
 			} 
 		} 
 		else 
 		{
-			Debug.Log ( "Need inventory to pickup item");
+			ShowMessage("Need inventory to pickup item");
 		}
 
+	}
+
+	public void ShowMessage(string text)
+	{
+		Debug.Log ( text );
 	}
 
 }
