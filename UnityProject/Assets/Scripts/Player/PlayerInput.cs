@@ -123,8 +123,10 @@ public class PlayerInput : MonoBehaviour
 				//try use item on actor
 				else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
 				{
-					TryUseItemOnObject( hitInfo.collider.gameObject );	
+					TryUseItemOnObject( hitInfo.collider.gameObject );
 				}
+
+				dragging = false;
 			}
 			else // No Inventory
 			{

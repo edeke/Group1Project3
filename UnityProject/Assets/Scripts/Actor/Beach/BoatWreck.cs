@@ -6,15 +6,9 @@ public class BoatWreck : CommentActorBase
 {
 
 	string EventID = "BoatWreckMoved";
-	public Vector3 target;
-	Vector3 startLocation;
-	float currentTime;
-
 
 	void Start () 
 	{
-		startLocation = transform.position;
-		currentTime = 0.0f;
 
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
@@ -44,19 +38,6 @@ public class BoatWreck : CommentActorBase
 		DisplayComment("Its to heavy!");
 
 	}
-
-	/*override public bool UseItemOnObject(EItem itemType)
-	{
-		switch (itemType) 
-		{
-			case EItem.MetalPipe :
-				moveWreck = true;
-				GWorld.MarkEventDone (EventID);
-			return true;
-		}
-		
-		return false;
-	}*/
 
 	public void OpenPassage()
 	{

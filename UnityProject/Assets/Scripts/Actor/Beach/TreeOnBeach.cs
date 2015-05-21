@@ -32,14 +32,8 @@ public class TreeOnBeach : CommentActorBase
 
 	override public void OnAction()
 	{	
-		if (rucksack != null) 
-		{
-			GWorld.MarkEventDone (EventID);
-
-			rucksack.AddComponent<Rigidbody> ();
-
-		}
-		
+		GWorld.MarkEventDone (EventID);
+		rucksack.AddComponent<Rigidbody> ();
 	}
 
 }
