@@ -20,7 +20,7 @@ public class DialoguerExampleStart : MonoBehaviour {
 			// Dialoguer.StartDialogue(0);
 
 			// We'll use the ID method for now, in order to avoid any errors when you start creating your own dialogues.
-			Dialoguer.StartDialogue(DialoguerDialogues.BeachDialogueNPC1);
+			Dialoguer.StartDialogue(DialoguerDialogues.Pirate_on_Beach);
 			
 			// By default, the DialoguerDialogues enum is automatically updated when you save your dialogues.
 			// You can turn this off in the Dialoguer preferences menu.
