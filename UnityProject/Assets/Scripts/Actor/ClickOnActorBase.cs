@@ -9,7 +9,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	public DialoguerDialogues dialog;
 	public string actorName;
 
-	void Awake()
+	public void Awake()
 	{
 		Dialoguer.Initialize ();
 
@@ -17,7 +17,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	}
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 	
 		speech = gameObject.GetComponentInChildren<SpeechBubbleController> ();
 
