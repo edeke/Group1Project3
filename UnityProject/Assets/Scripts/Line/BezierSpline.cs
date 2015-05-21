@@ -18,6 +18,26 @@ public class BezierSpline : MonoBehaviour {
 	[SerializeField]
 	private BezierControlPointMode[] modes;
 
+	[SerializeField]
+	private bool loop;
+
+	public bool Loop
+	{
+		get
+		{
+			return loop;
+		}
+		set
+		{
+			loop = value;
+			if(value == true)
+			{
+				modes[modes.Length - 1] = modes[0];
+				SetControlPoint(0,points[0]);
+			}
+		}
+	}
+
 	public int ControlPointCount
 	{
 		get 
@@ -33,6 +53,43 @@ public class BezierSpline : MonoBehaviour {
 
 	public void SetControlPoint (int index, Vector3 point)
 	{
+		if (index % 3 == 0) 
+		{
+			Vector3 delta = point - points[index];
+			if (loop)
+			{
+				if (index == 0)
+				{
+					points[1] += delta;
+					points[points.Length - 2] += delta;
+					points[points.Length - 1] = point;
+				}
+				else if ( index == points.Length - 1 )
+				{
+					points[0] = point;
+					points[1] += delta;
+					points[index - 1] += delta;
+				}
+				else
+				{
+					points[index - 1] += delta;
+					points[index + 1] += delta;
+				}
+
+			}
+			else
+			{
+				if (index > 0)
+				{
+					points[points.Length - 1] += delta;
+				}
+				else if ( index + 1 < points.Length )
+				{
+					points[points.Length + 1] += delta;
+				}
+			}
+		} 
+
 		points [index] = point;
 		EnforceMode (index);
 	}
@@ -112,7 +169,21 @@ public class BezierSpline : MonoBehaviour {
 
 	public void SetControlPointMode(int index, BezierControlPointMode mode) 
 	{
-		modes [(index + 1) / 3] = mode;
+		int modeIndex = (index + 1) / 3;
+		modes [modeIndex] = mode;
+
+		if (loop) 
+		{
+			if(modeIndex == 0)
+			{
+				modes[modes.Length - 1] = mode;
+			}
+			else if(modeIndex == modes.Length -1)
+			{
+				modes[0] = mode;
+			}
+		}
+
 		EnforceMode (index);
 	}
 
@@ -129,6 +200,8 @@ public class BezierSpline : MonoBehaviour {
 
 		Array.Resize (ref modes, modes.Length + 1);
 		modes[modes.Length - 1] = modes [modes.Length - 2];
+
+		EnforceMode(points.Length - 4);
 	}
 
 	private void EnforceMode (int index)
