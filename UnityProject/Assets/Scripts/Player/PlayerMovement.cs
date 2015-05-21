@@ -46,8 +46,8 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
+				break;
 
-			break;
 			case EPlayerState.WalkToLocation :
 				agent.SetDestination (locationToReach);
 				break;

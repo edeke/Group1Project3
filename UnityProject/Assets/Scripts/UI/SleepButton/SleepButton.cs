@@ -4,7 +4,7 @@ using System.Collections;
 
 public class SleepButton : MonoBehaviour {
 	
-	bool active = false;
+	//bool active = false;
 	GameObject sleepMenu;
 
 	// Use this for initialization

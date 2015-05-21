@@ -4,6 +4,29 @@ using System.Collections;
 
 public class Pirate : ClickOnActorBase
 {
+	string EventID = "RingGivenToPirate";
+	bool ringGiven = false;
+	public GameObject wreck;
+
+	void Start () 
+	{
+		
+		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventID,ref tempData);
+			
+			if(tempData.hasEventOccured)
+			{
+				ringGiven = true;
+			}
+			
+		}
+
+		ClickOnActorBase tempComp = (ClickOnActorBase)this;
+		tempComp.Start ();
+		
+	}
 
 	override public void OnAction()
 	{
@@ -42,12 +65,19 @@ public class Pirate : ClickOnActorBase
 				return false;
 
 			case EItem.PirateRing :
-				speech.SetText("Yay, du hitta min ring =D");
+				RingGivenToPirate();
 				return true;
-
 		}
 
 		return false;
+	}
+
+	void RingGivenToPirate()
+	{
+		wreck.GetComponent<BoatWreck> ().OpenPassage ();
+		speech.SetText("Yay, du hitta min ring =D");
+		ringGiven = true;
+		GWorld.MarkEventDone (EventID);
 	}
 
 }
