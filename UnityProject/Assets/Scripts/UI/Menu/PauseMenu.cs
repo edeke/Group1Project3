@@ -9,14 +9,14 @@ public class PauseMenu : MonoBehaviour {
 
 	private GameObject PauseUI;
 
-	private GameObject rpgGUI;
+	public GameObject rpgGUI;
 
 	// Use this for initialization
 	void Start () {
 	
 		UI = GWorld.mainUI;
 		PauseUI = GameObject.Find ("PauseMenu");
-		rpgGUI = GameObject.Find ("NextGenRpgGui(Clone)");
+		rpgGUI = GWorld.mainDialog;
 
 		PauseUI.SetActive (false);
 
@@ -67,6 +67,9 @@ public class PauseMenu : MonoBehaviour {
 
 	public void MainMenu(){
 		Application.LoadLevel ("MainMenu");
+
+		Dialoguer.EndDialogue ();
+
 	}
 
 	public void QuitGame (){

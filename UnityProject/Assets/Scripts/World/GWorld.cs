@@ -49,7 +49,7 @@ public class GWorld : MonoBehaviour
 	static GWorld currentWorld;
 
 	static GameObject myInv;
-	static GameObject mainDialog;
+	public static GameObject mainDialog;
 	public static GameObject mainUI;
 	static GameObject myPlayer;
 
