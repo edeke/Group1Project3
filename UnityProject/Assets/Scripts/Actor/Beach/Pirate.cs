@@ -31,7 +31,7 @@ public class Pirate : ClickOnActorBase
 	override public void OnAction()
 	{
 
-		Dialoguer.StartDialogue (dialog);
+		Dialoguer.StartDialogue (dialog, null);
 
 		/*if (speech != null)
 		{

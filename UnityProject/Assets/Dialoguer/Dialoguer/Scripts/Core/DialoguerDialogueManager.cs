@@ -9,15 +9,21 @@ namespace DialoguerCore{
 		private static DialoguerCallback onEndCallback;
 		
 		public static void startDialogueWithCallback(int dialogueId, DialoguerCallback callback){
+
+			
+			GWorld.dialogOpen = true;
+
 			//Set Callback
 			onEndCallback = callback;
 			
 			// Call true startDialogue method
 			startDialogue(dialogueId);
+
 		}
 		
 		public static void startDialogue(int dialogueId){
 			if(dialogue != null){ 
+				GWorld.dialogOpen = true;
 				DialoguerEventManager.dispatchOnSuddenlyEnded();
 			}
 			
@@ -50,6 +56,9 @@ namespace DialoguerCore{
 			
 			// Clean up
 			reset();
+
+			
+			GWorld.dialogOpen = false;
 		}
 		
 		

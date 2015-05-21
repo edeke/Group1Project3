@@ -42,7 +42,8 @@ public class GWorld : MonoBehaviour
 	static int currentTimeInMin = HOUR * 10 + 22;
 	public static TimeOfDay timeOfTheDay = 0;
 
-
+	static public bool dialogOpen = false;
+	
 	//private const float DEGREES_PER_SECOND = 360 / DAY;
 
 	static GWorld currentWorld;
@@ -63,7 +64,6 @@ public class GWorld : MonoBehaviour
 	{
 		BuildSceneLoadTable ();
 	}
-
 
 	void Awake()
 	{

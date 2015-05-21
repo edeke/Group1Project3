@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
 	Vector3 mouseLocationStartFrame;
 	const float mouseDragDeadZone = 10.0f;
 	bool dragging = false;
+	bool ignoreFirstInput = false;
 
 	PlayerMovement movementScript;
 
@@ -22,9 +23,18 @@ public class PlayerInput : MonoBehaviour
 
 	void Update () 
 	{
+		//dont do anything is dialog is open
+		if (GWorld.dialogOpen)
+		{
+			//will make the first movement input after closing the dialog to be ignored
+			ignoreFirstInput = true;
+			return;
+		}
+
 		//right mouse click
 		if (Input.GetMouseButtonUp (1)) 
-		{
+		{			
+
 			RaycastHit hitInfo = new RaycastHit ();
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
@@ -94,6 +104,12 @@ public class PlayerInput : MonoBehaviour
 		//when releasing mouse
 		else if( Input.GetMouseButtonUp (0) )
 		{
+
+			if(ignoreFirstInput)
+			{
+				ignoreFirstInput = false;
+				return;
+			}
 
 			RaycastHit hitInfo = new RaycastHit ();
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
