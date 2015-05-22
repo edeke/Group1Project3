@@ -223,20 +223,20 @@ public class GWorld : MonoBehaviour
 	{
 		//Debug.Log ("Spawning Player");
 
-		if (!myPlayer) 
-		{
+		if (!myPlayer) {
 			string path = "Prefabs/Player/MainPlayer";
-			myPlayer = (GameObject)Instantiate (Resources.Load (path));
+			myPlayer = (GameObject)Instantiate (Resources.Load (path), location.position, location.rotation);
 			DontDestroyOnLoad (myPlayer);
 
 			//check it exist after creating
-			if(!myPlayer)
-			{
+			if (!myPlayer) {
 				Debug.Log ("GWorld Failed to Load Player - " + path);
 			}
+		} 
+		else 
+		{
+			myPlayer.transform.position = location.position;
 		}
-
-		myPlayer.transform.position = location.position;
 
 	}
 
