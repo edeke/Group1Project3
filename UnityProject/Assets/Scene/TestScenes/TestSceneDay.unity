@@ -317,7 +317,7 @@ GameObject:
   - 23: {fileID: 371995104}
   - 114: {fileID: 371995103}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SplineDecoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,12 +331,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 371995102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e158dafca101924ca5e02d96dbbecf6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4196b176060d87b4f9f76e2fbe539f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 644151820}
-  duration: 2
+  frequency: 10
   lookForward: 1
+  items:
+  - {fileID: 466428, guid: 923b5e25537df3348a5aa9dc9beb000a, type: 2}
 --- !u!23 &371995104
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -506,12 +508,12 @@ MonoBehaviour:
   points:
   - {x: 1.4248544, y: -.0342464447, z: .0703392029}
   - {x: 1.48506343, y: -2.74897647, z: .0703392029}
-  - {x: 8.41759491, y: -1.67145514, z: -.306628644}
-  - {x: 8.48476505, y: .580078602, z: -.306628168}
-  - {x: 8.5519352, y: 2.83161235, z: -.306627691}
-  - {x: 7.30603027, y: 3.25383711, z: .338292122}
-  - {x: 4.92055988, y: 3.29068446, z: .338292122}
-  - {x: 2.53508949, y: 3.32753181, z: .338292122}
+  - {x: 8.2745533, y: -1.21161103, z: -.306628644}
+  - {x: 8.14312458, y: .580078602, z: -.306628168}
+  - {x: 8.01169586, y: 2.37176824, z: -.306627691}
+  - {x: 7.59733772, y: 4.03139782, z: .338292122}
+  - {x: 5.21186733, y: 4.06824493, z: .338292122}
+  - {x: 2.82639694, y: 4.10509205, z: .338292122}
   - {x: 1.36464536, y: 2.68048358, z: .0703392029}
   - {x: 1.4248544, y: -.0342464447, z: .0703392029}
   modes: 02000000020000000200000002000000
@@ -651,7 +653,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441632, guid: e6140fa5f5fe3e74694557edb17c7e45, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.08000004
+      value: 1.27999997
       objectReference: {fileID: 0}
     - target: {fileID: 441632, guid: e6140fa5f5fe3e74694557edb17c7e45, type: 2}
       propertyPath: m_LocalPosition.z
@@ -675,7 +677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441632, guid: e6140fa5f5fe3e74694557edb17c7e45, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6140fa5f5fe3e74694557edb17c7e45, type: 2}
