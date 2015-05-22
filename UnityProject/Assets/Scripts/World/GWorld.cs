@@ -142,6 +142,11 @@ public class GWorld : MonoBehaviour
 
 	void Update () 
 	{
+
+		if (myPlayer != null)
+			Debug.Log (myPlayer.transform.position);
+
+
 		currentTime += Time.deltaTime;
 
 		if ( currentTime >= SECONDS_PER_MIN ) 
@@ -232,7 +237,6 @@ public class GWorld : MonoBehaviour
 				Debug.Log ("GWorld Failed to Load Player - " + path);
 			}
 		}
-
 
 		myPlayer.transform.position = location.position;
 
