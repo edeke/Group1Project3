@@ -60,14 +60,17 @@ public class GWorld : MonoBehaviour
 	static public ZoneBase currentZone;
 	static public bool isInvEnabled = false;
 
+	static bool sceneAlreadyLoaded = false;
+
 
 	void Start()
 	{
-		BuildSceneLoadTable ();
+
 	}
 
 	void Awake()
 	{
+		BuildSceneLoadTable ();
 
 		if (!currentWorld) 
 		{
@@ -220,21 +223,20 @@ public class GWorld : MonoBehaviour
 	{
 		//Debug.Log ("Spawning Player");
 
-		if (!myPlayer) 
-		{
+		if (!myPlayer) {
 			string path = "Prefabs/Player/MainPlayer";
-			myPlayer = (GameObject)Instantiate (Resources.Load (path));
+			myPlayer = (GameObject)Instantiate (Resources.Load (path), location.position, location.rotation);
 			DontDestroyOnLoad (myPlayer);
 
 			//check it exist after creating
-			if(!myPlayer)
-			{
+			if (!myPlayer) {
 				Debug.Log ("GWorld Failed to Load Player - " + path);
 			}
+		} 
+		else 
+		{
+			myPlayer.transform.position = location.position;
 		}
-
-
-		myPlayer.transform.position = location.position;
 
 	}
 
@@ -334,6 +336,12 @@ public class GWorld : MonoBehaviour
 
 	static void BuildSceneLoadTable()
 	{
+		if (sceneAlreadyLoaded)
+		{
+			return;
+		}
+
+
 		ZoneBase scene = ZoneBase.Testscene1;
 		string[] sceneArray = {
 			"TestSceneNight",	//Dawn
@@ -350,8 +358,18 @@ public class GWorld : MonoBehaviour
 			"TestScene2Day",	//Dusk
 			"TestScene2Night"	//Night
 		};
-
 		sceneLoadTable.Add (scene2, sceneArray2);
+
+		ZoneBase scene3 = ZoneBase.Beach;
+		string[] sceneArray3 = {
+			"BeachSceneNight",	//Dawn
+			"BeachSceneDay",	//Day
+			"BeachSceneDay",	//Dusk
+			"BeachSceneNight"	//Night
+		};
+		sceneLoadTable.Add (scene3, sceneArray3);
+
+		sceneAlreadyLoaded = true;
 	
 	}
 
