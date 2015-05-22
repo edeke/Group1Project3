@@ -60,14 +60,17 @@ public class GWorld : MonoBehaviour
 	static public ZoneBase currentZone;
 	static public bool isInvEnabled = false;
 
+	static bool sceneAlreadyLoaded = false;
+
 
 	void Start()
 	{
-		BuildSceneLoadTable ();
+
 	}
 
 	void Awake()
 	{
+		BuildSceneLoadTable ();
 
 		if (!currentWorld) 
 		{
@@ -142,11 +145,6 @@ public class GWorld : MonoBehaviour
 
 	void Update () 
 	{
-
-		if (myPlayer != null)
-			Debug.Log (myPlayer.transform.position);
-
-
 		currentTime += Time.deltaTime;
 
 		if ( currentTime >= SECONDS_PER_MIN ) 
@@ -338,6 +336,12 @@ public class GWorld : MonoBehaviour
 
 	static void BuildSceneLoadTable()
 	{
+		if (sceneAlreadyLoaded)
+		{
+			return;
+		}
+
+
 		ZoneBase scene = ZoneBase.Testscene1;
 		string[] sceneArray = {
 			"TestSceneNight",	//Dawn
@@ -354,8 +358,18 @@ public class GWorld : MonoBehaviour
 			"TestScene2Day",	//Dusk
 			"TestScene2Night"	//Night
 		};
-
 		sceneLoadTable.Add (scene2, sceneArray2);
+
+		ZoneBase scene3 = ZoneBase.Beach;
+		string[] sceneArray3 = {
+			"BeachSceneNight",	//Dawn
+			"BeachSceneDay",	//Day
+			"BeachSceneDay",	//Dusk
+			"BeachSceneNight"	//Night
+		};
+		sceneLoadTable.Add (scene3, sceneArray3);
+
+		sceneAlreadyLoaded = true;
 	
 	}
 
