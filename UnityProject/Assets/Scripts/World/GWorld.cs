@@ -12,6 +12,7 @@ public enum TimeOfDay
 public enum ZoneBase
 {
 	None,
+	Beach,
 	Testscene1,
 	Testscene2,
 	Testscene3
