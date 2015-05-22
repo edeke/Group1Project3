@@ -44,20 +44,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: e24afafdd9d1cae4d87bccd5e35e872a, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 96ee3859926572244a57bcbe0fff0545, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
@@ -91,6 +77,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d10a4988acb26e4e816d4a5e1b00b92, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 96ee3859926572244a57bcbe0fff0545, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -99,7 +99,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .129999995
+        second: .178000003
       data:
         first:
           name: _SrcBlend
@@ -110,16 +110,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Outline
-        second: 0
-      data:
-        first:
           name: _Parallax
         second: .0199999996
-      data:
-        first:
-          name: _Metallic
-        second: 0
       data:
         first:
           name: _ZWrite
@@ -154,6 +146,10 @@ Material:
         second: 0
       data:
         first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
           name: _Reach
         second: .5
       data:
@@ -164,6 +160,10 @@ Material:
         first:
           name: _MaxLight
         second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
       data:
         first:
           name: _Autotiletoscale
@@ -183,9 +183,9 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
