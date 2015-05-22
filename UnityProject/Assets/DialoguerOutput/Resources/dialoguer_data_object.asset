@@ -89,7 +89,7 @@ MonoBehaviour:
         type: 1
         theme: 
         position: {x: 183, y: 10}
-        outs: 0300000004000000050000000600000007000000
+        outs: 0300000004000000070000000600000005000000
         advanced: 0
         metadata: 
         text: Ahoy there! What can I get ya?
@@ -107,9 +107,9 @@ MonoBehaviour:
         choices:
         - Have you seen my big brother?
         - "I don\u2019t drink. I\u2019m only 10 years old."
-        - "I\u2019ll have a bottle of rum!"
-        - What was all commotion outside about?
         - Gotta go. See ya!
+        - What was all commotion outside about?
+        - "I\u2019ll have a bottle of rum!"
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 16
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: -5773.93213, y: -623.700073}
       phases:
       - id: 0
         type: 6
@@ -769,12 +769,10 @@ MonoBehaviour:
         type: 0
         theme: 
         position: {x: 2777, y: 346}
-        outs: 0a000000
+        outs: 17000000
         advanced: 0
         metadata: 
-        text: "Sure thing. Here ya go me friend. MOHAHAHAhahahaha! I don\u2019t think
-          so pal. There are no free lunches in this world. If you wanna pass, it\u2019ll
-          cost ya. "
+        text: "Sure thing. Here ya go me friend. MOHAHAHA! I don\u2019t think so pal. "
         name: Pirate
         portrait: 
         audio: 
@@ -832,7 +830,7 @@ MonoBehaviour:
       - id: 10
         type: 0
         theme: 
-        position: {x: 3099, y: 344}
+        position: {x: 3393, y: 349}
         outs: 0b000000
         advanced: 0
         metadata: 
@@ -863,13 +861,12 @@ MonoBehaviour:
       - id: 11
         type: 0
         theme: 
-        position: {x: 3416, y: 344}
-        outs: 0f000000
+        position: {x: 3700, y: 350}
+        outs: 18000000
         advanced: 0
         metadata: 
         text: "I have a slight problem you see. I have lost me wedding ring and I
-          need it back before the old daggle-tail notices that it\u2019s gone. Bring
-          it to me and I\u2019ll let ya through."
+          need it back before the old wench notices that it\u2019s gone. "
         name: Pirate
         portrait: 
         audio: 
@@ -989,7 +986,7 @@ MonoBehaviour:
       - id: 15
         type: 3
         theme: 
-        position: {x: 3759, y: 344}
+        position: {x: 4334, y: 346}
         outs: 13000000
         advanced: 0
         metadata: 
@@ -1113,7 +1110,7 @@ MonoBehaviour:
       - id: 19
         type: 6
         theme: 
-        position: {x: 4126.66846, y: 483}
+        position: {x: 4675.66846, y: 535}
         outs: 
         advanced: 0
         metadata: 
@@ -1233,6 +1230,69 @@ MonoBehaviour:
         variableSetValue: true
         variableGetEquation: 0
         variableGetValue: true
+        messageName: 
+      - id: 23
+        type: 0
+        theme: 
+        position: {x: 3085.89941, y: 348.299988}
+        outs: 0a000000
+        advanced: 0
+        metadata: 
+        text: "There are no free lunches in this world. If you wanna pass, it\u2019ll
+          cost ya."
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 24
+        type: 0
+        theme: 
+        position: {x: 4011.46826, y: 351.400024}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: "Bring it to me and I\u2019ll let ya through."
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
         messageName: 
       floats:
         variables: []
