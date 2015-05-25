@@ -9,6 +9,8 @@ public class SplineDecorator : MonoBehaviour {
 
 	public bool lookForward;
 
+
+
 	public Transform[] items;
 
 	private void Awake()
