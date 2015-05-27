@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_box_01
-  m_Shader: {fileID: 4800000, guid: 29c01339fb27403479d7b19602bfac66, type: 3}
+  m_Name: mat_box_02
+  m_Shader: {fileID: 4800000, guid: 281f5e3a54980bd4f97a261aa2dd59e6, type: 3}
   m_ShaderKeywords: _AUTOTILETOSCALE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -96,6 +96,20 @@ Material:
           name: _NormalTexture
         second:
           m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PaintMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 5951c0cc7f0e59149847c33fbfcbc6c0, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WearMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 1807567cbf002c1449d55994cb039671, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -219,6 +233,10 @@ Material:
         second: 1
       data:
         first:
+          name: _PaintWearFactor
+        second: .623931587
+      data:
+        first:
           name: _Autotiletoscale
         second: 1
     m_Colors:
@@ -238,3 +256,7 @@ Material:
         first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _WallColor
+        second: {r: .875, g: .630514681, b: .66592288, a: 1}
