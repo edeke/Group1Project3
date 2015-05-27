@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_bush_leave
-  m_Shader: {fileID: 10606, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON
+  m_Shader: {fileID: 10601, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 6
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2450
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -93,6 +93,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _TranslucencyMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ToonShade
         second:
           m_Texture: {fileID: 0}
@@ -156,13 +163,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _TranslucencyMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ShadowOffset
         second:
           m_Texture: {fileID: 0}
@@ -195,11 +195,15 @@ Material:
       data:
         first:
           name: _SrcBlend
-        second: 5
+        second: 1
       data:
         first:
           name: _DstBlend
-        second: 10
+        second: 0
+      data:
+        first:
+          name: _Occlusion
+        second: 0
       data:
         first:
           name: _Parallax
@@ -207,7 +211,7 @@ Material:
       data:
         first:
           name: _ZWrite
-        second: 0
+        second: 1
       data:
         first:
           name: _Glossiness
@@ -235,10 +239,14 @@ Material:
       data:
         first:
           name: _Mode
-        second: 2
+        second: 1
       data:
         first:
           name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Outline
         second: 0
       data:
         first:
@@ -254,28 +262,12 @@ Material:
         second: 1
       data:
         first:
-          name: _Outline
-        second: 0
-      data:
-        first:
           name: _Autotiletoscale
         second: 0
       data:
         first:
           name: _BaseScale
         second: 1
-      data:
-        first:
-          name: _Occlusion
-        second: 0
-      data:
-        first:
-          name: _AO
-        second: 0
-      data:
-        first:
-          name: _Rotation
-        second: 0
       data:
         first:
           name: _SquashAmount
@@ -288,6 +280,14 @@ Material:
         first:
           name: _ShadowStrength
         second: 1
+      data:
+        first:
+          name: _AO
+        second: 0
+      data:
+        first:
+          name: _Rotation
+        second: 0
       data:
         first:
           name: _BaseLight
@@ -315,10 +315,6 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _Tint
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
           name: _TreeInstanceColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
@@ -329,3 +325,7 @@ Material:
         first:
           name: _TranslucencyColor
         second: {r: .730000019, g: .850000024, b: .409999996, a: 1}
+      data:
+        first:
+          name: _Tint
+        second: {r: .5, g: .5, b: .5, a: .5}
