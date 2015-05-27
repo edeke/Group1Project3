@@ -44,7 +44,7 @@ public class GWorld : MonoBehaviour
 	public static TimeOfDay timeOfTheDay = 0;
 
 	static public bool dialogOpen = false;
-	
+
 	//private const float DEGREES_PER_SECOND = 360 / DAY;
 
 	static GWorld currentWorld;
@@ -52,7 +52,7 @@ public class GWorld : MonoBehaviour
 	static GameObject myInv;
 	public static GameObject mainDialog;
 	public static GameObject mainUI;
-	static GameObject myPlayer;
+	public static GameObject myPlayer;
 
 	static Hashtable eventTable = new Hashtable();
 	static Hashtable sceneLoadTable = new Hashtable();

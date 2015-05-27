@@ -49,7 +49,19 @@ public class CPEPlayerPathFollow : MonoBehaviour
     //Set the initial position of the cam so we don't jump at the start of the demo
     void Start()
     {
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		if (GWorld.myPlayer != null)
+		{
+			Transform[] tempTransformArray = GWorld.myPlayer.GetComponentsInChildren<Transform>();
+			
+			foreach(Transform comp in tempTransformArray)
+			{
+				if( comp.CompareTag("CameraTarget"))
+				{
+					player = comp;
+				}
+			}
+			
+		}
 
         float nearestPercent = path.GetNearestPoint(player.position, ignoreNormalise, 5);
         lastPercent = nearestPercent;
