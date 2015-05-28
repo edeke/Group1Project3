@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497968}
   - 136: {fileID: 13649016}
+  - 208: {fileID: 20866328}
   m_Layer: 0
   m_Name: PalmtreeStraight
   m_TagString: Untagged
@@ -80,8 +81,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155254}
-  m_LocalRotation: {x: 0, y: -.514295161, z: 0, w: .857613266}
-  m_LocalPosition: {x: -82, y: -25.7000008, z: -80.9000015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -49.9251862, y: 41.8298607, z: -148.158539}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 465832}
@@ -163,6 +164,21 @@ CapsuleCollider:
   m_Height: 6.88999987
   m_Direction: 1
   m_Center: {x: 0, y: 1.29999995, z: 0}
+--- !u!208 &20866328
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155254}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: .5, y: 1, z: .5}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: .639999986, z: 0}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
