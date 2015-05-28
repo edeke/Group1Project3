@@ -7,7 +7,7 @@ public class PlayerAnimation : MonoBehaviour {
 	//Rigidbody body;
 
 	Vector3 posPrev;
-	float maxSpeed = 4;
+	float maxSpeed = 6;
 
 	//play idle
 	float playIdleAfterTime = 1.0f;
