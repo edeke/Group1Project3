@@ -56,6 +56,8 @@ public class PauseMenu : MonoBehaviour {
 
 		isPaused = false;
 		Time.timeScale = 1.0f;
+
+		Debug.Log ("Pressed resume");
 				
 		UI.SetActive(true);
 
@@ -66,6 +68,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void MainMenu(){
+
 		Application.LoadLevel ("MainMenu");
 
 		Dialoguer.EndDialogue ();

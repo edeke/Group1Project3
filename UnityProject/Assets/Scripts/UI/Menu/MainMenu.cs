@@ -136,7 +136,7 @@ public class MainMenu : MonoBehaviour {
 
 		chosenName = playerName.text;
 		PlayerPrefs.SetString ("Player Name", chosenName);
-		Application.LoadLevel("MechanicsAndCamera");
+		Application.LoadLevel("WaterfallAreaDay");
 
 	}
 
