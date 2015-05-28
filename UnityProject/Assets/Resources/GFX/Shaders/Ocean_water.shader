@@ -81,10 +81,10 @@ Shader "Shader Forge/Ocean_water" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_9567 = _Time + _TimeEditor;
-                float2 node_5692 = (o.uv0+node_9567.g*float2(0.02,0.03));
+                float4 node_6109 = _Time + _TimeEditor;
+                float2 node_5692 = (o.uv0+node_6109.g*float2(0.02,0.03));
                 float4 _height_var = tex2Dlod(_height,float4(TRANSFORM_TEX(node_5692, _height),0.0,0));
-                float2 node_1560 = ((o.uv0*1.3)+node_9567.g*float2(0.03,0.04));
+                float2 node_1560 = ((o.uv0*1.3)+node_6109.g*float2(0.03,0.04));
                 float4 _height_copy_var = tex2Dlod(_height_copy,float4(TRANSFORM_TEX(node_1560, _height_copy),0.0,0));
                 v.vertex.xyz += ((float3(0,1,0)*(_height_var.r*_height_copy_var.r))*(_VertexOffset/100.0));
                 o.posWorld = mul(_Object2World, v.vertex);
@@ -102,11 +102,11 @@ Shader "Shader Forge/Ocean_water" {
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
 /////// Vectors:
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float4 node_9567 = _Time + _TimeEditor;
+                float4 node_6109 = _Time + _TimeEditor;
                 float2 node_5627 = (i.uv0*_Tiling2);
-                float2 node_3317 = (node_5627+node_9567.g*float2(0.02,0.03));
+                float2 node_3317 = (node_5627+node_6109.g*float2(0.02,0.03));
                 float3 _NormalMap_copy_var = UnpackNormal(tex2D(_NormalMap_copy,TRANSFORM_TEX(node_3317, _NormalMap_copy)));
-                float2 node_4995 = ((node_5627*_Tiling3)+node_9567.g*float2(0.002,0.012));
+                float2 node_4995 = ((node_5627*_Tiling3)+node_6109.g*float2(0.002,0.012));
                 float3 _NormalMap_var = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(node_4995, _NormalMap)));
                 float3 normalLocal = (_NormalMap_copy_var.rgb+_NormalMap_var.rgb);
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
@@ -121,7 +121,7 @@ Shader "Shader Forge/Ocean_water" {
                 float3 indirectDiffuse = float3(0,0,0);
                 indirectDiffuse += UNITY_LIGHTMODEL_AMBIENT.rgb; // Ambient Light
                 float4 _BeachTexture_var = tex2D(_BeachTexture,TRANSFORM_TEX(node_4995, _BeachTexture));
-                float2 node_8160 = (node_5627+node_9567.g*float2(0.005,0.002));
+                float2 node_8160 = (node_5627+node_6109.g*float2(0.005,0.002));
                 float4 _OceanTexture_copy_var = tex2D(_OceanTexture_copy,TRANSFORM_TEX(node_8160, _OceanTexture_copy));
                 float4 _OceanTexture_var = tex2D(_OceanTexture,TRANSFORM_TEX(node_4995, _OceanTexture));
                 float3 node_4826 = saturate(max(_OceanTexture_copy_var.rgb,_OceanTexture_var.rgb));
@@ -192,10 +192,10 @@ Shader "Shader Forge/Ocean_water" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_9429 = _Time + _TimeEditor;
-                float2 node_5692 = (o.uv0+node_9429.g*float2(0.02,0.03));
+                float4 node_2173 = _Time + _TimeEditor;
+                float2 node_5692 = (o.uv0+node_2173.g*float2(0.02,0.03));
                 float4 _height_var = tex2Dlod(_height,float4(TRANSFORM_TEX(node_5692, _height),0.0,0));
-                float2 node_1560 = ((o.uv0*1.3)+node_9429.g*float2(0.03,0.04));
+                float2 node_1560 = ((o.uv0*1.3)+node_2173.g*float2(0.03,0.04));
                 float4 _height_copy_var = tex2Dlod(_height_copy,float4(TRANSFORM_TEX(node_1560, _height_copy),0.0,0));
                 v.vertex.xyz += ((float3(0,1,0)*(_height_var.r*_height_copy_var.r))*(_VertexOffset/100.0));
                 o.posWorld = mul(_Object2World, v.vertex);
@@ -213,11 +213,11 @@ Shader "Shader Forge/Ocean_water" {
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
 /////// Vectors:
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float4 node_9429 = _Time + _TimeEditor;
+                float4 node_2173 = _Time + _TimeEditor;
                 float2 node_5627 = (i.uv0*_Tiling2);
-                float2 node_3317 = (node_5627+node_9429.g*float2(0.02,0.03));
+                float2 node_3317 = (node_5627+node_2173.g*float2(0.02,0.03));
                 float3 _NormalMap_copy_var = UnpackNormal(tex2D(_NormalMap_copy,TRANSFORM_TEX(node_3317, _NormalMap_copy)));
-                float2 node_4995 = ((node_5627*_Tiling3)+node_9429.g*float2(0.002,0.012));
+                float2 node_4995 = ((node_5627*_Tiling3)+node_2173.g*float2(0.002,0.012));
                 float3 _NormalMap_var = UnpackNormal(tex2D(_NormalMap,TRANSFORM_TEX(node_4995, _NormalMap)));
                 float3 normalLocal = (_NormalMap_copy_var.rgb+_NormalMap_var.rgb);
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
@@ -230,7 +230,7 @@ Shader "Shader Forge/Ocean_water" {
                 float NdotL = max(0.0,dot( normalDirection, lightDirection ));
                 float3 directDiffuse = max( 0.0, NdotL) * attenColor;
                 float4 _BeachTexture_var = tex2D(_BeachTexture,TRANSFORM_TEX(node_4995, _BeachTexture));
-                float2 node_8160 = (node_5627+node_9429.g*float2(0.005,0.002));
+                float2 node_8160 = (node_5627+node_2173.g*float2(0.005,0.002));
                 float4 _OceanTexture_copy_var = tex2D(_OceanTexture_copy,TRANSFORM_TEX(node_8160, _OceanTexture_copy));
                 float4 _OceanTexture_var = tex2D(_OceanTexture,TRANSFORM_TEX(node_4995, _OceanTexture));
                 float3 node_4826 = saturate(max(_OceanTexture_copy_var.rgb,_OceanTexture_var.rgb));
@@ -277,10 +277,10 @@ Shader "Shader Forge/Ocean_water" {
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
-                float4 node_5465 = _Time + _TimeEditor;
-                float2 node_5692 = (o.uv0+node_5465.g*float2(0.02,0.03));
+                float4 node_7894 = _Time + _TimeEditor;
+                float2 node_5692 = (o.uv0+node_7894.g*float2(0.02,0.03));
                 float4 _height_var = tex2Dlod(_height,float4(TRANSFORM_TEX(node_5692, _height),0.0,0));
-                float2 node_1560 = ((o.uv0*1.3)+node_5465.g*float2(0.03,0.04));
+                float2 node_1560 = ((o.uv0*1.3)+node_7894.g*float2(0.03,0.04));
                 float4 _height_copy_var = tex2Dlod(_height_copy,float4(TRANSFORM_TEX(node_1560, _height_copy),0.0,0));
                 v.vertex.xyz += ((float3(0,1,0)*(_height_var.r*_height_copy_var.r))*(_VertexOffset/100.0));
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
