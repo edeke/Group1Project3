@@ -37,6 +37,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -100,34 +114,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _PaintMask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5951c0cc7f0e59149847c33fbfcbc6c0, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WearMask
-        second:
-          m_Texture: {fileID: 2800000, guid: 1807567cbf002c1449d55994cb039671, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Diffuse_copy
         second:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
@@ -154,6 +140,20 @@ Material:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PaintMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 5951c0cc7f0e59149847c33fbfcbc6c0, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WearMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 1807567cbf002c1449d55994cb039671, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -171,6 +171,26 @@ Material:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Reach
+        second: .5
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
       data:
         first:
           name: _Parallax
@@ -213,32 +233,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Reach
-        second: .5
-      data:
-        first:
-          name: _MinLight
-        second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
-        second: 0
-      data:
-        first:
-          name: _BaseScale
+          name: _Autotiletoscale
         second: 1
       data:
         first:
           name: _PaintWearFactor
-        second: .623931587
+        second: .481999993
       data:
         first:
-          name: _Autotiletoscale
-        second: 1
+          name: _ColorBlendshift
+        second: .400000006
     m_Colors:
       data:
         first:
@@ -250,12 +254,12 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _WallColor

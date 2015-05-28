@@ -37,13 +37,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Diffuse
         second:
           m_Texture: {fileID: 2800000, guid: a9b3ef6c3963d8d4dbe0f0971ec1f453, type: 3}
@@ -52,6 +45,13 @@ Material:
       data:
         first:
           name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: a1f7218e6e35b2a45af19cb56b244eba, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -99,7 +99,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .0250000004
+        second: .231999993
       data:
         first:
           name: _SrcBlend
@@ -110,16 +110,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Outline
-        second: 0
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
-      data:
-        first:
           name: _Reach
-        second: .5
+        second: .39199999
       data:
         first:
           name: _MinLight
@@ -130,12 +122,16 @@ Material:
         second: 1
       data:
         first:
-          name: _Autotiletoscale
+          name: _Outline
         second: 0
       data:
         first:
           name: _BaseScale
         second: 1
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
       data:
         first:
           name: _ZWrite
@@ -171,6 +167,10 @@ Material:
       data:
         first:
           name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
         second: 0
     m_Colors:
       data:
