@@ -13,6 +13,7 @@ public enum ZoneBase
 {
 	None,
 	Beach,
+	WaterFall,
 	Testscene1,
 	Testscene2,
 	Testscene3
@@ -368,6 +369,15 @@ public class GWorld : MonoBehaviour
 			"BeachSceneNight"	//Night
 		};
 		sceneLoadTable.Add (scene3, sceneArray3);
+
+		ZoneBase scene4 = ZoneBase.WaterFall;
+		string[] sceneArray4 = {
+			"WaterfallAreaNight",	//Dawn
+			"WaterfallAreaDay",	//Day
+			"WaterfallAreaDay",	//Dusk
+			"WaterfallAreaNight"	//Night
+		};
+		sceneLoadTable.Add (scene4, sceneArray4);
 
 		sceneAlreadyLoaded = true;
 	
