@@ -43,6 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 490544}
   - 136: {fileID: 13670150}
+  - 208: {fileID: 20819026}
   m_Layer: 0
   m_Name: PalmtreeBend
   m_TagString: Untagged
@@ -80,8 +81,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193354}
-  m_LocalRotation: {x: 0, y: -.545338988, z: 0, w: -.838215649}
-  m_LocalPosition: {x: -83.9000015, y: -24.7999992, z: -83.3000031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.7651863, y: 41.8898621, z: -143.578537}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 482356}
@@ -163,6 +164,21 @@ CapsuleCollider:
   m_Height: 4.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.42999995, z: 0}
+--- !u!208 &20819026
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193354}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: .5, y: 1, z: .5}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: .579999983, z: 0}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
