@@ -43,14 +43,20 @@ public class PlayerInput : MonoBehaviour
 			{
 				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					TryUseActionOnObject( hitInfo.collider.gameObject );
+					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					{
+						TryUseActionOnObject( hitInfo.collider.gameObject );
+					}
 				}
 			}
 			else
 			{	
 				if( traceHit && dragging == false )
 				{
-					TryUseActionOnObject( hitInfo.collider.gameObject );
+					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					{
+						TryUseActionOnObject( hitInfo.collider.gameObject );
+					}
 				}
 			}
 
@@ -224,7 +230,26 @@ public class PlayerInput : MonoBehaviour
 		}
 	}
 
-	bool TryDragOnObject(GameObject inspectObject)
+	bool TryTalkToObject(GameObject actionObject)
+	{
+		//store object for later
+		selectedObject = actionObject;
+		
+		ITalkTo onTalkTo = actionObject.GetComponent<ITalkTo> ();
+		
+		if(onTalkTo != null)
+		{
+			movementScript.TrySetTalking(actionObject);
+			return true;
+		}
+		else
+		{
+			//movementScript.TrySetMoveToLocationState(hitInfo.point);
+			return false;
+		}
+	}
+
+	/*bool TryDragOnObject(GameObject inspectObject)
 	{
 		//store object for later
 		selectedObject = inspectObject;
@@ -244,7 +269,7 @@ public class PlayerInput : MonoBehaviour
 			return false;
 		}
 
-	}
+	}*/
 
 	bool TryInspectOnObject(GameObject inspectObject)
 	{
