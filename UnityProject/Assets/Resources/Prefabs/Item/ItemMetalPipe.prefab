@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2382492}
   - 114: {fileID: 11478572}
   - 65: {fileID: 6518848}
+  - 208: {fileID: 20868580}
   m_Layer: 0
   m_Name: ItemMetalPipe
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14999998, y: 1.08000004, z: 2.17000008}
-  m_LocalScale: {x: .300000012, y: 1, z: .300000012}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .00625065388, y: .00625065388, z: .00625065388}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,14 +42,14 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07a9380188eaea7438ba7a5d2951dc54, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -61,7 +62,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155202}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: a32b2aea35643be4fbe065236c8fcddc, type: 3}
 --- !u!65 &6518848
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -72,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 3}
-  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
+  m_Size: {x: 902.629272, y: 67.673317, z: 203.464676}
+  m_Center: {x: .000977481832, y: 41.1294632, z: -.000484603981}
 --- !u!114 &11478572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,6 +94,21 @@ MonoBehaviour:
   onUseParticle: {fileID: 0}
   onPickupParticle: {fileID: 0}
   numberOfItemsInStack: 1
+--- !u!208 &20868580
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155202}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 451.315033, y: 33.8370018, z: 101.732002}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: .00100000005, y: 41.1290016, z: 0}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
