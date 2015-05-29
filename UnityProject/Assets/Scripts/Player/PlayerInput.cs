@@ -69,8 +69,41 @@ public class PlayerInput : MonoBehaviour
 		//for dragging
 		else if (Input.GetMouseButton (0) && mouseClicked) 
 		{
-
 			RaycastHit hitInfo = new RaycastHit ();
+			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+			
+			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
+
+			if(GWorld.isInvEnabled == true)
+			{
+				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit)
+				{
+					//if no interface on object and pointer is not over a UI element
+					if( EventSystem.current.IsPointerOverGameObject() == false )
+					{
+						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						{
+							movementScript.TrySetMoveToLocationState(hitInfo.point);
+						}	
+					}
+				}
+			}
+			else
+			{
+				if ( traceHit )
+				{
+					//if no interface on object and pointer is not over a UI element
+					if( EventSystem.current.IsPointerOverGameObject() == false )
+					{
+						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						{
+							movementScript.TrySetMoveToLocationState(hitInfo.point);
+						}	
+					}
+				}
+			}
+
+			/*RaycastHit hitInfo = new RaycastHit ();
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 
 			//check if we are dragging mouse by comparing to start location of mouse
@@ -98,6 +131,8 @@ public class PlayerInput : MonoBehaviour
 			
 			mouseClicked = true;
 			mouseLocationPrevFrame = Input.mousePosition;
+
+			*/
 
 		}
 
