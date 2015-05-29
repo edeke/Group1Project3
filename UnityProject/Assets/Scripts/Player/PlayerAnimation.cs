@@ -10,7 +10,7 @@ public class PlayerAnimation : MonoBehaviour {
 	PlayerMovement movement;
 
 	//play idle
-	float playIdleAfterTime = 1.0f;
+	float playIdleAfterTime = 5.0f;
 	float currentIdleTime = 0.0f;
 
 	// Use this for initialization

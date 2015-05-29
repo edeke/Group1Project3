@@ -135,15 +135,14 @@ public class PlayerMovement : MonoBehaviour {
 	void OnPickUpLogic()
 	{
 
+		RotateTowards (objectToUseItemOn.transform.position);
 		pickupTimeCurrent -= Time.deltaTime;
 		
-		if(pickupTimeCurrent <= 0.0f)
-		{
-			IAction useAction = objectToUseItemOn.GetComponent<IAction>();
+		if (pickupTimeCurrent <= 0.0f) {
+			IAction useAction = objectToUseItemOn.GetComponent<IAction> ();
 			
-			if (useAction != null)
-			{
-				useAction.OnAction();
+			if (useAction != null) {
+				useAction.OnAction ();
 				pickupTimeCurrent = pickupTimeStart;
 			}
 			
@@ -151,9 +150,10 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 	}
-
+	
 	void OnUseItemLogic()
 	{
+		RotateTowards (objectToUseItemOn.transform.position);
 		pickupTimeCurrent -= Time.deltaTime;
 		
 		if(pickupTimeCurrent <= 0.0f)
@@ -162,6 +162,15 @@ public class PlayerMovement : MonoBehaviour {
 			currentPlayerState = EPlayerState.Idle;
 			pickupTimeCurrent = pickupTimeStart;
 		}
+	}
+
+	void RotateTowards(Vector3 target)
+	{
+		Vector3 targetDir = target - transform.position;
+		float step = 10.0f * Time.deltaTime;
+		Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0f);
+		newDir.y = 0.0f;
+		transform.rotation = Quaternion.LookRotation (newDir);
 	}
 
 	int DetermineItemPosition()
