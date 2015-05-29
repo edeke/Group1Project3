@@ -4,10 +4,11 @@ using System.Collections;
 public enum EPlayerState {
 	WalkToLocation,
 	UseItemOnObject,
-	UsingItem,
+	UsingItemLow,
+	UsingItemNormal,
 	ActionOnObject,
 	PickupObjectLow,
-	//PickupObjectMedium,
+	PickupObjectNormal,
 	Idle
 };
 
@@ -26,6 +27,8 @@ public class PlayerMovement : MonoBehaviour {
 	int indexOfItem;
 	float distanceItemCanBeUsed = 3.0f;
 	GameObject objectToUseItemOn;
+
+	const float distToDetermineItemAsLow = 0.3f;
 
 	//talk to object
 	GameObject objectToTalkTo;
@@ -78,7 +81,15 @@ public class PlayerMovement : MonoBehaviour {
 
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
-					currentPlayerState = EPlayerState.UsingItem;
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.UsingItemLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.UsingItemNormal;
+					}
 					agent.ResetPath();
 					
 				}
@@ -91,41 +102,29 @@ public class PlayerMovement : MonoBehaviour {
 				
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.PickupObjectLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.PickupObjectNormal;
+					}
 
-					currentPlayerState = EPlayerState.PickupObjectLow;
 					agent.ResetPath();
-					
 				}
 				break;
 
 			case EPlayerState.PickupObjectLow :
-				pickupTimeCurrent -= Time.deltaTime;
-
-				if(pickupTimeCurrent <= 0.0f)
-				{
-					IAction useAction = objectToUseItemOn.GetComponent<IAction>();
-					
-					if (useAction != null)
-					{
-						Debug.Log ("Using Action");
-						useAction.OnAction();
-						pickupTimeCurrent = pickupTimeStart;
-					}
-
-					currentPlayerState = EPlayerState.Idle;
-				}
+			case EPlayerState.PickupObjectNormal :
+				OnPickUpLogic();
 				break;
 
-		case EPlayerState.UsingItem :
-			pickupTimeCurrent -= Time.deltaTime;
-			
-			if(pickupTimeCurrent <= 0.0f)
-			{
-				Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
-				currentPlayerState = EPlayerState.Idle;
-				pickupTimeCurrent = pickupTimeStart;
-			}
-			break;
+			case EPlayerState.UsingItemLow :
+			case EPlayerState.UsingItemNormal :
+				OnUseItemLogic();
+				break;
 
 			default :
 			break;
@@ -133,7 +132,64 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
+	void OnPickUpLogic()
+	{
 
+		RotateTowards (objectToUseItemOn.transform.position);
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if (pickupTimeCurrent <= 0.0f) {
+			IAction useAction = objectToUseItemOn.GetComponent<IAction> ();
+			
+			if (useAction != null) {
+				useAction.OnAction ();
+				pickupTimeCurrent = pickupTimeStart;
+			}
+			
+			currentPlayerState = EPlayerState.Idle;
+		}
+
+	}
+	
+	void OnUseItemLogic()
+	{
+		RotateTowards (objectToUseItemOn.transform.position);
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if(pickupTimeCurrent <= 0.0f)
+		{
+			Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
+			currentPlayerState = EPlayerState.Idle;
+			pickupTimeCurrent = pickupTimeStart;
+		}
+	}
+
+	void RotateTowards(Vector3 target)
+	{
+		Vector3 targetDir = target - transform.position;
+		float step = 10.0f * Time.deltaTime;
+		Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0f);
+		newDir.y = 0.0f;
+		transform.rotation = Quaternion.LookRotation (newDir);
+	}
+
+	int DetermineItemPosition()
+	{
+		Vector3 distanceToItem = (objectToUseItemOn.transform.position - transform.position);
+
+		//Debug.Log (distanceToItem.y);
+
+		if (distanceToItem.y < distToDetermineItemAsLow) 
+		{
+			return 1;
+		} 
+		else 
+		{
+			return 2;
+		}
+
+	}
+	
 	public void TrySetMoveToLocationState( Vector3 location )
 	{
 		switch (currentPlayerState)

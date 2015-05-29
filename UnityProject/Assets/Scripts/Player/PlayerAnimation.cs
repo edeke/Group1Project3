@@ -10,7 +10,7 @@ public class PlayerAnimation : MonoBehaviour {
 	PlayerMovement movement;
 
 	//play idle
-	float playIdleAfterTime = 1.0f;
+	float playIdleAfterTime = 5.0f;
 	float currentIdleTime = 0.0f;
 
 	// Use this for initialization
@@ -50,18 +50,28 @@ public class PlayerAnimation : MonoBehaviour {
 			anim.SetInteger("playIdle", 0);
 		}
 
+		//Pickup Item
 		if (movement.GetPlayerState () == EPlayerState.PickupObjectLow) 
 		{
 			anim.SetInteger ("Pickup", 1);
+		} 
+		else if (movement.GetPlayerState () == EPlayerState.PickupObjectNormal) 
+		{
+			anim.SetInteger ("Pickup", 2);
 		} 
 		else 
 		{
 			anim.SetInteger ("Pickup", 0);
 		}
 
-		if (movement.GetPlayerState () == EPlayerState.UsingItem) 
+		//using Item
+		if (movement.GetPlayerState () == EPlayerState.UsingItemLow) 
 		{
 			anim.SetInteger ("useingItem", 1);
+		} 
+		else if (movement.GetPlayerState () == EPlayerState.UsingItemNormal) 
+		{
+			anim.SetInteger ("useingItem", 2);
 		} 
 		else 
 		{
