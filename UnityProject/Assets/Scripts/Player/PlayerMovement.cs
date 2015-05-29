@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	NavMeshAgent agent;
 
-	float pickupTimeStart = 1.0f;
+	float pickupTimeStart = 1.5f;
 	float pickupTimeCurrent;
 
 	EPlayerState currentPlayerState = EPlayerState.Idle;

@@ -6,7 +6,7 @@ public class PlayerAnimation : MonoBehaviour {
 	Animator anim;
 
 	Vector3 posPrev;
-	float maxSpeed = 6;
+	float maxSpeed = 8;
 	PlayerMovement movement;
 
 	//play idle
