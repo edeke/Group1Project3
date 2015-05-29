@@ -86,11 +86,14 @@ public class PlayerInput : MonoBehaviour
 				{
 					//if no interface on object and pointer is not over a UI element
 					if( EventSystem.current.IsPointerOverGameObject() == false )
-					{
-						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+					{	
+						if(! TryInspectOnObject( hitInfo.collider.gameObject ) )
 						{
-							movementScript.TrySetMoveToLocationState(hitInfo.point);
-						}	
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}	
+						}
 					}
 				}
 			}
@@ -101,10 +104,13 @@ public class PlayerInput : MonoBehaviour
 					//if no interface on object and pointer is not over a UI element
 					if( EventSystem.current.IsPointerOverGameObject() == false )
 					{
-						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						if(! TryInspectOnObject( hitInfo.collider.gameObject ) )
 						{
-							movementScript.TrySetMoveToLocationState(hitInfo.point);
-						}	
+							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							{
+								movementScript.TrySetMoveToLocationState(hitInfo.point);
+							}	
+						}
 					}
 				}
 			}
@@ -275,14 +281,14 @@ public class PlayerInput : MonoBehaviour
 	{
 		//store object for later
 		selectedObject = inspectObject;
-		IInspectInterface canClick = inspectObject.GetComponent<IInspectInterface> ();
+		IInspectInterface canInspect = inspectObject.GetComponent<IInspectInterface> ();
 		
-		if (canClick != null) 
+		if (canInspect != null) 
 		{
 			Vector3 mouseLocation = Input.mousePosition;
 			Vector3 deltaMouseLocation = mouseLocation - mouseLocationPrevFrame;
 			
-			canClick.OnInspect();
+			canInspect.OnInspect();
 			
 			return true;
 		}
