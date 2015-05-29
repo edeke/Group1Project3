@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientSkyColor: {r: .264651835, g: .317348182, b: .404411793, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -44,7 +44,7 @@ LevelGameManager:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -53,8 +53,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 3
     m_Resolution: 2
@@ -570,6 +570,10 @@ Prefab:
     - target: {fileID: 404208, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
@@ -8759,6 +8763,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch6
       objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
   m_IsPrefabParent: 0
@@ -10012,6 +10020,10 @@ Prefab:
     - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
       propertyPath: m_Name
       value: Torch7
+      objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
@@ -12020,6 +12032,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch3
       objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
   m_IsPrefabParent: 0
@@ -13611,6 +13627,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch5
       objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
   m_IsPrefabParent: 0
@@ -14175,6 +14195,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
   m_IsPrefabParent: 0
@@ -14318,7 +14342,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
-  m_Intensity: 1
+  m_Intensity: .800000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -15490,15 +15514,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 490544, guid: 56f8c0785c8576649a2c375d7b097261, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -48.7651863
+      value: -48.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 490544, guid: 56f8c0785c8576649a2c375d7b097261, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 41.8898621
+      value: 41.8899994
       objectReference: {fileID: 0}
     - target: {fileID: 490544, guid: 56f8c0785c8576649a2c375d7b097261, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -143.578537
+      value: -143.419998
       objectReference: {fileID: 0}
     - target: {fileID: 490544, guid: 56f8c0785c8576649a2c375d7b097261, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15581,6 +15605,14 @@ Prefab:
     - target: {fileID: 441434, guid: 0c7f919bf47d1e241bc2694518ad7e79, type: 2}
       propertyPath: m_LocalScale.z
       value: .0113453763
+      objectReference: {fileID: 0}
+    - target: {fileID: 153714, guid: 0c7f919bf47d1e241bc2694518ad7e79, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 158642, guid: 0c7f919bf47d1e241bc2694518ad7e79, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c7f919bf47d1e241bc2694518ad7e79, type: 2}
@@ -15766,6 +15798,10 @@ Prefab:
     - target: {fileID: 451626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 199626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
@@ -17012,6 +17048,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch4
       objectReference: {fileID: 0}
+    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
   m_IsPrefabParent: 0
@@ -17170,6 +17210,10 @@ Prefab:
     - target: {fileID: 199626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
       propertyPath: m_Name
       value: Torch 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 199626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
