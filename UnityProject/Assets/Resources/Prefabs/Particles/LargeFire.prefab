@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19896866}
   - 199: {fileID: 19999186}
   m_Layer: 0
-  m_Name: Fire
+  m_Name: LargeFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160624}
   m_LocalRotation: {x: 0, y: -.250819951, z: 0, w: .968033791}
-  m_LocalPosition: {x: -2.41000009, y: 1.91999996, z: 10.0699997}
+  m_LocalPosition: {x: .959999979, y: 3.18799996, z: 12.3030005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -206,7 +206,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .5
+      scalar: 1.20000005
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -271,9 +271,9 @@ ParticleSystem:
     radius: .25
     angle: 25
     length: 5
-    boxX: .100000001
+    boxX: .5
     boxY: .200000003
-    boxZ: .100000001
+    boxZ: .5
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -536,7 +536,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 3
     y:
-      scalar: .300000012
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -551,7 +551,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .666666627
+          value: .300000012
           inSlope: 0
           outSlope: 0
           tangentMode: 0
