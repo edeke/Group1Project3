@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour {
 	float distanceItemCanBeUsed = 3.0f;
 	GameObject objectToUseItemOn;
 
+	const float distToDetermineItemAsLow = 0.3f;
+
 	//talk to object
 	GameObject objectToTalkTo;
 	//float distanceItenCanBeTalkedTo = 4.0f;
@@ -79,7 +81,15 @@ public class PlayerMovement : MonoBehaviour {
 
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
-					currentPlayerState = EPlayerState.UsingItemNormal;
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.UsingItemLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.UsingItemNormal;
+					}
 					agent.ResetPath();
 					
 				}
@@ -92,10 +102,17 @@ public class PlayerMovement : MonoBehaviour {
 				
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.PickupObjectLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.PickupObjectNormal;
+					}
 
-					currentPlayerState = EPlayerState.PickupObjectNormal;
 					agent.ResetPath();
-					
 				}
 				break;
 
@@ -147,7 +164,23 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	int DetermineItemPosition()
+	{
+		Vector3 distanceToItem = (objectToUseItemOn.transform.position - transform.position);
 
+		//Debug.Log (distanceToItem.y);
+
+		if (distanceToItem.y < distToDetermineItemAsLow) 
+		{
+			return 1;
+		} 
+		else 
+		{
+			return 2;
+		}
+
+	}
+	
 	public void TrySetMoveToLocationState( Vector3 location )
 	{
 		switch (currentPlayerState)
