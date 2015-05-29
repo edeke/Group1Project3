@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 466428}
   - 33: {fileID: 3386042}
   - 23: {fileID: 2399148}
-  - 114: {fileID: 11419268}
-  - 135: {fileID: 13532850}
-  - 208: {fileID: 20862628}
+  - 114: {fileID: 11460252}
+  - 208: {fileID: 20896168}
+  - 135: {fileID: 13581154}
   m_Layer: 0
   m_Name: RockOnBeach
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.32999992, y: .5, z: 3.88000011}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 172.679993, y: 5.5999999, z: -141.740005}
+  m_LocalScale: {x: .00474457582, y: .00474457769, z: .00474457769}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,14 +42,14 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 07a9380188eaea7438ba7a5d2951dc54, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
@@ -62,8 +62,8 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
-  m_Mesh: {fileID: 4300024, guid: 27cd3ffabf618924f9c9eeefb09b60e0, type: 3}
---- !u!114 &11419268
+  m_Mesh: {fileID: 4300000, guid: 69485e4fa1ba0c14199a7cc52fd0ff49, type: 3}
+--- !u!114 &11460252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: RockOnBeach
   target: {x: 2, y: 0, z: 0}
---- !u!135 &13532850
+--- !u!135 &13581154
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,9 +86,9 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: -3.27825546e-07, y: 5.96046448e-08, z: 2.08616257e-07}
---- !u!208 &20862628
+  m_Radius: 291.400299
+  m_Center: {x: 1.52587891e-05, y: 262.658417, z: 0}
+--- !u!208 &20896168
 NavMeshObstacle:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,11 +97,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1, y: 1, z: 1}
+  m_Extents: {x: 289.243011, y: 256.416016, z: 291.400024}
   m_MoveThreshold: .100000001
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 262.65802, z: 0}
   m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
