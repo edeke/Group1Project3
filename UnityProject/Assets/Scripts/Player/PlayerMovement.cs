@@ -4,14 +4,19 @@ using System.Collections;
 public enum EPlayerState {
 	WalkToLocation,
 	UseItemOnObject,
+	UsingItem,
 	ActionOnObject,
-	//TalkToObject,
+	PickupObjectLow,
+	//PickupObjectMedium,
 	Idle
 };
 
 public class PlayerMovement : MonoBehaviour {
 	
 	NavMeshAgent agent;
+
+	float pickupTimeStart = 1.0f;
+	float pickupTimeCurrent;
 
 	EPlayerState currentPlayerState = EPlayerState.Idle;
 	
@@ -30,16 +35,23 @@ public class PlayerMovement : MonoBehaviour {
 	void Start () {
 	
 		agent = GetComponent<NavMeshAgent> ();
-
+		pickupTimeCurrent = pickupTimeStart;
 	}
 
 	void OnLevelWasLoaded()
 	{
 		TrySetIdleState ();
 	}
+
+	public EPlayerState GetPlayerState()
+	{
+		return currentPlayerState;
+	}
 	
 	void Update () 
 	{
+
+		//Debug.Log (currentPlayerState);
 
 		float distanceToActor = 0.0f;
 
@@ -50,6 +62,13 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.WalkToLocation :
 				agent.SetDestination (locationToReach);
+
+				distanceToActor = (locationToReach - transform.position).magnitude;
+				if( distanceToActor <= 0.5f )
+				{
+					TrySetIdleState();
+				}
+
 				break;
 
 			case EPlayerState.UseItemOnObject :
@@ -59,9 +78,8 @@ public class PlayerMovement : MonoBehaviour {
 
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
-					Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
+					currentPlayerState = EPlayerState.UsingItem;
 					agent.ResetPath();
-					TrySetIdleState();
 					
 				}
 				break;
@@ -73,38 +91,41 @@ public class PlayerMovement : MonoBehaviour {
 				
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
-					IAction useAction = objectToUseItemOn.GetComponent<IAction>();
 
-					if (useAction != null)
-					{
-						useAction.OnAction();
-					}
-
+					currentPlayerState = EPlayerState.PickupObjectLow;
 					agent.ResetPath();
-					TrySetIdleState();
 					
 				}
 				break;
 
-			/*case EPlayerState.TalkToObject :
-				agent.SetDestination ( objectToTalkTo.transform.position );
-				
-				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
-			
-				if( distanceToActor <= distanceItenCanBeTalkedTo )
-				{
-					ISpeech canTalk = objectToTalkTo.GetComponent<ISpeech> ();
-					
-					if (canTalk != null)
-					{
-						canTalk.OnTalkTo();
-					}
-					agent.ResetPath();
-					TrySetIdleState();
-					
-				}
-				break;*/
+			case EPlayerState.PickupObjectLow :
+				pickupTimeCurrent -= Time.deltaTime;
 
+				if(pickupTimeCurrent <= 0.0f)
+				{
+					IAction useAction = objectToUseItemOn.GetComponent<IAction>();
+					
+					if (useAction != null)
+					{
+						Debug.Log ("Using Action");
+						useAction.OnAction();
+						pickupTimeCurrent = pickupTimeStart;
+					}
+
+					currentPlayerState = EPlayerState.Idle;
+				}
+				break;
+
+		case EPlayerState.UsingItem :
+			pickupTimeCurrent -= Time.deltaTime;
+			
+			if(pickupTimeCurrent <= 0.0f)
+			{
+				Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
+				currentPlayerState = EPlayerState.Idle;
+				pickupTimeCurrent = pickupTimeStart;
+			}
+			break;
 
 			default :
 			break;

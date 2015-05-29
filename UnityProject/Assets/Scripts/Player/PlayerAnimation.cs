@@ -4,10 +4,10 @@ using System.Collections;
 public class PlayerAnimation : MonoBehaviour {
 
 	Animator anim;
-	//Rigidbody body;
 
 	Vector3 posPrev;
 	float maxSpeed = 6;
+	PlayerMovement movement;
 
 	//play idle
 	float playIdleAfterTime = 1.0f;
@@ -17,9 +17,9 @@ public class PlayerAnimation : MonoBehaviour {
 	void Start () {
 		currentIdleTime = playIdleAfterTime;
 		anim = GetComponentInChildren<Animator> ();
-		//body = GetComponentInChildren<Rigidbody> ();
+		movement = GetComponentInChildren<PlayerMovement> ();
 		posPrev = transform.position;
-		//maxSpeed = body.maxAngularVelocity;
+
 	}
 	
 	// Update is called once per frame
@@ -32,25 +32,44 @@ public class PlayerAnimation : MonoBehaviour {
 
 		posPrev = transform.position;
 
-		if (speed > 0) 
+
+		if ( movement.GetPlayerState() == EPlayerState.Idle ) 
 		{
-			currentIdleTime = playIdleAfterTime;
+			currentIdleTime -= Time.deltaTime;
+
+			if (currentIdleTime <= 0.0f) 
+			{
+				int randomNum = Random.Range(1, 3); //random from 1 to 2
+				anim.SetInteger ("playIdle", randomNum);
+				currentIdleTime = 0.0f;
+			}
 		} 
 		else
 		{
-			currentIdleTime -= Time.deltaTime;
-		}
-
-		if (currentIdleTime <= 0.0f) 
-		{
-			int randomNum = Random.Range(1, 3); //random from 1 to 2
-			anim.SetInteger ("playIdle", randomNum);
-			currentIdleTime = 0.0f;
-		}
-		else 
-		{
+			currentIdleTime = playIdleAfterTime;
 			anim.SetInteger("playIdle", 0);
 		}
+
+		if (movement.GetPlayerState () == EPlayerState.PickupObjectLow) 
+		{
+			anim.SetInteger ("Pickup", 1);
+		} 
+		else 
+		{
+			anim.SetInteger ("Pickup", 0);
+		}
+
+		if (movement.GetPlayerState () == EPlayerState.UsingItem) 
+		{
+			anim.SetInteger ("useingItem", 1);
+		} 
+		else 
+		{
+			anim.SetInteger ("useingItem", 0);
+		}
+
+
+
 
 	}
 }
