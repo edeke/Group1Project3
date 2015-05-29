@@ -4,10 +4,11 @@ using System.Collections;
 public enum EPlayerState {
 	WalkToLocation,
 	UseItemOnObject,
-	UsingItem,
+	UsingItemLow,
+	UsingItemNormal,
 	ActionOnObject,
 	PickupObjectLow,
-	//PickupObjectMedium,
+	PickupObjectNormal,
 	Idle
 };
 
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
-					currentPlayerState = EPlayerState.UsingItem;
+					currentPlayerState = EPlayerState.UsingItemNormal;
 					agent.ResetPath();
 					
 				}
@@ -92,45 +93,58 @@ public class PlayerMovement : MonoBehaviour {
 				if( distanceToActor <= distanceItemCanBeUsed )
 				{
 
-					currentPlayerState = EPlayerState.PickupObjectLow;
+					currentPlayerState = EPlayerState.PickupObjectNormal;
 					agent.ResetPath();
 					
 				}
 				break;
 
 			case EPlayerState.PickupObjectLow :
-				pickupTimeCurrent -= Time.deltaTime;
-
-				if(pickupTimeCurrent <= 0.0f)
-				{
-					IAction useAction = objectToUseItemOn.GetComponent<IAction>();
-					
-					if (useAction != null)
-					{
-						Debug.Log ("Using Action");
-						useAction.OnAction();
-						pickupTimeCurrent = pickupTimeStart;
-					}
-
-					currentPlayerState = EPlayerState.Idle;
-				}
+			case EPlayerState.PickupObjectNormal :
+				OnPickUpLogic();
 				break;
 
-		case EPlayerState.UsingItem :
-			pickupTimeCurrent -= Time.deltaTime;
-			
-			if(pickupTimeCurrent <= 0.0f)
-			{
-				Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
-				currentPlayerState = EPlayerState.Idle;
-				pickupTimeCurrent = pickupTimeStart;
-			}
-			break;
+			case EPlayerState.UsingItemLow :
+			case EPlayerState.UsingItemNormal :
+				OnUseItemLogic();
+				break;
 
 			default :
 			break;
 		}
 
+	}
+
+	void OnPickUpLogic()
+	{
+
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if(pickupTimeCurrent <= 0.0f)
+		{
+			IAction useAction = objectToUseItemOn.GetComponent<IAction>();
+			
+			if (useAction != null)
+			{
+				useAction.OnAction();
+				pickupTimeCurrent = pickupTimeStart;
+			}
+			
+			currentPlayerState = EPlayerState.Idle;
+		}
+
+	}
+
+	void OnUseItemLogic()
+	{
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if(pickupTimeCurrent <= 0.0f)
+		{
+			Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
+			currentPlayerState = EPlayerState.Idle;
+			pickupTimeCurrent = pickupTimeStart;
+		}
 	}
 
 
