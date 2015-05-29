@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAction
+public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAction, ITalkTo
 {
 
 	protected SpeechBubbleController speech;
@@ -28,34 +28,25 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 
 	}
 
-	virtual public void OnAction()
+	virtual public void OnTalkTo()
 	{
 
-		Dialoguer.StartDialogue (dialog);
+	}
 
-		/*if (speech != null)
-		{
-			speech.SetText ("Jag vill ha Äpple !");
-		}*/
+	virtual public void OnAction()
+	{
 
 	}
 
 	virtual public void OnInspect()
 	{		
-		if (speech != null) 
-		{
-			//speech.SetSymbol(test);
-			//speech.SetText("Hej på dig! Du är bäst ! Hej på dig! Du är bäst ! Hej på dig! Du är bäst ! Hej på dig! Du är bäst ! Hej på dig! Du är bäst ! Hej på dig! Du är bäst ! Mooooooooooo");
-			//speech.SetText("Mooo på <color=#008000ff>" + actorName + "!</color> Hej Hej", 21);
-			speech.SetText("Hej, kom hit !");
 
-		}
 	}
 
-	virtual public void OnDragOver( Vector3 deltaMousePosition )
+	/*virtual public void OnDragOver( Vector3 deltaMousePosition )
 	{
 
-	}
+	}*/
 	
 	virtual public bool UseItemOnObject(EItem itemType)
 	{

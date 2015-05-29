@@ -7,6 +7,8 @@ public enum EPlayerState {
 	UsingItemLow,
 	UsingItemNormal,
 	ActionOnObject,
+	TalkToObject,
+	Talking,
 	PickupObjectLow,
 	PickupObjectNormal,
 	Idle
@@ -16,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	NavMeshAgent agent;
 
-	float pickupTimeStart = 1.0f;
+	float pickupTimeStart = 1.5f;
 	float pickupTimeCurrent;
 
 	EPlayerState currentPlayerState = EPlayerState.Idle;
@@ -54,12 +56,13 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 
-		//Debug.Log (currentPlayerState);
+		Debug.Log (currentPlayerState);
 
 		float distanceToActor = 0.0f;
 
 		switch (currentPlayerState)
 		{
+			case EPlayerState.Talking :
 			case EPlayerState.Idle :
 				break;
 
@@ -116,6 +119,26 @@ public class PlayerMovement : MonoBehaviour {
 				}
 				break;
 
+			case EPlayerState.TalkToObject :
+				agent.SetDestination ( objectToTalkTo.transform.position );
+				
+				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
+				
+				if( distanceToActor <= distanceItemCanBeUsed )
+				{
+				
+					ITalkTo onTalkTo = objectToTalkTo.GetComponent<ITalkTo> ();
+					
+					if(onTalkTo != null)
+					{
+						onTalkTo.OnTalkTo();
+						currentPlayerState = EPlayerState.Talking;
+					}
+					
+					agent.ResetPath();
+				}
+				break;
+
 			case EPlayerState.PickupObjectLow :
 			case EPlayerState.PickupObjectNormal :
 				OnPickUpLogic();
@@ -150,6 +173,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 	}
+
+
 	
 	void OnUseItemLogic()
 	{
@@ -195,9 +220,10 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-			//case EPlayerState.TalkToObject :
+			case EPlayerState.Talking :
 			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.WalkToLocation;
 				locationToReach = location;
@@ -213,9 +239,10 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-			//case EPlayerState.TalkToObject :
+			case EPlayerState.Talking :
 			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.Idle;
 			break;
@@ -230,9 +257,10 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-			//case EPlayerState.TalkToObject :
+			case EPlayerState.Talking :
 			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.UseItemOnObject;
 				this.indexOfItem = indexOfItem;
@@ -249,9 +277,10 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-			//case EPlayerState.TalkToObject :
+			case EPlayerState.Talking :
 			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.ActionOnObject;
 				this.objectToUseItemOn = actorToUseOn;
@@ -262,15 +291,20 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	/*public void TrySetTalkToObject( GameObject actorToTalkTo)
+	public void TrySetTalking( GameObject actorToTalkTo )
 	{
 		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-			//case EPlayerState.TalkToObject :
+			case EPlayerState.Talking :
 			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
 			case EPlayerState.ActionOnObject :
+			case EPlayerState.PickupObjectLow :
+			case EPlayerState.PickupObjectNormal :
+			case EPlayerState.UsingItemLow :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.UsingItemNormal :
 				currentPlayerState = EPlayerState.TalkToObject;
 				this.objectToTalkTo = actorToTalkTo;
 				break;
@@ -278,5 +312,5 @@ public class PlayerMovement : MonoBehaviour {
 			default :
 				break;
 			}
-	}*/
+	}
 }

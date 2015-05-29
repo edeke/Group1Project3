@@ -43,14 +43,20 @@ public class PlayerInput : MonoBehaviour
 			{
 				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					TryUseActionOnObject( hitInfo.collider.gameObject );
+					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					{
+						TryUseActionOnObject( hitInfo.collider.gameObject );
+					}
 				}
 			}
 			else
 			{	
 				if( traceHit && dragging == false )
 				{
-					TryUseActionOnObject( hitInfo.collider.gameObject );
+					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					{
+						TryUseActionOnObject( hitInfo.collider.gameObject );
+					}
 				}
 			}
 
@@ -69,8 +75,41 @@ public class PlayerInput : MonoBehaviour
 		//for dragging
 		else if (Input.GetMouseButton (0) && mouseClicked) 
 		{
-
 			RaycastHit hitInfo = new RaycastHit ();
+			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+			
+			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
+
+			if(GWorld.isInvEnabled == true)
+			{
+				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit)
+				{
+					//if no interface on object and pointer is not over a UI element
+					if( EventSystem.current.IsPointerOverGameObject() == false )
+					{
+						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						{
+							movementScript.TrySetMoveToLocationState(hitInfo.point);
+						}	
+					}
+				}
+			}
+			else
+			{
+				if ( traceHit )
+				{
+					//if no interface on object and pointer is not over a UI element
+					if( EventSystem.current.IsPointerOverGameObject() == false )
+					{
+						if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+						{
+							movementScript.TrySetMoveToLocationState(hitInfo.point);
+						}	
+					}
+				}
+			}
+
+			/*RaycastHit hitInfo = new RaycastHit ();
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 
 			//check if we are dragging mouse by comparing to start location of mouse
@@ -98,6 +137,8 @@ public class PlayerInput : MonoBehaviour
 			
 			mouseClicked = true;
 			mouseLocationPrevFrame = Input.mousePosition;
+
+			*/
 
 		}
 
@@ -189,7 +230,26 @@ public class PlayerInput : MonoBehaviour
 		}
 	}
 
-	bool TryDragOnObject(GameObject inspectObject)
+	bool TryTalkToObject(GameObject actionObject)
+	{
+		//store object for later
+		selectedObject = actionObject;
+		
+		ITalkTo onTalkTo = actionObject.GetComponent<ITalkTo> ();
+		
+		if(onTalkTo != null)
+		{
+			movementScript.TrySetTalking(actionObject);
+			return true;
+		}
+		else
+		{
+			//movementScript.TrySetMoveToLocationState(hitInfo.point);
+			return false;
+		}
+	}
+
+	/*bool TryDragOnObject(GameObject inspectObject)
 	{
 		//store object for later
 		selectedObject = inspectObject;
@@ -209,7 +269,7 @@ public class PlayerInput : MonoBehaviour
 			return false;
 		}
 
-	}
+	}*/
 
 	bool TryInspectOnObject(GameObject inspectObject)
 	{

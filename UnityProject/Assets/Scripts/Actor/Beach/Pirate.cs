@@ -28,7 +28,7 @@ public class Pirate : ClickOnActorBase
 		
 	}
 
-	override public void OnAction()
+	override public void OnTalkTo()
 	{
 
 		Dialoguer.StartDialogue (dialog, null);
