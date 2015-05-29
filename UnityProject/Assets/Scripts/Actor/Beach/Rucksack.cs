@@ -45,13 +45,14 @@ public class Rucksack : CommentActorBase
 		GWorld.EnableInventory();
 		GWorld.MarkEventDone (EventIDPickedUp);
 
-		Invoke ("DestroyObject", 1.0f);
+		Destroy (gameObject);
+		//Invoke ("DestroyObject", 1.0f);
 		
 	}
 	
 	void DestroyObject()
 	{
-		Destroy (gameObject);
+
 	}
 
 	void OnDestroy()
