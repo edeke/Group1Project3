@@ -56,8 +56,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 
-		Debug.Log (currentPlayerState);
-
 		float distanceToActor = 0.0f;
 
 		switch (currentPlayerState)
