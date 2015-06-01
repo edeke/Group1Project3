@@ -30,7 +30,7 @@ public class Fireplace : CommentActorBase
 		switch (itemType) 
 		{
 			case EItem.UnlitTorch :
-				
+				Inventory.myInv.AddItem( ItemDatabase.GetItem("LitTorch"), Vector3.zero, false);
 			return true;
 		}
 		

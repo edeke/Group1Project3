@@ -63,6 +63,27 @@ static public class ItemDatabase
 		unlitTorch.soundOnUse = null;
 		items.Add ("UnlitTorch", unlitTorch );
 
+		//Add Item to Itemdb
+		ItemStruct litTorch = new ItemStruct ();
+		
+		path = "Textures/ItemTextures/LitTorch";
+		newTex = (Texture)Resources.Load(path,typeof(Texture));
+		
+		if (!newTex)
+		{
+			Debug.Log("Item Database : Unable to load texture - " + path);
+		}
+		
+		litTorch.itemType = EItem.LitTorch;
+		litTorch.itemTexture = newTex;
+		litTorch.numberOfItemsInStack = 1;
+		litTorch.onDragParticle = null;
+		litTorch.onPickupParticle = null;
+		litTorch.onUseParticle = null;
+		litTorch.soundOnPickup = null;
+		litTorch.soundOnUse = null;
+		items.Add ("LitTorch", litTorch );
+
 		//Add combine data to array
 		path = "SFX/ItemSounds/EnemyLaugh2";
 		AudioClip newAudio = (AudioClip)Resources.Load(path,typeof(AudioClip));
@@ -94,8 +115,6 @@ static public class ItemDatabase
 		unlitTorchCombineData.newItemHashValue = "UnlitTorch";
 		unlitTorchCombineData.playOnCombine = newAudio;
 		combineItemsList.Add ( unlitTorchCombineData );
-
-
 
 
 	}
