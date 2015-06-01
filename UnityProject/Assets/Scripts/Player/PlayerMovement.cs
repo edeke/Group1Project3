@@ -11,6 +11,7 @@ public enum EPlayerState {
 	Talking,
 	PickupObjectLow,
 	PickupObjectNormal,
+	ForceWalkToLocation,
 	Idle
 };
 
@@ -56,6 +57,8 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 
+		//Debug.Log (currentPlayerState);
+
 		float distanceToActor = 0.0f;
 
 		switch (currentPlayerState)
@@ -64,11 +67,14 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.Idle :
 				break;
 
+			case EPlayerState.ForceWalkToLocation :
 			case EPlayerState.WalkToLocation :
 				agent.SetDestination (locationToReach);
 
 				distanceToActor = (locationToReach - transform.position).magnitude;
-				if( distanceToActor <= 0.5f )
+
+			//Debug.Log ("Distance: " + distanceToActor);
+				if( distanceToActor <= 0.2f )
 				{
 					TrySetIdleState();
 				}
@@ -200,8 +206,6 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		Vector3 distanceToItem = (objectToUseItemOn.transform.position - transform.position);
 
-		//Debug.Log (distanceToItem.y);
-
 		if (distanceToItem.y < distToDetermineItemAsLow) 
 		{
 			return 1;
@@ -224,7 +228,30 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.WalkToLocation;
-				locationToReach = location;
+				NavMeshHit hitData;
+				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+				locationToReach = hitData.position;
+			break;
+				
+			default :
+			break;
+		}
+	}
+
+	public void ForceMoveToLocation( Vector3 location )
+	{
+		switch (currentPlayerState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+				currentPlayerState = EPlayerState.ForceWalkToLocation;
+				NavMeshHit hitData;
+				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+				locationToReach = hitData.position;
 			break;
 				
 			default :
@@ -242,6 +269,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.WalkToLocation :
 			case EPlayerState.TalkToObject :
 			case EPlayerState.ActionOnObject :
+			case EPlayerState.ForceWalkToLocation :
 				currentPlayerState = EPlayerState.Idle;
 			break;
 				
