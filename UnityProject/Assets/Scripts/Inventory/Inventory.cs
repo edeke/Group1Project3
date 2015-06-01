@@ -8,7 +8,11 @@ public enum EItem {
 	Pear,
 	Banana,
 	PirateRing,
-	MetalPipe
+	MetalPipe,
+	Branch,
+	Leaves,
+	UnlitTorch,
+	LitTorch
 };
 
 public class ItemStruct

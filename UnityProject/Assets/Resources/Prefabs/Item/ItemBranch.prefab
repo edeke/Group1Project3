@@ -14,7 +14,7 @@ GameObject:
   - 65: {fileID: 6518848}
   - 208: {fileID: 20868580}
   m_Layer: 0
-  m_Name: ItemMetalPipe
+  m_Name: ItemBranch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.01000023, y: .180000007, z: 9.64999962}
   m_LocalScale: {x: .00625065388, y: .00625065388, z: .00625065388}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155202}
-  m_Mesh: {fileID: 4300000, guid: a32b2aea35643be4fbe065236c8fcddc, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a028e7c448f9b3c49b5a82dac8103bd9, type: 3}
 --- !u!65 &6518848
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 155202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f540b5ed226f54381f7e41f3b14760, type: 3}
+  m_Script: {fileID: 11500000, guid: bd7a4ceed3663cf4399e34c4036a2951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 5
