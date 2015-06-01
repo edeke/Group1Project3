@@ -37,6 +37,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 769a410b6d4cb024e82fd50c082718f8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: ae9576c60dff73e42ae34bb2f5a2aa44, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -77,20 +91,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 4ebf42e1177405a4da32c69beaaba240, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: ae9576c60dff73e42ae34bb2f5a2aa44, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -108,6 +108,30 @@ Material:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Reach
+        second: .595000029
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: .01635479
       data:
         first:
           name: _Parallax
@@ -150,28 +174,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Reach
-        second: .595000029
-      data:
-        first:
-          name: _MinLight
+          name: _DistanceFade
         second: 0
       data:
         first:
-          name: _MaxLight
-        second: 1
+          name: _FadeDistance
+        second: 99.4000015
       data:
         first:
-          name: _Outline
+          name: _DistanceFade_copy
         second: 0
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
     m_Colors:
       data:
         first:
@@ -183,9 +195,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
