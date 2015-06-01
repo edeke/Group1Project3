@@ -34,34 +34,13 @@ static public class ItemDatabase
 
 		banan.itemType = EItem.Banana;
 		banan.itemTexture = newTex;
-		banan.numberOfItemsInStack = 1;
+		banan.numberOfItemsInStack = 5;
 		banan.onDragParticle = null;
 		banan.onPickupParticle = null;
 		banan.onUseParticle = null;
 		banan.soundOnPickup = null;
 		banan.soundOnUse = null;
 		items.Add ("Banana", banan );
-
-		//Add Item to Itemdb
-		ItemStruct unlitTorch = new ItemStruct ();
-		
-		path = "Textures/ItemTextures/UnlitTorch";
-		newTex = (Texture)Resources.Load(path,typeof(Texture));
-		
-		if (!newTex)
-		{
-			Debug.Log("Item Database : Unable to load texture - " + path);
-		}
-		
-		unlitTorch.itemType = EItem.UnlitTorch;
-		unlitTorch.itemTexture = newTex;
-		unlitTorch.numberOfItemsInStack = 1;
-		unlitTorch.onDragParticle = null;
-		unlitTorch.onPickupParticle = null;
-		unlitTorch.onUseParticle = null;
-		unlitTorch.soundOnPickup = null;
-		unlitTorch.soundOnUse = null;
-		items.Add ("UnlitTorch", unlitTorch );
 
 		//Add combine data to array
 		path = "SFX/ItemSounds/EnemyLaugh2";
@@ -77,26 +56,13 @@ static public class ItemDatabase
 		newCombine.item2 = EItem.Pear;
 		newCombine.newItemHashValue = "Banana";
 		newCombine.playOnCombine = newAudio;
-		combineItemsList.Add ( newCombine );
 
-		//Add combine data to array
-		path = "SFX/ItemSounds/EnemyLaugh2";
-		newAudio = (AudioClip)Resources.Load(path,typeof(AudioClip));
-		
-		if (!newAudio)
+		if (newAudio == null) 
 		{
-			Debug.Log("Item Database : Unable to load Audio - " + path);
+			Debug.Log ("Audio Not Loaded");
 		}
-		
-		CombineData unlitTorchCombineData = new CombineData ();
-		unlitTorchCombineData.item1 = EItem.Leaves;
-		unlitTorchCombineData.item2 = EItem.Branch;
-		unlitTorchCombineData.newItemHashValue = "UnlitTorch";
-		unlitTorchCombineData.playOnCombine = newAudio;
-		combineItemsList.Add ( unlitTorchCombineData );
 
-
-
+		combineItemsList.Add ( newCombine );
 
 	}
 
