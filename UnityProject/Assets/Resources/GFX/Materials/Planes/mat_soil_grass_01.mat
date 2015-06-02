@@ -110,8 +110,24 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
+          name: _Reach
+        second: .569999993
+      data:
+        first:
+          name: _MinLight
         second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 50
       data:
         first:
           name: _Parallax
@@ -150,19 +166,7 @@ Material:
         second: 0
       data:
         first:
-          name: _Reach
-        second: .569999993
-      data:
-        first:
-          name: _MinLight
-        second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
+          name: _Metallic
         second: 0
       data:
         first:
@@ -170,8 +174,16 @@ Material:
         second: 1
       data:
         first:
-          name: _BaseScale
-        second: 50
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
     m_Colors:
       data:
         first:
@@ -183,9 +195,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}

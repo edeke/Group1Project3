@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_terrain_toon
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Name: mat_terrain_toon_01
+  m_Shader: {fileID: 4800000, guid: 358d0862d0deb2c4289865631c1fa055, type: 3}
+  m_ShaderKeywords: _AUTOTILETOSCALE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -77,11 +77,78 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 2800000, guid: e524f99f85a571f429050b2cc4d003e3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: aadf151636f60a44ead5c012a8d47769, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 0fa9c29aa9ce95541a1d26f6a5a3ac2e, type: 3}
+          m_Scale: {x: 3, y: 3}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: b561f8c9bea944e4c9a39e333b1db01c, type: 3}
+          m_Scale: {x: 3, y: 3}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BlackDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: a7c4e362b9739e742a67bfe632636f66, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BlackNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: a4900d3a9fde56248bc38b4521bdb13a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: 11fc48ff7e08c2f4a8241495b83c4943, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: c2c7987bbc1f8564cb085719685b74df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: c2c7987bbc1f8564cb085719685b74df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Cutoff
         second: .5
+      data:
+        first:
+          name: _Smoothness
+        second: .107000001
       data:
         first:
           name: _SrcBlend
@@ -90,6 +157,26 @@ Material:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Reach
+        second: .509000003
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 33.5
       data:
         first:
           name: _Parallax
@@ -130,6 +217,26 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 1
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _MinHeight
+        second: -7.11999989
+      data:
+        first:
+          name: _MaxHeight
+        second: 8.10000038
+      data:
+        first:
+          name: _TansitionSharpness
+        second: 9.60999966
     m_Colors:
       data:
         first:
@@ -141,5 +248,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
