@@ -115,14 +115,14 @@ Shader "Shader Forge/Examples/Box_Environment_Toon_Shader" {
                 float2 node_3093 = (i.uv0/_BaseScale);
                 float2 node_2423 = node_3093.rg;
                 float2 node_2057 = float2((node_2423.r*objScale.b),(node_2423.g*objScale.g));
-                float4 _Normals_copy_copy = tex2D(_NormalTexture,TRANSFORM_TEX(node_2057, _NormalTexture));
+                float3 _Normals_copy_copy = tex2D(_NormalTexture,TRANSFORM_TEX(node_2057, _NormalTexture));
                 float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
                 float2 node_6938 = node_3093.rg;
                 float2 node_2194 = float2((node_6938.r*objScale.r),(node_6938.g*objScale.g));
-                float4 _Normals_copy = tex2D(_NormalTexture,TRANSFORM_TEX(node_2194, _NormalTexture));
+                float3 _Normals_copy = tex2D(_NormalTexture,TRANSFORM_TEX(node_2194, _NormalTexture));
                 float2 node_3742 = node_3093.rg;
                 float2 node_1132 = float2((node_3742.r*objScale.r),(node_3742.g*objScale.b));
-                float4 _Normals = tex2D(_NormalTexture,TRANSFORM_TEX(node_1132, _NormalTexture));
+                float3 _Normals = tex2D(_NormalTexture,TRANSFORM_TEX(node_1132, _NormalTexture));
                 float3 normalLocal = ((_Normals_copy_copy.rgb*_Mask_var.r)+((_Normals_copy.rgb*_Mask_var.g)+(_Normals.rgb*_Mask_var.b)));
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
