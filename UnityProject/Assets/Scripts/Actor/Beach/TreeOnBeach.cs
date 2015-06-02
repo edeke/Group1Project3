@@ -6,6 +6,10 @@ public class TreeOnBeach : CommentActorBase
 {
 	public GameObject rucksack;
 	string EventID = "RucksackFallDown";
+	private Quaternion rotation;
+	private bool shaking = false;
+	private float timeShaking = 1.0f;
+	private float currentTimeShaking;
 
 	void Start () 
 	{
@@ -15,25 +19,63 @@ public class TreeOnBeach : CommentActorBase
 			EventData tempData = new EventData();
 			GWorld.FindEvent(EventID,ref tempData);
 
-			if(tempData.hasEventOccured && rucksack != null)
+			if(tempData.hasEventOccured)
 			{
 				rucksack.AddComponent<Rigidbody> ();
 			}
 
 		}
+
+		rotation = transform.rotation;
 	}
 
 	override public void OnInspect()
 	{	
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventID,ref tempData);
+		
+		if (!tempData.hasEventOccured) 
+		{
+			DisplayComment ("A tree, there is something hanging in it");
+		} 
+		else 
+		{
+			DisplayComment ("I think whatever was up there fell down");
+		}
+	}
 
-		DisplayComment("A tree, there is something hanging in it");
+	void Update()
+	{
+		if (shaking) 
+		{
+			currentTimeShaking -= Time.deltaTime;
 
+			float shakingIntensity = currentTimeShaking / timeShaking;
+
+
+			Vector3 newRot = new Vector3( Random.Range(-shakingIntensity,shakingIntensity), 0.0f, Random.Range(-shakingIntensity,shakingIntensity) );
+			transform.rotation = rotation * Quaternion.Euler(newRot);
+
+			if(currentTimeShaking <= 0.0f)
+			{
+				shaking = false;
+			}
+		}
 	}
 
 	override public void OnAction()
 	{	
-		GWorld.MarkEventDone (EventID);
-		rucksack.AddComponent<Rigidbody> ();
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventID,ref tempData);
+		
+		if(!tempData.hasEventOccured)
+		{
+			GWorld.MarkEventDone (EventID);
+			rucksack.AddComponent<Rigidbody> ();
+		}
+
+		currentTimeShaking = timeShaking;
+		shaking = true;
 	}
 
 }

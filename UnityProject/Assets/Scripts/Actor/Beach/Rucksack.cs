@@ -7,6 +7,7 @@ public class Rucksack : CommentActorBase
 
 	string EventIDPosition = "RuckSackPosition";
 	string EventIDPickedUp = "RuckSackPickedUp";
+	string EventIDFallDown = "RucksackFallDown";
 
 	void Start () 
 	{
@@ -35,8 +36,17 @@ public class Rucksack : CommentActorBase
 
 	override public void OnInspect()
 	{	
-
-		DisplayComment("Looks like a Backpack, but I can't reach it");
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventIDFallDown,ref tempData);
+		
+		if (!tempData.hasEventOccured) 
+		{
+			DisplayComment ("Looks like a Backpack, but I can't reach it");
+		} 
+		else 
+		{
+			DisplayComment ("It's a backpack, I should pick it up");
+		}
 
 	}
 
@@ -46,7 +56,6 @@ public class Rucksack : CommentActorBase
 		GWorld.MarkEventDone (EventIDPickedUp);
 
 		Destroy (gameObject);
-		//Invoke ("DestroyObject", 1.0f);
 		
 	}
 	
