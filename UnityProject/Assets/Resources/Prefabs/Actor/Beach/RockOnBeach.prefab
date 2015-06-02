@@ -86,7 +86,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 291.400299
+  m_Radius: 350
   m_Center: {x: 1.52587891e-05, y: 262.658417, z: 0}
 --- !u!208 &20896168
 NavMeshObstacle:
@@ -96,12 +96,12 @@ NavMeshObstacle:
   m_GameObject: {fileID: 193884}
   m_Enabled: 1
   serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 289.243011, y: 256.416016, z: 291.400024}
+  m_Shape: 0
+  m_Extents: {x: 200, y: 256.416016, z: 200}
   m_MoveThreshold: .100000001
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 262.65802, z: 0}
+  m_Center: {x: 0, y: 262.65802, z: .00100000005}
   m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
