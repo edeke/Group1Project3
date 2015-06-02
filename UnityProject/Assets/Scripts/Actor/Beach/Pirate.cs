@@ -6,7 +6,6 @@ public class Pirate : ClickOnActorBase
 {
 	string EventID = "RingGivenToPirate";
 	bool ringGiven = false;
-	public GameObject wreck;
 
 	void Start () 
 	{
@@ -32,11 +31,6 @@ public class Pirate : ClickOnActorBase
 	{
 
 		Dialoguer.StartDialogue (dialog, null);
-
-		/*if (speech != null)
-		{
-			speech.SetText ("Jag vill ha Äpple !");
-		}*/
 
 	}
 
@@ -74,10 +68,13 @@ public class Pirate : ClickOnActorBase
 
 	void RingGivenToPirate()
 	{
-		wreck.GetComponent<BoatWreck> ().OpenPassage ();
 		speech.SetText("Yay, du hitta min ring =D");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
 
+	public void GetAwayFromThere()
+	{
+		speech.SetText ("Get away from there !!");
+	}
 }
