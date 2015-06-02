@@ -6,6 +6,7 @@ public class RockOnBeach : CommentActorBase
 {
 
 	string EventID = "RockOnBeachMoved";
+	string EventIDPosition = "RockOnBeachPosition";
 	public Vector3 target;
 	bool moveRock = false;
 	Vector3 startLocation;
@@ -24,14 +25,29 @@ public class RockOnBeach : CommentActorBase
 			
 			if(tempData.hasEventOccured)
 			{
-				transform.position = target;
+				Rigidbody body = GetComponent<Rigidbody>();
+
+				if(body == null)
+				{
+					gameObject.AddComponent<Rigidbody> ();
+				}
+
 			}
 			
+		}
+
+		if (!GWorld.TryRegisterEvent (EventIDPosition, "Hello")) 
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventIDPosition,ref tempData);
+			
+			transform.position = tempData.position;
+			transform.rotation = tempData.rotation;
 		}
 	
 	}
 
-	void Update()
+	/*void Update()
 	{
 		
 		if (moveRock) 
@@ -39,6 +55,12 @@ public class RockOnBeach : CommentActorBase
 			currentTime += Time.deltaTime;
 			transform.position = Vector3.Lerp (startLocation, target, currentTime);
 		}
+	}*/
+
+	void OnDestroy()
+	{
+		//store position of object befor changing scene or quiting
+		GWorld.StorePositionForEvent (EventIDPosition, transform.position, transform.rotation);
 	}
 
 	override public void OnInspect()
@@ -68,6 +90,13 @@ public class RockOnBeach : CommentActorBase
 		{
 			case EItem.MetalPipe :
 				moveRock = true;
+
+				Rigidbody body = GetComponent<Rigidbody>();
+				if(body == null)
+				{
+					gameObject.AddComponent<Rigidbody> ();
+				}
+
 				GWorld.MarkEventDone (EventID);
 			return true;
 		}
