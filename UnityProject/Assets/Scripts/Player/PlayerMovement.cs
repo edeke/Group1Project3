@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	//Use Item at Location
 	int indexOfItem;
-	float distanceItemCanBeUsed = 3.0f;
+	float distanceItemCanBeUsed = 1.0f;
 	GameObject objectToUseItemOn;
 
 	const float distToDetermineItemAsLow = 0.3f;
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 
 				distanceToActor = (locationToReach - transform.position).magnitude;
 
-			//Debug.Log ("Distance: " + distanceToActor);
+				//Debug.Log ("Distance: " + distanceToActor);
 				if( distanceToActor <= 0.2f )
 				{
 					TrySetIdleState();
@@ -83,10 +83,9 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.UseItemOnObject :
 				agent.SetDestination ( objectToUseItemOn.transform.position );
+				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
 				
-				distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
-
-				if( distanceToActor <= distanceItemCanBeUsed )
+				if(  TraceObject() <= distanceItemCanBeUsed )
 				{
 					int low = DetermineItemPosition();
 					if(low == 1)
@@ -104,10 +103,9 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.ActionOnObject :
 				agent.SetDestination ( objectToUseItemOn.transform.position );
-				
-				distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
-				
-				if( distanceToActor <= distanceItemCanBeUsed )
+				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
+
+				if( TraceObject() <= distanceItemCanBeUsed )
 				{
 					int low = DetermineItemPosition();
 					if(low == 1)
@@ -125,10 +123,9 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.TalkToObject :
 				agent.SetDestination ( objectToTalkTo.transform.position );
+				//distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
 				
-				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
-				
-				if( distanceToActor <= distanceItemCanBeUsed )
+				if(  TraceObject() <= distanceItemCanBeUsed )
 				{
 				
 					ITalkTo onTalkTo = objectToTalkTo.GetComponent<ITalkTo> ();
@@ -157,6 +154,47 @@ public class PlayerMovement : MonoBehaviour {
 			break;
 		}
 
+	}
+
+	float TraceObject()
+	{
+		Collider collComp = objectToUseItemOn.GetComponentInChildren<Collider>();
+		if (collComp == null)
+		{
+			return 1000.0f;
+		}
+
+		Vector3 target = objectToUseItemOn.transform.position;
+		target.y = transform.position.y;
+		Vector3 dir = target - transform.position;
+		Ray newRay = new Ray(transform.position, dir);
+
+		RaycastHit hitData = new RaycastHit();
+
+		if (collComp.Raycast (newRay, out hitData, 100.0f)) 
+		{
+			//Debug.Log("HitPoint: " + hitData.point + " Object Location : " + objectToUseItemOn.transform.position);
+			Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
+			Debug.DrawLine (transform.position, hitData.point, Color.green, 100.0f);
+			return (hitData.point - transform.position).magnitude;
+		} 
+		else 
+		{
+			target = objectToUseItemOn.transform.position;
+			dir = target - transform.position;
+			newRay = new Ray(transform.position, dir);
+
+			if( collComp.Raycast (newRay, out hitData, 100.0f) )
+			{
+				Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
+				Debug.DrawLine (transform.position, hitData.point, Color.red, 100.0f);
+				return (hitData.point - transform.position).magnitude;
+			}
+			else
+			{
+				return 100.0f;
+			}
+		}
 	}
 
 	void OnPickUpLogic()

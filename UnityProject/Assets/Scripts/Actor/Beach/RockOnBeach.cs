@@ -31,6 +31,11 @@ public class RockOnBeach : CommentActorBase
 				{
 					gameObject.AddComponent<Rigidbody> ();
 				}
+				else
+				{
+					body.mass = 1000;
+					body.drag = 2;
+				}
 
 			}
 			
@@ -95,6 +100,11 @@ public class RockOnBeach : CommentActorBase
 				if(body == null)
 				{
 					gameObject.AddComponent<Rigidbody> ();
+				}
+				else
+				{
+					body.mass = 1000;
+					body.drag = 2;
 				}
 
 				GWorld.MarkEventDone (EventID);
