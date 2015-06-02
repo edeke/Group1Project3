@@ -174,8 +174,8 @@ public class PlayerMovement : MonoBehaviour {
 		if (collComp.Raycast (newRay, out hitData, 100.0f)) 
 		{
 			//Debug.Log("HitPoint: " + hitData.point + " Object Location : " + objectToUseItemOn.transform.position);
-			Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
-			Debug.DrawLine (transform.position, hitData.point, Color.green, 100.0f);
+			//Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
+			//Debug.DrawLine (transform.position, hitData.point, Color.green, 100.0f);
 			return (hitData.point - transform.position).magnitude;
 		} 
 		else 
@@ -186,8 +186,8 @@ public class PlayerMovement : MonoBehaviour {
 
 			if( collComp.Raycast (newRay, out hitData, 100.0f) )
 			{
-				Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
-				Debug.DrawLine (transform.position, hitData.point, Color.red, 100.0f);
+				//Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
+				//Debug.DrawLine (transform.position, hitData.point, Color.red, 100.0f);
 				return (hitData.point - transform.position).magnitude;
 			}
 			else
