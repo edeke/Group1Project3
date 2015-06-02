@@ -11,6 +11,8 @@ public class TreeOnBeach : CommentActorBase
 	private float timeShaking = 1.0f;
 	private float currentTimeShaking;
 
+	private ParticleSystem part;
+
 	void Start () 
 	{
 
@@ -27,6 +29,8 @@ public class TreeOnBeach : CommentActorBase
 		}
 
 		rotation = transform.rotation;
+
+		part = GetComponentInChildren<ParticleSystem> ();
 	}
 
 	override public void OnInspect()
@@ -74,6 +78,7 @@ public class TreeOnBeach : CommentActorBase
 			rucksack.AddComponent<Rigidbody> ();
 		}
 
+		part.Play ();
 		currentTimeShaking = timeShaking;
 		shaking = true;
 	}
