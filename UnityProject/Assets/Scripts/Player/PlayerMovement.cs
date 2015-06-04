@@ -29,15 +29,15 @@ public class PlayerMovement : MonoBehaviour {
 	//Use Item at Location
 	int indexOfItem;
 	float distanceItemCanBeUsed = 1.0f;
-	float distanceTalkTo = 2.0f;
+	float distanceTalkTo = 3.0f;
 	GameObject objectToUseItemOn;
+	bool objectReached = false;
 
 	const float distToDetermineItemAsLow = 0.3f;
 
 	//talk to object
 	GameObject objectToTalkTo;
 	//float distanceItenCanBeTalkedTo = 4.0f;
-
 
 	void Start () {
 	
@@ -85,8 +85,10 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.UseItemOnObject :
 				agent.SetDestination ( objectToUseItemOn.transform.position );
 				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
+
+				TraceObject();
 				
-				if(  TraceObject() <= distanceItemCanBeUsed )
+				if( objectReached )
 				{
 					int low = DetermineItemPosition();
 					if(low == 1)
@@ -106,7 +108,9 @@ public class PlayerMovement : MonoBehaviour {
 				agent.SetDestination ( objectToUseItemOn.transform.position );
 				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
 
-				if( TraceObject() <= distanceItemCanBeUsed )
+				TraceObject();
+
+				if( objectReached )
 				{
 					int low = DetermineItemPosition();
 					if(low == 1)
@@ -125,8 +129,8 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.TalkToObject :
 				agent.SetDestination ( objectToTalkTo.transform.position );
 				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
-				
-				if(  distanceToActor <= distanceTalkTo )
+
+				if(  distanceToActor <= distanceTalkTo)
 				{
 				
 					ITalkTo onTalkTo = objectToTalkTo.GetComponent<ITalkTo> ();
@@ -157,45 +161,26 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-	float TraceObject()
+	bool TraceObject()
 	{
-		Collider collComp = objectToUseItemOn.GetComponentInChildren<Collider>();
-		if (collComp == null)
+		if (objectToUseItemOn == null)
 		{
-			return 1000.0f;
+			return false;
 		}
 
-		Vector3 target = objectToUseItemOn.transform.position;
-		target.y = transform.position.y;
-		Vector3 dir = target - transform.position;
-		Ray newRay = new Ray(transform.position, dir);
+		Collider[] allObjects = Physics.OverlapSphere (transform.position, 1.5f);
 
-		RaycastHit hitData = new RaycastHit();
-
-		if (collComp.Raycast (newRay, out hitData, 100.0f)) 
+		foreach (Collider col in allObjects) 
 		{
-			//Debug.Log("HitPoint: " + hitData.point + " Object Location : " + objectToUseItemOn.transform.position);
-			//Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
-			//Debug.DrawLine (transform.position, hitData.point, Color.green, 100.0f);
-			return (hitData.point - transform.position).magnitude;
-		} 
-		else 
-		{
-			target = objectToUseItemOn.transform.position;
-			dir = target - transform.position;
-			newRay = new Ray(transform.position, dir);
-
-			if( collComp.Raycast (newRay, out hitData, 100.0f) )
+			if( col.gameObject == objectToUseItemOn)
 			{
-				//Debug.Log ("Distance : " + (hitData.point - transform.position).magnitude );
-				//Debug.DrawLine (transform.position, hitData.point, Color.red, 100.0f);
-				return (hitData.point - transform.position).magnitude;
-			}
-			else
-			{
-				return 100.0f;
+				objectReached = true;
+				Debug.Log ("Object reached");
+				return true;
 			}
 		}
+
+		return false;
 	}
 
 	void OnPickUpLogic()
@@ -218,7 +203,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-	
 	void OnUseItemLogic()
 	{
 		RotateTowards (objectToUseItemOn.transform.position);
@@ -330,6 +314,7 @@ public class PlayerMovement : MonoBehaviour {
 				currentPlayerState = EPlayerState.UseItemOnObject;
 				this.indexOfItem = indexOfItem;
 				this.objectToUseItemOn = actorToUseOn;
+				objectReached = false;
 				break;
 			
 			default :
@@ -349,6 +334,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.ActionOnObject :
 				currentPlayerState = EPlayerState.ActionOnObject;
 				this.objectToUseItemOn = actorToUseOn;
+				objectReached = false;
 				break;
 				
 			default :
@@ -372,6 +358,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.UsingItemNormal :
 				currentPlayerState = EPlayerState.TalkToObject;
 				this.objectToTalkTo = actorToTalkTo;
+				objectReached = false;
 				break;
 				
 			default :
