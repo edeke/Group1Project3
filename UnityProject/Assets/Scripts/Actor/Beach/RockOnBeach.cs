@@ -79,7 +79,7 @@ public class RockOnBeach : CommentActorBase
 		} 
 		else 
 		{
-			DisplayComment ("A large rock, however I can't move it");
+			DisplayComment ("It's a large rock");
 		}
 
 	}
@@ -87,7 +87,7 @@ public class RockOnBeach : CommentActorBase
 	override public void OnAction()
 	{	
 		
-		DisplayComment("This rock looks <b>suspicious</b> like its standing on something!");
+		DisplayComment("This rock looks <b>suspicious</b>, however it's to heavy to move !");
 
 		//Invoke ("DestroyObject", 1.0f);
 		
