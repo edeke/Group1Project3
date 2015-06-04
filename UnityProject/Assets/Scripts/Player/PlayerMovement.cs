@@ -16,24 +16,40 @@ public enum EPlayerState {
 	Idle
 };
 
+public class ActionData 
+{
+	public EPlayerState state;
+	public Vector3 location;
+	public GameObject objectToUse;
+	public int inventoryIndex;
+}
+
 public class PlayerMovement : MonoBehaviour {
 
-	EPlayerState currentState;
-	private List<EPlayerState> actionList = new List<EPlayerState>();
+	ActionData currentState;
+	private List<ActionData> actionList = new List<ActionData>();
 
 	NavMeshAgent agent;
 
+	GameObject commentObject;
+	CommentController comment;
+
 	Vector3 locationToReach;
+
+	GameObject objectToUseAtionOn;
+	bool objectToUseAtionOnReached;
 
 	// Use this for initialization
 	void Start () {
-		currentState = EPlayerState.Idle;
+		currentState = new ActionData ();
+		currentState.state = EPlayerState.Idle;
+
 		agent = GetComponent<NavMeshAgent> ();
 	}
 
 	void OnLevelWasLoaded()
 	{
-		currentState = EPlayerState.Idle;
+		currentState.state = EPlayerState.Idle;
 		actionList.Clear ();
 	}
 
@@ -44,21 +60,47 @@ public class PlayerMovement : MonoBehaviour {
 
 	public bool WalkToLocation(Vector3 location)
 	{
-		switch (currentState)
+		NavMeshHit hitData;
+		NavMeshPath path = new NavMeshPath();
+		bool foundDest = false;
+
+		switch (currentState.state)
 		{
+
 			case EPlayerState.WalkToLocation :
-			case EPlayerState.Idle :
-				NavMeshHit hitData;
+				//just update the location for holding down the mouse button
 				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
-				location = hitData.position;
 				
-				NavMeshPath path = new NavMeshPath();
-				bool foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
+				foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
 				if( foundDest )
 				{
+					currentState.location = hitData.position;
+					
+					return true;
+				}
+				
+				return false;
+
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+				
+				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+				
+				foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					ActionData newAction = new ActionData();
+					
+					newAction.state = EPlayerState.WalkToLocation;
+					newAction.location = hitData.position;
+					newAction.objectToUse = null;
+					newAction.inventoryIndex = -1;
+
 					actionList.Clear();
-					actionList.Add(EPlayerState.WalkToLocation);
-					locationToReach = hitData.position;
+					actionList.Add(newAction);
 					
 					return true;
 				}
@@ -70,9 +112,38 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	public void TrySetActionOnObject(GameObject objectToUseActionOn)
+	public void ActionOnObject(GameObject objectToUseActionOn)
 	{
+		/*switch (currentState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+				
+				NavMeshPath path = new NavMeshPath();
+				bool foundDest = NavMesh.CalculatePath(transform.position, objectToUseActionOn.transform.position, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					locationToReach = 
+					objectToUseAtionOn = objectToUseActionOn;
+					objectToUseAtionOnReached = false;
 
+					actionList.Clear();
+					actionList.Add(EPlayerState.WalkToLocation);
+					currentPlayerState = EPlayerState.ActionOnObject;
+					
+					return true;
+				}
+				
+				DisplayComment("I can't reach it");
+				return false;
+				
+			default :
+				return false;
+		}*/
 	}
 
 	public void TrySetTalking(GameObject objectToTalkTo)
@@ -87,18 +158,16 @@ public class PlayerMovement : MonoBehaviour {
 
 	public EPlayerState GetPlayerState()
 	{
-		return currentState;
+		return currentState.state;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log (currentState);
-		Debug.Log (actionList.Count);
 
 		float distanceToActor = 0.0f;
 
-		switch (currentState) 
+		switch (currentState.state) 
 		{
 			case EPlayerState.Idle :
 				if(actionList.Count > 0)
@@ -110,13 +179,13 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.ForceWalkToLocation :
 			case EPlayerState.WalkToLocation :
-				agent.SetDestination (locationToReach);
+				agent.SetDestination (currentState.location);
 					
-				distanceToActor = (locationToReach - transform.position).magnitude;
+				distanceToActor = (currentState.location - transform.position).magnitude;
 
 				if (distanceToActor <= 0.2f) 
 				{
-					currentState = EPlayerState.Idle;
+					currentState.state = EPlayerState.Idle;
 				}
 			break;
 
@@ -124,6 +193,25 @@ public class PlayerMovement : MonoBehaviour {
 			break;
 
 
+		}
+	}
+
+	public void DisplayComment ( string text )
+	{
+		
+		if (commentObject == null) 
+		{
+			string path = "Prefabs/UI/CommentBubble/Comment";
+			GameObject tmpHndl = (GameObject) Resources.Load (path);
+			commentObject = (GameObject)Instantiate (tmpHndl, Vector3.zero, Quaternion.identity);
+		}
+		
+		comment = commentObject.GetComponentInChildren<CommentController> ();
+		comment.SetObjectFollow (gameObject);
+		
+		if (comment != null) 
+		{
+			comment.SetText(text);	
 		}
 	}
 }
