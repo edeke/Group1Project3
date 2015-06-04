@@ -168,14 +168,14 @@ public class PlayerMovement : MonoBehaviour {
 			return false;
 		}
 
-		Collider[] allObjects = Physics.OverlapSphere (transform.position, 1.5f);
+		Collider[] allObjects = Physics.OverlapSphere (transform.position, 1.0f);
 
 		foreach (Collider col in allObjects) 
 		{
 			if( col.gameObject == objectToUseItemOn)
 			{
 				objectReached = true;
-				Debug.Log ("Object reached");
+				//Debug.Log ("Object reached");
 				return true;
 			}
 		}
