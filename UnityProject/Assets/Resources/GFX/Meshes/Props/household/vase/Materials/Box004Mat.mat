@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_test_character_frog
-  m_Shader: {fileID: 4800000, guid: 1523a4c9d9196c34a8728e157d91cb27, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Box004Mat
+  m_Shader: {fileID: 4800000, guid: 9f796bced76d70a4fb0c5f2c1a79996a, type: 3}
+  m_ShaderKeywords: _DISTANCEFADE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -39,14 +39,14 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 879ce83331cfb7541bac362c92a3f659, type: 3}
+          m_Texture: {fileID: 2800000, guid: e4c4f8767f932594d98104560bbcf23f, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normals
         second:
-          m_Texture: {fileID: 2800000, guid: 2a6467ca8c2640740b413c205c2246d2, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -91,13 +91,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _AO
-        second:
-          m_Texture: {fileID: 2800000, guid: 20f6dd41129d7304fac05d970b82603e, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -106,7 +99,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .0439999998
+        second: .488999993
       data:
         first:
           name: _SrcBlend
@@ -118,11 +111,11 @@ Material:
       data:
         first:
           name: _Reach
-        second: .5
+        second: 0
       data:
         first:
           name: _MinLight
-        second: .940999985
+        second: .0439999998
       data:
         first:
           name: _MaxLight
@@ -130,7 +123,15 @@ Material:
       data:
         first:
           name: _Outline
-        second: .000500000024
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
       data:
         first:
           name: _Parallax
@@ -173,8 +174,16 @@ Material:
         second: 0
       data:
         first:
-          name: _AOIntensity
-        second: .662
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
     m_Colors:
       data:
         first:
@@ -183,12 +192,16 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .800000012, g: .800000012, b: .800000012, a: 1}
       data:
         first:
           name: _OutlineColor
-        second: {r: .176470578, g: .176470578, b: .176470578, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
