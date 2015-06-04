@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 457248}
-  - 136: {fileID: 13622052}
-  - 114: {fileID: 11457244}
   - 208: {fileID: 20808410}
+  - 136: {fileID: 13683866}
+  - 114: {fileID: 11429960}
   m_Layer: 0
   m_Name: BeachTree
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163586}
   m_Mesh: {fileID: 4300002, guid: fd7def4bb07693d4194fef8d8bc2ad99, type: 3}
---- !u!114 &11457244
+--- !u!114 &11429960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: Tree
   rucksack: {fileID: 0}
---- !u!136 &13622052
+--- !u!136 &13683866
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -205,9 +205,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
-  m_Height: 2
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -1.00999999, z: 0}
 --- !u!198 &19869172
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1303,7 +1303,7 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124326}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: .300000012, y: 1, z: .300000012}
