@@ -4,4 +4,5 @@ public enum DialoguerDialogues{
 	Barnacle_Bill = 0,
 	Pirate_on_Beach = 1,
 	Singer = 2,
+	Surfer = 3,
 }
