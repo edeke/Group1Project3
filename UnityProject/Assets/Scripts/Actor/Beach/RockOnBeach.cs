@@ -70,15 +70,24 @@ public class RockOnBeach : CommentActorBase
 
 	override public void OnInspect()
 	{	
-
-		DisplayComment("A large rock, however I can't move it");
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventID,ref tempData);
+		
+		if (tempData.hasEventOccured) 
+		{
+			DisplayComment ("A large rock on the move, I should watch my toes");
+		} 
+		else 
+		{
+			DisplayComment ("A large rock, however I can't move it");
+		}
 
 	}
 
 	override public void OnAction()
 	{	
 		
-		DisplayComment("This rock looks <b>suspicious</b> and <b>delicious</b> !");
+		DisplayComment("This rock looks <b>suspicious</b> like its standing on something!");
 
 		//Invoke ("DestroyObject", 1.0f);
 		

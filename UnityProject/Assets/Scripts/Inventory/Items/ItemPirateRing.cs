@@ -19,7 +19,17 @@ public class ItemPirateRing : Item {
 
 	override public void OnInspect()
 	{
-
+		EventData rockMovedEvent = new EventData();
+		GWorld.FindEvent(EventIDRockMoved,ref rockMovedEvent);
+		
+		if (rockMovedEvent.hasEventOccured) 
+		{
+			DisplayComment ("It's a ring I should pick it up");
+		} 
+		else 
+		{
+			DisplayComment ("It's a ring with a large boulder on it");
+		}
 
 	}
 

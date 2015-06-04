@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour {
 	//Use Item at Location
 	int indexOfItem;
 	float distanceItemCanBeUsed = 1.0f;
+	float distanceTalkTo = 2.0f;
 	GameObject objectToUseItemOn;
 
 	const float distToDetermineItemAsLow = 0.3f;
@@ -123,9 +124,9 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.TalkToObject :
 				agent.SetDestination ( objectToTalkTo.transform.position );
-				//distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
+				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
 				
-				if(  TraceObject() <= distanceItemCanBeUsed )
+				if(  distanceToActor <= distanceTalkTo )
 				{
 				
 					ITalkTo onTalkTo = objectToTalkTo.GetComponent<ITalkTo> ();
