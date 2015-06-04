@@ -235,7 +235,7 @@ public class PlayerInput : MonoBehaviour
 		
 		if(onAction != null && useInterface == true)
 		{
-			movementScript.TrySetActionOnObject(actionObject);
+			movementScript.ActionOnObject(actionObject);
 			return true;
 		}
 		else
