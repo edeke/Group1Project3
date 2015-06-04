@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public enum EPlayerState {
+/*public enum EPlayerState {
 	WalkToLocation,
 	UseItemOnObject,
 	UsingItemLow,
@@ -14,107 +13,356 @@ public enum EPlayerState {
 	PickupObjectNormal,
 	ForceWalkToLocation,
 	Idle
-};
-
-public class ActionData 
-{
-	public EPlayerState state;
-	public Vector3 location;
-	public GameObject objectToUse;
-	public int inventoryIndex;
-}
+};*/
 
 public class PlayerMovement : MonoBehaviour {
-
-	ActionData currentState;
-	private List<ActionData> actionList = new List<ActionData>();
-
+	
 	NavMeshAgent agent;
 
-	GameObject commentObject;
-	CommentController comment;
+	float pickupTimeStart = 1.5f;
+	float pickupTimeCurrent;
 
-	Vector3 locationToReach;
+	protected GameObject commentObject;
+	protected CommentController comment;
 
-	GameObject objectToUseAtionOn;
-	bool objectToUseAtionOnReached;
+	EPlayerState currentPlayerState = EPlayerState.Idle;
+	
+	Vector3 locationToReach = Vector3.zero;
 
-	// Use this for initialization
+	//Use Item at Location
+	int indexOfItem;
+	float distanceItemCanBeUsed = 1.0f;
+	float distanceTalkTo = 3.0f;
+	GameObject objectToUseItemOn;
+	bool objectReached = false;
+
+	const float distToDetermineItemAsLow = 0.3f;
+
+	//talk to object
+	GameObject objectToTalkTo;
+	//float distanceItenCanBeTalkedTo = 4.0f;
+
 	void Start () {
-		currentState = new ActionData ();
-		currentState.state = EPlayerState.Idle;
-
+	
 		agent = GetComponent<NavMeshAgent> ();
+		pickupTimeCurrent = pickupTimeStart;
 	}
 
 	void OnLevelWasLoaded()
 	{
-		currentState.state = EPlayerState.Idle;
-		actionList.Clear ();
+		TrySetIdleState ();
 	}
 
-	public void ForceMoveToLocation(Vector3 location)
+	public EPlayerState GetPlayerState()
 	{
-
+		return currentPlayerState;
 	}
-
-	public bool WalkToLocation(Vector3 location)
+	
+	void Update () 
 	{
-		NavMeshHit hitData;
-		NavMeshPath path = new NavMeshPath();
-		bool foundDest = false;
 
-		switch (currentState.state)
+		//Debug.Log (currentPlayerState);
+
+		float distanceToActor = 0.0f;
+
+		switch (currentPlayerState)
 		{
-
-			case EPlayerState.WalkToLocation :
-				//just update the location for holding down the mouse button
-				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
-				
-				foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
-				if( foundDest )
-				{
-					currentState.location = hitData.position;
-					
-					return true;
-				}
-				
-				return false;
-
-			case EPlayerState.Idle :
 			case EPlayerState.Talking :
-			case EPlayerState.UseItemOnObject :
-			case EPlayerState.TalkToObject :
-			case EPlayerState.ActionOnObject :
-				
-				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
-				
-				foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
-				if( foundDest )
-				{
-					ActionData newAction = new ActionData();
-					
-					newAction.state = EPlayerState.WalkToLocation;
-					newAction.location = hitData.position;
-					newAction.objectToUse = null;
-					newAction.inventoryIndex = -1;
+			case EPlayerState.Idle :
+				break;
 
-					actionList.Clear();
-					actionList.Add(newAction);
-					
-					return true;
+			case EPlayerState.ForceWalkToLocation :
+			case EPlayerState.WalkToLocation :
+				agent.SetDestination (locationToReach);
+
+				distanceToActor = (locationToReach - transform.position).magnitude;
+
+				//Debug.Log ("Distance: " + distanceToActor);
+				if( distanceToActor <= 0.2f )
+				{
+					TrySetIdleState();
 				}
+
+				break;
+
+			case EPlayerState.UseItemOnObject :
+				agent.SetDestination ( objectToUseItemOn.transform.position );
+				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
+
+				TraceObject();
 				
-				return false;
+				if( objectReached )
+				{
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.UsingItemLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.UsingItemNormal;
+					}
+					agent.ResetPath();
+					
+				}
+				break;
+
+			case EPlayerState.ActionOnObject :
+				agent.SetDestination ( objectToUseItemOn.transform.position );
+				//distanceToActor = (objectToUseItemOn.transform.position - transform.position).magnitude;
+
+				TraceObject();
+
+				if( objectReached )
+				{
+					int low = DetermineItemPosition();
+					if(low == 1)
+					{
+						currentPlayerState = EPlayerState.PickupObjectLow;
+					}
+					else
+					{
+						currentPlayerState = EPlayerState.PickupObjectNormal;
+					}
+
+					agent.ResetPath();
+				}
+				break;
+
+			case EPlayerState.TalkToObject :
+				agent.SetDestination ( objectToTalkTo.transform.position );
+				distanceToActor = (objectToTalkTo.transform.position - transform.position).magnitude;
+
+				if(  distanceToActor <= distanceTalkTo)
+				{
 				
+					ITalkTo onTalkTo = objectToTalkTo.GetComponent<ITalkTo> ();
+					
+					if(onTalkTo != null)
+					{
+						onTalkTo.OnTalkTo();
+						currentPlayerState = EPlayerState.Talking;
+					}
+					
+					agent.ResetPath();
+				}
+				break;
+
+			case EPlayerState.PickupObjectLow :
+			case EPlayerState.PickupObjectNormal :
+				OnPickUpLogic();
+				break;
+
+			case EPlayerState.UsingItemLow :
+			case EPlayerState.UsingItemNormal :
+				OnUseItemLogic();
+				break;
+
 			default :
+			break;
+		}
+
+	}
+
+	bool TraceObject()
+	{
+		if (objectToUseItemOn == null)
+		{
 			return false;
+		}
+
+		Collider[] allObjects = Physics.OverlapSphere (transform.position, 1.0f);
+
+		foreach (Collider col in allObjects) 
+		{
+			if( col.gameObject == objectToUseItemOn)
+			{
+				objectReached = true;
+				//Debug.Log ("Object reached");
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	void OnPickUpLogic()
+	{
+
+		RotateTowards (objectToUseItemOn.transform.position);
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if (pickupTimeCurrent <= 0.0f) {
+			IAction useAction = objectToUseItemOn.GetComponent<IAction> ();
+			
+			if (useAction != null) {
+				useAction.OnAction ();
+				pickupTimeCurrent = pickupTimeStart;
+			}
+			
+			currentPlayerState = EPlayerState.Idle;
+		}
+
+	}
+
+
+	void OnUseItemLogic()
+	{
+		RotateTowards (objectToUseItemOn.transform.position);
+		pickupTimeCurrent -= Time.deltaTime;
+		
+		if(pickupTimeCurrent <= 0.0f)
+		{
+			Inventory.myInv.TryUseItemOnActor(objectToUseItemOn, indexOfItem);
+			currentPlayerState = EPlayerState.Idle;
+			pickupTimeCurrent = pickupTimeStart;
 		}
 	}
 
-	public void ActionOnObject(GameObject objectToUseActionOn)
+	void RotateTowards(Vector3 target)
 	{
-		/*switch (currentState)
+		Vector3 targetDir = target - transform.position;
+		float step = 10.0f * Time.deltaTime;
+		Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0f);
+		newDir.y = 0.0f;
+		transform.rotation = Quaternion.LookRotation (newDir);
+	}
+
+	int DetermineItemPosition()
+	{
+		Vector3 distanceToItem = (objectToUseItemOn.transform.position - transform.position);
+
+		if (distanceToItem.y < distToDetermineItemAsLow) 
+		{
+			return 1;
+		} 
+		else 
+		{
+			return 2;
+		}
+
+	}
+	
+	public bool WalkToLocation( Vector3 location )
+	{
+		switch (currentPlayerState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+				NavMeshHit hitData;
+				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+				location = hitData.position;
+				
+				NavMeshPath path = new NavMeshPath();
+				bool foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					currentPlayerState = EPlayerState.WalkToLocation;
+					locationToReach = hitData.position;
+					
+					return true;
+				}
+
+				return false;
+
+			default :
+				return false;
+		}
+	}
+
+	public bool ForceMoveToLocation( Vector3 location )
+	{
+		switch (currentPlayerState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+
+				NavMeshHit hitData;
+				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+				location = hitData.position;
+
+				NavMeshPath path = new NavMeshPath();
+				bool foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					currentPlayerState = EPlayerState.ForceWalkToLocation;
+					locationToReach = hitData.position;
+					
+					return true;
+				}
+
+				DisplayComment("I can't reach it");
+
+				return false;
+
+			default :
+				return false;
+		}
+	}
+
+	public void TrySetIdleState( )
+	{
+		switch (currentPlayerState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+			case EPlayerState.ForceWalkToLocation :
+				currentPlayerState = EPlayerState.Idle;
+			break;
+				
+			default :
+			break;
+		}
+	}
+
+	public bool TrySetUseItemOnObject( int indexOfItem, GameObject actorToUseOn)
+	{
+		switch (currentPlayerState)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.ActionOnObject :
+
+				NavMeshPath path = new NavMeshPath();
+				bool foundDest = NavMesh.CalculatePath(transform.position, actorToUseOn.transform.position, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					currentPlayerState = EPlayerState.UseItemOnObject;
+					this.indexOfItem = indexOfItem;
+					this.objectToUseItemOn = actorToUseOn;
+					objectReached = false;
+					
+					return true;
+				}
+				
+				DisplayComment("I can't reach it");
+
+				return false;
+			
+			default :
+				return false;
+
+		}
+	}
+
+	public bool ActionOnObject( GameObject actorToUseOn)
+	{
+		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
@@ -124,76 +372,59 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.ActionOnObject :
 				
 				NavMeshPath path = new NavMeshPath();
-				bool foundDest = NavMesh.CalculatePath(transform.position, objectToUseActionOn.transform.position, NavMesh.AllAreas, path);
+				bool foundDest = NavMesh.CalculatePath(transform.position, actorToUseOn.transform.position, NavMesh.AllAreas, path);
 				if( foundDest )
 				{
-					locationToReach = 
-					objectToUseAtionOn = objectToUseActionOn;
-					objectToUseAtionOnReached = false;
-
-					actionList.Clear();
-					actionList.Add(EPlayerState.WalkToLocation);
+					this.objectToUseItemOn = actorToUseOn;
+					objectReached = false;
 					currentPlayerState = EPlayerState.ActionOnObject;
-					
+
 					return true;
 				}
-				
+
 				DisplayComment("I can't reach it");
+
 				return false;
 				
 			default :
 				return false;
-		}*/
+		}
 	}
 
-	public void TrySetTalking(GameObject objectToTalkTo)
+	public bool TrySetTalking( GameObject actorToTalkTo )
 	{
-
-	}
-
-	public void TrySetUseItemOnObject(int indexSelectedItem, GameObject objectToUseItemOn)
-	{
-
-	}
-
-	public EPlayerState GetPlayerState()
-	{
-		return currentState.state;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-
-		float distanceToActor = 0.0f;
-
-		switch (currentState.state) 
+		switch (currentPlayerState)
 		{
 			case EPlayerState.Idle :
-				if(actionList.Count > 0)
-				{
-					currentState = actionList[0];
-					actionList.RemoveAt(0);
-				}
-			break;
-
-			case EPlayerState.ForceWalkToLocation :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItemOnObject :
 			case EPlayerState.WalkToLocation :
-				agent.SetDestination (currentState.location);
-					
-				distanceToActor = (currentState.location - transform.position).magnitude;
+			case EPlayerState.ActionOnObject :
+			case EPlayerState.PickupObjectLow :
+			case EPlayerState.PickupObjectNormal :
+			case EPlayerState.UsingItemLow :
+			case EPlayerState.TalkToObject :
+			case EPlayerState.UsingItemNormal :
 
-				if (distanceToActor <= 0.2f) 
+				NavMeshPath path = new NavMeshPath();
+				bool foundDest = NavMesh.CalculatePath(transform.position, actorToTalkTo.transform.position, NavMesh.AllAreas, path);
+				if( foundDest )
 				{
-					currentState.state = EPlayerState.Idle;
+					currentPlayerState = EPlayerState.TalkToObject;
+					this.objectToTalkTo = actorToTalkTo;
+					objectReached = false;
+
+					return true;
 				}
-			break;
 
+				DisplayComment("It's to far away");
+
+				return false;
+				
 			default :
-			break;
+				return false;
 
-
-		}
+			}
 	}
 
 	public void DisplayComment ( string text )

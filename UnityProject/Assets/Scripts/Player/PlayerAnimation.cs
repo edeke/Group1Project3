@@ -32,7 +32,6 @@ public class PlayerAnimation : MonoBehaviour {
 
 		posPrev = transform.position;
 
-
 		if ( movement.GetPlayerState() == EPlayerState.Idle ) 
 		{
 			currentIdleTime -= Time.deltaTime;

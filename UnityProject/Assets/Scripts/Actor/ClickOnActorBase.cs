@@ -7,6 +7,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 
 	protected SpeechBubbleController speech;
 	public DialoguerDialogues dialog;
+	public string speechBubbleText;
 	public string actorName;
 
 	public void Awake()

@@ -38,7 +38,7 @@ public class Pirate : ClickOnActorBase
 	{		
 		if (speech != null) 
 		{
-			speech.SetText("Jag vill ha min ring !!");
+			speech.SetText(speechBubbleText);
 		}
 	}
 
