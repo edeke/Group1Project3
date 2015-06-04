@@ -51,6 +51,27 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -93,27 +114,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DiffuseTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NormalTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Diffuse_copy
         second:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
@@ -145,7 +145,7 @@ Material:
           name: _PaintMask
         second:
           m_Texture: {fileID: 2800000, guid: 5951c0cc7f0e59149847c33fbfcbc6c0, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .400000006, y: .400000006}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -189,8 +189,12 @@ Material:
         second: 0
       data:
         first:
-          name: _BaseScale
+          name: _Autotiletoscale
         second: 1
+      data:
+        first:
+          name: _BaseScale
+        second: 6
       data:
         first:
           name: _Parallax
@@ -233,12 +237,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Autotiletoscale
-        second: 1
-      data:
-        first:
           name: _PaintWearFactor
-        second: .481999993
+        second: .0769999996
       data:
         first:
           name: _ColorBlendshift

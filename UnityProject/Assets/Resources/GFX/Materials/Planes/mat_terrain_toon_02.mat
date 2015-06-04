@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_box_01
-  m_Shader: {fileID: 4800000, guid: 29c01339fb27403479d7b19602bfac66, type: 3}
+  m_Name: mat_terrain_toon_02
+  m_Shader: {fileID: 4800000, guid: 358d0862d0deb2c4289865631c1fa055, type: 3}
   m_ShaderKeywords: _AUTOTILETOSCALE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -37,37 +37,65 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Mask
         second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
+          m_Texture: {fileID: 2800000, guid: e524f99f85a571f429050b2cc4d003e3, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _DiffuseTexture
+          name: _RDiffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Texture: {fileID: 2800000, guid: aadf151636f60a44ead5c012a8d47769, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _NormalTexture
+          name: _GDiffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0fa9c29aa9ce95541a1d26f6a5a3ac2e, type: 3}
+          m_Scale: {x: 3, y: 3}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: b561f8c9bea944e4c9a39e333b1db01c, type: 3}
+          m_Scale: {x: 3, y: 3}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BlackDiffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: a7c4e362b9739e742a67bfe632636f66, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BlackNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: a4900d3a9fde56248bc38b4521bdb13a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: 11fc48ff7e08c2f4a8241495b83c4943, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: c2c7987bbc1f8564cb085719685b74df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: c2c7987bbc1f8564cb085719685b74df, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -112,34 +140,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -148,7 +148,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .151999995
+        second: .107000001
       data:
         first:
           name: _SrcBlend
@@ -160,7 +160,7 @@ Material:
       data:
         first:
           name: _Reach
-        second: .5
+        second: .509000003
       data:
         first:
           name: _MinLight
@@ -180,7 +180,23 @@ Material:
       data:
         first:
           name: _BaseScale
-        second: 5.80000019
+        second: 33.5
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _MinHeight
+        second: -.100000001
+      data:
+        first:
+          name: _MaxHeight
+        second: .100000001
+      data:
+        first:
+          name: _TansitionSharpness
+        second: 1
       data:
         first:
           name: _Parallax
@@ -234,6 +250,10 @@ Material:
         first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
