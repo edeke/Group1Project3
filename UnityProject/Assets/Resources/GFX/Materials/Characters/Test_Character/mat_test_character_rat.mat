@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_test_character
+  m_Name: mat_test_character_rat
   m_Shader: {fileID: 4800000, guid: 1523a4c9d9196c34a8728e157d91cb27, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -33,6 +33,20 @@ Material:
           name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: acce403bd1e64b44c9be7a56da718b0f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 1927898f8b7abb34ea2385333c6a22c5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -79,23 +93,9 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 6c89b2a032515e44eaa938cc63d21041, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 8873df0230cdf9a4f93c300fe2990fa2, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _AO
         second:
-          m_Texture: {fileID: 2800000, guid: 6cd6a0f94b60c1145a608a252abfbe94, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0a185a0fad2b522499475dc93a68457f, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -115,6 +115,22 @@ Material:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Reach
+        second: .5
+      data:
+        first:
+          name: _MinLight
+        second: 1
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: .000500000024
       data:
         first:
           name: _Parallax
@@ -157,22 +173,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Reach
-        second: .5
-      data:
-        first:
-          name: _MinLight
-        second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
-        second: .000500000024
-      data:
-        first:
           name: _AOIntensity
         second: .662
     m_Colors:
@@ -186,9 +186,9 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _OutlineColor
         second: {r: .176470578, g: .176470578, b: .176470578, a: 0}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}

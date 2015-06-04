@@ -100,7 +100,7 @@ public class PlayerInput : MonoBehaviour
 							{
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
-									movementScript.TrySetMoveToLocationState(hitInfo.point);
+									movementScript.WalkToLocation(hitInfo.point);
 								}	
 							}
 						}
@@ -117,7 +117,7 @@ public class PlayerInput : MonoBehaviour
 							{
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
-									movementScript.TrySetMoveToLocationState(hitInfo.point);
+									movementScript.WalkToLocation(hitInfo.point);
 								}	
 							}
 						}
@@ -184,7 +184,7 @@ public class PlayerInput : MonoBehaviour
 						{
 							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 							{
-								movementScript.TrySetMoveToLocationState(hitInfo.point);
+								movementScript.WalkToLocation(hitInfo.point);
 							}
 
 						}
@@ -211,7 +211,7 @@ public class PlayerInput : MonoBehaviour
 						{
 							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 							{
-								movementScript.TrySetMoveToLocationState(hitInfo.point);
+								movementScript.WalkToLocation(hitInfo.point);
 							}
 							
 						}
@@ -235,7 +235,7 @@ public class PlayerInput : MonoBehaviour
 		
 		if(onAction != null && useInterface == true)
 		{
-			movementScript.TrySetActionOnObject(actionObject);
+			movementScript.ActionOnObject(actionObject);
 			return true;
 		}
 		else
