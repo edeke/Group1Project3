@@ -8,7 +8,7 @@ public class ItemMetalPipe : Item {
 
 	override public void OnInspect()
 	{
-
+		DisplayComment("It's a large metal spoon");
 
 	}
 
@@ -31,7 +31,7 @@ public class ItemMetalPipe : Item {
 		} 
 		else 
 		{
-			DisplayComment("Need inventory to pickup item");
+			DisplayComment("I need a backpack or something to hold this large spoon");
 		}
 
 	}
