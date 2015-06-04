@@ -32,8 +32,6 @@ public class MainMenu : MonoBehaviour {
 			BackButton();
 		}
 
-		Debug.Log (PlayerPrefs.GetString("Player Name"));
-
 		if (playerName.text.Length > 0 && playerName.text.Length < 8) {
 
 			acceptButton.interactable = true;
