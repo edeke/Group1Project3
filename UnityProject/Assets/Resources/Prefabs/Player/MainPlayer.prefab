@@ -13,7 +13,6 @@ GameObject:
   - 54: {fileID: 5465492}
   - 114: {fileID: 11420116}
   - 195: {fileID: 19559550}
-  - 114: {fileID: 11455058}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Player
@@ -46,6 +45,7 @@ GameObject:
   - 4: {fileID: 403660}
   - 137: {fileID: 13760688}
   - 95: {fileID: 9551450}
+  - 114: {fileID: 11468094}
   m_Layer: 0
   m_Name: Mainchar_mesh:Group1
   m_TagString: Untagged
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100528}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -4.0574646, y: 5.20940399, z: -10.5258789}
+  m_LocalPosition: {x: -62.5419617, y: 4.53694248, z: -24.5821686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434460}
@@ -142,15 +142,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627e48c20c160764da65128612c85f6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e04176e394b7a94284b33eabc007c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11455058
+--- !u!114 &11468094
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100528}
+  m_GameObject: {fileID: 114792}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 329d3669b9b1c5246ac1d4169b705b9a, type: 3}

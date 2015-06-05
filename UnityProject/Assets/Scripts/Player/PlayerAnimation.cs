@@ -17,9 +17,19 @@ public class PlayerAnimation : MonoBehaviour {
 	void Start () {
 		currentIdleTime = playIdleAfterTime;
 		anim = GetComponentInChildren<Animator> ();
-		movement = GetComponentInChildren<PlayerMovement> ();
+		movement = GetComponentInParent<PlayerMovement> ();
 		posPrev = transform.position;
 
+	}
+
+	void AnimationUseItem()
+	{
+		movement.AnimationUseItem ();
+	}
+
+	void AnimationDonePlaying()
+	{
+		movement.AnimationDonePlaying ();
 	}
 	
 	// Update is called once per frame
@@ -28,9 +38,11 @@ public class PlayerAnimation : MonoBehaviour {
 		//calculate speed
 		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
 		//speed /= maxSpeed;
-		anim.SetFloat("speed", speed);
+		anim.SetFloat ("speed", speed);
 
 		posPrev = transform.position;
+
+
 
 		if ( movement.GetPlayerState() == EPlayerState.Idle ) 
 		{
@@ -50,11 +62,11 @@ public class PlayerAnimation : MonoBehaviour {
 		}
 
 		//Pickup Item
-		if (movement.GetPlayerState () == EPlayerState.PickupObjectLow) 
+		if (movement.GetPlayerAnimationState () == EAnimationState.PickupLow) 
 		{
 			anim.SetInteger ("Pickup", 1);
 		} 
-		else if (movement.GetPlayerState () == EPlayerState.PickupObjectNormal) 
+		else if (movement.GetPlayerAnimationState () == EAnimationState.Pickup) 
 		{
 			anim.SetInteger ("Pickup", 2);
 		} 
@@ -64,11 +76,11 @@ public class PlayerAnimation : MonoBehaviour {
 		}
 
 		//using Item
-		if (movement.GetPlayerState () == EPlayerState.UsingItemLow) 
+		if (movement.GetPlayerAnimationState () == EAnimationState.UseLow) 
 		{
 			anim.SetInteger ("useingItem", 1);
 		} 
-		else if (movement.GetPlayerState () == EPlayerState.UsingItemNormal) 
+		else if (movement.GetPlayerAnimationState () == EAnimationState.Use) 
 		{
 			anim.SetInteger ("useingItem", 2);
 		} 

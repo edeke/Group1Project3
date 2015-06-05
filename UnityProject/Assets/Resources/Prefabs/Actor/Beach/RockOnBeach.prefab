@@ -26,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
-  m_LocalRotation: {x: .0158712417, y: .682261586, z: -.0479168445, w: .729363561}
-  m_LocalPosition: {x: -62.7299995, y: 5.00299978, z: -22.25}
+  m_LocalRotation: {x: -.0279423185, y: .681874156, z: -.00101469457, w: .730934978}
+  m_LocalPosition: {x: -59.9202652, y: 6.33559704, z: -13.46}
   m_LocalScale: {x: .00474457582, y: .00474457769, z: .00474457769}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: RockOnBeach
+  animationOnAction: 7
   target: {x: 2, y: 0, z: 0}
 --- !u!135 &13581154
 SphereCollider:
@@ -94,10 +95,10 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 200, y: 256.416016, z: 200}
+  m_Extents: {x: 100, y: 256.416016, z: 100}
   m_MoveThreshold: .100000001
   m_Carve: 1
   m_CarveOnlyStationary: 1

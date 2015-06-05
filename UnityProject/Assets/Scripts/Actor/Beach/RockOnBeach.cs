@@ -7,6 +7,7 @@ public class RockOnBeach : CommentActorBase
 
 	string EventID = "RockOnBeachMoved";
 	string EventIDPosition = "RockOnBeachPosition";
+	
 	public Vector3 target;
 	bool moveRock = false;
 	Vector3 startLocation;
@@ -91,6 +92,13 @@ public class RockOnBeach : CommentActorBase
 
 		//Invoke ("DestroyObject", 1.0f);
 		
+	}
+
+	override public EAnimationState AnimationOnAction()
+	{	
+		
+		
+		return animationOnAction;
 	}
 	
 	void DestroyObject()

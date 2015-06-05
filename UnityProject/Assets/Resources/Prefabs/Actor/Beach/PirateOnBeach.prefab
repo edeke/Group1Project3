@@ -131,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133810}
-  m_LocalRotation: {x: 0, y: .44192344, z: 0, w: .897052765}
-  m_LocalPosition: {x: 4.00442171, y: 6.20940399, z: -51.0239754}
+  m_LocalRotation: {x: 0, y: .975027442, z: 0, w: .222084492}
+  m_LocalPosition: {x: 8.72999954, y: 6.17000008, z: -88.9499969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22447826}
@@ -144,7 +144,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133810}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -348,8 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: 1
+  speechBubbleText: 
   actorName: Pirate
-  wreck: {fileID: 0}
 --- !u!114 &11491044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +387,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: .5, y: 1, z: .5}
   m_MoveThreshold: .100000001
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: .5
@@ -478,8 +478,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.423544019, z: 0, w: .905875564}
+  m_LocalPosition: {x: 0, y: 0, z: .0799999982}
   m_LocalScale: {x: .0299999993, y: .0199999996, z: .0299999993}
   m_Children:
   - {fileID: 22456338}
@@ -491,7 +491,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -.52700001, y: .699999988}
+  m_AnchoredPosition: {x: -.200000003, y: 2.72000003}
   m_SizeDelta: {x: 154.908005, y: 147.057007}
   m_Pivot: {x: 0, y: 0}
 --- !u!224 &22456338

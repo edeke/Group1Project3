@@ -8,6 +8,8 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 	protected GameObject commentObject;
 	protected CommentController comment;
 	public string actorName;
+
+	public EAnimationState animationOnAction;
 	
 	// Use this for initialization
 	void Start () 
@@ -28,6 +30,13 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		
 		
 		
+	}
+
+	virtual public EAnimationState AnimationOnAction()
+	{	
+		
+		
+		return animationOnAction;
 	}
 	
 

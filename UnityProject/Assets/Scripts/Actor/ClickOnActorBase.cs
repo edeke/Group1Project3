@@ -39,6 +39,13 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 
 	}
 
+	virtual public EAnimationState AnimationOnAction()
+	{	
+		
+		
+		return EAnimationState.Idle;
+	}
+
 	virtual public void OnInspect()
 	{		
 
