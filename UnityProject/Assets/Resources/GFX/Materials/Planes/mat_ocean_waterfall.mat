@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_ocean_waterfall
-  m_Shader: {fileID: 4800000, guid: 4dcdd5f731e301a408659ac880c8e1a3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 91f11c9e6c97c3f4babb90d556f41a95, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -33,7 +33,7 @@ Material:
           name: _NormalMap
         second:
           m_Texture: {fileID: 2800000, guid: 6ad9ac4bb377abe44ae01bbeab2f5d1d, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 1, y: .540000021}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -88,14 +88,14 @@ Material:
         first:
           name: _OceanTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 769ddf77be1403d42a3febf63e58c8c7, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Texture: {fileID: 2800000, guid: b056e6acf922fb647ab1da0e4d27b308, type: 3}
+          m_Scale: {x: 1, y: .769999981}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _OceanTexture_copy
         second:
-          m_Texture: {fileID: 2800000, guid: 769ddf77be1403d42a3febf63e58c8c7, type: 3}
+          m_Texture: {fileID: 2800000, guid: b056e6acf922fb647ab1da0e4d27b308, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -103,7 +103,7 @@ Material:
           name: _NormalMap_copy
         second:
           m_Texture: {fileID: 2800000, guid: 6ad9ac4bb377abe44ae01bbeab2f5d1d, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 1, y: .360000014}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -123,14 +123,14 @@ Material:
         first:
           name: _BeachTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 10ab5b50a612bf742a80a74eaf5c16e3, type: 3}
+          m_Texture: {fileID: 2800000, guid: 232b9a29652feb349a7e479e23fb3978, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _FoamTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 10ab5b50a612bf742a80a74eaf5c16e3, type: 3}
+          m_Texture: {fileID: 2800000, guid: 232b9a29652feb349a7e479e23fb3978, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -202,6 +202,14 @@ Material:
         first:
           name: _VertexOffset
         second: .5
+      data:
+        first:
+          name: _BeachDepth
+        second: 2
+      data:
+        first:
+          name: _OpacityFade
+        second: 0
     m_Colors:
       data:
         first:
