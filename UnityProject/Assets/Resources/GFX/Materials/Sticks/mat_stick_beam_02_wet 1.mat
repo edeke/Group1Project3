@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_box_03
-  m_Shader: {fileID: 4800000, guid: 281f5e3a54980bd4f97a261aa2dd59e6, type: 3}
-  m_ShaderKeywords: _AUTOTILETOSCALE_ON
+  m_Name: mat_stick_beam_02_wet 1
+  m_Shader: {fileID: 4800000, guid: 48f2c8efdef466742945f6f8ffe3bad3, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -39,14 +39,14 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Texture: {fileID: 2800000, guid: f927c959cce5dfc4bb096beb5386ae84, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normals
         second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Texture: {fileID: 2800000, guid: 6ad841430f602b14fbcd46a887ef6b6e, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -91,69 +91,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DiffuseTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NormalTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 6e5554f87e2917f4aa8e5808e175307f, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _PaintMask
-        second:
-          m_Texture: {fileID: 2800000, guid: ef8d8143ef717ad4c821e8bd0d150c72, type: 3}
-          m_Scale: {x: .400000006, y: .400000006}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WearMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 3, y: 3}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -162,7 +99,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .151999995
+        second: .063000001
       data:
         first:
           name: _SrcBlend
@@ -190,11 +127,11 @@ Material:
       data:
         first:
           name: _Autotiletoscale
-        second: 1
+        second: 0
       data:
         first:
           name: _BaseScale
-        second: 6
+        second: 1
       data:
         first:
           name: _Parallax
@@ -237,12 +174,28 @@ Material:
         second: 0
       data:
         first:
-          name: _PaintWearFactor
-        second: .193000004
+          name: _WaterHeight
+        second: .25
       data:
         first:
-          name: _ColorBlendshift
-        second: .349999994
+          name: _Wetlinesharpness
+        second: 2.42000008
+      data:
+        first:
+          name: _WearThreshold
+        second: .463999987
+      data:
+        first:
+          name: _PaintOpacity
+        second: .601999998
+      data:
+        first:
+          name: _ColorExp
+        second: 4.46999979
+      data:
+        first:
+          name: _ColorShift
+        second: .159999996
     m_Colors:
       data:
         first:
@@ -262,5 +215,17 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _WallColor
-        second: {r: .435337365, g: .839741707, b: .897058845, a: 1}
+          name: _WetColor
+        second: {r: .544982672, g: .705882311, b: .55275023, a: 1}
+      data:
+        first:
+          name: _PaintColor
+        second: {r: .362781137, g: .808823526, b: .753452778, a: 1}
+      data:
+        first:
+          name: _WoodColor1
+        second: {r: .0588235259, g: .0588235259, b: .0588235259, a: 1}
+      data:
+        first:
+          name: _WoodColor2
+        second: {r: 1, g: .902636886, b: .647058845, a: 1}
