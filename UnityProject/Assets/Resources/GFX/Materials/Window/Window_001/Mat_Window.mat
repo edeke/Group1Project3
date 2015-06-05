@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Window
-  m_Shader: {fileID: 4800000, guid: d66bd06643320294da14684a9382c7ca, type: 3}
+  m_Shader: {fileID: 4800000, guid: e2036b326bab128468c064d0880157a8, type: 3}
   m_ShaderKeywords: _DISTANCEFADE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -33,6 +33,20 @@ Material:
           name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 79fb3fe1d0086304ca3183d32e48e2ad, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 10edc4278bf351b4699dbaf3e030e294, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -79,30 +93,9 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 98fc2dafe51660e438eeadd93966579f, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 10edc4278bf351b4699dbaf3e030e294, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _EmissiveMap
         second:
           m_Texture: {fileID: 2800000, guid: 29d4828faf4470e47a2ecf4a3ccaf38d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _LerpMask
-        second:
-          m_Texture: {fileID: 2800000, guid: fc06ace90a037ca419c9ab62c2791bc0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -124,8 +117,28 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
+          name: _Reach
+        second: .600000024
+      data:
+        first:
+          name: _MinLight
         second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
       data:
         first:
           name: _Parallax
@@ -164,36 +177,16 @@ Material:
         second: 0
       data:
         first:
-          name: _Reach
-        second: .600000024
-      data:
-        first:
-          name: _MinLight
+          name: _Metallic
         second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _DistanceFade
-        second: .352941185
       data:
         first:
           name: _FadeDistance
         second: 10
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
       data:
         first:
           name: _DistanceFade_copy
@@ -213,12 +206,12 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _DistanceColor
@@ -227,11 +220,3 @@ Material:
         first:
           name: _EmissiveColor
         second: {r: .921906829, g: 1, b: .191176504, a: 1}
-      data:
-        first:
-          name: _LowColor
-        second: {r: .172199383, g: .360294104, b: .344727635, a: 1}
-      data:
-        first:
-          name: _HighColor
-        second: {r: .610294104, g: .601319194, b: .601319194, a: 1}

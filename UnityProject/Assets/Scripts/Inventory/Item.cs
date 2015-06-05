@@ -14,6 +14,8 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	public GameObject onUseParticle;
 	public GameObject onPickupParticle;
 	public int numberOfItemsInStack = 1;
+
+	public EAnimationState animationOnAction;
 	
 	protected string eventID;
 	
@@ -81,6 +83,13 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 			DisplayComment("Need inventory to pickup item");
 		}
 
+	}
+
+	virtual public EAnimationState AnimationOnAction()
+	{	
+		
+		
+		return animationOnAction;
 	}
 	
 	public void DisplayComment ( string text )

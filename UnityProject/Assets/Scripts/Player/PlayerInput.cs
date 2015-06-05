@@ -43,9 +43,9 @@ public class PlayerInput : MonoBehaviour
 			{
 				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					if( !TryTalkToObject( hitInfo.collider.gameObject, hitInfo.point ))
 					{
-						TryUseActionOnObject( hitInfo.collider.gameObject );
+						TryUseActionOnObject( hitInfo.collider.gameObject, hitInfo.point);
 					}
 				}
 			}
@@ -53,9 +53,9 @@ public class PlayerInput : MonoBehaviour
 			{	
 				if( traceHit && dragging == false )
 				{
-					if( !TryTalkToObject( hitInfo.collider.gameObject ))
+					if( !TryTalkToObject( hitInfo.collider.gameObject , hitInfo.point ))
 					{
-						TryUseActionOnObject( hitInfo.collider.gameObject );
+						TryUseActionOnObject( hitInfo.collider.gameObject, hitInfo.point );
 					}
 				}
 			}
@@ -160,7 +160,6 @@ public class PlayerInput : MonoBehaviour
 		//when releasing mouse
 		else if( Input.GetMouseButtonUp (0) )
 		{
-
 			if(ignoreFirstInput)
 			{
 				ignoreFirstInput = false;
@@ -226,7 +225,7 @@ public class PlayerInput : MonoBehaviour
 		}
 	}
 
-	bool TryUseActionOnObject(GameObject actionObject, bool useInterface = true)
+	bool TryUseActionOnObject(GameObject actionObject, Vector3 location,  bool useInterface = true)
 	{
 		//store object for later
 		selectedObject = actionObject;
@@ -235,7 +234,7 @@ public class PlayerInput : MonoBehaviour
 		
 		if(onAction != null && useInterface == true)
 		{
-			movementScript.ActionOnObject(actionObject);
+			movementScript.ActionOnObject(actionObject, location);
 			return true;
 		}
 		else
@@ -245,7 +244,7 @@ public class PlayerInput : MonoBehaviour
 		}
 	}
 
-	bool TryTalkToObject(GameObject actionObject)
+	bool TryTalkToObject(GameObject actionObject, Vector3 location)
 	{
 		//store object for later
 		selectedObject = actionObject;
@@ -254,7 +253,7 @@ public class PlayerInput : MonoBehaviour
 		
 		if(onTalkTo != null)
 		{
-			movementScript.TrySetTalking(actionObject);
+			movementScript.TrySetTalking(actionObject, location);
 			return true;
 		}
 		else

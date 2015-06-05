@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163586}
   m_LocalRotation: {x: -.723271728, y: -.0221333448, z: .0232066084, w: .689818561}
-  m_LocalPosition: {x: .660000026, y: -.0529999994, z: -.129999995}
+  m_LocalPosition: {x: .660000026, y: -.331, z: -.129999995}
   m_LocalScale: {x: .202058867, y: .2023101, z: .0683938339}
   m_Children:
   - {fileID: 467274}
@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.22000003, y: .170000002, z: -1.12}
+  m_LocalPosition: {x: -8.17000008, y: 8.73999977, z: -25.5900002}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children:
   - {fileID: 426120}
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: Tree
+  animationOnAction: 7
   rucksack: {fileID: 0}
 --- !u!136 &13683866
 CapsuleCollider:
@@ -1303,12 +1304,12 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124326}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: .300000012, y: 1, z: .300000012}
+  m_Extents: {x: .5, y: .5, z: .5}
   m_MoveThreshold: .100000001
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: .5

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8d06c35dee1f6d847b0121013570de61
-timeCreated: 1432824444
+guid: 5cf2bfbcf7a776e4db5aa3ba82308b24
+timeCreated: 1433498249
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -245,7 +245,7 @@ ModelImporter:
       name: Take 001
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 65
+      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -264,16 +264,16 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: .440748513
-        functionName: AnimationUseItem
+      - time: 0
+        functionName: AnimationDonePlaying
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 329d3669b9b1c5246ac1d4169b705b9a,
           type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
-        functionName: AnimationDonePlaying
+      - time: .386490136
+        functionName: AnimationUseItem
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 329d3669b9b1c5246ac1d4169b705b9a,
           type: 3}

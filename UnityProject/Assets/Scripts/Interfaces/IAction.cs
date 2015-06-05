@@ -4,5 +4,6 @@ interface IAction
 {
 
 	void OnAction();
+	EAnimationState AnimationOnAction();
 
 }
