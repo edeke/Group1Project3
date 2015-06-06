@@ -424,6 +424,14 @@ public class PlayerMovement : MonoBehaviour {
 						if( Inventory.myInv.GetItemFromIndex(currentState.inventoryIndex, ref itemToUse) )
 						{
 							currentAnimationState = useItem.AnimationOnItem( itemToUse.itemType );
+
+							if( currentAnimationState == EAnimationState.None )
+							{
+								currentAnimationState = EAnimationState.Idle;
+								currentState.state = EPlayerState.Idle;
+								
+								break;
+							}
 						}
 					}
 					else
@@ -452,7 +460,7 @@ public class PlayerMovement : MonoBehaviour {
 						talkObject.OnTalkTo();
 						
 						//remove the state from the queue
-						currentState.state = EPlayerState.Idle;
+						currentState.state = EPlayerState.Idle; //fix not to try open the dialog every frame, makes the dialog hang
 						currentAnimationState = EAnimationState.Talk;
 					}
 					/*else
