@@ -292,6 +292,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 06923962102a92e40ad162bffbb89729, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &301350091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  m_PrefabInternal: {fileID: 1674143945}
 --- !u!1001 &352823863
 Prefab:
   m_ObjectHideFlags: 0
@@ -329,19 +333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 497116, guid: 28b7fa2980e7dfa40a56353647ef3425, type: 2}
       propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 20899174, guid: 28b7fa2980e7dfa40a56353647ef3425, type: 2}
-      propertyPath: m_CarveOnlyStationary
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20899174, guid: 28b7fa2980e7dfa40a56353647ef3425, type: 2}
-      propertyPath: m_Carve
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20899174, guid: 28b7fa2980e7dfa40a56353647ef3425, type: 2}
-      propertyPath: m_Enabled
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28b7fa2980e7dfa40a56353647ef3425, type: 2}
@@ -569,7 +561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441632, guid: cac83ff72f99f3d4e84c4bd0c3f50ffc, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cac83ff72f99f3d4e84c4bd0c3f50ffc, type: 2}
@@ -1084,22 +1076,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 634775265}
-    - target: {fileID: 11450356, guid: 8cd04dc3e3a058542b77585d270c6e77, type: 2}
-      propertyPath: actorName
-      value: Snake
-      objectReference: {fileID: 0}
-    - target: {fileID: 497116, guid: 8cd04dc3e3a058542b77585d270c6e77, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.55000019
-      objectReference: {fileID: 0}
-    - target: {fileID: 497116, guid: 8cd04dc3e3a058542b77585d270c6e77, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.42000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 497116, guid: 8cd04dc3e3a058542b77585d270c6e77, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.42000008
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8cd04dc3e3a058542b77585d270c6e77, type: 2}
   m_IsPrefabParent: 0
@@ -1189,6 +1165,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 11429960, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
+      propertyPath: rucksack
+      value: 
+      objectReference: {fileID: 301350091}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
   m_IsPrefabParent: 0

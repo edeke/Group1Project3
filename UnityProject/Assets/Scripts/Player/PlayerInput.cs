@@ -221,6 +221,7 @@ public class PlayerInput : MonoBehaviour
 			}
 
 			mouseClicked = false;
+			dragging = false;
 
 		}
 	}

@@ -9,6 +9,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	public DialoguerDialogues dialog;
 	public string speechBubbleText;
 	public string actorName;
+	public EAnimationState onActionAnimation;
 
 	public void Awake()
 	{
@@ -43,7 +44,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	{	
 		
 		
-		return EAnimationState.Idle;
+		return onActionAnimation;
 	}
 
 	virtual public void OnInspect()

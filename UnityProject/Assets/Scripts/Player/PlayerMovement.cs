@@ -185,6 +185,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void ActionOnObject(GameObject objectToUseActionOn, Vector3 location)
 	{
+
 		switch (currentState.state)
 		{
 			case EPlayerState.Idle :
@@ -203,9 +204,7 @@ public class PlayerMovement : MonoBehaviour {
 
 					actionList.Add(newAction);
 
-					currentState.state = EPlayerState.Idle;
 				}
-
 				return;
 
 				
@@ -235,7 +234,6 @@ public class PlayerMovement : MonoBehaviour {
 				
 				actionList.Add(newAction);
 
-				currentState.state = EPlayerState.Idle;
 			}
 			
 			return;
@@ -314,15 +312,12 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
-		//Debug.Log (currentState.state);
-
 		float distanceToActor = 0.0f;
 
 		switch (currentState.state) 
 		{
 			case EPlayerState.Idle :
-				currentAnimationState = EAnimationState.Idle;
+				//currentAnimationState = EAnimationState.Idle;
 				if(actionList.Count > 0)
 				{
 					currentState = actionList[0];
@@ -389,10 +384,10 @@ public class PlayerMovement : MonoBehaviour {
 						currentState.state = EPlayerState.Idle;
 						currentAnimationState = EAnimationState.Talk;
 					}
-					else
+					/*else
 					{
 						DisplayComment("I can't reach it");
-					}
+					}*/
 				}
 			break;
 
