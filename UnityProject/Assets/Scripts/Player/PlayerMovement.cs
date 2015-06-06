@@ -4,9 +4,8 @@ using System.Collections.Generic;
 
 public enum EPlayerState {
 	WalkToLocation,
-	UseItemOnObject,
-	UsingItemOnObject,
-	ActionOnObject,
+	UseItem,
+	Action,
 	Talking,
 	ForceWalkToLocation,
 	Idle
@@ -20,7 +19,8 @@ public enum EAnimationState {
 	PickupLow,
 	Pickup,
 	UseLow,
-	Use
+	Use,
+	None
 };
 
 public class ActionData 
@@ -93,8 +93,8 @@ public class PlayerMovement : MonoBehaviour {
 			
 		case EPlayerState.Idle :
 		case EPlayerState.Talking :
-		case EPlayerState.UseItemOnObject :
-		case EPlayerState.ActionOnObject :
+		case EPlayerState.UseItem :
+		case EPlayerState.Action :
 			
 			NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
 			location = hitData.position;
@@ -151,8 +151,8 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
-			case EPlayerState.UseItemOnObject :
-			case EPlayerState.ActionOnObject :
+			//case EPlayerState.UseItem :
+			//case EPlayerState.Action :
 				
 				NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
 				location = hitData.position;
@@ -190,14 +190,14 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
-			case EPlayerState.UseItemOnObject :
+			case EPlayerState.UseItem :
 			case EPlayerState.WalkToLocation :
-			case EPlayerState.ActionOnObject :
+			case EPlayerState.Action :
 				if( WalkToLocation(location)  )
 				{
 					ActionData newAction = new ActionData();
 
-					newAction.state = EPlayerState.ActionOnObject;
+					newAction.state = EPlayerState.Action;
 					newAction.location = location;
 					newAction.objectToUse = objectToUseActionOn;
 					newAction.inventoryIndex = -1;
@@ -219,9 +219,9 @@ public class PlayerMovement : MonoBehaviour {
 		{
 		case EPlayerState.Idle :
 		case EPlayerState.Talking :
-		case EPlayerState.UseItemOnObject :
+		case EPlayerState.UseItem :
 		case EPlayerState.WalkToLocation :
-		case EPlayerState.ActionOnObject :
+		case EPlayerState.Action :
 			
 			if( WalkToLocation(location)  )
 			{
@@ -244,9 +244,33 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	public void TrySetUseItemOnObject(int indexSelectedItem, GameObject objectToUseItemOn)
+	public void UseItem(int indexSelectedItem, GameObject objectToUseItemOn, Vector3 location)
 	{
-
+		switch (currentState.state)
+		{
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItem :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.Action :
+				if( WalkToLocation(location)  )
+				{
+					ActionData newAction = new ActionData();
+					
+					newAction.state = EPlayerState.UseItem;
+					newAction.location = location;
+					newAction.objectToUse = objectToUseItemOn;
+					newAction.inventoryIndex = indexSelectedItem;
+					
+					actionList.Add(newAction);
+					
+				}
+				return;
+				
+				
+			default :
+				return;
+		}
 	}
 
 	public EPlayerState GetPlayerState()
@@ -265,9 +289,14 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
-			case EPlayerState.UseItemOnObject :
+			case EPlayerState.UseItem :
+				IUseItem useObject = null;
+				
+				Inventory.myInv.TryUseItemOnActor(currentState.objectToUse, currentState.inventoryIndex);
+			
+				return;
 			case EPlayerState.WalkToLocation :
-			case EPlayerState.ActionOnObject :
+			case EPlayerState.Action :
 				IAction actionObject = null;
 
 				if( currentState.objectToUse != null )
@@ -294,9 +323,9 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
-			case EPlayerState.UseItemOnObject :
+			case EPlayerState.UseItem :
 			case EPlayerState.WalkToLocation :
-			case EPlayerState.ActionOnObject :
+			case EPlayerState.Action:
 
 				currentAnimationState = EAnimationState.Idle;
 				currentState.state = EPlayerState.Idle;
@@ -312,6 +341,9 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+
+		//Debug.Log (currentState.state);
+
 		float distanceToActor = 0.0f;
 
 		switch (currentState.state) 
@@ -339,7 +371,7 @@ public class PlayerMovement : MonoBehaviour {
 				}
 			break;
 
-			case EPlayerState.ActionOnObject :
+			case EPlayerState.Action :
 				IAction actionObject = null;
 
 				if(currentState.objectToUse != null)
@@ -354,6 +386,45 @@ public class PlayerMovement : MonoBehaviour {
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						currentAnimationState = actionObject.AnimationOnAction();
+
+						if( currentAnimationState == EAnimationState.None )
+						{
+							currentAnimationState = EAnimationState.Idle;
+							currentState.state = EPlayerState.Idle;
+							
+							break;
+						}
+
+						currentAnimationState = actionObject.AnimationOnAction();
+					}
+					else
+					{
+						DisplayComment("I can't reach it");
+						currentState.state = EPlayerState.Idle;
+						currentAnimationState = EAnimationState.Idle;
+					}
+				}
+			break;
+
+			case EPlayerState.UseItem :
+				IUseItem useItem = null;
+				
+				if(currentState.objectToUse != null)
+				{
+					useItem = currentState.objectToUse.GetComponent<IUseItem>();
+				}
+				
+				if(useItem != null)
+				{
+					//within range
+					if( TraceObject(currentState.objectToUse) )
+					{
+						RotateTowards(currentState.objectToUse.transform.position);
+						ItemStruct itemToUse = new ItemStruct();
+						if( Inventory.myInv.GetItemFromIndex(currentState.inventoryIndex, ref itemToUse) )
+						{
+							currentAnimationState = useItem.AnimationOnItem( itemToUse.itemType );
+						}
 					}
 					else
 					{

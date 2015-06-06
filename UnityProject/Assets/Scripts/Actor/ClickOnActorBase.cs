@@ -74,4 +74,10 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 		return false;
 	}
 
+	virtual public EAnimationState AnimationOnItem(EItem itemType)
+	{
+
+		return EAnimationState.Use;
+	}
+
 }

@@ -70,4 +70,9 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		return false;
 	}
 
+	virtual public EAnimationState AnimationOnItem(EItem itemType)
+	{
+		return EAnimationState.Use;
+	}
+
 }

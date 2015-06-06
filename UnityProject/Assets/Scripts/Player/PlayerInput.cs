@@ -194,7 +194,7 @@ public class PlayerInput : MonoBehaviour
 				//try use item on actor
 				else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
 				{
-					TryUseItemOnObject( hitInfo.collider.gameObject );
+					TryUseItemOnObject( hitInfo.collider.gameObject, hitInfo.point );
 				}
 
 				dragging = false;
@@ -308,7 +308,7 @@ public class PlayerInput : MonoBehaviour
 		
 	}
 
-	bool TryUseItemOnObject(GameObject actorToUseOn, bool useInterface = true)
+	bool TryUseItemOnObject(GameObject actorToUseOn, Vector3 location, bool useInterface = true)
 	{
 		//store object for later
 		selectedObject = actorToUseOn;
@@ -317,7 +317,7 @@ public class PlayerInput : MonoBehaviour
 		if ( canUseItem != null && useInterface == true	)
 		{
 			
-			movementScript.TrySetUseItemOnObject( Inventory.myInv.CurrentSelectedItem,  actorToUseOn );
+			movementScript.UseItem( Inventory.myInv.CurrentSelectedItem,  actorToUseOn , location);
 			
 			Inventory.myInv.DeselectItem();
 
