@@ -171,6 +171,8 @@ public class PlayerInput : MonoBehaviour
 			
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
+			//Debug.Log ("Hit : " + hitInfo.collider.name);
+
 			//try talk or onclick funtions on hit actor
 			if(GWorld.isInvEnabled == true)
 			{
