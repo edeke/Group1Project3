@@ -31,7 +31,7 @@ public class Fireplace : CommentActorBase
 		{
 			case EItem.UnlitTorch :
 				Inventory.myInv.AddItem( ItemDatabase.GetItem("LitTorch"), Vector3.zero, false);
-			return true;
+			return false;
 		}
 		
 		return false;

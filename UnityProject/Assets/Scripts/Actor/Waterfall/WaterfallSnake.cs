@@ -53,7 +53,7 @@ public class WaterfallSnake : ClickOnActorBase
 		return false;
 	}
 
-	void SnakeScared()
+	public void SnakeScared()
 	{
 		DisplaySpeechBubble("Arrrgh... !");
 		snakeScared = true;
