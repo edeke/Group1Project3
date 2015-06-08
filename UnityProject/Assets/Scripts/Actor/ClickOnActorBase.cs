@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAction, ITalkTo
+public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITalkTo
 {
 	
 	public DialoguerDialogues dialog;
@@ -38,18 +38,6 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	virtual public void OnTalkTo()
 	{
 
-	}
-
-	virtual public void OnAction()
-	{
-
-	}
-
-	virtual public EAnimationState AnimationOnAction()
-	{	
-		
-		
-		return onActionAnimation;
 	}
 
 	virtual public void OnInspect()

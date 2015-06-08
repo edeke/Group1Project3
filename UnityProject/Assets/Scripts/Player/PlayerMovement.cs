@@ -255,6 +255,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.Action :
 				if( WalkToLocation(location)  )
 				{
+					Debug.Log ("Action");
 					ActionData newAction = new ActionData();
 					
 					newAction.state = EPlayerState.UseItem;
