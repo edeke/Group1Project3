@@ -20,7 +20,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 
 	float currentOpenTime;
 
-	const float textOpenTimeBase = 2.0f;
+	const float textOpenTimeBase = 3.0f;
 	const float textOpenTimePerLetter = 0.1f;
 	
 	float fadeSpeed = 0.5f;
@@ -82,11 +82,17 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		SetPositionAndSize ();
 		
 		currentOpenTime -= Time.deltaTime;
+
+		if(currentOpenTime <= 0.75f)
+		{
+			
+			anim.SetBool("close", true );
+		}
 		
 		if(currentOpenTime <= 0.0f)
 		{
 
-			//Destroy(gameObject);
+			Destroy(gameObject);
 		}
 
 	}

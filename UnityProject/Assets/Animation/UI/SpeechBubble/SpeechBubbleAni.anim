@@ -18,46 +18,61 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: .00499999989, y: .00499999989, z: .0299999993}
-        inSlope: {x: -.00540230889, y: .0473684222, z: 0}
-        outSlope: {x: -.00540230889, y: .0473684222, z: 0}
+        value: {x: .100000001, y: .300000012, z: 1}
+        inSlope: {x: .387754798, y: 2.70000005, z: 0}
+        outSlope: {x: .387754798, y: 2.70000005, z: 0}
         tangentMode: 0
-      - time: .316666663
-        value: {x: .00328926882, y: .0199999996, z: .0299999993}
-        inSlope: {x: .0365884528, y: .0236842111, z: 0}
-        outSlope: {x: .0365884528, y: .0236842111, z: 0}
+      - time: .333333343
+        value: {x: .229251593, y: 1.20000005, z: 1}
+        inSlope: {x: .575384021, y: .933780968, z: 0}
+        outSlope: {x: .575384021, y: .933780968, z: 0}
         tangentMode: 0
-      - time: .666666687
-        value: {x: .0307919979, y: .0208625887, z: .0299999993}
-        inSlope: {x: .036913611, y: -.00788652059, z: 0}
-        outSlope: {x: .036913611, y: -.00788652059, z: 0}
+      - time: .699999988
+        value: {x: .750621557, y: .867506862, z: 1}
+        inSlope: {x: 3.7021184, y: -1.17378259, z: 0}
+        outSlope: {x: 3.7021184, y: -1.17378259, z: 0}
+        tangentMode: 0
+      - time: .816666663
+        value: {x: 1.05938411, y: .797654986, z: 1}
+        inSlope: {x: .842839956, y: .135630965, z: 0}
+        outSlope: {x: .842839956, y: .135630965, z: 0}
         tangentMode: 0
       - time: .833333313
-        value: {x: .0299999993, y: .0199999996, z: .0299999993}
-        inSlope: {x: -.00475199241, y: 0, z: 0}
-        outSlope: {x: -.00475199241, y: 0, z: 0}
+        value: {x: 1.06710124, y: .802715719, z: 1}
+        inSlope: {x: .067949295, y: .463654131, z: 0}
+        outSlope: {x: .067949295, y: .463654131, z: 0}
+        tangentMode: 0
+      - time: .949999988
+        value: {x: .989129722, y: .935214281, z: 1}
+        inSlope: {x: -.042751532, y: 1.41572225, z: 0}
+        outSlope: {x: -.042751532, y: 1.41572225, z: 0}
+        tangentMode: 0
+      - time: 1
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: .217405513, y: 1.10370004, z: 0}
+        outSlope: {x: .217405513, y: 1.10370004, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    path: 
+    path: MainCanvas
   m_FloatCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .316666663
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
+      - time: .583333313
         value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_Enabled
-    path: SpeechSymbol
+    attribute: m_Color.a
+    path: MainCanvas/SpeechBubble
     classID: 114
     script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
@@ -65,66 +80,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .316666663
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Enabled
-    path: Text
-    classID: 114
-    script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: -3.15789485
-        outSlope: -3.15789485
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: -.611205459
-        outSlope: -.611205459
-        tangentMode: 10
-      - time: .833333313
+      - time: .583333313
         value: 1
-        inSlope: 1.93548393
-        outSlope: 1.93548393
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: SpeechSymbol
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: -3.15789485
-        outSlope: -3.15789485
-        tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: -.611205459
-        outSlope: -.611205459
-        tangentMode: 10
-      - time: .833333313
-        value: 1
-        inSlope: 1.93548393
-        outSlope: 1.93548393
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: Text
+    path: MainCanvas/Text
     classID: 114
     script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
@@ -132,18 +99,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
-      - time: .5
+      - time: .583333313
         value: 1
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: SpeechBubble
+    path: MainCanvas/NameBubble
     classID: 114
     script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
@@ -151,37 +118,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
-      - time: .5
+      - time: .583333313
         value: 1
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: NameBubble
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 10
-      - time: .5
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: NameText
+    path: MainCanvas/NameText
     classID: 114
     script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_PPtrCurves: []
@@ -192,49 +140,31 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 0
+    - path: 3289003300
       attribute: 3
       script: {fileID: 0}
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 1404248073
-      attribute: 3305885265
-      script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-      classID: 114
-      customType: 24
-      isPPtrCurve: 0
-    - path: 2612594937
-      attribute: 3305885265
-      script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-      classID: 114
-      customType: 24
-      isPPtrCurve: 0
-    - path: 1404248073
+    - path: 3628232450
       attribute: 304273561
       script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
       classID: 114
       customType: 0
       isPPtrCurve: 0
-    - path: 2612594937
+    - path: 1861979878
       attribute: 304273561
       script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
       classID: 114
       customType: 0
       isPPtrCurve: 0
-    - path: 1415309063
+    - path: 2851839289
       attribute: 304273561
       script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
       classID: 114
       customType: 0
       isPPtrCurve: 0
-    - path: 3889121736
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 733051835
+    - path: 3387650132
       attribute: 304273561
       script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
       classID: 114
@@ -244,7 +174,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: .833333313
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -263,182 +193,92 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .316666663
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Enabled
-    path: SpeechSymbol
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .316666663
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Enabled
-    path: Text
-    classID: 114
-    script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: -3.15789485
-        outSlope: -3.15789485
+        value: .100000001
+        inSlope: .387754798
+        outSlope: .387754798
         tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: -.611205459
-        outSlope: -.611205459
-        tangentMode: 10
+      - time: .333333343
+        value: .229251593
+        inSlope: .575384021
+        outSlope: .575384021
+        tangentMode: 0
+      - time: .699999988
+        value: .750621557
+        inSlope: 3.7021184
+        outSlope: 3.7021184
+        tangentMode: 0
       - time: .833333313
+        value: 1.06710124
+        inSlope: .067949295
+        outSlope: .067949295
+        tangentMode: 0
+      - time: .949999988
+        value: .989129722
+        inSlope: -.042751532
+        outSlope: -.042751532
+        tangentMode: 0
+      - time: 1
         value: 1
-        inSlope: 1.93548393
-        outSlope: 1.93548393
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: SpeechSymbol
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 1
-        inSlope: -3.15789485
-        outSlope: -3.15789485
-        tangentMode: 10
-      - time: .316666663
-        value: 0
-        inSlope: -.611205459
-        outSlope: -.611205459
-        tangentMode: 10
-      - time: .833333313
-        value: 1
-        inSlope: 1.93548393
-        outSlope: 1.93548393
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: Text
-    classID: 114
-    script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 10
-      - time: .5
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_Color.a
-    path: SpeechBubble
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: .00499999989
-        inSlope: -.00540230889
-        outSlope: -.00540230889
-        tangentMode: 10
-      - time: .316666663
-        value: .00328926882
-        inSlope: .0365884528
-        outSlope: .0365884528
-        tangentMode: 10
-      - time: .666666687
-        value: .0307919979
-        inSlope: .036913611
-        outSlope: .036913611
-        tangentMode: 10
-      - time: .833333313
-        value: .0299999993
-        inSlope: -.00475199241
-        outSlope: -.00475199241
+        inSlope: .217405513
+        outSlope: .217405513
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.x
-    path: 
+    path: MainCanvas
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .00499999989
-        inSlope: .0473684222
-        outSlope: .0473684222
+        value: .300000012
+        inSlope: 2.70000005
+        outSlope: 2.70000005
         tangentMode: 10
-      - time: .316666663
-        value: .0199999996
-        inSlope: .0236842111
-        outSlope: .0236842111
+      - time: .333333343
+        value: 1.20000005
+        inSlope: .933780968
+        outSlope: .933780968
         tangentMode: 10
-      - time: .833333313
-        value: .0199999996
-        inSlope: 0
-        outSlope: 0
+      - time: .816666663
+        value: .797654986
+        inSlope: .135630965
+        outSlope: .135630965
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1.10370004
+        outSlope: 1.10370004
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.y
-    path: 
+    path: MainCanvas
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: .0299999993
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: .316666663
-        value: .0299999993
+      - time: .333333343
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
-      - time: .833333313
-        value: .0299999993
+      - time: 1
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalScale.z
-    path: 
+    path: MainCanvas
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -446,18 +286,18 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
-      - time: .5
+      - time: .583333313
         value: 1
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: NameBubble
+    path: MainCanvas/SpeechBubble
     classID: 114
     script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
@@ -465,18 +305,56 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
-      - time: .5
+      - time: .583333313
         value: 1
-        inSlope: 2
-        outSlope: 2
+        inSlope: 1.71428573
+        outSlope: 1.71428573
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_Color.a
-    path: NameText
+    path: MainCanvas/Text
+    classID: 114
+    script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
+      - time: .583333313
+        value: 1
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Color.a
+    path: MainCanvas/NameBubble
+    classID: 114
+    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
+      - time: .583333313
+        value: 1
+        inSlope: 1.71428573
+        outSlope: 1.71428573
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Color.a
+    path: MainCanvas/NameText
     classID: 114
     script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_EulerEditorCurves: []
