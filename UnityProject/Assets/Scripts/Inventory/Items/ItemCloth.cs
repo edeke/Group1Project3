@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemMetalPipe : Item {
+public class ItemCloth : Item {
 
 
 
 
 	override public void OnInspect()
 	{
-		DisplayComment("It's a large metal spoon!");
+		DisplayComment("It's a cloth!");
 
 	}
 

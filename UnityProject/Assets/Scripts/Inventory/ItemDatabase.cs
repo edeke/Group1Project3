@@ -110,11 +110,12 @@ static public class ItemDatabase
 		}
 		
 		CombineData unlitTorchCombineData = new CombineData ();
-		unlitTorchCombineData.item1 = EItem.Leaves;
+		unlitTorchCombineData.item1 = EItem.HangingCloth;
 		unlitTorchCombineData.item2 = EItem.Branch;
 		unlitTorchCombineData.newItemHashValue = "UnlitTorch";
 		unlitTorchCombineData.playOnCombine = newAudio;
 		combineItemsList.Add ( unlitTorchCombineData );
+
 
 
 	}
