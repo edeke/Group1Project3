@@ -11,6 +11,7 @@ GameObject:
   - 193: {fileID: 19376796}
   - 33: {fileID: 3318036}
   - 23: {fileID: 2391220}
+  - 208: {fileID: 20847786}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.344055235, z: 0, w: .938949406}
+  m_LocalPosition: {x: 1.49185944, y: -1.97712994, z: -39.5581894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6414,6 +6415,21 @@ Tree:
   m_GameObject: {fileID: 150088}
   m_SpeedTreeWindAsset: {fileID: 0}
   m_TreeData: {fileID: 11417550}
+--- !u!208 &20847786
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 2.11999989, y: 2.09500003, z: 2.11999989}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -.180000007, y: .989000022, z: -.293000013}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

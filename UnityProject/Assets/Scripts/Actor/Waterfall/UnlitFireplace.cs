@@ -10,7 +10,7 @@ public class UnlitFireplace : CommentActorBase {
 
 	override public void OnAction()
 	{
-		DisplayComment ("I can't open it without a key");
+		DisplayComment ("It's stone cold!");
 	}
 
 }

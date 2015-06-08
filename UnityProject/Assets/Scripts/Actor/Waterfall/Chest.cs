@@ -10,7 +10,7 @@ public class Chest : CommentActorBase {
 
 	override public void OnAction()
 	{
-		DisplayComment ("I can't open it without a key");
+		DisplayComment ("I'm not a thief!");
 	}
 
 }
