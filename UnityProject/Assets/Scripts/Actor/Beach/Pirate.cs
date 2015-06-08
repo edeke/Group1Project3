@@ -36,7 +36,7 @@ public class Pirate : ClickOnActorBase
 
 	override public void OnInspect()
 	{	
-
+		//DisplaySpeechBubble ( "Hello" );
 		DisplaySpeechBubble ( "It's a pirate... Hello Weee oosog ooasdgfads" );
 
 	}
@@ -46,15 +46,15 @@ public class Pirate : ClickOnActorBase
 		switch ( itemType )
 		{
 			case EItem.Apple :
-				speech.SetText("Blää vill inte ha äpple");
+				DisplaySpeechBubble("Blää vill inte ha äpple");
 				return false;
 
 			case EItem.Pear :
-				speech.SetText("Usch, Tvi ! ");
+				DisplaySpeechBubble("Usch, Tvi ! ");
 				return false;
 
 			case EItem.MetalPipe :
-				speech.SetText("Vad ska jag med den till ?");
+				DisplaySpeechBubble("Vad ska jag med den till ?");
 				return false;
 
 			case EItem.PirateRing :
@@ -67,13 +67,13 @@ public class Pirate : ClickOnActorBase
 
 	void RingGivenToPirate()
 	{
-		speech.SetText("Yay, du hitta min ring =D");
+		DisplaySpeechBubble("Yay, du hitta min ring =D");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
 
 	public void GetAwayFromThere()
 	{
-		speech.SetText ("Get away from there !!");
+		DisplaySpeechBubble("Get away from there !!");
 	}
 }

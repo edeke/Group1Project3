@@ -96,11 +96,11 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		switch ( itemType )
 		{
 			case EItem.Apple :
-				speech.SetText("Tack för <color=#008000ff>Äpplet!!</color>", 17);
+				DisplaySpeechBubble("Tack för Äpplet!!");
 				return true;
 
 			case EItem.Pear :
-				speech.SetText("Usch! Vill inte ha <color=#ff0000ff>Lakrits!!</color>", 26);
+				DisplaySpeechBubble("Usch! Vill inte ha Lakrits!!");
 				return false;
 
 		}

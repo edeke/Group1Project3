@@ -27,24 +27,18 @@ public class WaterfallSnake : ClickOnActorBase
 		
 	}
 
-	override public void OnTalkTo()
+	override public void OnInspect()
 	{
 
-		/*Dialoguer.StartDialogue (dialog, null);
-
-		if (speech != null)
-		{
-			speech.SetText ("Jag vill ha Äpple !");
-		}*/
+		//DisplaySpeechBubble ("Hello");
 
 	}
 
 	public void HissSound()
 	{		
-		if (speech != null) 
-		{
-			speech.SetText("Hiss...");
-		}
+
+		DisplaySpeechBubble("Hiss...");
+
 	}
 
 	override public bool UseItemOnObject(EItem itemType)
@@ -61,7 +55,7 @@ public class WaterfallSnake : ClickOnActorBase
 
 	void SnakeScared()
 	{
-		speech.SetText("Arrrgh... !");
+		DisplaySpeechBubble("Arrrgh... !");
 		snakeScared = true;
 		GWorld.MarkEventDone (EventID);
 		//Destroy (gameObject);
