@@ -35,11 +35,10 @@ public class Pirate : ClickOnActorBase
 	}
 
 	override public void OnInspect()
-	{		
-		if (speech != null) 
-		{
-			speech.SetText(speechBubbleText);
-		}
+	{	
+
+		DisplaySpeechBubble ( "It's a pirate... Hello Weee oosog ooasdgfads" );
+
 	}
 
 	override public bool UseItemOnObject(EItem itemType)

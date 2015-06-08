@@ -4,12 +4,17 @@ using System.Collections;
 
 public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAction, ITalkTo
 {
-
-	protected SpeechBubbleController speech;
+	
 	public DialoguerDialogues dialog;
 	public string speechBubbleText;
 	public string actorName;
 	public EAnimationState onActionAnimation;
+
+	protected GameObject commentObject;
+	protected CommentController comment;
+
+	protected GameObject speechObject;
+	protected SpeechBubbleScreen speech;
 
 	public void Awake()
 	{
@@ -21,12 +26,12 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	// Use this for initialization
 	public void Start () {
 	
-		speech = gameObject.GetComponentInChildren<SpeechBubbleController> ();
+		/*speech = gameObject.GetComponentInChildren<SpeechBubbleController> ();
 
 		if (speech != null)
 		{
 			speech.SetName (actorName);
-		}
+		}*/
 
 	}
 
@@ -56,6 +61,47 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, IAct
 	{
 
 	}*/
+
+	public void DisplayComment ( string text )
+	{
+		
+		if (commentObject == null) 
+		{
+			string path = "Prefabs/UI/CommentBubble/Comment";
+			GameObject tmpHndl = (GameObject) Resources.Load (path);
+			commentObject = (GameObject)Instantiate (tmpHndl, Vector3.zero, Quaternion.identity);
+		}
+		
+		comment = commentObject.GetComponentInChildren<CommentController> ();
+		comment.SetObjectFollow (gameObject);
+		
+		if (comment != null) 
+		{
+			comment.SetText(text);	
+		}
+	}
+
+	public void DisplaySpeechBubble ( string text )
+	{
+		
+		if (speechObject == null) 
+		{
+			string path = "Prefabs/UI/SpeechBubble/SpeechBubbleScreen";
+			GameObject tmpHndl = (GameObject) Resources.Load (path);
+			speechObject = (GameObject)Instantiate (tmpHndl, Vector3.zero, Quaternion.identity);
+		}
+		
+		speech = speechObject.GetComponentInChildren<SpeechBubbleScreen> ();
+		speech.SetName (actorName);
+		speech.SetObjectFollow (gameObject);
+
+		
+		if (speech != null) 
+		{
+			speech.SetText(text);	
+		}
+
+	}
 	
 	virtual public bool UseItemOnObject(EItem itemType)
 	{

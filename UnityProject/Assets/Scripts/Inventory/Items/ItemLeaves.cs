@@ -9,7 +9,7 @@ public class ItemLeaves : Item {
 	override public void OnInspect()
 	{
 
-
+		DisplayComment ("Some large leaves, they could be good for something");
 	}
 
 

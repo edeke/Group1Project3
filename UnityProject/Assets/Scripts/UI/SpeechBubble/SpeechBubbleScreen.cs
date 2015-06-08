@@ -3,91 +3,95 @@ using UnityEngine.UI;
 using System.Collections;
 
 
-public class CommentController : MonoBehaviour {
+public class SpeechBubbleScreen : MonoBehaviour {
 
-	Canvas mainCanvas;
 	RectTransform mainCanvasRect;
-	
-	public AudioClip speechSound;
-
-	const int xSpacing = 10;
-	const int ySpacing = 10;
-
-	float currentOpenTime;
-
-	float fadeSpeed = 0.5f;
-
-	const float textOpenTimeBase = 2.0f;
-	const float textOpenTimePerLetter = 0.1f;
+	Text textComp;
+	Text nameComp;
+	Image speechBubbleComp;
+	Canvas mainCanvas;
 
 	Camera mainCamera;
 	GameObject objectToFollow;
 
+	public AudioClip speechSound;
+
+	Animator anim;
+
+	float currentOpenTime;
+
+	const float textOpenTimeBase = 2.0f;
+	const float textOpenTimePerLetter = 0.1f;
+	
+	float fadeSpeed = 0.5f;
+	Vector3 screenLocation;
+
+	const int xSpacing = 10;
+	const int ySpacing = 10;
+
+	const int xPadding = 70;
+	const int yPadding = 70;
+
 	Vector2 sizeOfText;
 	GUIStyle myStyle;
 
-	Vector3 screenLocation;
 
+	// Use this for initialization
+	void Awake () {
 
-	void Awake()
-	{
-		currentOpenTime = textOpenTimeBase;
 		mainCamera = FindObjectOfType<Camera> ();
 
+		Canvas[] tempComp = gameObject.GetComponentsInChildren<Canvas> ();
+		foreach (Canvas comp in tempComp)
+		{
+			if (comp.CompareTag ("SpeechMainCanvas")) {
+				mainCanvas = comp;
+			}
+		}
+		 
+		anim = gameObject.GetComponentInChildren<Animator>();
+		mainCanvasRect = mainCanvas.GetComponent<RectTransform> ();
+
+		//background
+		speechBubbleComp = gameObject.GetComponentInChildren<Image> ();
+
+		//Text
+		Text[] tmpNames = gameObject.GetComponentsInChildren<Text>();
+		foreach (Text txt in tmpNames)
+		{
+			if( txt.CompareTag("SpeechName") )
+			{
+				nameComp = txt;
+			}
+			else
+			{
+				textComp = txt;
+			}
+		}
+
 		myStyle = new GUIStyle ();
-
-		Text tempComp = gameObject.GetComponentInChildren<Text>();
-
-		myStyle.fontStyle = tempComp.fontStyle;
-		myStyle.fontSize = tempComp.fontSize;
-		myStyle.font = tempComp.font;
-
-		Color newColor = tempComp.color;
-		newColor.a = 0.0f;
-		
-		tempComp.color = newColor;
-		//myStyle.wordWrap = tempComp.horizontalOverflow;
-
+		myStyle.fontStyle = textComp.fontStyle;
+		myStyle.fontSize = textComp.fontSize;
+		myStyle.font = textComp.font;
+	
 	}
-
-	public void SetObjectFollow(GameObject worldObject)
-	{
-		objectToFollow = worldObject;
-	}
-
-
+	
 	// Update is called once per frame
 	void Update () 
 	{
-		SetPosition ();
-
+		SetPositionAndSize ();
+		
 		currentOpenTime -= Time.deltaTime;
-	
-		Text tempComp = gameObject.GetComponentInChildren<Text> ();
-		Color newColor = tempComp.color;
-
-		if (currentOpenTime < (1.0f/fadeSpeed) ) 
-		{
-			newColor.a -= (Time.deltaTime * fadeSpeed);
-
-			tempComp.color = newColor;
-		} 
-		else if (newColor.a < 1.0f)
-		{
-			newColor.a += Time.deltaTime * (1.0f/fadeSpeed);
-			
-			tempComp.color = newColor;
-
-		}
-
+		
 		if(currentOpenTime <= 0.0f)
 		{
-			Destroy(gameObject);
+
+			//Destroy(gameObject);
 		}
 
 	}
 
-	public void SetPosition()
+	private void SetPositionAndSize()
 	{
 		//if object is deleted when  we pick it up then stop following but use same position
 		if (objectToFollow == null) 
@@ -95,12 +99,11 @@ public class CommentController : MonoBehaviour {
 			gameObject.transform.position = screenLocation;
 			return;
 		}
-
+		
 		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
-
-
-		int offsetY = Mathf.FloorToInt(Screen.height * 0.1f);
-
+		
+		int offsetY = Mathf.FloorToInt(sizeOfText.y + (Screen.height * 0.1f) );
+		
 		//Clamp X location to within screen
 		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 
 		{
@@ -112,9 +115,9 @@ public class CommentController : MonoBehaviour {
 			int deltaX = Mathf.FloorToInt (screenLocation.x - (sizeOfText.x / 2) );
 			screenLocation.x -= deltaX - xSpacing;
 		}
-
+		
 		screenLocation.y += offsetY;
-
+		
 		if (screenLocation.y + (sizeOfText.y / 2) > Screen.height) 
 		{
 			int deltaY = Screen.height - Mathf.FloorToInt (screenLocation.y + (sizeOfText.y / 2));
@@ -125,43 +128,63 @@ public class CommentController : MonoBehaviour {
 			int deltaY = Mathf.FloorToInt (screenLocation.y - (sizeOfText.y / 2) );
 			screenLocation.y -= deltaY - ySpacing;
 		}
-
+		
 		gameObject.transform.position = screenLocation;
 
+
+
+
+		Vector2 size = new Vector2 (sizeOfText.x + xPadding, sizeOfText.y + yPadding);
+		mainCanvasRect.sizeDelta = size;
+		
 	}
+
 
 	public void SetText(string text, int length = -1)
 	{
-
+		
 		if (length == -1)
 		{
 			length = text.Length;
 		}
-
+		
 		if(string.Compare(text, "") != 0 )
 		{
 			PlaySpeechAudio();
-
+			
 			UpdateTextComp(text);
-
+			
 			currentOpenTime = textOpenTimeBase;
 			currentOpenTime += (length * textOpenTimePerLetter);
-
+			
 		}
 		else
 		{
 			UpdateTextComp("");
 		}
-
+		
 	}
-
+	
 	void UpdateTextComp(string text)
 	{
-
+		
 		Text tempComp = gameObject.GetComponentInChildren<Text>();
-
+		
 		tempComp.text = text;
+		
+	}
 
+	public void SetName(string newName)
+	{
+		if (newName != null) 
+		{
+			nameComp.text = newName;
+		} 
+	}
+
+	public void SetObjectFollow(GameObject worldObject)
+	{
+		objectToFollow = worldObject;
 	}
 
 	void PlaySpeechAudio()
@@ -174,12 +197,7 @@ public class CommentController : MonoBehaviour {
 
 	void OnGUI()
 	{
-		//calculate size of text after every F frame becuse Unity is useless crap
-		Text tempComp = gameObject.GetComponentInChildren<Text>();
-
-		sizeOfText = myStyle.CalcSize(new GUIContent (tempComp.text));
-
-
+		sizeOfText = myStyle.CalcSize (new GUIContent (textComp.text));
 	}
 
 }
