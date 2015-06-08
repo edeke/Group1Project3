@@ -99,7 +99,7 @@ public class CommentController : MonoBehaviour {
 		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
 
 
-		int offsetY = Mathf.FloorToInt(Screen.height * 0.1f);
+		int offsetY = Mathf.FloorToInt(Screen.height * 0.05f);
 
 		//Clamp X location to within screen
 		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 

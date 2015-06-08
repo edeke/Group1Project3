@@ -102,7 +102,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		
 		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
 
-		int offsetY = Mathf.FloorToInt( sizeOfText.y + (Screen.height * 0.2f) );
+		int offsetY = Mathf.FloorToInt( sizeOfText.y + (Screen.height * 0.1f) );
 		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) + (Screen.width * 0.02f));
 
 		screenLocation.x += offsetX;
