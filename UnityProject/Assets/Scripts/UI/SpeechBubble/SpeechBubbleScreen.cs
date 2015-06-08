@@ -137,7 +137,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 			screenLocation.y = deltaY;
 		}
 		
-		gameObject.transform.position = screenLocation;
+		mainCanvas.transform.position = screenLocation;
 
 
 		Vector2 size = new Vector2 (sizeOfText.x + xPadding, sizeOfText.y + yPadding);
