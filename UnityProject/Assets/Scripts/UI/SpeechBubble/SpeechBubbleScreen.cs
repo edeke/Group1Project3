@@ -101,37 +101,37 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		}
 		
 		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
-		
-		int offsetY = Mathf.FloorToInt(sizeOfText.y + (Screen.height * 0.1f) );
-		
+
+		int offsetY = Mathf.FloorToInt( sizeOfText.y + (Screen.height * 0.2f) );
+		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) + (Screen.width * 0.02f));
+
+		screenLocation.x += offsetX;
 		//Clamp X location to within screen
-		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 
+		if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
 		{
-			int deltaX = Screen.width - Mathf.FloorToInt (screenLocation.x + (sizeOfText.x / 2));
-			screenLocation.x += deltaX - xSpacing;
+			int deltaX = Screen.width - Mathf.FloorToInt ( (sizeOfText.x + xPadding) / 2);
+			screenLocation.x = deltaX;
 		} 
-		else if (screenLocation.x - (sizeOfText.x / 2) < 0.0f)
+		else if ( screenLocation.x - ((sizeOfText.x + xPadding) / 2) - 5 < 0.0f )
 		{
-			int deltaX = Mathf.FloorToInt (screenLocation.x - (sizeOfText.x / 2) );
-			screenLocation.x -= deltaX - xSpacing;
+			int deltaX = Mathf.FloorToInt ( (sizeOfText.x + xPadding) / 2);
+			screenLocation.x = deltaX + 5;
 		}
 		
-		screenLocation.y += offsetY;
-		
-		if (screenLocation.y + (sizeOfText.y / 2) > Screen.height) 
+		screenLocation.y += offsetY + 5;
+		//Clamp Y location to within screen
+		if ( screenLocation.y + ( (sizeOfText.y + yPadding) / 2) + 5 > Screen.height) 
 		{
-			int deltaY = Screen.height - Mathf.FloorToInt (screenLocation.y + (sizeOfText.y / 2));
-			screenLocation.y += deltaY - ySpacing;
-		}
-		else if (screenLocation.y - (sizeOfText.y / 2) < 0.0f)
+			int deltaY = Screen.height - Mathf.FloorToInt ( (sizeOfText.y + yPadding) / 2);
+			screenLocation.y = deltaY - 5;
+		} 
+		else if ( screenLocation.y - ((sizeOfText.y + yPadding) / 2) < 0.0f )
 		{
-			int deltaY = Mathf.FloorToInt (screenLocation.y - (sizeOfText.y / 2) );
-			screenLocation.y -= deltaY - ySpacing;
+			int deltaY = Mathf.FloorToInt ( (sizeOfText.y + yPadding) / 2);
+			screenLocation.y = deltaY;
 		}
 		
 		gameObject.transform.position = screenLocation;
-
-
 
 
 		Vector2 size = new Vector2 (sizeOfText.x + xPadding, sizeOfText.y + yPadding);
