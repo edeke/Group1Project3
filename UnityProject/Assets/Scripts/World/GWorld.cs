@@ -119,6 +119,8 @@ public class GWorld : MonoBehaviour
 		}
 
 		CalcTimeOfDay ();
+
+		mainUI.GetComponent<MainUI> ().GoBlack ( false );
 	}
 
 	static public void EnableInventory()
