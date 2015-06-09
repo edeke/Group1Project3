@@ -28,6 +28,8 @@ public class CommentController : MonoBehaviour {
 
 	Vector3 screenLocation;
 
+	int objectSetOffset_x = 0;
+	int objectSetOffset_y = 0;
 
 	void Awake()
 	{
@@ -99,7 +101,7 @@ public class CommentController : MonoBehaviour {
 		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
 
 
-		int offsetY = Mathf.FloorToInt(Screen.height * 0.05f);
+		screenLocation.y += objectSetOffset_x;
 
 		//Clamp X location to within screen
 		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 
@@ -113,6 +115,7 @@ public class CommentController : MonoBehaviour {
 			screenLocation.x -= deltaX - xSpacing;
 		}
 
+		int offsetY = Mathf.FloorToInt(Screen.height * 0.05f) + objectSetOffset_y;
 		screenLocation.y += offsetY;
 
 		if (screenLocation.y + (sizeOfText.y / 2) > Screen.height) 
@@ -170,6 +173,12 @@ public class CommentController : MonoBehaviour {
 		{
 			AudioSource.PlayClipAtPoint( speechSound, transform.localPosition );
 		}
+	}
+
+	public void SetOffset(int x, int y)
+	{
+		objectSetOffset_x = x;
+		objectSetOffset_y = y;
 	}
 
 	void OnGUI()

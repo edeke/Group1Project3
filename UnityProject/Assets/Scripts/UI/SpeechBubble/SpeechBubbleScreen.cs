@@ -35,6 +35,8 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	Vector2 sizeOfText;
 	GUIStyle myStyle;
 
+	int objectSetOffset_x = 0;
+	int objectSetOffset_y = 0;
 
 	// Use this for initialization
 	void Awake () {
@@ -111,7 +113,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		int offsetY = Mathf.FloorToInt( sizeOfText.y + (Screen.height * 0.1f) );
 		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) + (Screen.width * 0.02f));
 
-		screenLocation.x += offsetX;
+		screenLocation.x += offsetX + objectSetOffset_x;
 		//Clamp X location to within screen
 		if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
 		{
@@ -124,7 +126,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 			screenLocation.x = deltaX + 5;
 		}
 		
-		screenLocation.y += offsetY + 5;
+		screenLocation.y += offsetY + 5 + + objectSetOffset_y;
 		//Clamp Y location to within screen
 		if ( screenLocation.y + ( (sizeOfText.y + yPadding) / 2) + 5 > Screen.height) 
 		{
@@ -191,6 +193,12 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	public void SetObjectFollow(GameObject worldObject)
 	{
 		objectToFollow = worldObject;
+	}
+
+	public void SetOffset(int x, int y)
+	{
+		objectSetOffset_x = x;
+		objectSetOffset_y = y;
 	}
 
 	void PlaySpeechAudio()

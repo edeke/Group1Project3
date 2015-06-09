@@ -21,6 +21,9 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	
 	public ItemStruct itemData = new ItemStruct();
 
+	public int commentOffsetX;
+	public int commentOffsetY;
+
 
 	// Use this for initialization
 	public void Start () {
@@ -104,6 +107,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 		
 		comment = commentObject.GetComponentInChildren<CommentController> ();
 		comment.SetObjectFollow (gameObject);
+		comment.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (comment != null) 
 		{

@@ -15,6 +15,9 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	protected GameObject speechObject;
 	protected SpeechBubbleScreen speech;
 
+	public int commentOffsetX;
+	public int commentOffsetY;
+
 	public void Awake()
 	{
 		Dialoguer.Initialize ();
@@ -45,6 +48,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		
 		comment = commentObject.GetComponentInChildren<CommentController> ();
 		comment.SetObjectFollow (gameObject);
+		comment.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (comment != null) 
 		{
@@ -65,7 +69,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		speech = speechObject.GetComponentInChildren<SpeechBubbleScreen> ();
 		speech.SetName (actorName);
 		speech.SetObjectFollow (gameObject);
-
+		speech.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (speech != null) 
 		{
