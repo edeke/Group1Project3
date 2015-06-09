@@ -25,6 +25,7 @@ public class ItemStruct
 	public GameObject onDragParticle;
 	public GameObject onUseParticle;
 	public GameObject onPickupParticle;
+	[HideInInspector]
 	public int numberOfItemsInStack;
 
 }
@@ -63,7 +64,7 @@ public class Inventory : MonoBehaviour {
 						Instantiate( newItem.onPickupParticle, location, Quaternion.identity );
 					}
 
-					itemArray[index].numberOfItemsInStack += newItem.numberOfItemsInStack;
+					itemArray[index].numberOfItemsInStack += 1;
 					itemInserted = true;
 					break;
 				}

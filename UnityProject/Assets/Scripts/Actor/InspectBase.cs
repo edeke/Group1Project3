@@ -9,6 +9,9 @@ public class InspectBase : MonoBehaviour, IInspectInterface {
 	
 	public EAnimationState animationOnAction;
 
+	public int commentOffsetX;
+	public int commentOffsetY;
+
 	virtual public void OnInspect()
 	{	
 		
@@ -28,6 +31,7 @@ public class InspectBase : MonoBehaviour, IInspectInterface {
 		
 		comment = commentObject.GetComponentInChildren<CommentController> ();
 		comment.SetObjectFollow (gameObject);
+		comment.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (comment != null) 
 		{

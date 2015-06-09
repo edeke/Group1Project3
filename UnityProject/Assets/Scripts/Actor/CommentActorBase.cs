@@ -11,6 +11,9 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	public EAnimationState animationOnAction;
 
+	public int commentOffsetX;
+	public int commentOffsetY;
+
 	
 	virtual public void OnInspect()
 	{	
@@ -44,6 +47,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		
 		comment = commentObject.GetComponentInChildren<CommentController> ();
 		comment.SetObjectFollow (gameObject);
+		comment.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (comment != null) 
 		{
