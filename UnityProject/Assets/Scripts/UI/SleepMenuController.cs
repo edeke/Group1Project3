@@ -31,8 +31,6 @@ public class SleepMenuController : MonoBehaviour {
 			}
 		}
 
-
-	
 	}
 	
 	// Update is called once per frame
@@ -43,8 +41,9 @@ public class SleepMenuController : MonoBehaviour {
 
 	public void OnSleepClick()
 	{
-		int value = Mathf.RoundToInt(sleepSlider.value);
-		GWorld.FastForwardTime (value);
+		//int value = Mathf.RoundToInt(sleepSlider.value);
+		//GWorld.FastForwardTime (value);
+		GWorld.FastForwardTime (12);
 		Destroy (gameObject);
 	}
 
@@ -53,12 +52,12 @@ public class SleepMenuController : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	public void OnSliderChange()
+	/*public void OnSliderChange()
 	{
 		int value = Mathf.RoundToInt(sleepSlider.value);
 
 		sleepText.text = value.ToString() + " h";
 		
-	}
+	}*/
 
 }
