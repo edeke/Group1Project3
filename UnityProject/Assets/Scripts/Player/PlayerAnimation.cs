@@ -98,6 +98,15 @@ public class PlayerAnimation : MonoBehaviour {
 			anim.SetBool ("shakehead", false);
 		}
 
+		if (movement.GetPlayerAnimationState () == EAnimationState.Talk) 
+		{
+			anim.SetBool ("talking", true);
+		}
+		else
+		{
+			anim.SetBool ("talking", false);
+		}
+
 
 
 
