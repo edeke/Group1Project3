@@ -136,7 +136,7 @@ Transform:
   - {fileID: 728804265}
   - {fileID: 819756637}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &16247009
 Prefab:
   m_ObjectHideFlags: 0
@@ -956,7 +956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1001 &102441769
 Prefab:
   m_ObjectHideFlags: 0
@@ -1303,7 +1303,7 @@ Transform:
   - {fileID: 1993235651}
   - {fileID: 1295348494}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &153060625
 Prefab:
   m_ObjectHideFlags: 0
@@ -8090,7 +8090,7 @@ Transform:
   - {fileID: 1205586403}
   - {fileID: 1235500277}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1001 &251179599
 Prefab:
   m_ObjectHideFlags: 0
@@ -8522,7 +8522,7 @@ Transform:
   - {fileID: 1696429122}
   - {fileID: 2022733322}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1001 &291984375
 Prefab:
   m_ObjectHideFlags: 0
@@ -8872,6 +8872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
 --- !u!23 &318111542
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10437,7 +10439,7 @@ Transform:
   - {fileID: 207328085}
   - {fileID: 1114145357}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &529305834
 GameObject:
   m_ObjectHideFlags: 0
@@ -11330,7 +11332,7 @@ Transform:
   m_Children:
   - {fileID: 1778703101}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &634775267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11736,6 +11738,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 4
+  commentOffsetX: 0
+  commentOffsetY: 0
 --- !u!208 &679229697
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13641,7 +13645,7 @@ Transform:
   - {fileID: 1286747820}
   - {fileID: 1363134091}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!4 &940734046 stripped
 Transform:
   m_PrefabParentObject: {fileID: 404616, guid: 490c1e97b31b3f344a57205cd6214030, type: 2}
@@ -14926,7 +14930,7 @@ Transform:
   - {fileID: 910303930}
   - {fileID: 718365616}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1001 &1087768817
 Prefab:
   m_ObjectHideFlags: 0
@@ -15725,6 +15729,10 @@ Prefab:
       propertyPath: m_Name
       value: mesh_character_frog 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11474200, guid: 35eecb36629bad848b0daa59d349fa95, type: 2}
+      propertyPath: commentOffsetY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35eecb36629bad848b0daa59d349fa95, type: 2}
   m_IsPrefabParent: 0
@@ -15840,38 +15848,6 @@ Prefab:
     - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
       propertyPath: m_Name
       value: Torch5
-      objectReference: {fileID: 0}
-    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 164218, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 154702, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 195986, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 130224, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 178808, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 164218, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
@@ -16765,7 +16741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!1001 &1286747819
 Prefab:
   m_ObjectHideFlags: 0
@@ -18457,6 +18433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
 --- !u!23 &1460121190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18623,7 +18601,7 @@ Transform:
   m_LocalScale: {x: 1.64204264, y: 1, z: 5.99435806}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!114 &1493869803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18637,6 +18615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 8
+  commentOffsetX: 0
+  commentOffsetY: 0
 --- !u!1001 &1498198651
 Prefab:
   m_ObjectHideFlags: 0
@@ -19019,7 +18999,7 @@ Transform:
   - {fileID: 1540770551}
   - {fileID: 1395484625}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &1535332407
 Prefab:
   m_ObjectHideFlags: 0
@@ -19705,6 +19685,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
 --- !u!23 &1587849996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20830,7 +20812,7 @@ Transform:
   - {fileID: 804900674}
   - {fileID: 1363635323}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!4 &1691483806 stripped
 Transform:
   m_PrefabParentObject: {fileID: 450928, guid: c7afdc4fc8263aa4eb890032a73e39b0, type: 2}
@@ -23946,7 +23928,7 @@ Transform:
   - {fileID: 282324632}
   - {fileID: 439059881}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1001 &2013634031
 Prefab:
   m_ObjectHideFlags: 0
@@ -25033,7 +25015,7 @@ Transform:
   - {fileID: 1818592967}
   - {fileID: 1115841635}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1 &2140107394
 GameObject:
   m_ObjectHideFlags: 0
