@@ -20,7 +20,8 @@ public enum EAnimationState {
 	Pickup,
 	UseLow,
 	Use,
-	None
+	None,
+	Error
 };
 
 public class ActionData 
@@ -297,15 +298,13 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		switch (currentState.state)
 		{
-			case EPlayerState.Idle :
-			case EPlayerState.Talking :
 			case EPlayerState.UseItem :
 				IUseItem useObject = null;
 				
 				Inventory.myInv.TryUseItemOnActor(currentState.objectToUse, currentState.inventoryIndex);
 			
 				return;
-			case EPlayerState.WalkToLocation :
+
 			case EPlayerState.Action :
 				IAction actionObject = null;
 
@@ -320,7 +319,6 @@ public class PlayerMovement : MonoBehaviour {
 				}
 
 				return;
-				
 				
 			default :
 				return;

@@ -89,6 +89,16 @@ public class PlayerAnimation : MonoBehaviour {
 			anim.SetInteger ("useingItem", 0);
 		}
 
+		if (movement.GetPlayerAnimationState () == EAnimationState.Error) 
+		{
+			anim.SetBool ("shakehead", true);
+		}
+		else
+		{
+			anim.SetBool ("shakehead", false);
+		}
+
+
 
 
 

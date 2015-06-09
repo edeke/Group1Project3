@@ -87,9 +87,14 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 
 	virtual public EAnimationState AnimationOnAction()
 	{	
-		
-		
-		return animationOnAction;
+		if (GWorld.isInvEnabled) 
+		{
+			return animationOnAction;
+		}
+		else 
+		{
+			return EAnimationState.Error;
+		}
 	}
 	
 	public void DisplayComment ( string text )
