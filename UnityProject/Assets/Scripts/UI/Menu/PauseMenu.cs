@@ -44,7 +44,8 @@ public class PauseMenu : MonoBehaviour {
 		isPaused = true; 
 		Time.timeScale = 0.0f;
 				
-		UI.SetActive(false);
+		//UI.SetActive(false);
+		EnableUI (false);
 
 		PauseUI.SetActive (true);
 
@@ -57,13 +58,28 @@ public class PauseMenu : MonoBehaviour {
 		isPaused = false;
 		Time.timeScale = 1.0f;
 				
-		UI.SetActive(true);
+		//UI.SetActive(true);
+		EnableUI (true);
 
 		PauseUI.SetActive (false);
 
 		rpgGUI.SetActive (true);
 
 	}
+
+	void EnableUI( bool enable )
+	{
+		Canvas[] allCanvas = UI.GetComponentsInChildren<Canvas> ();
+
+		foreach (Canvas comp in allCanvas) 
+		{
+			if( comp.CompareTag("MainUI") )
+			{
+				comp.enabled = enable;
+			}
+		}
+	}
+
 
 	public void MainMenu(){
 
