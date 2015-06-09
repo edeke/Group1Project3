@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_rope_05
-  m_Shader: {fileID: 4800000, guid: d66bd06643320294da14684a9382c7ca, type: 3}
-  m_ShaderKeywords: _DISTANCEFADE_ON
+  m_Name: mat_RoundBerry01_05
+  m_Shader: {fileID: 4800000, guid: 8adb6d649aca978498af50b1f96fc1d5, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -39,14 +39,7 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: f3d310e43ae71f54ea01628c5edb7a89, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 693bec6f26ec06948bec6e381662aa78, type: 3}
+          m_Texture: {fileID: 2800000, guid: e88e0cccfd5fa4e439cbe69934299358, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -91,13 +84,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _LerpMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -106,7 +92,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .0829999968
+        second: .00700000022
       data:
         first:
           name: _SrcBlend
@@ -118,7 +104,7 @@ Material:
       data:
         first:
           name: _Reach
-        second: .688000023
+        second: .5
       data:
         first:
           name: _MinLight
@@ -173,24 +159,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade
-        second: .352941185
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
+          name: _BerryColorPower
+        second: 2.42000008
     m_Colors:
       data:
         first:
@@ -210,13 +180,21 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
+          name: _FoliageColor1
+        second: {r: .338235319, g: .125723273, b: .0770977512, a: 1}
       data:
         first:
-          name: _LowColor
-        second: {r: .422656834, g: .260056227, b: .544117689, a: 1}
+          name: _FoliageColor2
+        second: {r: .176470578, g: .10380622, b: .10380622, a: 1}
       data:
         first:
-          name: _HighColor
-        second: {r: .889705896, g: .510272503, b: .836988568, a: 1}
+          name: _BerryColor2
+        second: {r: .616110742, g: .169279829, b: .742647052, a: 1}
+      data:
+        first:
+          name: _BerryColor1
+        second: {r: .257352948, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _KnoppColor
+        second: {r: .187465712, g: .20588237, b: .178633228, a: 1}
