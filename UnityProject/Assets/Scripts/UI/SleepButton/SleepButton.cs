@@ -14,7 +14,7 @@ public class SleepButton : MonoBehaviour {
 
 	public void OnClick()
 	{
-		if (sleepMenu == null) 
+		if (sleepMenu == null && GWorld.LoadingLevel() == false) 
 		{
 			string path = "Prefabs/UI/SleepMenu/SleepMenu";
 			sleepMenu = (GameObject)Instantiate (Resources.Load (path));

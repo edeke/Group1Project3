@@ -28,7 +28,7 @@ public class InventoryOpenButton : MonoBehaviour {
 
 	public void OnClick()
 	{
-		if (GWorld.isInvEnabled == true) 
+		if ( GWorld.isInvEnabled == true && GWorld.LoadingLevel () == false ) 
 		{
 			if (active) 
 			{

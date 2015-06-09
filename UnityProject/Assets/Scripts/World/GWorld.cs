@@ -63,6 +63,12 @@ public class GWorld : MonoBehaviour
 
 	static bool sceneAlreadyLoaded = false;
 
+	static string sceneToLoad;
+
+	static bool loadLevel = false;
+	static float loadLevelCountdownCurrentTime;
+	static float loadLevelCountdownTimerMax = 1.0f;
+
 
 	void Start()
 	{
@@ -120,7 +126,21 @@ public class GWorld : MonoBehaviour
 
 		CalcTimeOfDay ();
 
+		loadLevelCountdownCurrentTime = loadLevelCountdownTimerMax;
+
+		//fade in when starting game
 		mainUI.GetComponent<MainUI> ().GoBlack ( false );
+
+	}
+
+	static public void FadeToBlack( bool enable )
+	{
+		mainUI.GetComponent<MainUI> ().GoBlack ( enable );
+	}
+
+	static public bool LoadingLevel( )
+	{
+		return loadLevel;
 	}
 
 	static public void EnableInventory()
@@ -164,6 +184,17 @@ public class GWorld : MonoBehaviour
 			}
 		}
 
+		if (loadLevel) 
+		{
+			loadLevelCountdownCurrentTime -= Time.deltaTime;
+
+			if( loadLevelCountdownCurrentTime <= 0.0f )
+			{
+				Application.LoadLevel(sceneToLoad);
+				loadLevelCountdownCurrentTime = loadLevelCountdownTimerMax;
+				loadLevel = false;
+			}
+		}
 	}
 
 	static void CalcTimeOfDay()
@@ -390,10 +421,14 @@ public class GWorld : MonoBehaviour
 	public static void LoadScene( ZoneBase scene )
 	{
 
-		string[] sceneArray = (string[]) sceneLoadTable[scene];
-		string sceneToLoad = sceneArray [(int) timeOfTheDay];
+		mainUI.GetComponent<MainUI> ().GoBlack ( true );
 
-		Application.LoadLevel (sceneToLoad);
+		string[] sceneArray = (string[]) sceneLoadTable[scene];
+		sceneToLoad = sceneArray [(int) timeOfTheDay];
+
+		//Invoke("InternalLoadScene", 1);
+		loadLevel = true;
+		//Application.LoadLevel (sceneToLoad)
 
 	}
 

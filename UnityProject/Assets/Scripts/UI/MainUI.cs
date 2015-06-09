@@ -10,7 +10,7 @@ public class MainUI : MonoBehaviour {
 
 	static GameObject invOpenButton; 
 
-	const float fadeTime = 0.3f;
+	const float fadeTime = 1.0f;
 	bool increaseAlpha = false;
 
 	void Awake ()
@@ -54,7 +54,7 @@ public class MainUI : MonoBehaviour {
 	{
 		Color currentColor = blackScreen.color;
 
-		Debug.Log (blackScreen.color.a);
+		//Debug.Log (blackScreen.color.a);
 
 		if (increaseAlpha && currentColor.a < 1 )
 		{

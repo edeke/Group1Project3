@@ -43,8 +43,16 @@ public class SleepMenuController : MonoBehaviour {
 	{
 		//int value = Mathf.RoundToInt(sleepSlider.value);
 		//GWorld.FastForwardTime (value);
-		GWorld.FastForwardTime (12);
-		Destroy (gameObject);
+
+		if (GWorld.LoadingLevel () == false) 
+		{
+			GWorld.FastForwardTime (12);
+			Destroy (gameObject);
+		} 
+		else 
+		{
+			Destroy (gameObject);
+		}
 	}
 
 	public void OnCancelClick()
