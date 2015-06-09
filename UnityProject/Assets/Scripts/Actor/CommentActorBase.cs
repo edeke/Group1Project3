@@ -10,39 +10,26 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 	public string actorName;
 
 	public EAnimationState animationOnAction;
-	
-	// Use this for initialization
-	void Start () 
-	{
-	
 
-	}
 	
 	virtual public void OnInspect()
 	{	
 
-
+		DisplayComment ("I don't know what that is");
 
 	}
 
 	virtual public void OnAction()
 	{	
 		
-		
+		DisplayComment ("That didn't do anything");
 		
 	}
 
 	virtual public EAnimationState AnimationOnAction()
 	{	
-		
-		
+
 		return animationOnAction;
-	}
-	
-
-	virtual public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
 	}
 
 	public void DisplayComment ( string text )
@@ -66,21 +53,15 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	virtual public bool UseItemOnObject(EItem itemType)
 	{
+		DisplayComment ("What is that supposed to do ?");
 		
 		return false;
 	}
 
 	virtual public EAnimationState AnimationOnItem(EItem itemType)
 	{
-		switch (itemType) 
-		{
-			case EItem.Apple :
-				return EAnimationState.Use;
 
-			default :
-				return EAnimationState.Error;
-		}
-
+		return EAnimationState.Error;
 	}
 
 }

@@ -38,15 +38,10 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	}
 
 	virtual public void OnInspect()
-	{
-
-
-	}
-
-
-	virtual public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
+	{	
+		
+		DisplayComment ("I don't know what that is");
+		
 	}
 
 	public void Awake()

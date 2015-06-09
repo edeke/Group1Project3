@@ -19,35 +19,19 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	{
 		Dialoguer.Initialize ();
 
-
-	}
-
-	// Use this for initialization
-	public void Start () {
-	
-		/*speech = gameObject.GetComponentInChildren<SpeechBubbleController> ();
-
-		if (speech != null)
-		{
-			speech.SetName (actorName);
-		}*/
-
 	}
 
 	virtual public void OnTalkTo()
 	{
-
+		DisplayComment ("I don't think he wants to talk to me");
 	}
 
 	virtual public void OnInspect()
-	{		
-
+	{	
+		
+		DisplayComment ("I don't know what that is");
+		
 	}
-
-	/*virtual public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
-	}*/
 
 	public void DisplayComment ( string text )
 	{
@@ -92,25 +76,15 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	
 	virtual public bool UseItemOnObject(EItem itemType)
 	{
-		switch ( itemType )
-		{
-			case EItem.Apple :
-				DisplaySpeechBubble("Tack för Äpplet!!");
-				return true;
-
-			case EItem.Pear :
-				DisplaySpeechBubble("Usch! Vill inte ha Lakrits!!");
-				return false;
-
-		}
-
+		DisplayComment ("What is that supposed to do ?");
+		
 		return false;
 	}
 
 	virtual public EAnimationState AnimationOnItem(EItem itemType)
 	{
-
-		return EAnimationState.Use;
+		
+		return EAnimationState.Error;
 	}
 
 }
