@@ -395,10 +395,25 @@ public class PlayerMovement : MonoBehaviour {
 						RotateTowards(currentState.objectToUse.transform.position);
 						currentAnimationState = actionObject.AnimationOnAction();
 
-						if( currentAnimationState == EAnimationState.None )
+						if( currentAnimationState == EAnimationState.None || 
+					   		currentAnimationState == EAnimationState.Idle ||
+					   		currentAnimationState == EAnimationState.Running ||
+					  		currentAnimationState == EAnimationState.Talk ||
+					   		currentAnimationState == EAnimationState.Walk )
 						{
 							currentAnimationState = EAnimationState.Idle;
 							currentState.state = EPlayerState.Idle;
+
+							//use action without animation	
+							if( currentState.objectToUse != null )
+							{
+								actionObject = currentState.objectToUse.GetComponent<IAction>();
+							}
+							
+							if(actionObject != null)
+							{
+								actionObject.OnAction();
+							}
 							
 							break;
 						}
@@ -433,11 +448,19 @@ public class PlayerMovement : MonoBehaviour {
 						{
 							currentAnimationState = useItem.AnimationOnItem( itemToUse.itemType );
 
-							if( currentAnimationState == EAnimationState.None )
+							if( currentAnimationState == EAnimationState.None || 
+							   	currentAnimationState == EAnimationState.Idle ||
+							   	currentAnimationState == EAnimationState.Running ||
+							   	currentAnimationState == EAnimationState.Talk ||
+							   	currentAnimationState == EAnimationState.Walk )
 							{
 								currentAnimationState = EAnimationState.Idle;
 								currentState.state = EPlayerState.Idle;
 								
+								//use item without animation
+								IUseItem useObject = null;
+								Inventory.myInv.TryUseItemOnActor(currentState.objectToUse, currentState.inventoryIndex);
+
 								break;
 							}
 						}
