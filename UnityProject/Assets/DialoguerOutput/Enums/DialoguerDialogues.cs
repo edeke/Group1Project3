@@ -5,4 +5,8 @@ public enum DialoguerDialogues{
 	Pirate_on_Beach = 1,
 	Singer = 2,
 	Surfer = 3,
+	Shopkeeper = 4,
+	Random_person_in_bar_1 = 5,
+	Skyler = 6,
+	Random_person_in_bar_2 = 7,
 }

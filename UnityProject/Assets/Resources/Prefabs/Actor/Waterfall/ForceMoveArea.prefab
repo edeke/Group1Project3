@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 446702}
   - 65: {fileID: 6593546}
   - 114: {fileID: 11481086}
+  - 114: {fileID: 11470314}
   m_Layer: 0
   m_Name: ForceMoveArea
   m_TagString: Untagged
@@ -23,9 +24,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161018}
-  m_LocalRotation: {x: 0, y: -.329129696, z: 0, w: .944284737}
-  m_LocalPosition: {x: 179.309998, y: 5.44999981, z: -131.050003}
-  m_LocalScale: {x: 2.96945786, y: 2.65394735, z: 9.09074497}
+  m_LocalRotation: {x: 0, y: -.359477669, z: 0, w: .933153749}
+  m_LocalPosition: {x: 187.720001, y: 5.44999981, z: -122.120003}
+  m_LocalScale: {x: 6.82898903, y: 2.65394735, z: 18.9778786}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,6 +42,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11470314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0348764b291fe4ab031c00cde04e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11481086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccbd415cb0142a4ba213d13ec8d604f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkToTarget: {x: -5, y: 0, z: -5}
+  walkToTarget: {x: -10, y: 0, z: -10}
   waterFallSnake: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:

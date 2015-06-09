@@ -8,7 +8,7 @@ public class ItemCloth : Item {
 
 	override public void OnInspect()
 	{
-		DisplayComment("It's a cloth!");
+		DisplayComment("It's a cloth. I can use this!");
 
 	}
 
@@ -25,7 +25,7 @@ public class ItemCloth : Item {
 		} 
 		else 
 		{
-			DisplayComment("I need a backpack or something to hold this large spoon");
+			DisplayComment("I need a backpack to hold this cloth.");
 		}
 
 	}
