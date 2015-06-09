@@ -12,12 +12,6 @@ public class ItemLeaves : Item {
 		DisplayComment ("Some large leaves, they could be good for something");
 	}
 
-
-	override public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
-	}
-
 	override public void OnAction( ) 
 	{
 

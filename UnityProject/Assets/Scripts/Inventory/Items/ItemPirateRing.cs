@@ -33,12 +33,6 @@ public class ItemPirateRing : Item {
 
 	}
 
-
-	override public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
-	}
-
 	override public void OnAction( ) 
 	{
 		EventData rockMovedEvent = new EventData();

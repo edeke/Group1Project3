@@ -12,12 +12,6 @@ public class ItemBranch : Item {
 
 	}
 
-
-	override public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
-	}
-
 	override public void OnAction( ) 
 	{
 
@@ -35,5 +29,8 @@ public class ItemBranch : Item {
 		}
 
 	}
+
+
+
 
 }

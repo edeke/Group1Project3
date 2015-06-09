@@ -25,16 +25,13 @@ public class SnakeTorch : ClickOnActorBase
 			}
 			
 		}
-
-		ClickOnActorBase tempComp = (ClickOnActorBase)this;
-		tempComp.Start ();
 		
 	}
 
 	override public void OnInspect()
 	{
 
-		DisplayComment ("I need fire to light this.");
+		DisplayComment ("I need fire to light this");
 
 	}
 
@@ -47,8 +44,11 @@ public class SnakeTorch : ClickOnActorBase
 				light.SetActive(true);
 				particle.SetActive(true);
 				GWorld.MarkEventDone(EventIDLit);
+				return true;
 
-			return true;
+			case EItem.UnlitTorch :
+				DisplayComment("I need to light the torch first");
+				return false;
 		}
 
 		return false;
@@ -59,6 +59,18 @@ public class SnakeTorch : ClickOnActorBase
 		WaterfallSnake snake = waterFallSnake.GetComponentInChildren<WaterfallSnake> ();
 		snake.SnakeScared ();
 		//Destroy (gameObject);
+	}
+
+	override public EAnimationState AnimationOnItem(EItem itemType)
+	{
+		switch (itemType) 
+		{
+			case EItem.LitTorch :
+				return EAnimationState.Use;
+				
+			default :
+				return EAnimationState.Error;
+		}
 	}
 
 }

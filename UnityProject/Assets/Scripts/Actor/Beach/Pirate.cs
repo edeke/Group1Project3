@@ -21,9 +21,6 @@ public class Pirate : ClickOnActorBase
 			}
 			
 		}
-
-		ClickOnActorBase tempComp = (ClickOnActorBase)this;
-		tempComp.Start ();
 		
 	}
 

@@ -21,16 +21,13 @@ public class WaterfallSnake : ClickOnActorBase
 			}
 			
 		}
-
-		ClickOnActorBase tempComp = (ClickOnActorBase)this;
-		tempComp.Start ();
 		
 	}
 
 	override public void OnInspect()
 	{
 
-		//DisplaySpeechBubble ("Hello");
+		DisplayComment ("I think it's a snake");
 
 	}
 

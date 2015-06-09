@@ -12,12 +12,6 @@ public class ItemCloth : Item {
 
 	}
 
-
-	override public void OnDragOver( Vector3 deltaMousePosition )
-	{
-
-	}
-
 	override public void OnAction( ) 
 	{
 
