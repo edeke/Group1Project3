@@ -45,16 +45,8 @@ public class Pirate : ClickOnActorBase
 	{
 		switch ( itemType )
 		{
-			case EItem.Apple :
-				DisplaySpeechBubble("Blää vill inte ha äpple");
-				return false;
-
-			case EItem.Pear :
-				DisplaySpeechBubble("Usch, Tvi ! ");
-				return false;
-
 			case EItem.MetalPipe :
-				DisplaySpeechBubble("Vad ska jag med den till ?");
+				DisplaySpeechBubble("What do you want me to do with that ?");
 				return false;
 
 			case EItem.PirateRing :
@@ -67,13 +59,28 @@ public class Pirate : ClickOnActorBase
 
 	void RingGivenToPirate()
 	{
-		DisplaySpeechBubble("Yay, du hitta min ring =D");
+		DisplaySpeechBubble("Thank you for finding my ring, you may pass");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
 
 	public void GetAwayFromThere()
 	{
-		DisplaySpeechBubble("Get away from there !!");
+		DisplaySpeechBubble("Get away from there right NOW !!");
+	}
+
+	override public EAnimationState AnimationOnItem(EItem itemType)
+	{
+		switch (itemType) 
+		{
+			case EItem.MetalPipe :
+			return EAnimationState.Use;
+
+			case EItem.PirateRing :
+				return EAnimationState.Use;
+				
+			default :
+				return EAnimationState.Error;
+		}
 	}
 }

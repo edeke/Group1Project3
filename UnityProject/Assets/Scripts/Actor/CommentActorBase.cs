@@ -72,7 +72,15 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	virtual public EAnimationState AnimationOnItem(EItem itemType)
 	{
-		return EAnimationState.Use;
+		switch (itemType) 
+		{
+			case EItem.Apple :
+				return EAnimationState.Use;
+
+			default :
+				return EAnimationState.Error;
+		}
+
 	}
 
 }

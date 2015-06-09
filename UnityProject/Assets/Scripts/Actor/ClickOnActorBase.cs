@@ -8,7 +8,6 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	public DialoguerDialogues dialog;
 	public string speechBubbleText;
 	public string actorName;
-	public EAnimationState onActionAnimation;
 
 	protected GameObject commentObject;
 	protected CommentController comment;
