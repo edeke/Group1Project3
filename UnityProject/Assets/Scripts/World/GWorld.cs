@@ -139,6 +139,8 @@ public class GWorld : MonoBehaviour
 				InventoryOpenButton button = mainUI.GetComponentInChildren<InventoryOpenButton>();
 				button.ShowButton();
 
+				myPlayer.GetComponent<PlayerMovement>().EnableBackpack(true);
+
 			}
 			
 		}

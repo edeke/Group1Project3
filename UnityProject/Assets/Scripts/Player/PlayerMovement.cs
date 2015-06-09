@@ -56,6 +56,15 @@ public class PlayerMovement : MonoBehaviour {
 		currentState.state = EPlayerState.Idle;
 
 		agent = GetComponent<NavMeshAgent> ();
+
+		if (GWorld.isInvEnabled)
+		{
+			EnableBackpack (true);
+		} 
+		else
+		{
+			EnableBackpack (false);
+		}
 	}
 
 	void OnLevelWasLoaded()
@@ -524,5 +533,19 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		
 		return false;
+	}
+
+	public void EnableBackpack(bool enable)
+	{
+		MeshRenderer[] allMeshes = GetComponentsInChildren<MeshRenderer> ();
+
+		foreach (MeshRenderer comp in allMeshes) 
+		{
+			if( comp.CompareTag("PlayerBackpack") )
+			{
+				comp.enabled = enable;
+			}
+		}
+
 	}
 }
