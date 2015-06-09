@@ -31,7 +31,7 @@ public class SnakeTorch : ClickOnActorBase
 	override public void OnInspect()
 	{
 
-		DisplayComment ("I need fire to light this");
+		DisplayComment ("If I light this it could scare the snake away.");
 
 	}
 

@@ -9,14 +9,14 @@ public class Fireplace : CommentActorBase
 	override public void OnInspect()
 	{	
 
-		DisplayComment("A warm fireplace");
+		DisplayComment("A warm fireplace.");
 
 	}
 
 	override public void OnAction()
 	{	
 		
-		DisplayComment("I could use a hotdog at this moment !");
+		DisplayComment("I could use a hotdog at this moment!");
 		
 	}
 	

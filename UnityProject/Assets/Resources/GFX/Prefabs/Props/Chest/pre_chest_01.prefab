@@ -25,12 +25,14 @@ GameObject:
   - 4: {fileID: 430396}
   - 33: {fileID: 3321298}
   - 23: {fileID: 2379080}
+  - 65: {fileID: 6513926}
+  - 114: {fileID: 11461736}
   m_Layer: 0
   m_Name: Chest_BaseMesh:Mesh_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &430396
 Transform:
@@ -50,8 +52,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.988770723, z: 0, w: .149440587}
+  m_LocalPosition: {x: 27.6280003, y: -8.63000011, z: 36.4290009}
   m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children:
   - {fileID: 430396}
@@ -88,6 +90,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191126}
   m_Mesh: {fileID: 4300000, guid: 10a91afd06a44f043af9f051ce3a06d8, type: 3}
+--- !u!65 &6513926
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 145.648575, y: 129.550156, z: 127.917999}
+  m_Center: {x: -14.7242775, y: 68.5525284, z: 6.15604353}
+--- !u!114 &11461736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1066db3afcbea4aa53664049ff34b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -26,6 +26,7 @@ GameObject:
   - 33: {fileID: 3386126}
   - 23: {fileID: 2363396}
   - 65: {fileID: 6598494}
+  - 114: {fileID: 11456354}
   m_Layer: 0
   m_Name: pre_chimney_03
   m_TagString: Untagged
@@ -90,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130224}
   m_LocalRotation: {x: 0, y: .250819951, z: 0, w: .968033791}
-  m_LocalPosition: {x: 66.9300003, y: -7.75, z: 17.6299992}
+  m_LocalPosition: {x: -69.6467896, y: -6.75884676, z: 14.035347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488084}
@@ -219,7 +220,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.00000048, y: 2.00000024, z: 4.12877035}
+  m_Size: {x: 2.00000048, y: 2.00000024, z: 8.56999969}
   m_Center: {x: 3.0612624e-05, y: -3.04806345e-05, z: -.140000001}
 --- !u!108 &10815492
 Light:
@@ -253,6 +254,19 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11456354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0d6a1831359414a8add3c3d3ed0c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
 --- !u!198 &19823094
 ParticleSystem:
   m_ObjectHideFlags: 1
