@@ -41,7 +41,7 @@ public class Rucksack : CommentActorBase
 		
 		if (!tempData.hasEventOccured) 
 		{
-			DisplayComment ("Looks like a Backpack, but I can't reach it");
+			DisplayComment ("Looks like a backpack, but I can't reach it");
 		} 
 		else 
 		{

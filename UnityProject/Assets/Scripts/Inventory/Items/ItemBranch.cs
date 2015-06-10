@@ -8,8 +8,7 @@ public class ItemBranch : Item {
 
 	override public void OnInspect()
 	{
-
-
+		DisplayComment("This could be used as a torch.");
 	}
 
 	override public void OnAction( ) 
