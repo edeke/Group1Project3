@@ -43,6 +43,27 @@ static public class ItemDatabase
 		items.Add ("Banana", banan );
 
 		//Add Item to Itemdb
+		ItemStruct JarWithFireflies = new ItemStruct ();
+		
+		path = "Textures/ItemTextures/JarWithFireflies";
+		newTex = (Texture)Resources.Load(path,typeof(Texture));
+		
+		if (!newTex)
+		{
+			Debug.Log("Item Database : Unable to load texture - " + path);
+		}
+		
+		JarWithFireflies.itemType = EItem.JarWithFireflies;
+		JarWithFireflies.itemTexture = newTex;
+		JarWithFireflies.numberOfItemsInStack = 1;
+		JarWithFireflies.onDragParticle = null;
+		JarWithFireflies.onPickupParticle = null;
+		JarWithFireflies.onUseParticle = null;
+		JarWithFireflies.soundOnPickup = null;
+		JarWithFireflies.soundOnUse = null;
+		items.Add ("JarWithFireflies", JarWithFireflies );
+
+		//Add Item to Itemdb
 		ItemStruct unlitTorch = new ItemStruct ();
 		
 		path = "Textures/ItemTextures/UnlitTorch";

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ItemJar : Item {
 
+	public GameObject skyler;
 
 
 
@@ -21,12 +22,13 @@ public class ItemJar : Item {
 				{
 					GWorld.MarkEventDone (eventID);
 					Destroy (gameObject);
+					//DisplayComment("Into my pocket you go little jar-y jar.");
 				} 
 			} 
 		}
 		else 
 		{
-			DisplayComment("I need a backpack to hold this jar.");
+			skyler.GetComponent<Skyler>().DontTouchTheJar();
 		}
 
 	}

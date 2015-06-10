@@ -3,9 +3,6 @@ using System.Collections;
 
 public class ItemCloth : Item {
 
-
-
-
 	override public void OnInspect()
 	{
 		DisplayComment("It's a cloth. I can use this!");

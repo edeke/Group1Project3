@@ -2792,7 +2792,7 @@ MonoBehaviour:
     - id: 6
       name: Skyler
       startPage: 0
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 2947, y: 0}
       phases:
       - id: 0
         type: 1
@@ -3305,7 +3305,7 @@ MonoBehaviour:
         type: 0
         theme: 
         position: {x: 3516, y: 143}
-        outs: 11000000
+        outs: 12000000
         advanced: 0
         metadata: 
         text: Fair winds matey!
@@ -3335,7 +3335,7 @@ MonoBehaviour:
       - id: 17
         type: 6
         theme: 
-        position: {x: 3820, y: 169}
+        position: {x: 4126, y: 142}
         outs: 
         advanced: 0
         metadata: 
@@ -3360,6 +3360,37 @@ MonoBehaviour:
         variableScrollPosition: {x: 0, y: 0}
         variableSetEquation: 0
         variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 3
+        theme: 
+        position: {x: 3822, y: 142}
+        outs: 11000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 4
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: true
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
@@ -4063,7 +4094,10 @@ MonoBehaviour:
         - name: Seen the snake
           variable: false
           id: 3
-        selection: 3
+        - name: Talked with Skyler
+          variable: false
+          id: 4
+        selection: 4
       floats:
         variables: []
         selection: 0

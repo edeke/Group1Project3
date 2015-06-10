@@ -14,7 +14,8 @@ public enum EItem {
 	UnlitTorch,
 	LitTorch,
 	HangingCloth,
-	GlassJar
+	GlassJar,
+	JarWithFireflies
 };
 
 public class ItemStruct
