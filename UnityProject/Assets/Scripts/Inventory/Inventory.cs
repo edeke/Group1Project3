@@ -13,7 +13,8 @@ public enum EItem {
 	Leaves,
 	UnlitTorch,
 	LitTorch,
-	HangingCloth
+	HangingCloth,
+	GlassJar
 };
 
 public class ItemStruct

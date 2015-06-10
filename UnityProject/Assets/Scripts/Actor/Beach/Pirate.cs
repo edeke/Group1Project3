@@ -11,7 +11,6 @@ public class Pirate : ClickOnActorBase
 	float maxSpeed = 8;
 
 	Animator anim;
-	Pirate dialogue;
 
 	private bool isTalking;
 	private bool isWalking;
@@ -19,7 +18,6 @@ public class Pirate : ClickOnActorBase
 	void Start () 
 	{
 		anim = GetComponentInChildren<Animator> ();
-		dialogue = GetComponentInChildren<Pirate> ();
 		
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{

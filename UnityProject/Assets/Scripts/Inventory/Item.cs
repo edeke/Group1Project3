@@ -43,14 +43,14 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	virtual public void OnInspect()
 	{	
 		
-		DisplayComment ("I don't know what that is");
+		DisplayComment ("I don't know what that is.");
 		
 	}
 
 	public void Awake()
 	{
 		eventID = this.gameObject.name;
-		GWorld.TryRegisterEvent (eventID, "Hello" );
+		GWorld.TryRegisterEvent (eventID, "Hello!" );
 
 
 		EventData newData = new EventData();
