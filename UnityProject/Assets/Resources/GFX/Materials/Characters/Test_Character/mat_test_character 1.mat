@@ -8,7 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_test_character 1
   m_Shader: {fileID: 4800000, guid: 1523a4c9d9196c34a8728e157d91cb27, type: 3}
-  m_ShaderKeywords: _USEBLUE_ON _USECYAN_ON _USEMASKS_ON _USERED_ON
+  m_ShaderKeywords: _USEBLUE_ON _USECYAN_ON _USEMASKS_ON _USEPURPLE_ON _USERED_ON
+    _USEWHITE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -113,7 +114,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .0250000004
+        second: 0
       data:
         first:
           name: _SrcBlend
@@ -181,7 +182,7 @@ Material:
       data:
         first:
           name: _AOIntensity
-        second: .662
+        second: .566999972
       data:
         first:
           name: _UseMasks
@@ -201,11 +202,11 @@ Material:
       data:
         first:
           name: _UsePurple
-        second: 0
+        second: 1
       data:
         first:
           name: _UseWhite
-        second: 0
+        second: 1
       data:
         first:
           name: _UseRed
@@ -238,15 +239,7 @@ Material:
       data:
         first:
           name: _RedColor
-        second: {r: .788235307, g: .298039228, b: .290196091, a: 1}
-      data:
-        first:
-          name: _GreenColor
-        second: {r: .933823526, g: .879366279, b: .762164772, a: 1}
-      data:
-        first:
-          name: _BlueColor
-        second: {r: .698529422, g: .272221029, b: .446619958, a: 1}
+        second: {r: .720588207, g: .464070529, b: .434472322, a: 1}
       data:
         first:
           name: _BlackColor
@@ -254,16 +247,24 @@ Material:
       data:
         first:
           name: _CyanColor
-        second: {r: .95588237, g: .854283571, b: .0351427123, a: 1}
+        second: {r: .808823526, g: .779948711, b: .547145307, a: 1}
       data:
         first:
           name: _YellowColor
-        second: {r: .286764681, g: .0569312274, b: .0569312274, a: 1}
+        second: {r: 1, g: .0514705777, b: .0514705777, a: 1}
       data:
         first:
           name: _PurpleColor
-        second: {r: .301470578, g: .143458396, b: 0, a: 1}
+        second: {r: .279411793, g: .187823668, b: .0719074458, a: 1}
       data:
         first:
           name: _WhiteColor
-        second: {r: .625, g: .297413886, b: 0, a: 1}
+        second: {r: .382352948, g: .233347744, b: .285756469, a: 1}
+      data:
+        first:
+          name: _GreenColor
+        second: {r: .772058845, g: .647793412, b: .380352527, a: 1}
+      data:
+        first:
+          name: _BlueColor
+        second: {r: .485294104, g: .296172142, b: .404843181, a: 1}
