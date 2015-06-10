@@ -55,13 +55,4 @@ public class SurferDude : ClickOnActorBase {
 		
 	}
 
-	override public EAnimationState AnimationOnItem(EItem itemType)
-	{
-		switch (itemType) 
-		{
-					
-		default :
-			return EAnimationState.Error;
-		}
-	}
 }
