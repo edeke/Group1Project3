@@ -7,8 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_PirateShip_001
-  m_Shader: {fileID: 4800000, guid: 9f796bced76d70a4fb0c5f2c1a79996a, type: 3}
-  m_ShaderKeywords: _NORMALMAP
+  m_Shader: {fileID: 4800000, guid: 0af8a5286f7a48e46ae155c494964a68, type: 3}
+  m_ShaderKeywords: _NORMALMAP _USEBLACK_ON _USEBLUE_ON _USECYAN_ON _USEGREEN_ON _USEMASKS_ON
+    _USEPURPLE_ON _USERED_ON _USEWHITE_ON _USEYELLOW_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -93,10 +94,45 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Masks
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ToonShade
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HullWood
+        second:
+          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HullWoodAO
+        second:
+          m_Texture: {fileID: 2800000, guid: 8f66fdf0f8b4cac4abd8afa72856afcb, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WoodMerge
+        second:
+          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
+          m_Scale: {x: 15, y: 15}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
@@ -173,12 +209,72 @@ Material:
         second: 0
       data:
         first:
+          name: _UseMasks
+        second: 1
+      data:
+        first:
+          name: _UseBlack
+        second: 1
+      data:
+        first:
+          name: _UseCyan
+        second: 1
+      data:
+        first:
+          name: _UseYellow
+        second: 1
+      data:
+        first:
+          name: _UsePurple
+        second: 1
+      data:
+        first:
+          name: _UseWhite
+        second: 1
+      data:
+        first:
+          name: _UseRed
+        second: 1
+      data:
+        first:
+          name: _UseGreen
+        second: 1
+      data:
+        first:
+          name: _UseBlue
+        second: 1
+      data:
+        first:
           name: _Autotiletoscale
         second: 0
       data:
         first:
           name: _BaseScale
         second: 1
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
+          name: _HullTiling
+        second: 1
+      data:
+        first:
+          name: _DeckTiling
+        second: .699999988
+      data:
+        first:
+          name: _BoardTiling
+        second: .49000001
     m_Colors:
       data:
         first:
@@ -196,3 +292,39 @@ Material:
         first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _RedColor
+        second: {r: 1, g: .707910776, b: .338235319, a: 1}
+      data:
+        first:
+          name: _BlackColor
+        second: {r: .166414365, g: .41911763, b: .377290845, a: 1}
+      data:
+        first:
+          name: _CyanColor
+        second: {r: .507352948, g: .427082092, b: .283520758, a: 1}
+      data:
+        first:
+          name: _YellowColor
+        second: {r: .522058845, g: .130514711, b: .130514711, a: 1}
+      data:
+        first:
+          name: _PurpleColor
+        second: {r: .862631321, g: .504000783, b: .867647111, a: 1}
+      data:
+        first:
+          name: _WhiteColor
+        second: {r: .91911763, g: .297361553, b: .297361553, a: 1}
+      data:
+        first:
+          name: _GreenColor
+        second: {r: .590986371, g: .904411793, b: .56525737, a: 1}
+      data:
+        first:
+          name: _BlueColor
+        second: {r: .286958486, g: .269896209, b: .764705896, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
