@@ -80,7 +80,7 @@ public class RockOnBeach : CommentActorBase
 		} 
 		else 
 		{
-			DisplayComment ("It's a large rock");
+			DisplayComment ("It's a large rock.");
 		}
 
 	}
