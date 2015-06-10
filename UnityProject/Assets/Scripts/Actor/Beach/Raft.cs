@@ -6,7 +6,7 @@ public class Raft : CommentActorBase {
 	override public void OnInspect()
 	{		
 		//DisplaySpeechBubble ("That's not mine!");
-		DisplayComment ("My raft is broken!");
+		DisplayComment ("Oh no! My raft is broken!");
 	}
 
 	override public void OnAction()
