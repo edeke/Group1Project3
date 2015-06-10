@@ -37,13 +37,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: e88e0cccfd5fa4e439cbe69934299358, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -82,6 +75,13 @@ Material:
           name: _MetallicGlossMap
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: e88e0cccfd5fa4e439cbe69934299358, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -189,11 +189,11 @@ Material:
       data:
         first:
           name: _BerryColor2
-        second: {r: 1, g: .404411793, b: .934279859, a: 1}
+        second: {r: .926470578, g: .435986131, b: .709981024, a: 1}
       data:
         first:
           name: _BerryColor1
-        second: {r: .566176474, g: 0, b: 0, a: 1}
+        second: {r: .573529422, g: .0590397827, b: .0590397827, a: 1}
       data:
         first:
           name: _KnoppColor
