@@ -8,13 +8,22 @@ public class SurferDude : ClickOnActorBase {
 
 	Animator anim;
 
+	NavMeshAgent agent;
+
 	Vector3 posPrev;
 	float maxSpeed = 8;
+
+	Vector3 destination;
+
+	public Transform[] target;
 
 	// Use this for initialization
 	void Start () {
 
 		anim = GetComponentInChildren<Animator> ();
+		agent = GetComponentInChildren<NavMeshAgent> ();
+
+		destination = agent.destination;
 	
 	}
 
@@ -36,7 +45,12 @@ public class SurferDude : ClickOnActorBase {
 			isTalking = false;
 			
 		}
-		
+
+//		if (Vector3.Distance (destination, target.position) > 1.0f) {
+//			destination = target.position;
+//			agent.destination = destination;
+//		}
+
 	}
 	
 	override public void OnTalkTo()
