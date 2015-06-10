@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_box_03
-  m_Shader: {fileID: 4800000, guid: 281f5e3a54980bd4f97a261aa2dd59e6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 267ee3b7c26018641b41177076fa1bb8, type: 3}
   m_ShaderKeywords: _AUTOTILETOSCALE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -37,16 +37,30 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
+          name: _Mask
+        second:
+          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseTexture
         second:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Normals
+          name: _NormalTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
+          m_Texture: {fileID: 2800000, guid: 6e5554f87e2917f4aa8e5808e175307f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WearMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 0f3fa02a33d2ced4cb4be559048625fb, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -93,23 +107,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DiffuseTexture
+          name: _Diffuse
         second:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _NormalTexture
+          name: _Normals
         second:
-          m_Texture: {fileID: 2800000, guid: 6e5554f87e2917f4aa8e5808e175307f, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -147,13 +154,6 @@ Material:
           m_Texture: {fileID: 2800000, guid: ef8d8143ef717ad4c821e8bd0d150c72, type: 3}
           m_Scale: {x: .400000006, y: .400000006}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WearMask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 3, y: 3}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -189,12 +189,24 @@ Material:
         second: 0
       data:
         first:
-          name: _Autotiletoscale
-        second: 1
-      data:
-        first:
           name: _BaseScale
         second: 6
+      data:
+        first:
+          name: _ColorOpacity
+        second: .709999979
+      data:
+        first:
+          name: _WearThreshold
+        second: 0
+      data:
+        first:
+          name: _WearExponent
+        second: 12.1999998
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 1
       data:
         first:
           name: _Parallax
@@ -256,6 +268,10 @@ Material:
         first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _PaintColor
+        second: {r: .505882382, g: .839215696, b: .898039222, a: 1}
       data:
         first:
           name: _EmissionColorUI
