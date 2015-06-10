@@ -9,7 +9,6 @@ Material:
   m_Name: mat_test_character 1
   m_Shader: {fileID: 4800000, guid: 1523a4c9d9196c34a8728e157d91cb27, type: 3}
   m_ShaderKeywords: _USEBLUE_ON _USECYAN_ON _USEMASKS_ON _USEPURPLE_ON _USERED_ON
-    _USEWHITE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -40,7 +39,7 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 62cc0e4d4e0eb0146b6b8c13668535fb, type: 3}
+          m_Texture: {fileID: 2800000, guid: eff02b2e513eb8c49b1cdd6b1daca576, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -206,7 +205,7 @@ Material:
       data:
         first:
           name: _UseWhite
-        second: 1
+        second: 0
       data:
         first:
           name: _UseRed
