@@ -98,6 +98,13 @@ Material:
           m_Texture: {fileID: 2800000, guid: 7fa40f066ce63df409ba24bb8cba41a3, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Masks
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -175,6 +182,42 @@ Material:
         first:
           name: _AOIntensity
         second: .662
+      data:
+        first:
+          name: _UseMasks
+        second: 0
+      data:
+        first:
+          name: _UseBlack
+        second: 1
+      data:
+        first:
+          name: _UseCyan
+        second: 1
+      data:
+        first:
+          name: _UseYellow
+        second: 1
+      data:
+        first:
+          name: _UsePurple
+        second: 1
+      data:
+        first:
+          name: _UseWhite
+        second: 1
+      data:
+        first:
+          name: _UseRed
+        second: 1
+      data:
+        first:
+          name: _UseGreen
+        second: 1
+      data:
+        first:
+          name: _UseBlue
+        second: 1
     m_Colors:
       data:
         first:
@@ -192,3 +235,35 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _RedColor
+        second: {r: .735294104, g: .194636703, b: .194636703, a: 1}
+      data:
+        first:
+          name: _BlackColor
+        second: {r: .433823496, g: .343758911, b: .149924293, a: 1}
+      data:
+        first:
+          name: _CyanColor
+        second: {r: .134299293, g: .56429708, b: .676470578, a: 1}
+      data:
+        first:
+          name: _YellowColor
+        second: {r: 1, g: .940770805, b: .463235289, a: 1}
+      data:
+        first:
+          name: _PurpleColor
+        second: {r: .862631321, g: .504000783, b: .867647111, a: 1}
+      data:
+        first:
+          name: _WhiteColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _GreenColor
+        second: {r: .590986371, g: .904411793, b: .56525737, a: 1}
+      data:
+        first:
+          name: _BlueColor
+        second: {r: .286958486, g: .269896209, b: .764705896, a: 1}
