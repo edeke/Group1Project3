@@ -7,8 +7,19 @@ public class Pirate : ClickOnActorBase
 	string EventID = "RingGivenToPirate";
 	bool ringGiven = false;
 
+	Vector3 posPrev;
+	float maxSpeed = 8;
+
+	Animator anim;
+	Pirate dialogue;
+
+	private bool isTalking;
+	private bool isWalking;
+
 	void Start () 
 	{
+		anim = GetComponentInChildren<Animator> ();
+		dialogue = GetComponentInChildren<Pirate> ();
 		
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
@@ -24,17 +35,40 @@ public class Pirate : ClickOnActorBase
 		
 	}
 
+	void Update (){
+
+		//calculate speed
+		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
+		//speed /= maxSpeed;
+		anim.SetFloat ("speed", speed);
+		
+		posPrev = transform.position;
+
+		if (isTalking == true) {
+			anim.SetBool ("Talk", true);
+		} 
+
+		if (isTalking == true && GWorld.dialogOpen == false) {
+			anim.SetBool ("Talk", false);
+			isTalking = false;
+
+		}
+
+	}
+
 	override public void OnTalkTo()
 	{
 
 		Dialoguer.StartDialogue (dialog, null);
+
+		isTalking = true;
 
 	}
 
 	override public void OnInspect()
 	{	
 		//DisplaySpeechBubble ( "Hello" );
-		DisplaySpeechBubble ( "It's a pirate... Hello Weee oosog ooasdgfads" );
+		DisplaySpeechBubble ( "Where is it?!" );
 
 	}
 
@@ -56,14 +90,14 @@ public class Pirate : ClickOnActorBase
 
 	void RingGivenToPirate()
 	{
-		DisplaySpeechBubble("Thank you for finding my ring, you may pass");
+		DisplaySpeechBubble("Thank you for finding my ring, you may pass.");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
 
 	public void GetAwayFromThere()
 	{
-		DisplaySpeechBubble("Get away from there right NOW !!");
+		DisplaySpeechBubble("Get away from there right NOW!!");
 	}
 
 	override public EAnimationState AnimationOnItem(EItem itemType)
