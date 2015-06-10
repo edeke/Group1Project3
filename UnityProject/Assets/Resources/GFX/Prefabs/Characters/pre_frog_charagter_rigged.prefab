@@ -40,8 +40,8 @@ GameObject:
   - 4: {fileID: 469712}
   - 95: {fileID: 9557648}
   - 65: {fileID: 6511290}
-  - 208: {fileID: 20833816}
   - 114: {fileID: 11403554}
+  - 195: {fileID: 19570394}
   m_Layer: 0
   m_Name: pre_frog_charagter_rigged
   m_TagString: Untagged
@@ -405,6 +405,21 @@ GameObject:
   - 4: {fileID: 455066}
   m_Layer: 0
   m_Name: jnt_tumb_end_l
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &149644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 438240}
+  m_Layer: 0
+  m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1188,6 +1203,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 474606}
   m_RootOrder: 0
+--- !u!4 &438240
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149644}
+  m_LocalRotation: {x: 0, y: -.951583564, z: 0, w: -.307390183}
+  m_LocalPosition: {x: 4.5439353, y: .447668046, z: 16.1347504}
+  m_LocalScale: {x: 1.09187257, y: 1.09187245, z: 1.09187257}
+  m_Children: []
+  m_Father: {fileID: 469712}
+  m_RootOrder: 3
 --- !u!4 &438330
 Transform:
   m_ObjectHideFlags: 1
@@ -1525,12 +1552,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101454}
   m_LocalRotation: {x: 0, y: .951583564, z: 0, w: -.307390183}
-  m_LocalPosition: {x: 111.68, y: 5.21000004, z: -121.980003}
+  m_LocalPosition: {x: 111.68, y: 5.65999985, z: -121.980003}
   m_LocalScale: {x: .915857852, y: .915857852, z: .915857852}
   m_Children:
   - {fileID: 457618}
   - {fileID: 492992}
   - {fileID: 422030}
+  - {fileID: 438240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &472814
@@ -1784,6 +1812,8 @@ MonoBehaviour:
   actorName: Surfer
   commentOffsetX: 0
   commentOffsetY: 80
+  target:
+  - {fileID: 0}
 --- !u!137 &13769960
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1866,21 +1896,26 @@ SkinnedMeshRenderer:
     m_Center: {x: -.241887331, y: .132478446, z: -2.38418579e-07}
     m_Extent: {x: 1.8484261, y: 1.0898056, z: 3.80410314}
   m_DirtyAABB: 0
---- !u!208 &20833816
-NavMeshObstacle:
+--- !u!195 &19570394
+NavMeshAgent:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101454}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.21500003, y: 1.745, z: .860000014}
-  m_MoveThreshold: .100000001
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1.38, z: -.0700000003}
-  m_TimeToStationary: .5
+  m_Radius: .5
+  m_Speed: 8
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

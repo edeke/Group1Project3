@@ -9,4 +9,6 @@ public enum DialoguerDialogues{
 	Random_person_in_bar_1 = 5,
 	Skyler = 6,
 	Random_person_in_bar_2 = 7,
+	Random_person_in_bar_3 = 8,
+	Town_elder = 9,
 }
