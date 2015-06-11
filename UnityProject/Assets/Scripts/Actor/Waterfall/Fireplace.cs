@@ -37,4 +37,16 @@ public class Fireplace : CommentActorBase
 		return false;
 	}
 
+	override public EAnimationState AnimationOnItem(EItem itemType)
+	{
+		switch (itemType) 
+		{
+			case EItem.UnlitTorch :
+				return EAnimationState.UseLow;
+				
+			default :
+				return EAnimationState.Error;
+		}
+	}
+
 }

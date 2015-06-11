@@ -14,6 +14,7 @@ public enum ZoneBase
 	None,
 	Beach,
 	WaterFall,
+	Cave,
 	Testscene1,
 	Testscene2,
 	Testscene3
@@ -36,12 +37,12 @@ public class GWorld : MonoBehaviour
 	private const int HOUR = 60 * MINUTE;
 	private const int DAY = 24 * HOUR;
 	
-	private const int DAWN_START = HOUR * 4;
-	private const int DAY_START = HOUR * 8;
-	private const int DUSK_START = HOUR * 20;
-	private const int NIGHT_START = HOUR * 22;
+	private const int DAWN_START = HOUR * 21;
+	private const int DAY_START = HOUR * 6;
+	private const int DUSK_START = HOUR * 6;
+	private const int NIGHT_START = HOUR * 21;
 
-	static int currentTimeInMin = HOUR * 10 + 22;
+	static int currentTimeInMin = HOUR * 10 + 1;
 	public static TimeOfDay timeOfTheDay = 0;
 
 	static public bool dialogOpen = false;
@@ -170,7 +171,7 @@ public class GWorld : MonoBehaviour
 
 	void Update () 
 	{
-		currentTime += Time.deltaTime;
+		/*currentTime += Time.deltaTime;
 
 		if ( currentTime >= SECONDS_PER_MIN ) 
 		{
@@ -182,7 +183,7 @@ public class GWorld : MonoBehaviour
 			{
 				currentTimeInMin -= DAY;
 			}
-		}
+		}*/
 
 		if (loadLevel) 
 		{
@@ -413,6 +414,15 @@ public class GWorld : MonoBehaviour
 			"WaterfallAreaNight"	//Night
 		};
 		sceneLoadTable.Add (scene4, sceneArray4);
+
+		ZoneBase scene5 = ZoneBase.Cave;
+		string[] sceneArray5 = {
+			"CaveNight",	//Dawn
+			"CaveDay",	//Day
+			"CaveDay",	//Dusk
+			"CaveNight"	//Night
+		};
+		sceneLoadTable.Add (scene5, sceneArray5);
 
 		sceneAlreadyLoaded = true;
 	

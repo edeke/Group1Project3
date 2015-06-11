@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LittleHole : CommentActorBase {
+public class CaveLittleHole : CommentActorBase {
 
 	override public void OnInspect()
 	{		

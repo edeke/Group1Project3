@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour {
 				return true;
 			}
 			
-			DisplayComment("I can't reach it");
+			DisplayComment("I can't reach it.");
 			return false;
 			
 		case EPlayerState.Idle :
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour {
 				return true;
 			}
 			
-			DisplayComment("I can't reach it");
+			DisplayComment("I can't reach it.");
 			return false;
 			
 		default :
@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour {
 					return true;
 				}
 				
-				DisplayComment("I can't reach it");
+				DisplayComment("I can't reach it.");
 				return false;
 
 			case EPlayerState.Idle :
@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour {
 					return true;
 				}
 				
-				DisplayComment("I can't reach it");
+				DisplayComment("I can't reach it.");
 				return false;
 				
 			default :
@@ -265,7 +265,6 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.Action :
 				if( WalkToLocation(location)  )
 				{
-					Debug.Log ("Action");
 					ActionData newAction = new ActionData();
 					
 					newAction.state = EPlayerState.UseItem;
@@ -422,7 +421,7 @@ public class PlayerMovement : MonoBehaviour {
 					}
 					else
 					{
-						DisplayComment("I can't reach it");
+						DisplayComment("I can't reach it.");
 						currentState.state = EPlayerState.Idle;
 						currentAnimationState = EAnimationState.Idle;
 					}
@@ -467,7 +466,7 @@ public class PlayerMovement : MonoBehaviour {
 					}
 					else
 					{
-						DisplayComment("I can't reach it");
+						DisplayComment("I can't reach it.");
 						currentState.state = EPlayerState.Idle;
 						currentAnimationState = EAnimationState.Idle;
 					}
@@ -496,7 +495,7 @@ public class PlayerMovement : MonoBehaviour {
 					}
 					/*else
 					{
-						DisplayComment("I can't reach it");
+						DisplayComment("I can't reach it.");
 					}*/
 				}
 			break;
