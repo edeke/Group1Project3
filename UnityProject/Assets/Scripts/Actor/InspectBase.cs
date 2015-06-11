@@ -7,7 +7,7 @@ public class InspectBase : MonoBehaviour, IInspectInterface {
 	protected CommentController comment;
 	public string actorName;
 	
-	public EAnimationState animationOnAction;
+	//public EAnimationState animationOnAction;
 
 	public int commentOffsetX;
 	public int commentOffsetY;
