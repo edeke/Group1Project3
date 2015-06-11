@@ -10189,6 +10189,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d73e0d22fd99a4ba3fa43b6471e7bb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &464693138 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 183448, guid: c4d73e0d22fd99a4ba3fa43b6471e7bb, type: 2}
+  m_PrefabInternal: {fileID: 464693137}
 --- !u!1001 &465962281
 Prefab:
   m_ObjectHideFlags: 0
@@ -10507,6 +10511,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d73e0d22fd99a4ba3fa43b6471e7bb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &509019305 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 183448, guid: c4d73e0d22fd99a4ba3fa43b6471e7bb, type: 2}
+  m_PrefabInternal: {fileID: 509019304}
 --- !u!4 &514298531 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441434, guid: 0c7f919bf47d1e241bc2694518ad7e79, type: 2}
@@ -21044,8 +21052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c26063a2889dd64bbedd10ee8af06ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFromCove: {fileID: 0}
-  spawnFromBeach: {fileID: 0}
+  spawnFromCove: {fileID: 509019305}
+  spawnFromBeach: {fileID: 464693138}
 --- !u!4 &1621368371
 Transform:
   m_ObjectHideFlags: 0
