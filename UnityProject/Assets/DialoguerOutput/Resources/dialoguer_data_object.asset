@@ -17,7 +17,7 @@ MonoBehaviour:
     - id: 0
       name: Barnacle Bill
       startPage: 2
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 27.1487026, y: 0}
       phases:
       - id: 0
         type: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
       - id: 2
         type: 1
         theme: 
-        position: {x: 183, y: 10}
+        position: {x: 187, y: 20}
         outs: 0300000004000000070000000600000005000000
         advanced: 0
         metadata: 
@@ -105,10 +105,11 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - Have you seen my big brother?
+        - "Hi! I\u2019m trying to find my family. Do you know them? I have been told
+          that my mothers name is Derya."
         - "I don\u2019t drink. I\u2019m only 10 years old."
         - Gotta go. See ya!
-        - What was all commotion outside about?
+        - What was all that commotion outside about?
         - "I\u2019ll have a bottle of rum!"
         waitType: 0
         waitDuration: 0
@@ -124,11 +125,11 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 504, y: 11}
+        position: {x: 510, y: 17}
         outs: 08000000
         advanced: 0
         metadata: 
-        text: 'I dunno. What does he look like? '
+        text: 'I dunno. What does she look like? '
         name: Barnacle Bill
         portrait: 
         audio: 
@@ -155,7 +156,7 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 505, y: 150}
+        position: {x: 501, y: 172}
         outs: 09000000
         advanced: 0
         metadata: 
@@ -186,11 +187,11 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 507, y: 287}
+        position: {x: 502, y: 328}
         outs: 02000000
         advanced: 0
         metadata: 
-        text: "I don\u2019t think so mate. You look to young to be drinking such a
+        text: "I don\u2019t think so mate! You look to young to be drinking such a
           strong beverage.  "
         name: Barnacle Bill
         portrait: 
@@ -218,7 +219,7 @@ MonoBehaviour:
       - id: 6
         type: 0
         theme: 
-        position: {x: 506, y: 424}
+        position: {x: 490, y: 471}
         outs: 0a000000
         advanced: 0
         metadata: 
@@ -250,7 +251,7 @@ MonoBehaviour:
       - id: 7
         type: 6
         theme: 
-        position: {x: 505, y: 561}
+        position: {x: 288, y: 680}
         outs: 
         advanced: 0
         metadata: 
@@ -281,12 +282,12 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 815, y: 10}
+        position: {x: 824, y: 15}
         outs: 0b000000
         advanced: 0
         metadata: 
-        text: "He looks a lot like me. But has\u2026 "
-        name: Player
+        text: I have never met her but I guess she looks a lot like me.
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -312,12 +313,12 @@ MonoBehaviour:
       - id: 9
         type: 0
         theme: 
-        position: {x: 815, y: 150}
+        position: {x: 812, y: 175}
         outs: 0c000000
         advanced: 0
         metadata: 
         text: Do you have any soda?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -343,12 +344,12 @@ MonoBehaviour:
       - id: 10
         type: 0
         theme: 
-        position: {x: 815, y: 424}
+        position: {x: 813, y: 415}
         outs: 0d000000
         advanced: 0
         metadata: 
         text: 'Invaded? I thought I heard him say they want to help. '
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -378,8 +379,9 @@ MonoBehaviour:
         outs: 02000000
         advanced: 0
         metadata: 
-        text: "Sorry, haven\u2019t seen \u2018im. Ask around this here bar. Maybe
-          someone knows somethin\u2019."
+        text: "Hmm.. Yer looks is familiar somehow. But I can\u2019t say it rings
+          any of me bells at the moment. Ask around this here bar. Maybe someone knows
+          somethin\u2019."
         name: Barnacle Bill
         portrait: 
         audio: 
@@ -406,11 +408,11 @@ MonoBehaviour:
       - id: 12
         type: 0
         theme: 
-        position: {x: 1123, y: 150}
+        position: {x: 1120, y: 182}
         outs: 02000000
         advanced: 0
         metadata: 
-        text: Sure, here ya goooo matey!
+        text: Soda? Har har har!! I only have soda for grown ups.
         name: Barnacle Bill
         portrait: 
         audio: 
@@ -437,7 +439,7 @@ MonoBehaviour:
       - id: 13
         type: 0
         theme: 
-        position: {x: 1124, y: 423}
+        position: {x: 1126, y: 423}
         outs: 0e000000
         advanced: 0
         metadata: 
@@ -475,7 +477,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Yikes!
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -510,7 +512,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 16
-      scrollPosition: {x: 1480.59424, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 6
@@ -1441,7 +1443,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "Hellooo theeeere\u2026\r"
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1507,7 +1509,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "I dooon\u2019t think soooo."
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1533,12 +1535,12 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 473, y: 147}
+        position: {x: 471, y: 146}
         outs: 05000000
         advanced: 0
         metadata: 
         text: "I\u2019m Priscilla de Fooooontaine. Who wants to know?"
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1564,13 +1566,13 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 474, y: 317}
+        position: {x: 471, y: 344}
         outs: 06000000
         advanced: 0
         metadata: 
         text: "He\u2019s very attractive. I like the sound of his voice. He\u2019s
           soooooo self confident."
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1600,8 +1602,8 @@ MonoBehaviour:
         outs: 07000000
         advanced: 0
         metadata: 
-        text: "I\u2019m [\u2026] and I\u2019m new in town."
-        name: Player
+        text: "I\u2019m Ash and I\u2019m new in town."
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -1627,12 +1629,12 @@ MonoBehaviour:
       - id: 6
         type: 0
         theme: 
-        position: {x: 778, y: 318}
+        position: {x: 786, y: 334}
         outs: 08000000
         advanced: 0
         metadata: 
         text: Do you know why he and his men are here?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -1663,7 +1665,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "Oh, ooookey. That\u2019s soooo interesting..."
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1689,13 +1691,13 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 1084, y: 318}
+        position: {x: 1120, y: 327}
         outs: 00000000
         advanced: 0
         metadata: 
         text: "I think they are here to help. That\u2019s what he says at least. I
           have no reason to doubt him.\r"
-        name: Singer
+        name: Priscilla
         portrait: 
         audio: 
         audioDelay: 0
@@ -1740,7 +1742,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "Aloha! What\u2019s up, dude?"
-        name: Surfer
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1752,10 +1754,10 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - Not much. I just got here on my boat. How are you?
+        - Not much. Just got here on my raft. How are you?
         - "I\u2019m trying to find my family, have you seen them by any chance?"
         - See ya later!
-        - "I came here with my brother, but he\u2019s disappeared. Have you seen him?"
+        - Hey, my name is Ash! Who are you?
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -1805,8 +1807,9 @@ MonoBehaviour:
         outs: 00000000
         advanced: 0
         metadata: 
-        text: "I\u2019m cool, dude. Just chillin\u2019 here on the beach."
-        name: Surfer
+        text: "I\u2019m cool, dude. Just chillin\u2019 here on the beach. I'm so amped
+          about todays waves!"
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1832,14 +1835,12 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 483, y: 146}
+        position: {x: 834, y: 28}
         outs: 05000000
         advanced: 0
         metadata: 
-        text: "Sorry dude. I haven\u2019t seen a soul today. Not many people come
-          down here. Sometimes in the evening but almost never in the day time. It\u2019s
-          just me and the waves!"
-        name: Surfer
+        text: "Sorry dude. I haven\u2019t seen a soul today. Yawn... I just woke up."
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1865,12 +1866,12 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 488, y: 318}
+        position: {x: 477, y: 332}
         outs: 06000000
         advanced: 0
         metadata: 
-        text: "No dude. Haven\u2019t seen him. Sorry."
-        name: Surfer
+        text: 'My name is Hurley and I''m the master of the waves! '
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1896,12 +1897,12 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 790, y: 146}
+        position: {x: 1313, y: 10}
         outs: 00000000
         advanced: 0
         metadata: 
         text: Okey, thanks anyway.
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -1927,12 +1928,12 @@ MonoBehaviour:
       - id: 6
         type: 0
         theme: 
-        position: {x: 797, y: 318}
+        position: {x: 787, y: 332}
         outs: 07000000
         advanced: 0
         metadata: 
-        text: "Really? He must have passed through here\u2026"
-        name: Player
+        text: What kind of animal are you by the way?
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1958,12 +1959,13 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 1103, y: 318}
+        position: {x: 1406, y: 337}
         outs: 00000000
         advanced: 0
         metadata: 
-        text: "Don\u2019t worry about it dude. You\u2019ll find him. Just be cool."
-        name: Surfer
+        text: "Don\u2019t worry about it dude. I'm sure you\u2019ll find them. Just
+          be cool!"
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -1989,7 +1991,7 @@ MonoBehaviour:
       - id: 8
         type: 4
         theme: 
-        position: {x: 23, y: 400}
+        position: {x: 13, y: 402}
         outs: 0000000009000000
         advanced: 0
         metadata: 
@@ -2025,7 +2027,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Hey dude!
-        name: Surfer
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -2055,8 +2057,8 @@ MonoBehaviour:
         outs: 0b000000
         advanced: 0
         metadata: 
-        text: "There is a big snake over there. I can\u2019t get past!"
-        name: Player
+        text: There is a big snake in the bushes over there. I'm scared!
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2086,9 +2088,9 @@ MonoBehaviour:
         outs: 0c000000
         advanced: 0
         metadata: 
-        text: "Yeah, she\u2019s a grumpy that one. I\u2019m pretty sure she don\u2019t
+        text: "Yeah, she\u2019s grumpy that one. I\u2019m pretty sure she don\u2019t
           like fire though. "
-        name: Surfer
+        name: Hurley
         portrait: 
         audio: 
         audioDelay: 0
@@ -2145,12 +2147,44 @@ MonoBehaviour:
       - id: 13
         type: 0
         theme: 
-        position: {x: 417, y: 505}
+        position: {x: 946, y: 525}
         outs: ffffffff
         advanced: 0
         metadata: 
         text: Should add another condition later.
         name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 14
+        type: 0
+        theme: 
+        position: {x: 1093, y: 332}
+        outs: ffffffff
+        advanced: 0
+        metadata: 
+        text: 'I have no idea. I have never met my real parents. I grew up in a foster
+          home. '
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2185,7 +2219,7 @@ MonoBehaviour:
     - id: 4
       name: Shopkeeper
       startPage: 0
-      scrollPosition: {x: 259.423767, y: 48}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 1
@@ -2195,7 +2229,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Hello there!
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2208,7 +2242,7 @@ MonoBehaviour:
         newWindow: 0
         choices:
         - Hello! What is this place?
-        - Does the name [mothers name] mean anything to you?
+        - Does the name Derya mean anything to you?
         - Gotta go!
         - What can you tell me about the one who founded this village?
         - "Are you one of \u201CThe Old Four\u201D? "
@@ -2263,7 +2297,7 @@ MonoBehaviour:
         metadata: 
         text: This is the old Antique Boutique. It is one of the oldest buildings
           on this island. Can I interest you in a particular item?
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2289,13 +2323,13 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 475, y: 146}
+        position: {x: 483, y: 151}
         outs: 07000000
         advanced: 0
         metadata: 
         text: Yes, it is familiar to me. But there was a really long time ago I last
           heard that name being used. Who told you that?
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2321,12 +2355,12 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 475, y: 310}
+        position: {x: 479, y: 320}
         outs: 08000000
         advanced: 0
         metadata: 
         text: You mean the old Pirate King? Why do you want to know about that?
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2352,7 +2386,7 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 475, y: 446}
+        position: {x: 467, y: 459}
         outs: 09000000
         advanced: 0
         metadata: 
@@ -2388,7 +2422,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "Yes, I\u2019ll take that expensive looking Myan mirror please."
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2414,13 +2448,13 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 780, y: 147}
+        position: {x: 789, y: 144}
         outs: 0b000000
         advanced: 0
         metadata: 
         text: "My fosterparents told me her name and that she supposedly lives on
           this island. Do you know if that\u2019s true?"
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2446,14 +2480,14 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 780, y: 307}
+        position: {x: 798, y: 293}
         outs: 0c000000
         advanced: 0
         metadata: 
         text: I got a letter from the Lighthouse Master which is written by him. According
           to the letter there are more hidden letters which will tell me more about
           my family.
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2479,13 +2513,13 @@ MonoBehaviour:
       - id: 9
         type: 0
         theme: 
-        position: {x: 779, y: 445}
+        position: {x: 783, y: 468}
         outs: ffffffff
         advanced: 0
         metadata: 
         text: Yes, I did. I know that you might be one of them. Can you tell me more
           about them?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2518,7 +2552,7 @@ MonoBehaviour:
         text: "No no no, that is my most valuable item. According to legend, it is
           the key that opens \u201Cthe cursed door\u201D when moonlight shines upon
           it. Obviously, it is not for sale. "
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2544,13 +2578,13 @@ MonoBehaviour:
       - id: 11
         type: 0
         theme: 
-        position: {x: 1085, y: 148}
+        position: {x: 1100, y: 153}
         outs: 00000000
         advanced: 0
         metadata: 
         text: "According to the legend yes. But I have never met her in person so
           I don\u2019t know for sure I\u2019m afraid."
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2576,7 +2610,7 @@ MonoBehaviour:
       - id: 12
         type: 0
         theme: 
-        position: {x: 1083, y: 306}
+        position: {x: 1109, y: 300}
         outs: 00000000
         advanced: 0
         metadata: 
@@ -2609,13 +2643,13 @@ MonoBehaviour:
       - id: 13
         type: 0
         theme: 
-        position: {x: 1083, y: 445}
+        position: {x: 1114, y: 469}
         outs: 00000000
         advanced: 0
         metadata: 
         text: Yes, I am one of the old four. But I am afraid I cannot tell you more
           about it. It is not safe now with all those soldiers scavaging the island.
-        name: Shopkeeper
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2646,7 +2680,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Do you know where the cursed door is located?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -2676,9 +2710,9 @@ MonoBehaviour:
         outs: 00000000
         advanced: 0
         metadata: 
-        text: Oh yes. It is located in the caves beneath this old building. But I
-          am afraid no one knows how to get down there.
-        name: Skopkeeper
+        text: Oh yes. It is located in an old smugglers cave beneath this old building.
+          But I am afraid I don't know how to get down there.
+        name: Delwyn
         portrait: 
         audio: 
         audioDelay: 0
@@ -2735,7 +2769,7 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - "Hi I\u2019m [...], who are you?"
+        - "Hi! I\u2019m Ash. Who are you?"
         - "I\u2019m looking for my mother and father. Do you know where they are?"
         - Bye!
         waitType: 0
@@ -2787,7 +2821,7 @@ MonoBehaviour:
         outs: 04000000
         advanced: 0
         metadata: 
-        text: "I\u2019m [...]. Are you new in town?"
+        text: "I\u2019m Elian. Are you new in town?"
         name: Drunk
         portrait: 
         audio: 
@@ -2818,7 +2852,7 @@ MonoBehaviour:
         outs: 05000000
         advanced: 0
         metadata: 
-        text: "I don\u2019t know either of them I\u2019m afraid. But go talk to [...]
+        text: "I don\u2019t know either of them I\u2019m afraid. But go talk to Skyler
           up by the Lighthouse. She sees a lot of things from up there."
         name: Drunk
         portrait: 
@@ -2917,7 +2951,7 @@ MonoBehaviour:
     - id: 6
       name: Skyler
       startPage: 0
-      scrollPosition: {x: 2947, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 1
@@ -3055,9 +3089,9 @@ MonoBehaviour:
         outs: 07000000
         advanced: 0
         metadata: 
-        text: "I don\u2019t know much about them. They got her recently and have kept
-          to themselves a lot. But me eyes tell me the lot look like blaggards who
-          are up to no good!\r"
+        text: "I don\u2019t know much about them. They got here recently and have
+          kept to themselves a lot. But me eyes tell me the lot look like blaggards
+          who are up to no good!\r"
         name: Skyler
         portrait: 
         audio: 
@@ -3088,7 +3122,7 @@ MonoBehaviour:
         outs: 00000000
         advanced: 0
         metadata: 
-        text: "My name is [...] and I\u2019m new in town."
+        text: "My name is Ash and I\u2019m new in town."
         name: Player
         portrait: 
         audio: 
@@ -3119,7 +3153,7 @@ MonoBehaviour:
         outs: 08000000
         advanced: 0
         metadata: 
-        text: 'I am [...] and my mothers name is [...] '
+        text: I am Ash and my mothers name is Derya.
         name: Player
         portrait: 
         audio: 
@@ -3146,7 +3180,7 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 774, y: 307}
+        position: {x: 803, y: 308}
         outs: 00000000
         advanced: 0
         metadata: 
@@ -3538,10 +3572,10 @@ MonoBehaviour:
         theme: 
         position: {x: 164, y: 10}
         outs: 0100000002000000
-        advanced: 0
+        advanced: 1
         metadata: 
         text: Hi there!
-        name: Drunk 2
+        name: Greer
         portrait: 
         audio: 
         audioDelay: 0
@@ -3572,11 +3606,11 @@ MonoBehaviour:
         theme: 
         position: {x: 469, y: 10}
         outs: 00000000
-        advanced: 0
+        advanced: 1
         metadata: 
-        text: I think I saw some lights down at the waterfall on the beach when I
+        text: I think I saw some lights down by the waterfall on the beach when I
           went there a couple of nights ago. Try down there.
-        name: Drunk 2
+        name: Greer
         portrait: 
         audio: 
         audioDelay: 0
@@ -3652,7 +3686,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Hi there!
-        name: Drunk
+        name: Keelin
         portrait: 
         audio: 
         audioDelay: 0
@@ -3717,7 +3751,7 @@ MonoBehaviour:
         metadata: 
         text: "I think it\u2019s written in very small letters on the diploma behind
           the bar."
-        name: Drunk
+        name: Keelin
         portrait: 
         audio: 
         audioDelay: 0
@@ -3748,7 +3782,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Do you know how I could distract him so I can get to the diploma?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -3779,7 +3813,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: I think he is afraid of bugs.
-        name: Drunk
+        name: Keelin
         portrait: 
         audio: 
         audioDelay: 0
@@ -3814,7 +3848,7 @@ MonoBehaviour:
     - id: 9
       name: Town elder
       startPage: 0
-      scrollPosition: {x: 485.100067, y: 0}
+      scrollPosition: {x: 338.643585, y: 0}
       phases:
       - id: 0
         type: 1
@@ -3918,7 +3952,7 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 469, y: 145}
+        position: {x: 469, y: 155}
         outs: 06000000
         advanced: 0
         metadata: 
@@ -3949,13 +3983,13 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 468, y: 306}
+        position: {x: 463, y: 304}
         outs: 07000000
         advanced: 0
         metadata: 
         text: Oooh, so you have come at last my child. I have been waiting for you
           for a long time. Come with me. Do you want me to take you to your parents?
-        name: 
+        name: Town elder
         portrait: 
         audio: 
         audioDelay: 0
@@ -3981,7 +4015,7 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 773, y: 10}
+        position: {x: 773, y: 14}
         outs: 08000000
         advanced: 0
         metadata: 
@@ -4012,11 +4046,11 @@ MonoBehaviour:
       - id: 6
         type: 0
         theme: 
-        position: {x: 774, y: 145}
+        position: {x: 782, y: 161}
         outs: 00000000
         advanced: 0
         metadata: 
-        text: "Eeeh, oooookey\u2026"
+        text: Isn't that Shakespeare..?
         name: Player
         portrait: 
         audio: 
@@ -4043,12 +4077,12 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 773, y: 304}
+        position: {x: 774, y: 305}
         outs: 09000000
         advanced: 0
         metadata: 
         text: "They\u2019re here?? Yes! Thank you! Thank you! "
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
