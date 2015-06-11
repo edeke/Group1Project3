@@ -3,9 +3,9 @@ using System.Collections;
 
 public enum TimeOfDay
 {
-	Dawn,
+	//Dawn,
 	Day,
-	Dusk,
+	//Dusk,
 	Night
 }
 
@@ -15,6 +15,7 @@ public enum ZoneBase
 	Beach,
 	WaterFall,
 	Cave,
+	Cove,
 	Testscene1,
 	Testscene2,
 	Testscene3
@@ -37,9 +38,9 @@ public class GWorld : MonoBehaviour
 	private const int HOUR = 60 * MINUTE;
 	private const int DAY = 24 * HOUR;
 	
-	private const int DAWN_START = HOUR * 21;
+	//private const int DAWN_START = HOUR * 21;
 	private const int DAY_START = HOUR * 6;
-	private const int DUSK_START = HOUR * 6;
+	//private const int DUSK_START = HOUR * 6;
 	private const int NIGHT_START = HOUR * 21;
 
 	static int currentTimeInMin = HOUR * 10 + 1;
@@ -205,18 +206,18 @@ public class GWorld : MonoBehaviour
 		{
 			timeOfTheDay = TimeOfDay.Night;
 		} 
-		else if (currentTimeInMin >= DUSK_START) 
+		/*else if (currentTimeInMin >= DUSK_START) 
 		{
 			timeOfTheDay = TimeOfDay.Dusk;
-		} 
+		} */
 		else if (currentTimeInMin >= DAY_START) 
 		{
 			timeOfTheDay = TimeOfDay.Day;
 		}
-		else if (currentTimeInMin >= DAWN_START) 
+		/*else if (currentTimeInMin >= DAWN_START) 
 		{
 			timeOfTheDay = TimeOfDay.Dawn;
-		}
+		}*/
 		else 
 		{
 			timeOfTheDay = TimeOfDay.Night;
@@ -381,48 +382,57 @@ public class GWorld : MonoBehaviour
 
 		ZoneBase scene = ZoneBase.Testscene1;
 		string[] sceneArray = {
-			"TestSceneNight",	//Dawn
+			//"TestSceneNight",	//Dawn
 			"TestSceneDay",		//Day
-			"TestSceneDay",		//Dusk
+			//"TestSceneDay",		//Dusk
 			"TestSceneNight"	//Night
 		};
 		sceneLoadTable.Add (scene, sceneArray);
 
 		ZoneBase scene2 = ZoneBase.Testscene2;
 		string[] sceneArray2 = {
-			"TestScene2Night",	//Dawn
+			//"TestScene2Night",	//Dawn
 			"TestScene2Day",	//Day
-			"TestScene2Day",	//Dusk
+			//"TestScene2Day",	//Dusk
 			"TestScene2Night"	//Night
 		};
 		sceneLoadTable.Add (scene2, sceneArray2);
 
 		ZoneBase scene3 = ZoneBase.Beach;
 		string[] sceneArray3 = {
-			"BeachSceneNight",	//Dawn
+			//"BeachSceneNight",	//Dawn
 			"BeachSceneDay",	//Day
-			"BeachSceneDay",	//Dusk
+			//"BeachSceneDay",	//Dusk
 			"BeachSceneNight"	//Night
 		};
 		sceneLoadTable.Add (scene3, sceneArray3);
 
 		ZoneBase scene4 = ZoneBase.WaterFall;
 		string[] sceneArray4 = {
-			"WaterfallAreaNight",	//Dawn
+			//"WaterfallAreaNight",	//Dawn
 			"WaterfallAreaDay",	//Day
-			"WaterfallAreaDay",	//Dusk
+			//"WaterfallAreaDay",	//Dusk
 			"WaterfallAreaNight"	//Night
 		};
 		sceneLoadTable.Add (scene4, sceneArray4);
 
 		ZoneBase scene5 = ZoneBase.Cave;
 		string[] sceneArray5 = {
-			"CaveNight",	//Dawn
+			//"CaveNight",	//Dawn
 			"CaveDay",	//Day
-			"CaveDay",	//Dusk
+			//"CaveDay",	//Dusk
 			"CaveNight"	//Night
 		};
 		sceneLoadTable.Add (scene5, sceneArray5);
+
+		ZoneBase scene6 = ZoneBase.Cove;
+		string[] sceneArray6 = {
+			//"CoveAreaNight",	//Dawn
+			"CoveAreaDay",	//Day
+			//"CoveAreaDay",	//Dusk
+			"CoveAreaNight"	//Night
+		};
+		sceneLoadTable.Add (scene6, sceneArray6);
 
 		sceneAlreadyLoaded = true;
 	

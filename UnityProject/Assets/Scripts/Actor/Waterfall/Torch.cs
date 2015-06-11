@@ -5,7 +5,7 @@ public class Torch : CommentActorBase {
 
 	override public void OnInspect()
 	{	
-		if(GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn){
+		if(GWorld.GetTimeOfTheDay() == TimeOfDay.Night ){
 			DisplayComment ("I like fire!");
 		} else {
 			DisplayComment ("I wonder if it lights up during the night.");

@@ -25,7 +25,7 @@ public class ForbiddenAreaCave : MonoBehaviour
 		{
 			if( other.CompareTag("Player") )
 			{
-				if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn)
+				if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night )
 				{
 					//GWorld.LoadScene(LevelToLoad);
 				}

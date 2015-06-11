@@ -12,8 +12,12 @@ public class CaveDay : MonoBehaviour {
 
 		switch (GWorld.currentZone) 
 		{
+			case ZoneBase.Cove :
+				GWorld.SpawnPlayer(  spawnFromCove.transform  );
+			break;
+
 			case ZoneBase.Cave :
-				//GWorld.SpawnPlayer(  spawnFromTest2.transform  );
+				//GWorld.SpawnPlayer(  spawnFromCove.transform  );
 			break;
 
 			default :
