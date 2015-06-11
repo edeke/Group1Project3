@@ -28,7 +28,7 @@ public class CaveReflectedLight : MonoBehaviour {
 			
 			if(tempData.hasEventOccured)
 			{
-				if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn)
+				if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night )
 				{
 					if(lightComp != null)
 					{
@@ -61,7 +61,7 @@ public class CaveReflectedLight : MonoBehaviour {
 	
 	public void TurnOnLight()
 	{
-		if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn)
+		if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night )
 		{
 			if(lightComp != null)
 			{

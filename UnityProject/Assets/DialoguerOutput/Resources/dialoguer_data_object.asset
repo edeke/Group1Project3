@@ -510,7 +510,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 16
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 1480.59424, y: 0}
       phases:
       - id: 0
         type: 6
@@ -546,12 +546,12 @@ MonoBehaviour:
       - id: 1
         type: 1
         theme: 
-        position: {x: 1119, y: 146}
+        position: {x: 1107, y: 224}
         outs: 0200000003000000
         advanced: 0
         metadata: 
         text: Stop right there stranger!
-        name: Pirate
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -579,12 +579,12 @@ MonoBehaviour:
       - id: 2
         type: 0
         theme: 
-        position: {x: 1454, y: 49}
+        position: {x: 1418, y: 23}
         outs: 04000000
         advanced: 0
         metadata: 
         text: Who are you and what is your business here!?
-        name: Pirate
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -610,13 +610,13 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 2445, y: 491}
+        position: {x: 2466, y: 473}
         outs: 0d000000
         advanced: 0
         metadata: 
         text: "Don\u2019t tell me to take it easy! Get out of here ya ugly little
           grunt!"
-        name: Pirate
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -642,12 +642,12 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 1783, y: 47}
-        outs: 05000000
+        position: {x: 1735, y: 25}
+        outs: 1c000000
         advanced: 0
         metadata: 
-        text: "My name is [\u2026] and I just woke up here.. "
-        name: Player
+        text: 'My name is Ash and I just woke up here.. '
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -673,12 +673,12 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 2109, y: 49}
+        position: {x: 2173, y: 13}
         outs: 06000000
         advanced: 0
         metadata: 
-        text: Where am I?
-        name: Player
+        text: Is this the Kang Islands?
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -704,12 +704,12 @@ MonoBehaviour:
       - id: 6
         type: 1
         theme: 
-        position: {x: 2446, y: 66}
+        position: {x: 2495, y: 10}
         outs: 0700000008000000
         advanced: 0
         metadata: 
-        text: This is the .... Islands.
-        name: Pirate
+        text: Yes, this is the Kang Islands.
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - Let me through Pirate! Or...
+        - Let me through soldier! Or...
         - Can I please enter?
         waitType: 0
         waitDuration: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: Or what!? What are ya gonna do!? Get outta here and stop pestering me...
-        name: Pirate
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -768,12 +768,12 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 2777, y: 346}
-        outs: 17000000
+        position: {x: 2804, y: 260}
+        outs: 19000000
         advanced: 0
         metadata: 
-        text: "Sure thing. Here ya go me friend. MOHAHAHA! I don\u2019t think so pal. "
-        name: Pirate
+        text: 'Sure thing! Here you go friend. '
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -830,12 +830,12 @@ MonoBehaviour:
       - id: 10
         type: 0
         theme: 
-        position: {x: 3393, y: 349}
-        outs: 0b000000
+        position: {x: 3719, y: 357}
+        outs: 1a000000
         advanced: 0
         metadata: 
         text: How much do you want for letting me through?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -861,12 +861,12 @@ MonoBehaviour:
       - id: 11
         type: 0
         theme: 
-        position: {x: 3700, y: 350}
+        position: {x: 4421, y: 354}
         outs: 18000000
         advanced: 0
         metadata: 
-        text: "I have a slight problem you see. I have lost me wedding ring and I
-          need it back before the old wench notices that it\u2019s gone. "
+        text: "I have a slight problem you see. I have lost my wedding ring and I
+          need it back before the old wench at home notices that it\u2019s gone. "
         name: Pirate
         portrait: 
         audio: 
@@ -955,12 +955,12 @@ MonoBehaviour:
       - id: 14
         type: 0
         theme: 
-        position: {x: 1119.29993, y: 10}
+        position: {x: 1111.29993, y: 18}
         outs: 02000000
         advanced: 0
         metadata: 
         text: "Please don\u2019t hurt me sir! I come in peace!"
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -986,7 +986,7 @@ MonoBehaviour:
       - id: 15
         type: 3
         theme: 
-        position: {x: 4334, y: 346}
+        position: {x: 5054, y: 358}
         outs: 13000000
         advanced: 0
         metadata: 
@@ -1053,7 +1053,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: I really need my ring back...
-        name: Player
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -1110,7 +1110,7 @@ MonoBehaviour:
       - id: 19
         type: 6
         theme: 
-        position: {x: 4675.66846, y: 535}
+        position: {x: 5379.66846, y: 522}
         outs: 
         advanced: 0
         metadata: 
@@ -1141,12 +1141,12 @@ MonoBehaviour:
       - id: 20
         type: 0
         theme: 
-        position: {x: 2445.06982, y: 343}
+        position: {x: 2492.06982, y: 284}
         outs: 08000000
         advanced: 0
         metadata: 
         text: Can I please enter?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -1193,7 +1193,7 @@ MonoBehaviour:
         waitDuration: 0
         variableScope: 0
         variableType: 0
-        variableId: 0
+        variableId: 2
         variableScrollPosition: {x: 0, y: 0}
         variableSetEquation: 0
         variableSetValue: true
@@ -1203,7 +1203,7 @@ MonoBehaviour:
       - id: 22
         type: 4
         theme: 
-        position: {x: 443, y: 199}
+        position: {x: 440, y: 220}
         outs: 140000000c000000
         advanced: 0
         metadata: 
@@ -1234,13 +1234,13 @@ MonoBehaviour:
       - id: 23
         type: 0
         theme: 
-        position: {x: 3085.89941, y: 348.299988}
+        position: {x: 3416.89941, y: 359.299988}
         outs: 0a000000
         advanced: 0
         metadata: 
         text: "There are no free lunches in this world. If you wanna pass, it\u2019ll
           cost ya."
-        name: 
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -1266,12 +1266,12 @@ MonoBehaviour:
       - id: 24
         type: 0
         theme: 
-        position: {x: 4011.46826, y: 351.400024}
+        position: {x: 4734.46826, y: 354.400024}
         outs: 0f000000
         advanced: 0
         metadata: 
         text: "Bring it to me and I\u2019ll let ya through."
-        name: 
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -1282,6 +1282,131 @@ MonoBehaviour:
           width: 0
           height: 0
         newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 25
+        type: 0
+        theme: 
+        position: {x: 3112.28955, y: 357}
+        outs: 17000000
+        advanced: 0
+        metadata: 
+        text: "Mohahaha! I don\u2019t think so pal... "
+        name: Soldier
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 26
+        type: 0
+        theme: 
+        position: {x: 4069.59692, y: 359}
+        outs: 0b000000
+        advanced: 0
+        metadata: 
+        text: I'm posted here to guard the the way into Cove Towne, but I guess I
+          can make and exception...
+        name: Soldier
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 27
+        type: 0
+        theme: 
+        position: {x: 2161.39844, y: 182}
+        outs: 05000000
+        advanced: 0
+        metadata: 
+        text: I don't know what I am. But everyone keeps telling me I am different.
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 28
+        type: 0
+        theme: 
+        position: {x: 1812.59424, y: 180}
+        outs: 1b000000
+        advanced: 0
+        metadata: 
+        text: An what are you supposed to be? Some ugly kind of rat?
+        name: Soldier
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 1
         choices: []
         waitType: 0
         waitDuration: 0
