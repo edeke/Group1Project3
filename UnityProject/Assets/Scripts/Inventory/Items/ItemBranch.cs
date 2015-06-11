@@ -8,7 +8,7 @@ public class ItemBranch : Item {
 
 	override public void OnInspect()
 	{
-		DisplayComment("This could be used as a torch.");
+		DisplayComment("It's a branch.");
 	}
 
 	override public void OnAction( ) 
@@ -24,7 +24,7 @@ public class ItemBranch : Item {
 		} 
 		else 
 		{
-			DisplayComment("Need inventory to pickup item");
+			DisplayComment("I need something to carry it in.");
 		}
 
 	}

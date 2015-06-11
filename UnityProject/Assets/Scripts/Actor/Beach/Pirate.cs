@@ -66,7 +66,7 @@ public class Pirate : ClickOnActorBase
 	override public void OnInspect()
 	{	
 		//DisplaySpeechBubble ( "Hello" );
-		DisplaySpeechBubble ( "Where is it?!" );
+		DisplaySpeechBubble ( "How could I loose it..." );
 
 	}
 
@@ -75,7 +75,7 @@ public class Pirate : ClickOnActorBase
 		switch ( itemType )
 		{
 			case EItem.MetalPipe :
-				DisplaySpeechBubble("What do you want me to do with that ?");
+				DisplaySpeechBubble("I don't want that.");
 				return false;
 
 			case EItem.PirateRing :
@@ -88,14 +88,14 @@ public class Pirate : ClickOnActorBase
 
 	void RingGivenToPirate()
 	{
-		DisplaySpeechBubble("Thank you for finding my ring, you may pass.");
+		DisplaySpeechBubble("Okey, you can enter now.");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
 
 	public void GetAwayFromThere()
 	{
-		DisplaySpeechBubble("Get away from there right NOW!!");
+		DisplaySpeechBubble("Stop right there!");
 	}
 
 	override public EAnimationState AnimationOnItem(EItem itemType)

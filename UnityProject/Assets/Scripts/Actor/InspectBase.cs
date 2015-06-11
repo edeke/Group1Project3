@@ -15,7 +15,7 @@ public class InspectBase : MonoBehaviour, IInspectInterface {
 	virtual public void OnInspect()
 	{	
 		
-		DisplayComment ("I don't know what that is");
+		DisplayComment ("I don't know what that is.");
 		
 	}
 	

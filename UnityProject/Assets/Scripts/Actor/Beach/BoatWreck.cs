@@ -28,14 +28,14 @@ public class BoatWreck : CommentActorBase
 	override public void OnInspect()
 	{	
 
-		DisplayComment("The wreck, I can't move it");
+		DisplayComment("A Shipwreck. I can't move it.");
 
 	}
 
 	override public void OnAction()
 	{	
 		
-		DisplayComment("Its to heavy!");
+		DisplayComment("It's to heavy!");
 
 	}
 

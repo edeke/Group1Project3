@@ -76,7 +76,7 @@ public class RockOnBeach : CommentActorBase
 		
 		if (tempData.hasEventOccured) 
 		{
-			DisplayComment ("A large rock on the move, I should watch my toes");
+			DisplayComment ("I should watch my toes!");
 		} 
 		else 
 		{
@@ -88,7 +88,7 @@ public class RockOnBeach : CommentActorBase
 	override public void OnAction()
 	{	
 		
-		DisplayComment("This rock looks <b>suspicious</b>, however it's to heavy to move !");
+		DisplayComment("This rock looks <b>suspicious</b> but it's to heavy to move.");
 
 		//Invoke ("DestroyObject", 1.0f);
 		

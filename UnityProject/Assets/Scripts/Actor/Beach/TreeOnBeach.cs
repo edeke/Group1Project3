@@ -40,11 +40,11 @@ public class TreeOnBeach : CommentActorBase
 		
 		if (!tempData.hasEventOccured) 
 		{
-			DisplayComment ("A tree, there is something hanging in it");
+			DisplayComment ("It's a small palm tree.");
 		} 
 		else 
 		{
-			DisplayComment ("I think whatever was up there fell down");
+			DisplayComment ("It's a small palm tree.");
 		}
 	}
 

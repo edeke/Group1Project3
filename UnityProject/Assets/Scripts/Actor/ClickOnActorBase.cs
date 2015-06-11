@@ -25,13 +25,13 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 	virtual public void OnTalkTo()
 	{
-		DisplayComment ("I don't think he wants to talk to me");
+		DisplayComment ("I don't think he wants to talk to me.");
 	}
 
 	virtual public void OnInspect()
 	{	
 		
-		DisplayComment ("I don't know what that is");
+		DisplayComment ("I don't know what that is.");
 		
 	}
 
@@ -79,7 +79,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	
 	virtual public bool UseItemOnObject(EItem itemType)
 	{
-		DisplayComment ("What is that supposed to do ?");
+		DisplayComment ("What is that supposed to do?");
 		
 		return false;
 	}

@@ -41,11 +41,11 @@ public class Rucksack : CommentActorBase
 		
 		if (!tempData.hasEventOccured) 
 		{
-			DisplayComment ("Looks like a backpack, but I can't reach it");
+			DisplayComment ("It's my backpack. How did it end up in the palm tree?");
 		} 
 		else 
 		{
-			DisplayComment ("It's a backpack, I should pick it up");
+			DisplayComment ("It's my backpack.");
 		}
 
 	}

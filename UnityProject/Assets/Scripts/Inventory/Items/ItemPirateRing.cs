@@ -24,11 +24,11 @@ public class ItemPirateRing : Item {
 		
 		if (rockMovedEvent.hasEventOccured) 
 		{
-			DisplayComment ("It's a ring I should pick it up");
+			DisplayComment ("It's a ring.");
 		} 
 		else 
 		{
-			DisplayComment ("It's a ring with a large boulder on it");
+			DisplayComment ("It's a ring.");
 		}
 
 	}
@@ -52,7 +52,7 @@ public class ItemPirateRing : Item {
 		} 
 		else 
 		{
-			DisplayComment ("There is a large rock on it");
+			DisplayComment ("It's stuck under the rock.");
 		}
 
 	}

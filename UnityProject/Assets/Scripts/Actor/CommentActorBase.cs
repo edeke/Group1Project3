@@ -18,14 +18,14 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 	virtual public void OnInspect()
 	{	
 
-		DisplayComment ("I don't know what that is");
+		DisplayComment ("I don't know what that is.");
 
 	}
 
 	virtual public void OnAction()
 	{	
 		
-		DisplayComment ("That didn't do anything");
+		DisplayComment ("That didn't do anything.");
 		
 	}
 
@@ -57,7 +57,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	virtual public bool UseItemOnObject(EItem itemType)
 	{
-		DisplayComment ("What is that supposed to do ?");
+		DisplayComment ("What is that supposed to do?");
 		
 		return false;
 	}
