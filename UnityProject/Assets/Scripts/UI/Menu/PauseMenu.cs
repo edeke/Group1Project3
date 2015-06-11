@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
@@ -18,7 +19,7 @@ public class PauseMenu : MonoBehaviour {
 		PauseUI = GameObject.Find ("PauseMenu");
 		rpgGUI = GWorld.mainDialog;
 
-		PauseUI.SetActive (false);
+		PauseUI.gameObject.SetActive (false);
 
 		UnpauseGame();
 
