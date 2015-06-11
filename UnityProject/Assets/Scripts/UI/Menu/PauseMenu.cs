@@ -83,9 +83,12 @@ public class PauseMenu : MonoBehaviour {
 
 	public void MainMenu(){
 
-		Application.LoadLevel ("MainMenu");
+		Application.LoadLevel ("MainMenuNew");
 
-		Dialoguer.EndDialogue ();
+		if (GWorld.dialogOpen == true) {
+			Dialoguer.EndDialogue ();
+		}
+
 
 	}
 
