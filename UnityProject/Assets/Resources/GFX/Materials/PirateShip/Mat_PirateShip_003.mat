@@ -1,0 +1,345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Mat_PirateShip_003
+  m_Shader: {fileID: 4800000, guid: 0af8a5286f7a48e46ae155c494964a68, type: 3}
+  m_ShaderKeywords: _NORMALMAP _USEBLACK_ON _USEBLUE_ON _USECYAN_ON _USEGREEN_ON _USEMASKS_ON
+    _USEPURPLE_ON _USERED_ON _USEWHITE_ON _USEYELLOW_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Masks
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WoodMerge
+        second:
+          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Wood
+        second:
+          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
+          m_Scale: {x: 2, y: 10}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ToonShade
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HullWood
+        second:
+          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HullWoodAO
+        second:
+          m_Texture: {fileID: 2800000, guid: 8f66fdf0f8b4cac4abd8afa72856afcb, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _Smoothness
+        second: .0599999987
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Reach
+        second: .518999994
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _UseMasks
+        second: 1
+      data:
+        first:
+          name: _UseBlack
+        second: 1
+      data:
+        first:
+          name: _UseCyan
+        second: 1
+      data:
+        first:
+          name: _UseYellow
+        second: 1
+      data:
+        first:
+          name: _UsePurple
+        second: 1
+      data:
+        first:
+          name: _UseWhite
+        second: 1
+      data:
+        first:
+          name: _UseRed
+        second: 1
+      data:
+        first:
+          name: _UseGreen
+        second: 1
+      data:
+        first:
+          name: _UseBlue
+        second: 1
+      data:
+        first:
+          name: _HullTiling
+        second: 1
+      data:
+        first:
+          name: _DeckTiling
+        second: .699999988
+      data:
+        first:
+          name: _BoardTiling
+        second: .49000001
+      data:
+        first:
+          name: _WearThreshold
+        second: .200000003
+      data:
+        first:
+          name: _WearExp
+        second: 48.0900002
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .5
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _RedColor
+        second: {r: .117647052, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _BlueColor
+        second: {r: .117647067, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _BlackColor
+        second: {r: .117647067, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _CyanColor
+        second: {r: .257352948, g: .199252784, b: .177876309, a: 1}
+      data:
+        first:
+          name: _YellowColor
+        second: {r: .522058845, g: .130514711, b: .130514711, a: 1}
+      data:
+        first:
+          name: _PurpleColor
+        second: {r: .0665008575, g: .602941155, b: .114595495, a: 1}
+      data:
+        first:
+          name: _WhiteColor
+        second: {r: .0661764741, g: .04233348, b: .064532131, a: 1}
+      data:
+        first:
+          name: _GreenColor
+        second: {r: .20588237, g: .143814892, b: .143814892, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
