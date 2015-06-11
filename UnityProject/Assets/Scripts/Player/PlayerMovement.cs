@@ -52,6 +52,9 @@ public class PlayerMovement : MonoBehaviour {
 	protected GameObject speechObject;
 	protected SpeechBubbleScreen speech;
 
+	bool spawning = false;
+	Vector3 spawnLocation;
+
 	// Use this for initialization
 	void Start () {
 		currentAnimationState = EAnimationState.Idle;
@@ -75,6 +78,25 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		currentState.state = EPlayerState.Idle;
 		actionList.Clear ();
+	}
+
+	public void PlayerSetLocationOnSpawn(Vector3 location)
+	{
+
+		NavMeshHit hitData;
+		NavMeshPath path = new NavMeshPath();
+
+		NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
+		location = hitData.position;
+
+		//Debug.Log ("SetPosition : " + location);
+		transform.position = location;
+
+		spawnLocation = location;
+		spawning = true;
+
+		agent.enabled = false;
+
 	}
 
 	public bool ForceMoveToLocation(Vector3 location)
@@ -347,7 +369,28 @@ public class PlayerMovement : MonoBehaviour {
 				return;
 		}
 	}
+
+	void LateUpdate()
+	{
+		//Debug.Log ("Test1");
+		if (spawning)
+		{
+			if( (transform.position.x != spawnLocation.x) || (transform.position.z != spawnLocation.z) )
+			{
+				//Debug.Log ("Test2");
+				transform.position = spawnLocation;
+			}
+			else
+			{
+				agent.enabled = true;
+				spawning = false;
+			}
+		}
+
+	}
 	
+
+
 	// Update is called once per frame
 	void Update () 
 	{

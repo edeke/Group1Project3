@@ -267,13 +267,19 @@ public class GWorld : MonoBehaviour
 			DontDestroyOnLoad (myPlayer);
 
 			//check it exist after creating
-			if (!myPlayer) {
+			if (!myPlayer) 
+			{
 				Debug.Log ("GWorld Failed to Load Player - " + path);
 			}
 		} 
 		else 
 		{
-			myPlayer.transform.position = location.position;
+			Debug.Log ("Position : " + location.position );
+
+			PlayerMovement movComp = myPlayer.GetComponent<PlayerMovement>();
+			movComp.PlayerSetLocationOnSpawn(location.position);
+
+			//myPlayer.transform.position = location.position;
 		}
 
 	}
@@ -440,6 +446,7 @@ public class GWorld : MonoBehaviour
 
 	public static void LoadScene( ZoneBase scene )
 	{
+		Debug.Log ("Load Level : " + scene);
 
 		mainUI.GetComponent<MainUI> ().GoBlack ( true );
 

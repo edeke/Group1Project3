@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BeachSceneDay : MonoBehaviour {
 	
-	public GameObject spawnFromCove;
+	public GameObject spawnFromWaterfall;
 	public GameObject defaultSpawn;
 
 
@@ -14,6 +14,10 @@ public class BeachSceneDay : MonoBehaviour {
 		{
 			case ZoneBase.Beach :
 				//GWorld.SpawnPlayer(  spawnFromTest2.transform  );
+			break;
+
+			case ZoneBase.WaterFall :
+				GWorld.SpawnPlayer(  spawnFromWaterfall.transform  );
 			break;
 
 			default :

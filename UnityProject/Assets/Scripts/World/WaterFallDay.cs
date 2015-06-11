@@ -4,8 +4,7 @@ using System.Collections;
 public class WaterFallDay : MonoBehaviour {
 	
 	public GameObject spawnFromCove;
-	public GameObject defaultSpawn;
-
+	public GameObject spawnFromBeach;
 
 	void Awake()
 	{
@@ -16,8 +15,16 @@ public class WaterFallDay : MonoBehaviour {
 				//GWorld.SpawnPlayer(  spawnFromTest2.transform  );
 			break;
 
+			case ZoneBase.Beach :
+				GWorld.SpawnPlayer(  spawnFromBeach.transform  );
+			break;
+
+			case ZoneBase.Cove :
+				GWorld.SpawnPlayer(  spawnFromCove.transform  );
+			break;
+
 			default :
-				GWorld.SpawnPlayer(  defaultSpawn.transform  );
+				GWorld.SpawnPlayer(  spawnFromBeach.transform  );
 			break;
 
 		}
