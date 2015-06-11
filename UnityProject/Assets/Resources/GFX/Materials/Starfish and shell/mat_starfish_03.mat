@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: 2154e803cc7d2b9469021225148361bf, type: 3}
-  m_ShaderKeywords: 
+  m_Name: mat_starfish_03
+  m_Shader: {fileID: 4800000, guid: d66bd06643320294da14684a9382c7ca, type: 3}
+  m_ShaderKeywords: _DISTANCEFADE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -39,14 +39,14 @@ Material:
         first:
           name: _Normals
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 0cb7f2adcccc5144f9100669f31a6782, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 411956bc70a8679449dee31b7ee22190, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -91,6 +91,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _LerpMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -126,12 +133,20 @@ Material:
         second: 0
       data:
         first:
+          name: _BaseScale
+        second: 1
+      data:
+        first:
           name: _Autotiletoscale
         second: 0
       data:
         first:
-          name: _BaseScale
-        second: 1
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
       data:
         first:
           name: _Parallax
@@ -172,6 +187,10 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _DistanceFade
+        second: .523788929
     m_Colors:
       data:
         first:
@@ -187,5 +206,17 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _LowColor
+        second: {r: 0, g: .194066927, b: .654411793, a: 1}
+      data:
+        first:
+          name: _HighColor
+        second: {r: .688127875, g: .384083033, b: .705882311, a: 1}
