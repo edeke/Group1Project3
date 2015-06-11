@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour {
 	GameObject objectToUseAtionOn;
 	bool objectToUseAtionOnReached;
 
+	protected GameObject speechObject;
+	protected SpeechBubbleScreen speech;
+
 	// Use this for initialization
 	void Start () {
 		currentAnimationState = EAnimationState.Idle;
@@ -567,5 +570,27 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}
 
+	}
+
+	public void DisplaySpeechBubble ( string text )
+	{
+		
+		if (speechObject == null) 
+		{
+			string path = "Prefabs/UI/SpeechBubble/SpeechBubbleScreen";
+			GameObject tmpHndl = (GameObject) Resources.Load (path);
+			speechObject = (GameObject)Instantiate (tmpHndl, Vector3.zero, Quaternion.identity);
+		}
+		
+		speech = speechObject.GetComponentInChildren<SpeechBubbleScreen> ();
+		speech.SetName ("Player");
+		speech.SetObjectFollow (gameObject);
+		//speech.SetOffset (commentOffsetX, commentOffsetY);
+		
+		if (speech != null) 
+		{
+			speech.SetText(text);	
+		}
+		
 	}
 }

@@ -7,7 +7,9 @@ public class CaveReflectedLight : MonoBehaviour {
 	string EventID = "MirrorPlacedCave";
 	bool turnOnLight = false;
 
+
 	Light lightComp;
+	float intensityStart;
 
 
 	// Use this for initialization
@@ -15,6 +17,9 @@ public class CaveReflectedLight : MonoBehaviour {
 	{
 		lightComp = GetComponent<Light> ();
 		lightComp.enabled = false;
+
+		intensityStart = lightComp.intensity;
+		lightComp.intensity = 0.0f;
 
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
@@ -25,8 +30,29 @@ public class CaveReflectedLight : MonoBehaviour {
 			{
 				if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn)
 				{
-					lightComp.enabled = true;
+					if(lightComp != null)
+					{
+						lightComp.enabled = true;
+						lightComp.intensity = intensityStart;
+					}
 				}
+			}
+		}
+
+
+	
+
+	}
+
+	void Update()
+	{
+
+		if (turnOnLight)
+		{
+			float currentIntensity = lightComp.intensity;
+			if(currentIntensity < intensityStart)
+			{
+				lightComp.intensity += Time.deltaTime;
 			}
 		}
 
@@ -37,8 +63,11 @@ public class CaveReflectedLight : MonoBehaviour {
 	{
 		if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night || GWorld.GetTimeOfTheDay() == TimeOfDay.Dawn)
 		{
-			lightComp.enabled = true;
-			turnOnLight = true;
+			if(lightComp != null)
+			{
+				lightComp.enabled = true;
+				turnOnLight = true;
+			}
 		}
 	}
 
