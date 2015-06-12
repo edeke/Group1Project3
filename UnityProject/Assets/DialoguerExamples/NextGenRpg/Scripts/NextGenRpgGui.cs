@@ -119,7 +119,9 @@ public class NextGenRpgGui : MonoBehaviour {
 		GUI.skin = guiSkin;
 		
 		//int textY = (_choices == null) ? 100 : 260;
+
 		int textY = 260;
+
 		Rect textRect = new Rect(Screen.width*0.5f - 300, Screen.height - textY, 600, 80);
 		//GUI.Box(textRect, string.Empty);
 		

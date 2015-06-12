@@ -40,8 +40,8 @@ GameObject:
   - 4: {fileID: 469712}
   - 95: {fileID: 9557648}
   - 65: {fileID: 6511290}
-  - 114: {fileID: 11403554}
   - 195: {fileID: 19570394}
+  - 114: {fileID: 11434778}
   m_Layer: 0
   m_Name: pre_frog_charagter_rigged
   m_TagString: Untagged
@@ -1797,7 +1797,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11403554
+--- !u!114 &11434778
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1811,9 +1811,13 @@ MonoBehaviour:
   dialog: 3
   actorName: Surfer
   commentOffsetX: 0
-  commentOffsetY: 80
-  target:
-  - {fileID: 0}
+  commentOffsetY: 0
+  walking: 0
+  patrol: 0
+  walkToLocation:
+  - {x: 111.68, y: 5.65999985, z: -121.980003}
+  - {x: 101.981468, y: 5.65999985, z: -132.053925}
+  - {x: 50.2358322, y: 5.65999985, z: -138.128235}
 --- !u!137 &13769960
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1904,7 +1908,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 101454}
   m_Enabled: 1
   m_Radius: .5
-  m_Speed: 8
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
