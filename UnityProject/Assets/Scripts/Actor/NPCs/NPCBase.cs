@@ -97,7 +97,11 @@ public class NPCBase : ClickOnActorBase
 		Dialoguer.StartDialogue (dialog, null);
 		prevNPCState = currentNPCState;
 		currentNPCState = NPCState.talking;
-		agent.Stop ();
+
+		if (agent) 
+		{
+			agent.Stop ();
+		}
 	}
 
 	void Update (){
@@ -138,7 +142,7 @@ public class NPCBase : ClickOnActorBase
 	public void WalkToWaypointLogic()
 	{
 
-		if( walkToLocation.Length > 0 )
+		if( walkToLocation.Length > 0 && agent)
 		{
 			agent.SetDestination ( walkToLocation[currentTargetIndex] );
 			agent.Resume();
@@ -222,7 +226,7 @@ public class NPCBase : ClickOnActorBase
 	{
 		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
 		//speed /= maxSpeed;
-		if (anim)
+		if (anim && !disableAnimatons)
 		{
 			anim.SetFloat ("speed", speed);
 		}
@@ -232,13 +236,23 @@ public class NPCBase : ClickOnActorBase
 
 	void OnTalkLogic()
 	{
-		transform.LookAt( GWorld.myPlayer.transform.position );
-		anim.SetBool ("Talk", true);
+		if (!disableAnimatons) 
+		{
+			transform.LookAt (GWorld.myPlayer.transform.position);
+		}
 
+		if (anim && !disableAnimatons)
+		{
+			anim.SetBool ("Talk", true);
+		}
 		
 		if ( GWorld.dialogOpen == false ) 
 		{
-			anim.SetBool ("Talk", false);
+			if (anim && !disableAnimatons)
+			{
+				anim.SetBool ("Talk", false);
+			}
+
 			currentNPCState = prevNPCState;
 		}
 
