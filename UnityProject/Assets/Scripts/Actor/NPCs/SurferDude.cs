@@ -10,15 +10,6 @@ public class SurferDude : NPCBase {
 	
 	}
 	
-	override public void OnTalkTo()
-	{
-		
-		Dialoguer.StartDialogue (dialog, null);
-		
-		isTalking = true;
-		
-	}
-	
 	override public void OnInspect()
 	{	
 		DisplaySpeechBubble ( "Hey duuude!" );

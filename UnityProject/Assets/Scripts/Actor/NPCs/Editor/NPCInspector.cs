@@ -85,6 +85,9 @@ public class NPCInspector : Editor {
 
 	private void ShowLines()
 	{
+		if (npc.currentWalkMode == WalkMode.random)
+			return;
+
 		int length = npc.NumWalkLocations;
 
 		/*if (length > 0)
@@ -105,7 +108,7 @@ public class NPCInspector : Editor {
 			}
 		}
 
-		if (!npc.patrol && length > 1) 
+		if (npc.currentWalkMode == WalkMode.loop && length > 1) 
 		{
 			Handles.color = Color.green;
 			Vector3 point = npc.GetWalkLocation( length - 1 );

@@ -2,6 +2,21 @@
 using System.Collections;
 using System;
 
+public enum NPCState
+{
+	idle,
+	walking,
+	talking
+}
+
+public enum WalkMode 
+{
+	loop,
+	patrol,
+	random
+}
+
+
 public class NPCBase : ClickOnActorBase
 {
 	protected NavMeshAgent agent;
@@ -9,11 +24,10 @@ public class NPCBase : ClickOnActorBase
 	protected Vector3 posPrev;
 	protected float maxSpeed = 2.0f;
 
-	protected bool isTalking;
-	protected bool isWalking;
+	public NPCState currentNPCState;
+	NPCState prevNPCState;
+	public WalkMode currentWalkMode;
 
-	public bool walking;
-	public bool patrol;
 	protected bool movingForward = true;
 	protected int currentTargetIndex = 0;
 	public Vector3[] walkToLocation;
@@ -66,17 +80,108 @@ public class NPCBase : ClickOnActorBase
 
 	override public void OnTalkTo()
 	{
-		
 		Dialoguer.StartDialogue (dialog, null);
-		
-		isTalking = true;
+		prevNPCState = currentNPCState;
+		currentNPCState = NPCState.talking;
 		agent.Stop ();
-		
 	}
 
 	void Update (){
 		
 		//calculate speed
+		CalculateSpeed ();
+		
+
+
+		switch (currentNPCState) 
+		{
+			case NPCState.idle :
+				
+			break;
+
+			case NPCState.talking :
+				OnTalkLogic();
+			break;
+
+			case NPCState.walking :
+				WalkToWaypointLogic ();
+			break;
+		}
+	}
+
+	public void WalkToWaypointLogic()
+	{
+
+		if( walkToLocation.Length > 0 )
+		{
+			agent.SetDestination ( walkToLocation[currentTargetIndex] );
+			agent.Resume();
+		}
+
+		//Debug.Log ("currentTargetIndex : " + currentTargetIndex);
+		//Debug.Log ("currentTargetDistance : " + Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) );
+
+		if (Vector3.Distance (transform.position, walkToLocation [currentTargetIndex]) < 2.0f)
+		{
+			switch(currentWalkMode)
+			{
+				case WalkMode.patrol :
+					PatrolNextWayPoint();
+				break;
+
+				case WalkMode.loop :
+					LoopNextWayPoint();
+				break;
+
+				case WalkMode.random :
+					RandomNextWayPoint();
+				break;
+			}
+		}
+	}
+
+	void PatrolNextWayPoint()
+	{
+		if (movingForward) 
+		{
+			currentTargetIndex++;
+			
+			if (currentTargetIndex == walkToLocation.Length) 
+			{
+				currentTargetIndex--;
+				movingForward = false;
+			}
+			
+		} 
+		else 
+		{
+			currentTargetIndex--;
+			
+			if (currentTargetIndex < 0) 
+			{
+				currentTargetIndex++;
+				movingForward = true;
+			}
+		}
+	}
+
+	void LoopNextWayPoint()
+	{
+		currentTargetIndex++;
+		
+		if(currentTargetIndex == walkToLocation.Length)
+		{
+			currentTargetIndex = 0;
+		}
+	}
+
+	void RandomNextWayPoint()
+	{
+		currentTargetIndex = UnityEngine.Random.Range (0, walkToLocation.Length);
+	}
+
+	void CalculateSpeed()
+	{
 		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
 		//speed /= maxSpeed;
 		if (anim)
@@ -85,79 +190,20 @@ public class NPCBase : ClickOnActorBase
 		}
 		
 		posPrev = transform.position;
-		
-		if (isTalking == true) {
-			anim.SetBool ("Talk", true);
-		} 
-		
-		if (isTalking == true && GWorld.dialogOpen == false) {
-			anim.SetBool ("Talk", false);
-			isTalking = false;
-			
-		}
-		
-		if (isTalking == true) 
-		{
-			//insert lerp thing
-			transform.LookAt( GWorld.myPlayer.transform.position );
-		}
-		
-		WalkToWaypointLogic ();
-		
 	}
 
-	public void WalkToWaypointLogic()
+	void OnTalkLogic()
 	{
+		transform.LookAt( GWorld.myPlayer.transform.position );
+		anim.SetBool ("Talk", true);
+
 		
-		if (walking && isTalking == false) 
+		if ( GWorld.dialogOpen == false ) 
 		{
-			if( walkToLocation.Length > 0 )
-			{
-				agent.SetDestination ( walkToLocation[currentTargetIndex] );
-				agent.Resume();
-			}
+			anim.SetBool ("Talk", false);
+			currentNPCState = prevNPCState;
 		}
-		
-		//Debug.Log ("currentTargetIndex : " + currentTargetIndex);
-		//Debug.Log ("currentTargetDistance : " + Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) );
-		
-		if (Vector3.Distance (transform.position, walkToLocation [currentTargetIndex]) < 2.0f)
-		{
-			if (patrol)
-			{
-				if (movingForward) 
-				{
-					currentTargetIndex++;
-					
-					if (currentTargetIndex == walkToLocation.Length) 
-					{
-						currentTargetIndex--;
-						movingForward = false;
-					}
-					
-				} 
-				else 
-				{
-					currentTargetIndex--;
-					
-					if (currentTargetIndex < 0) 
-					{
-						currentTargetIndex++;
-						movingForward = true;
-					}
-				}
-			}
-			else
-			{
-				
-				currentTargetIndex++;
-				
-				if(currentTargetIndex == walkToLocation.Length)
-				{
-					currentTargetIndex = 0;
-				}
-			}
-		}
+
 	}
 	
 }
