@@ -18,6 +18,7 @@ public class Pirate : ClickOnActorBase
 
 	NavMeshAgent agent;
 	public bool walking;
+	private int currentTargetIndex = 0;
 
 	public Vector3[] walkToLocation;
 	
@@ -61,6 +62,7 @@ public class Pirate : ClickOnActorBase
 	void Start () 
 	{
 
+
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
 			EventData tempData = new EventData();
@@ -99,10 +101,34 @@ public class Pirate : ClickOnActorBase
 
 		}
 
-		if (walking) 
+		if (walking && isTalking == false) 
 		{
-			agent.SetDestination ( GetWalkLocation(0) );
+			if( walkToLocation.Length > 0 )
+			{
+				agent.SetDestination ( walkToLocation[currentTargetIndex] );
+				agent.Resume();
+			}
 		}
+
+		if (isTalking == true) 
+		{
+			//insert lerp thing
+			transform.LookAt( GWorld.myPlayer.transform.position );
+		}
+
+		Debug.Log ("currentTargetIndex : " + currentTargetIndex);
+		Debug.Log ("currentTargetDistance : " + Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) );
+
+		if( Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) < 2.0f )
+		{
+			currentTargetIndex++;
+
+			if(currentTargetIndex == walkToLocation.Length)
+			{
+				currentTargetIndex = 0;
+			}
+		}
+
 
 	}
 
@@ -112,6 +138,8 @@ public class Pirate : ClickOnActorBase
 		Dialoguer.StartDialogue (dialog, null);
 
 		isTalking = true;
+
+		agent.Stop ();
 
 	}
 
