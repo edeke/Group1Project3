@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public enum EPlayerState {
 	WalkToLocation,
+	WalkToObject,
 	UseItem,
 	Action,
 	Talking,
@@ -129,6 +130,7 @@ public class PlayerMovement : MonoBehaviour {
 		case EPlayerState.Idle :
 		case EPlayerState.Talking :
 		case EPlayerState.UseItem :
+		case EPlayerState.WalkToObject :
 		case EPlayerState.Action :
 			
 			NavMesh.SamplePosition(location, out hitData, 100.0f, NavMesh.AllAreas);
@@ -184,6 +186,7 @@ public class PlayerMovement : MonoBehaviour {
 				DisplayComment("I can't reach it.");
 				return false;
 
+			case EPlayerState.WalkToObject :
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
 			//case EPlayerState.UseItem :
@@ -218,11 +221,55 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	public bool WalkToObject(GameObject objectToFollow)
+	{
+		NavMeshHit hitData;
+		NavMeshPath path = new NavMeshPath();
+		bool foundDest = false;
+		
+		switch (currentState.state)
+		{
+			case EPlayerState.WalkToObject :
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.WalkToLocation :
+				
+				NavMesh.SamplePosition(objectToFollow.transform.position, out hitData, 100.0f, NavMesh.AllAreas);
+				Vector3 location = hitData.position;
+				
+				foundDest = NavMesh.CalculatePath(transform.position, location, NavMesh.AllAreas, path);
+				if( foundDest )
+				{
+					ActionData newAction = new ActionData();
+					
+					newAction.state = EPlayerState.WalkToObject;
+					newAction.location = hitData.position;
+					newAction.objectToUse = objectToFollow;
+					newAction.inventoryIndex = -1;
+					
+					actionList.Clear();
+					actionList.Add(newAction);
+					
+					currentState.state = EPlayerState.Idle;
+					
+					return true;
+				}
+				
+				DisplayComment("I can't reach it.");
+				return false;
+				
+			default :
+				return false;
+		}
+
+	}
+
 	public void ActionOnObject(GameObject objectToUseActionOn, Vector3 location)
 	{
 
 		switch (currentState.state)
 		{
+			case EPlayerState.WalkToObject :
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
 			case EPlayerState.UseItem :
@@ -252,30 +299,31 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		switch (currentState.state)
 		{
-		case EPlayerState.Idle :
-		case EPlayerState.Talking :
-		case EPlayerState.UseItem :
-		case EPlayerState.WalkToLocation :
-		case EPlayerState.Action :
-			
-			if( WalkToLocation(location)  )
-			{
-				ActionData newAction = new ActionData();
+			case EPlayerState.WalkToObject :
+			case EPlayerState.Idle :
+			case EPlayerState.Talking :
+			case EPlayerState.UseItem :
+			case EPlayerState.WalkToLocation :
+			case EPlayerState.Action :
 				
-				newAction.state = EPlayerState.Talking;
-				newAction.location = location;
-				newAction.objectToUse = objectToTalkTo;
-				newAction.inventoryIndex = -1;
-				
-				actionList.Add(newAction);
+				if( WalkToObject( objectToTalkTo )  )
+				{
+					ActionData newAction = new ActionData();
+					
+					newAction.state = EPlayerState.Talking;
+					newAction.location = location;
+					newAction.objectToUse = objectToTalkTo;
+					newAction.inventoryIndex = -1;
+					
+					actionList.Add(newAction);
 
-			}
-			
-			return;
-			
-			
-		default :
-			return;
+				}
+				
+				return;
+				
+				
+			default :
+				return;
 		}
 	}
 
@@ -286,6 +334,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
 			case EPlayerState.UseItem :
+			case EPlayerState.WalkToObject :
 			case EPlayerState.WalkToLocation :
 			case EPlayerState.Action :
 				if( WalkToLocation(location)  )
@@ -353,6 +402,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		switch (currentState.state)
 		{
+			case EPlayerState.WalkToObject :
 			case EPlayerState.Idle :
 			case EPlayerState.Talking :
 			case EPlayerState.UseItem :
@@ -410,6 +460,19 @@ public class PlayerMovement : MonoBehaviour {
 				}
 			break;
 
+			case EPlayerState.WalkToObject :
+				currentAnimationState = EAnimationState.Running;
+				
+				agent.SetDestination (currentState.objectToUse.transform.position);
+				
+				distanceToActor = (currentState.objectToUse.transform.position - transform.position).magnitude;
+				
+				if (distanceToActor <= 2.5f) 
+				{
+					currentState.state = EPlayerState.Idle;
+					agent.ResetPath(); 
+				}
+			break;
 			case EPlayerState.ForceWalkToLocation :
 			case EPlayerState.WalkToLocation :
 				currentAnimationState = EAnimationState.Running;
@@ -421,6 +484,7 @@ public class PlayerMovement : MonoBehaviour {
 				if (distanceToActor <= 0.2f) 
 				{
 					currentState.state = EPlayerState.Idle;
+					agent.ResetPath(); 
 				}
 			break;
 
@@ -435,7 +499,7 @@ public class PlayerMovement : MonoBehaviour {
 				if(actionObject != null)
 				{
 					//within range
-					if( TraceObject(currentState.objectToUse) )
+					if( TraceObject(currentState.objectToUse, 1.5f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						currentAnimationState = actionObject.AnimationOnAction();
@@ -485,7 +549,7 @@ public class PlayerMovement : MonoBehaviour {
 				if(useItem != null)
 				{
 					//within range
-					if( TraceObject(currentState.objectToUse) )
+					if( TraceObject(currentState.objectToUse, 1.5f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						ItemStruct itemToUse = new ItemStruct();
@@ -529,8 +593,9 @@ public class PlayerMovement : MonoBehaviour {
 				
 				if(talkObject != null)
 				{
+					
 					//within range
-					if( TraceObject(currentState.objectToUse) )
+					if( TraceObject(currentState.objectToUse, 2.0f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						talkObject.OnTalkTo();
@@ -581,14 +646,14 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	bool TraceObject(GameObject objectToCheck)
+	bool TraceObject(GameObject objectToCheck, float distance)
 	{
 		if (objectToCheck == null)
 		{
 			return false;
 		}
 		
-		Collider[] allObjects = Physics.OverlapSphere (transform.position, 1.5f);
+		Collider[] allObjects = Physics.OverlapSphere (transform.position, distance);
 		
 		foreach (Collider col in allObjects) 
 		{
