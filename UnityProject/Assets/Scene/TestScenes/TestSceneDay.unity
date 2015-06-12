@@ -647,7 +647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430524, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.59000015
+      value: 7.51000023
       objectReference: {fileID: 0}
     - target: {fileID: 430524, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -795,7 +795,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: currentNPCState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: walkToLocation.Array.data[1].y
@@ -803,6 +803,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: currentWalkMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: wayPointIdleTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: idleTimeMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: disableAnimatons
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

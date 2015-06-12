@@ -28,16 +28,30 @@ public class NPCBase : ClickOnActorBase
 	NPCState prevNPCState;
 	public WalkMode currentWalkMode;
 
+	public bool wayPointIdleTime;
+	public float currentIdleTime;
+	public float idleTimeMax;
+
 	protected bool movingForward = true;
 	protected int currentTargetIndex = 0;
 	public Vector3[] walkToLocation;
 
+	public bool disableAnimatons;
 	protected Animator anim;
 
 	public void Awake()
 	{
 		anim = GetComponentInChildren<Animator> ();
 		agent = GetComponent<NavMeshAgent> ();
+
+		if (disableAnimatons)
+		{
+			anim.enabled = false;
+		}
+		else
+		{
+			anim.enabled = true;
+		}
 	}
 
 	public Vector3 GetWalkLocation(int index)
@@ -94,7 +108,7 @@ public class NPCBase : ClickOnActorBase
 		switch (currentNPCState) 
 		{
 			case NPCState.idle :
-				
+				OnIdleLogic();
 			break;
 
 			case NPCState.talking :
@@ -105,6 +119,20 @@ public class NPCBase : ClickOnActorBase
 				WalkToWaypointLogic ();
 			break;
 		}
+	}
+
+	public void OnIdleLogic()
+	{
+		if (wayPointIdleTime) 
+		{
+			currentIdleTime -= Time.deltaTime;
+
+			if( currentIdleTime <= 0.0f )
+			{
+				currentNPCState = NPCState.walking;
+			}
+		}
+
 	}
 
 	public void WalkToWaypointLogic()
@@ -125,14 +153,17 @@ public class NPCBase : ClickOnActorBase
 			{
 				case WalkMode.patrol :
 					PatrolNextWayPoint();
+					IdleOnWayPoint();
 				break;
 
 				case WalkMode.loop :
 					LoopNextWayPoint();
+					IdleOnWayPoint();
 				break;
 
 				case WalkMode.random :
 					RandomNextWayPoint();
+					IdleOnWayPoint();
 				break;
 			}
 		}
@@ -176,6 +207,15 @@ public class NPCBase : ClickOnActorBase
 	void RandomNextWayPoint()
 	{
 		currentTargetIndex = UnityEngine.Random.Range (0, walkToLocation.Length);
+	}
+
+	void IdleOnWayPoint()
+	{
+		if (wayPointIdleTime) 
+		{
+			currentNPCState = NPCState.idle;
+			currentIdleTime = UnityEngine.Random.Range( idleTimeMax / 2 , idleTimeMax );
+		}
 	}
 
 	void CalculateSpeed()
