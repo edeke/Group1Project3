@@ -901,11 +901,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469712, guid: cc2f46f206fd9434bac0413685dcd30b, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434778, guid: cc2f46f206fd9434bac0413685dcd30b, type: 2}
+      propertyPath: currentNPCState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11434778, guid: cc2f46f206fd9434bac0413685dcd30b, type: 2}
-      propertyPath: walking
-      value: 1
+      propertyPath: currentWalkMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc2f46f206fd9434bac0413685dcd30b, type: 2}
@@ -16704,7 +16708,7 @@ Transform:
   m_LocalScale: {x: 17.0831013, y: 2.33200765, z: 5.31810141}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &1223852804
 Prefab:
   m_ObjectHideFlags: 0
