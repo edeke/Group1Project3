@@ -337,7 +337,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.WalkToObject :
 			case EPlayerState.WalkToLocation :
 			case EPlayerState.Action :
-				if( WalkToLocation(location)  )
+				if( WalkToObject(objectToUseItemOn)  )
 				{
 					ActionData newAction = new ActionData();
 					
@@ -549,7 +549,7 @@ public class PlayerMovement : MonoBehaviour {
 				if(useItem != null)
 				{
 					//within range
-					if( TraceObject(currentState.objectToUse, 1.5f) )
+					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						ItemStruct itemToUse = new ItemStruct();
@@ -595,7 +595,7 @@ public class PlayerMovement : MonoBehaviour {
 				{
 					
 					//within range
-					if( TraceObject(currentState.objectToUse, 2.0f) )
+					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
 						talkObject.OnTalkTo();
