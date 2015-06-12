@@ -94,16 +94,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Masks
+          name: _AO
         second:
-          m_Texture: {fileID: 2800000, guid: cc12ac8a8c246ed42abbf0600f4adadd, type: 3}
+          m_Texture: {fileID: 2800000, guid: 43694c3d5f2ceda418efd01ec28d9c24, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _AO
+          name: _Masks
         second:
-          m_Texture: {fileID: 2800000, guid: 43694c3d5f2ceda418efd01ec28d9c24, type: 3}
+          m_Texture: {fileID: 2800000, guid: cc12ac8a8c246ed42abbf0600f4adadd, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -181,6 +181,10 @@ Material:
         second: .00999999978
       data:
         first:
+          name: _AOIntensity
+        second: .662
+      data:
+        first:
           name: _UseMasks
         second: 1
       data:
@@ -217,10 +221,6 @@ Material:
         second: 1
       data:
         first:
-          name: _AOIntensity
-        second: .662
-      data:
-        first:
           name: _HardSkinColor
         second: 1
     m_Colors:
@@ -246,10 +246,6 @@ Material:
         second: {r: .404411793, g: .225256547, b: .172469735, a: 1}
       data:
         first:
-          name: _BlueColor
-        second: {r: .838235259, g: 0, b: .780426025, a: 1}
-      data:
-        first:
           name: _BlackColor
         second: {r: .433823496, g: .343758911, b: .149924293, a: 1}
       data:
@@ -272,6 +268,10 @@ Material:
         first:
           name: _GreenColor
         second: {r: .422253489, g: .493149698, b: .522058845, a: 1}
+      data:
+        first:
+          name: _BlueColor
+        second: {r: .838235259, g: 0, b: .780426025, a: 1}
       data:
         first:
           name: _HardSkinColor1

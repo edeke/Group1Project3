@@ -38,48 +38,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Masks
-        second:
-          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WoodMerge
-        second:
-          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
-          m_Scale: {x: 15, y: 15}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Wood
-        second:
-          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
-          m_Scale: {x: 2, y: 10}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -122,6 +80,48 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Masks
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WoodMerge
+        second:
+          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Wood
+        second:
+          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
+          m_Scale: {x: 2, y: 10}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ToonShade
         second:
           m_Texture: {fileID: 0}
@@ -160,6 +160,46 @@ Material:
         second: 0
       data:
         first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .5
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
           name: _Reach
         second: .518999994
       data:
@@ -174,6 +214,30 @@ Material:
         first:
           name: _Outline
         second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
+          name: _WearThreshold
+        second: .200000003
       data:
         first:
           name: _UseMasks
@@ -224,72 +288,8 @@ Material:
         second: .49000001
       data:
         first:
-          name: _WearThreshold
-        second: .200000003
-      data:
-        first:
           name: _WearExp
         second: 48.0900002
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
-      data:
-        first:
-          name: _ZWrite
-        second: 1
-      data:
-        first:
-          name: _Glossiness
-        second: .5
-      data:
-        first:
-          name: _BumpScale
-        second: 1
-      data:
-        first:
-          name: _OcclusionStrength
-        second: 1
-      data:
-        first:
-          name: _DetailNormalMapScale
-        second: 1
-      data:
-        first:
-          name: _UVSec
-        second: 0
-      data:
-        first:
-          name: _EmissionScaleUI
-        second: 0
-      data:
-        first:
-          name: _Mode
-        second: 0
-      data:
-        first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _DistanceFade
-        second: .352941185
     m_Colors:
       data:
         first:
@@ -301,16 +301,20 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _RedColor
-        second: {r: .545098066, g: .729411781, b: .643137276, a: 1}
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _BlueColor
-        second: {r: .662745118, g: .498039246, b: .329411775, a: 1}
+          name: _RedColor
+        second: {r: .545098066, g: .729411781, b: .643137276, a: 1}
       data:
         first:
           name: _BlackColor
@@ -337,9 +341,5 @@ Material:
         second: {r: .470588207, g: .352941155, b: .352941155, a: 1}
       data:
         first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+          name: _BlueColor
+        second: {r: .662745118, g: .498039246, b: .329411775, a: 1}

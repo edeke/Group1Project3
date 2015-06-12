@@ -180,7 +180,6 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float node_3112 = (lerp( node_1404, node_2964, _UsePurple )*node_4199);
                 float2 node_8045 = (i.uv0*_HullTiling);
                 float4 node_1922 = tex2D(_WoodMerge,TRANSFORM_TEX(node_8045, _WoodMerge));
-                float3 node_6948 = ((node_1922.r*node_1922.g)*_WhiteColor.rgb);
                 float4 _Wood_var = tex2D(_Wood,TRANSFORM_TEX(node_8045, _Wood));
                 float node_7632 = (node_3469*lerp( node_1404, node_2964, _UseWhite ));
                 float node_5900 = (lerp( node_1404, node_2964, _UseRed )*saturate((node_9743-(node_4199+node_4133))));
@@ -188,7 +187,7 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float4 _HullWood_copy = tex2D(_WoodMerge,TRANSFORM_TEX(node_783, _WoodMerge));
                 float node_1992 = (lerp( node_1404, node_2964, _UseGreen )*saturate((node_9121-(node_9700+node_4133))));
                 float node_9587 = (saturate((node_8685-(node_4199+node_9700)))*lerp( node_1404, node_2964, _UseBlue ));
-                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(node_6948,_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
+                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(((node_1922.r*node_1922.g)*_WhiteColor.rgb),_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
                 float3 emissive = (_UseMasks_var*UNITY_LIGHTMODEL_AMBIENT.rgb);
                 float node_2384 = (_Reach-_Smoothness);
                 float node_5169 = 0.0;
@@ -301,7 +300,6 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float node_3112 = (lerp( node_1404, node_2964, _UsePurple )*node_4199);
                 float2 node_8045 = (i.uv0*_HullTiling);
                 float4 node_1922 = tex2D(_WoodMerge,TRANSFORM_TEX(node_8045, _WoodMerge));
-                float3 node_6948 = ((node_1922.r*node_1922.g)*_WhiteColor.rgb);
                 float4 _Wood_var = tex2D(_Wood,TRANSFORM_TEX(node_8045, _Wood));
                 float node_7632 = (node_3469*lerp( node_1404, node_2964, _UseWhite ));
                 float node_5900 = (lerp( node_1404, node_2964, _UseRed )*saturate((node_9743-(node_4199+node_4133))));
@@ -309,7 +307,7 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float4 _HullWood_copy = tex2D(_WoodMerge,TRANSFORM_TEX(node_783, _WoodMerge));
                 float node_1992 = (lerp( node_1404, node_2964, _UseGreen )*saturate((node_9121-(node_9700+node_4133))));
                 float node_9587 = (saturate((node_8685-(node_4199+node_9700)))*lerp( node_1404, node_2964, _UseBlue ));
-                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(node_6948,_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
+                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(((node_1922.r*node_1922.g)*_WhiteColor.rgb),_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
                 float node_2384 = (_Reach-_Smoothness);
                 float node_5169 = 0.0;
                 float node_2105 = (lerp(_MinLight,_MaxLight,saturate((node_5169 + ( (0.5*dot(lightDirection,normalDirection)+0.5 - node_2384) * (1.0 - node_5169) ) / ((_Reach+_Smoothness) - node_2384))))*attenuation);
@@ -398,7 +396,6 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float node_3112 = (lerp( node_1404, node_2964, _UsePurple )*node_4199);
                 float2 node_8045 = (i.uv0*_HullTiling);
                 float4 node_1922 = tex2D(_WoodMerge,TRANSFORM_TEX(node_8045, _WoodMerge));
-                float3 node_6948 = ((node_1922.r*node_1922.g)*_WhiteColor.rgb);
                 float4 _Wood_var = tex2D(_Wood,TRANSFORM_TEX(node_8045, _Wood));
                 float node_7632 = (node_3469*lerp( node_1404, node_2964, _UseWhite ));
                 float node_5900 = (lerp( node_1404, node_2964, _UseRed )*saturate((node_9743-(node_4199+node_4133))));
@@ -406,7 +403,7 @@ Shader "Shader Forge/Examples/Boat_Shader" {
                 float4 _HullWood_copy = tex2D(_WoodMerge,TRANSFORM_TEX(node_783, _WoodMerge));
                 float node_1992 = (lerp( node_1404, node_2964, _UseGreen )*saturate((node_9121-(node_9700+node_4133))));
                 float node_9587 = (saturate((node_8685-(node_4199+node_9700)))*lerp( node_1404, node_2964, _UseBlue ));
-                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(node_6948,_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
+                float3 _UseMasks_var = lerp( _Diffuse_copy_var.rgb, lerp(_Diffuse_copy_var.rgb,(((_BlackColor.rgb*node_4529)+(_CyanColor.rgb*node_2593)+(_YellowColor.rgb*node_4224)+(_PurpleColor.rgb*node_3112)+(lerp(((node_1922.r*node_1922.g)*_WhiteColor.rgb),_Wood_var.rgb,saturate((pow((_Wood_var.r+_WearThreshold),_WearExp)-_WearThreshold)))*node_7632))+(_RedColor.rgb*node_5900)+(((_HullWood_copy.r*_HullWood_copy.g)*_GreenColor.rgb)*node_1992)+(_BlueColor.rgb*node_9587)),((node_4529+node_2593+node_4224+node_3112+node_7632)+node_5900+node_1992+node_9587)), _UseMasks );
                 o.Emission = (_UseMasks_var*UNITY_LIGHTMODEL_AMBIENT.rgb);
                 
                 float3 diffColor = float3(0,0,0);
