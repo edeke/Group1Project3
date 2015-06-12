@@ -8,7 +8,7 @@ public class ItemBranch : Item {
 
 	override public void OnInspect()
 	{
-		DisplayComment("It's a branch.");
+		DisplayComment("It's a bone.");
 	}
 
 	override public void OnAction( ) 

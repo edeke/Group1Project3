@@ -1811,13 +1811,17 @@ MonoBehaviour:
   dialog: 3
   actorName: Surfer
   commentOffsetX: 0
-  commentOffsetY: 0
-  walking: 0
-  patrol: 0
+  commentOffsetY: 80
+  currentNPCState: 0
+  currentWalkMode: 0
+  wayPointIdleTime: 0
+  currentIdleTime: 0
+  idleTimeMax: 0
   walkToLocation:
   - {x: 111.68, y: 5.65999985, z: -121.980003}
-  - {x: 101.981468, y: 5.65999985, z: -132.053925}
+  - {x: 172.002823, y: 5.65999985, z: -143.415512}
   - {x: 50.2358322, y: 5.65999985, z: -138.128235}
+  disableAnimatons: 0
 --- !u!137 &13769960
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1907,7 +1911,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101454}
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: 1
   m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
