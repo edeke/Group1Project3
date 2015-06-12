@@ -37,34 +37,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _DiffuseTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _NormalTexture
-        second:
-          m_Texture: {fileID: 2800000, guid: 6e5554f87e2917f4aa8e5808e175307f, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WearMask
-        second:
-          m_Texture: {fileID: 2800000, guid: 0f3fa02a33d2ced4cb4be559048625fb, type: 3}
-          m_Scale: {x: .600000024, y: .600000024}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -128,6 +100,27 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 2800000, guid: 5f35c53802c6051489400c74fd077f13, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 6e5554f87e2917f4aa8e5808e175307f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Normals_copy
         second:
           m_Texture: {fileID: 2800000, guid: 5381acadfe3f0a34a9b357162965ce71, type: 3}
@@ -146,6 +139,13 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: 38e7dc430bf1ebb42818ebc6fdffebfc, type: 3}
           m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WearMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 0f3fa02a33d2ced4cb4be559048625fb, type: 3}
+          m_Scale: {x: .600000024, y: .600000024}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -171,42 +171,6 @@ Material:
         first:
           name: _DstBlend
         second: 0
-      data:
-        first:
-          name: _Reach
-        second: .5
-      data:
-        first:
-          name: _MinLight
-        second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 6
-      data:
-        first:
-          name: _ColorOpacity
-        second: .88499999
-      data:
-        first:
-          name: _WearThreshold
-        second: -.00999999978
-      data:
-        first:
-          name: _WearExponent
-        second: 15.7399998
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 1
       data:
         first:
           name: _Parallax
@@ -249,6 +213,42 @@ Material:
         second: 0
       data:
         first:
+          name: _Reach
+        second: .5
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 1
+      data:
+        first:
+          name: _BaseScale
+        second: 6
+      data:
+        first:
+          name: _WearThreshold
+        second: -.00999999978
+      data:
+        first:
+          name: _ColorOpacity
+        second: .88499999
+      data:
+        first:
+          name: _WearExponent
+        second: 15.7399998
+      data:
+        first:
           name: _PaintWearFactor
         second: .0769999996
       data:
@@ -266,16 +266,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
           name: _OutlineColor
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _PaintColor
-        second: {r: .517444134, g: 1, b: .426470578, a: 1}
-      data:
-        first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .528606355, g: .808823526, b: .47577855, a: 1}
       data:
         first:
           name: _WallColor
