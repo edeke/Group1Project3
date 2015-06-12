@@ -5,7 +5,11 @@ public class ItemJar : Item {
 
 	public GameObject skyler;
 
+	void Start (){
 
+		skyler = GameObject.Find ("Skyler");
+
+	}
 
 	override public void OnInspect()
 	{
