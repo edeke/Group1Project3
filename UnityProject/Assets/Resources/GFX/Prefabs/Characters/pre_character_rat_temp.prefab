@@ -1490,8 +1490,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174264}
-  m_LocalRotation: {x: 0, y: -.962561131, z: 0, w: .271064728}
-  m_LocalPosition: {x: 4.03999996, y: .0299999993, z: 7.11999989}
+  m_LocalRotation: {x: 0, y: -.678431988, z: 0, w: .734663188}
+  m_LocalPosition: {x: 8.31000042, y: 6.46999979, z: -85.2900009}
   m_LocalScale: {x: .681415558, y: .681415558, z: .681415558}
   m_Children:
   - {fileID: 400022}
@@ -2118,13 +2118,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: 1
-  actorName: Soldier
+  actorName: 
   commentOffsetX: 0
-  commentOffsetY: 180
+  commentOffsetY: 80
   walking: 0
+  patrol: 0
   walkToLocation:
-  - {x: 9.58856583, y: .0299999993, z: -1.19281316}
-  - {x: 18.0774956, y: .0299999993, z: 10.0869904}
+  - {x: 8.31000042, y: 6.46999979, z: -85.2900009}
 --- !u!137 &13793306
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2255,7 +2255,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 1.34000003, y: 2.54999995, z: .870000005}
   m_MoveThreshold: .100000001
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 2.68000007, z: 0}
   m_TimeToStationary: .5
