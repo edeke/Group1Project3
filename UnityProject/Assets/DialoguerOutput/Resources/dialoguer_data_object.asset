@@ -512,7 +512,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 16
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 385.000183, y: 0}
       phases:
       - id: 0
         type: 6
@@ -549,7 +549,7 @@ MonoBehaviour:
         type: 1
         theme: 
         position: {x: 1107, y: 224}
-        outs: 0200000003000000
+        outs: 02000000030000001d000000
         advanced: 0
         metadata: 
         text: Stop right there stranger!
@@ -567,6 +567,7 @@ MonoBehaviour:
         choices:
         - "Please don\u2019t hurt me sir! I come in peace!"
         - Take it easy old man! I have no quarrel with you.
+        - Bye bye!
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -1421,6 +1422,37 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
+      - id: 29
+        type: 6
+        theme: 
+        position: {x: 1440.00024, y: 499}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
       floats:
         variables: []
         selection: 0
@@ -1897,7 +1929,7 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 1313, y: 10}
+        position: {x: 1228, y: 34}
         outs: 00000000
         advanced: 0
         metadata: 
@@ -2085,7 +2117,7 @@ MonoBehaviour:
         type: 0
         theme: 
         position: {x: 955.916382, y: 679}
-        outs: 0c000000
+        outs: 0f000000
         advanced: 0
         metadata: 
         text: "Yeah, she\u2019s grumpy that one. I\u2019m pretty sure she don\u2019t
@@ -2116,7 +2148,7 @@ MonoBehaviour:
       - id: 12
         type: 6
         theme: 
-        position: {x: 1270, y: 707}
+        position: {x: 1680, y: 692}
         outs: 
         advanced: 0
         metadata: 
@@ -2185,6 +2217,38 @@ MonoBehaviour:
         text: 'I have no idea. I have never met my real parents. I grew up in a foster
           home. '
         name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 15
+        type: 0
+        theme: 
+        position: {x: 1281, y: 680.599976}
+        outs: 0c000000
+        advanced: 0
+        metadata: 
+        text: 'Remember that you can combine stuff you pick up. You never know what
+          you can make! '
+        name: 
         portrait: 
         audio: 
         audioDelay: 0
