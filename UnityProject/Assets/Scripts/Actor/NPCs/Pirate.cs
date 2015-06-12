@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 
 public class Pirate : ClickOnActorBase
@@ -8,17 +9,58 @@ public class Pirate : ClickOnActorBase
 	bool ringGiven = false;
 
 	Vector3 posPrev;
-	float maxSpeed = 8;
+	float maxSpeed = 2.0f;
 
 	Animator anim;
 
 	private bool isTalking;
 	private bool isWalking;
 
+	NavMeshAgent agent;
+	public bool walking;
+
+	public Vector3[] walkToLocation;
+	
+	public Vector3 GetWalkLocation(int index)
+	{
+		return walkToLocation [index];
+	}
+	
+	public void SetWalkLocation(int index, Vector3 newLocation)
+	{
+		walkToLocation [index] = newLocation;
+	}
+	
+	public int NumWalkLocations
+	{
+		get 
+		{
+			return walkToLocation.Length;
+		}
+	}
+	
+	public void Reset()
+	{
+		Vector3 newVector = transform.position;
+		
+		walkToLocation = new Vector3[] {
+			newVector
+		};
+	}
+	
+	public void AddWalkPoint()
+	{
+		Vector3 newVector = transform.position;
+		
+		Array.Resize (ref walkToLocation, walkToLocation.Length + 1);
+		SetWalkLocation (walkToLocation.Length - 1, newVector);
+		
+	}
+
+	
 	void Start () 
 	{
-		anim = GetComponentInChildren<Animator> ();
-		
+
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
 			EventData tempData = new EventData();
@@ -30,7 +72,9 @@ public class Pirate : ClickOnActorBase
 			}
 			
 		}
-		
+
+		anim = GetComponentInChildren<Animator> ();
+		agent = GetComponent<NavMeshAgent> ();
 	}
 
 	void Update (){
@@ -38,7 +82,10 @@ public class Pirate : ClickOnActorBase
 		//calculate speed
 		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
 		//speed /= maxSpeed;
-		anim.SetFloat ("speed", speed);
+		if (anim)
+		{
+			anim.SetFloat ("speed", speed);
+		}
 		
 		posPrev = transform.position;
 
@@ -50,6 +97,11 @@ public class Pirate : ClickOnActorBase
 			anim.SetBool ("Talk", false);
 			isTalking = false;
 
+		}
+
+		if (walking) 
+		{
+			agent.SetDestination ( GetWalkLocation(0) );
 		}
 
 	}
