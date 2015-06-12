@@ -90,8 +90,6 @@ public class NPCBase : ClickOnActorBase
 		
 		//calculate speed
 		CalculateSpeed ();
-		
-
 
 		switch (currentNPCState) 
 		{

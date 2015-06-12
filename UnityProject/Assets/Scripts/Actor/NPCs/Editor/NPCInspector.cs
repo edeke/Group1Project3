@@ -85,35 +85,50 @@ public class NPCInspector : Editor {
 
 	private void ShowLines()
 	{
-		if (npc.currentWalkMode == WalkMode.random)
-			return;
-
 		int length = npc.NumWalkLocations;
 
-		/*if (length > 0)
+		switch( npc.currentWalkMode) 
 		{
-			Handles.color = Color.green;
-			Handles.DrawLine (pirate.transform.position, pirate.GetWalkLocation(0) );
-		}*/
+			case WalkMode.random :
+				if( length > 1 )
+				{
+					for (int i = 0; i < length; i++)
+					{
+						Handles.color = Color.red;
+						Vector3 point = npc.GetWalkLocation (i);
+						
+						Handles.DrawLine (npc.transform.position, point);
+					}
+				}
+			break;
 
-		if( length > 1 )
-		{
-			for (int i = 0; i < length - 1; i++)
-			{
-				Handles.color = Color.green;
-				Vector3 point = npc.GetWalkLocation (i);
-				Vector3 pointNext = npc.GetWalkLocation (i + 1);
-				
-				Handles.DrawLine (point, pointNext);
-			}
+			case WalkMode.loop :
+			case WalkMode.patrol :
+				if( length > 1 )
+				{
+					for (int i = 0; i < length - 1; i++)
+					{
+						Handles.color = Color.green;
+						Vector3 point = npc.GetWalkLocation (i);
+						Vector3 pointNext = npc.GetWalkLocation (i + 1);
+						
+						Handles.DrawLine (point, pointNext);
+					}
+				}
+				if (npc.currentWalkMode == WalkMode.loop && length > 1) 
+				{
+					Handles.color = Color.green;
+					Vector3 point = npc.GetWalkLocation( length - 1 );
+					Vector3 pointNext = npc.GetWalkLocation (0);
+					Handles.DrawLine (point, pointNext);
+				}
+			break;
+
 		}
 
-		if (npc.currentWalkMode == WalkMode.loop && length > 1) 
-		{
-			Handles.color = Color.green;
-			Vector3 point = npc.GetWalkLocation( length - 1 );
-			Vector3 pointNext = npc.GetWalkLocation (0);
-			Handles.DrawLine (point, pointNext);
-		}
+
+
+
+
 	}
 }
