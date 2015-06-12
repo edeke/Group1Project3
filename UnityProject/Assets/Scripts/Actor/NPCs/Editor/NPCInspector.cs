@@ -3,8 +3,8 @@ using UnityEditor;
 using System.Collections;
 
 
-[CustomEditor(typeof(Pirate))]
-public class PirateInspector : Editor {
+[CustomEditor( typeof( NPCBase ), true )]
+public class NPCInspector : Editor {
 
 	private Transform handleTransform;
 	private Quaternion handleRotation;
@@ -14,7 +14,7 @@ public class PirateInspector : Editor {
 
 	bool pointSelected = false;
 
-	private Pirate pirate;
+	private NPCBase npc;
 
 
 	public override void OnInspectorGUI()
@@ -23,20 +23,20 @@ public class PirateInspector : Editor {
 
 		if (GUILayout.Button ("Add Location")) 
 		{
-			Undo.RecordObject(pirate, "Add Location");
-			pirate.AddWalkPoint();
-			EditorUtility.SetDirty(pirate);
+			Undo.RecordObject(npc, "Add Location");
+			npc.AddWalkPoint();
+			EditorUtility.SetDirty(npc);
 		}
 
 	}
 
 	private void ShowPoints( )
 	{
-		int length = pirate.NumWalkLocations;
+		int length = npc.NumWalkLocations;
 
 		for (int i = 0; i < length; i++)
 		{
-			Vector3 point = pirate.GetWalkLocation(i);
+			Vector3 point = npc.GetWalkLocation(i);
 			float size = HandleUtility.GetHandleSize (point);
 
 			Handles.color = Color.white;
@@ -51,8 +51,8 @@ public class PirateInspector : Editor {
 
 	private void OnSceneGUI()
 	{
-		pirate = target as Pirate;
-		handleTransform = pirate.transform;
+		npc = target as NPCBase;
+		handleTransform = npc.transform;
 		handleRotation = Tools.pivotRotation == PivotRotation.Local ? handleTransform.rotation : Quaternion.identity;
 
 
@@ -67,25 +67,25 @@ public class PirateInspector : Editor {
 	private void DrawSeletedPointInspector()
 	{
 
-		int length = pirate.NumWalkLocations;
+		int length = npc.NumWalkLocations;
 
 		for (int i = 0; i < length; i++)
 		{
 			EditorGUI.BeginChangeCheck ();
-			Vector3 selectedPoint = pirate.GetWalkLocation(i);
+			Vector3 selectedPoint = npc.GetWalkLocation(i);
 			selectedPoint = Handles.DoPositionHandle (selectedPoint, handleRotation);
 
 			if (EditorGUI.EndChangeCheck ()) {
-				Undo.RecordObject (pirate, "Move Point");
-				EditorUtility.SetDirty (pirate);
-				pirate.SetWalkLocation(i,selectedPoint);
+				Undo.RecordObject (npc, "Move Point");
+				EditorUtility.SetDirty (npc);
+				npc.SetWalkLocation(i,selectedPoint);
 			}
 		}
 	}
 
 	private void ShowLines()
 	{
-		int length = pirate.NumWalkLocations;
+		int length = npc.NumWalkLocations;
 
 		/*if (length > 0)
 		{
@@ -98,18 +98,18 @@ public class PirateInspector : Editor {
 			for (int i = 0; i < length - 1; i++)
 			{
 				Handles.color = Color.green;
-				Vector3 point = pirate.GetWalkLocation (i);
-				Vector3 pointNext = pirate.GetWalkLocation (i + 1);
+				Vector3 point = npc.GetWalkLocation (i);
+				Vector3 pointNext = npc.GetWalkLocation (i + 1);
 				
 				Handles.DrawLine (point, pointNext);
 			}
 		}
 
-		if (!pirate.patrol) 
+		if (!npc.patrol && length > 1) 
 		{
 			Handles.color = Color.green;
-			Vector3 point = pirate.GetWalkLocation( length - 1 );
-			Vector3 pointNext = pirate.GetWalkLocation (0);
+			Vector3 point = npc.GetWalkLocation( length - 1 );
+			Vector3 pointNext = npc.GetWalkLocation (0);
 			Handles.DrawLine (point, pointNext);
 		}
 	}
