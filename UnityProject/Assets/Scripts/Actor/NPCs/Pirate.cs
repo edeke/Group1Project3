@@ -18,6 +18,8 @@ public class Pirate : ClickOnActorBase
 
 	NavMeshAgent agent;
 	public bool walking;
+	public bool patrol;
+	private bool movingForward = true;
 	private int currentTargetIndex = 0;
 
 	public Vector3[] walkToLocation;
@@ -119,13 +121,41 @@ public class Pirate : ClickOnActorBase
 		Debug.Log ("currentTargetIndex : " + currentTargetIndex);
 		Debug.Log ("currentTargetDistance : " + Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) );
 
-		if( Vector3.Distance( transform.position, walkToLocation[currentTargetIndex] ) < 2.0f )
+		if (Vector3.Distance (transform.position, walkToLocation [currentTargetIndex]) < 2.0f)
 		{
-			currentTargetIndex++;
-
-			if(currentTargetIndex == walkToLocation.Length)
+			if (patrol)
 			{
-				currentTargetIndex = 0;
+				if (movingForward) 
+				{
+					currentTargetIndex++;
+
+					if (currentTargetIndex == walkToLocation.Length) 
+					{
+						currentTargetIndex--;
+						movingForward = false;
+					}
+
+				} 
+				else 
+				{
+					currentTargetIndex--;
+
+					if (currentTargetIndex < 0) 
+					{
+						currentTargetIndex++;
+						movingForward = true;
+					}
+				}
+			}
+			else
+			{
+
+				currentTargetIndex++;
+
+				if(currentTargetIndex == walkToLocation.Length)
+				{
+					currentTargetIndex = 0;
+				}
 			}
 		}
 

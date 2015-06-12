@@ -87,13 +87,11 @@ public class PirateInspector : Editor {
 	{
 		int length = pirate.NumWalkLocations;
 
-
-
-		if (length > 0)
+		/*if (length > 0)
 		{
 			Handles.color = Color.green;
 			Handles.DrawLine (pirate.transform.position, pirate.GetWalkLocation(0) );
-		}
+		}*/
 
 		if( length > 1 )
 		{
@@ -105,6 +103,14 @@ public class PirateInspector : Editor {
 				
 				Handles.DrawLine (point, pointNext);
 			}
+		}
+
+		if (!pirate.patrol) 
+		{
+			Handles.color = Color.green;
+			Vector3 point = pirate.GetWalkLocation( length - 1 );
+			Vector3 pointNext = pirate.GetWalkLocation (0);
+			Handles.DrawLine (point, pointNext);
 		}
 	}
 }
