@@ -26,8 +26,10 @@ public class SurferDude : ClickOnActorBase {
 		//calculate speed
 		float speed = (transform.position - posPrev).magnitude / Time.deltaTime / maxSpeed;
 		//speed /= maxSpeed;
-		anim.SetFloat ("speed", speed);
-		
+		if (anim) {
+			anim.SetFloat ("speed", speed);
+		}
+
 		posPrev = transform.position;
 		
 		if (isTalking == true) {

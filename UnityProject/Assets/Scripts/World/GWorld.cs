@@ -56,6 +56,7 @@ public class GWorld : MonoBehaviour
 	public static GameObject mainDialog;
 	public static GameObject mainUI;
 	public static GameObject myPlayer;
+	public static GameObject cameraFollow;
 
 	static Hashtable eventTable = new Hashtable();
 	static Hashtable sceneLoadTable = new Hashtable();
@@ -280,6 +281,25 @@ public class GWorld : MonoBehaviour
 			movComp.PlayerSetLocationOnSpawn(location.position);
 
 			//myPlayer.transform.position = location.position;
+		}
+			//Camera player follow
+
+		if (!cameraFollow) {
+			string path = "Prefabs/Player/SmoothFollow";
+			cameraFollow = (GameObject)Instantiate (Resources.Load (path), location.position, location.rotation);
+			DontDestroyOnLoad (cameraFollow);
+			
+			//check it exist after creating
+			if (!cameraFollow) 
+			{
+				Debug.Log ("GWorld Failed to Load Camera Follow - " + path);
+			}
+		} 
+		else 
+		{
+			Debug.Log ("Position : " + location.position );
+			
+			cameraFollow.transform.position = location.position;
 		}
 
 	}

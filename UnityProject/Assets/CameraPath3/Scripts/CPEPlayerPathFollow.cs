@@ -49,9 +49,9 @@ public class CPEPlayerPathFollow : MonoBehaviour
     //Set the initial position of the cam so we don't jump at the start of the demo
     void Start()
     {
-		if (GWorld.myPlayer != null)
+		if (GWorld.cameraFollow != null)
 		{
-			Transform[] tempTransformArray = GWorld.myPlayer.GetComponentsInChildren<Transform>();
+			Transform[] tempTransformArray = GWorld.cameraFollow.GetComponentsInChildren<Transform>();
 			
 			foreach(Transform comp in tempTransformArray)
 			{
