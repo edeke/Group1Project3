@@ -8,7 +8,7 @@ public class MainCamera : MonoBehaviour {
 
 
 	// Use this for initialization	
-	void OnPostRender()
+	void Update()
 	{
 		if (RenderOutlines) 
 		{

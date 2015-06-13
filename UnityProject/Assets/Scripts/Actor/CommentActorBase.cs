@@ -59,9 +59,11 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		
 		if (enable) 
 		{
-			foreach (Transform comp in allTrans) {
+			foreach (Transform comp in allTrans) 
+			{
 				comp.gameObject.layer = LayerMask.NameToLayer ("Outline");
 			}
+
 			isOutlineEnabled = true;
 		} 
 		else 
