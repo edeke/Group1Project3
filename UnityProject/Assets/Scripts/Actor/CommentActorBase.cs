@@ -16,6 +16,8 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	public MouseCursorInput mouseCursorOver;
 
+	bool isOutlineEnabled = false;
+
 	
 	virtual public void OnInspect()
 	{	
@@ -26,6 +28,8 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 	virtual public MouseCursorInput OnMouseOverCursor()
 	{
+		EnableOutline (true);
+
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
 			return MouseCursorInput.Inspect;
@@ -34,6 +38,41 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		{
 			return mouseCursorOver;
 		}
+	}
+
+	virtual public void OnMouseLeave()
+	{
+		EnableOutline (false);
+		
+		return;
+	}
+
+	void EnableOutline(bool enable)
+	{
+		
+		if (enable == isOutlineEnabled)
+		{
+			return;
+		}
+		
+		Transform[] allTrans = GetComponentsInChildren<Transform> ();
+		
+		if (enable) 
+		{
+			foreach (Transform comp in allTrans) {
+				comp.gameObject.layer = LayerMask.NameToLayer ("Outline");
+			}
+			isOutlineEnabled = true;
+		} 
+		else 
+		{
+			foreach (Transform comp in allTrans) 
+			{
+				comp.gameObject.layer = LayerMask.NameToLayer ("Default");
+			}
+			isOutlineEnabled = false;
+		}
+		
 	}
 
 	virtual public void OnAction()

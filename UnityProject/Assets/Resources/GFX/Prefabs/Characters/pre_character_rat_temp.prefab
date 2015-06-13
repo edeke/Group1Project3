@@ -1490,8 +1490,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174264}
-  m_LocalRotation: {x: 0, y: -.678431988, z: 0, w: .734663188}
-  m_LocalPosition: {x: 8.31000042, y: 6.46999979, z: -85.2900009}
+  m_LocalRotation: {x: 0, y: -.962561131, z: 0, w: .271064728}
+  m_LocalPosition: {x: .699999988, y: .0299999993, z: -.730000019}
   m_LocalScale: {x: .681415558, y: .681415558, z: .681415558}
   m_Children:
   - {fileID: 400022}
@@ -2118,13 +2118,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: 1
-  actorName: 
+  actorName: Soldier
   commentOffsetX: 0
-  commentOffsetY: 80
-  walking: 0
-  patrol: 0
+  commentOffsetY: 0
+  mouseCursorOver: 0
+  currentNPCState: 1
+  currentWalkMode: 1
+  wayPointIdleTime: 0
+  currentIdleTime: 0
+  idleTimeMax: 2
   walkToLocation:
-  - {x: 8.31000042, y: 6.46999979, z: -85.2900009}
+  - {x: 6.53868628, y: .0299999993, z: 5.84081745}
+  - {x: 7.95456266, y: .0299999993, z: -10.0071468}
+  - {x: -.175847054, y: .0299999993, z: -2.92776179}
+  - {x: 5.48656178, y: .0299999993, z: -3.00615764}
+  disableAnimatons: 0
 --- !u!137 &13793306
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2236,7 +2244,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

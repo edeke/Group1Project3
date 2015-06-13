@@ -27,6 +27,8 @@ public class PlayerInput : MonoBehaviour
 
 	Vector2 mouseHotSpot;
 
+	IMouseCursor currentMouseObject;
+
 	public Texture2D mouseTextureNormal;
 	public Texture2D mouseTextureInspect;
 	public Texture2D mouseTextureTalk;
@@ -36,14 +38,6 @@ public class PlayerInput : MonoBehaviour
 	{
 		movementScript = GetComponentInChildren<PlayerMovement>();
 		mouseHotSpot = new Vector2 (16.0f, 16.0f);
-
-		/*string path = "Textures/Mouse/InspectCursor";
-		mouseTextureInspect = (Texture2D)Resources.Load(path,typeof(Texture2D));
-		
-		if (!mouseTextureInspect)
-		{
-			Debug.Log("Player Input : Failed to load mouse cursor - " + path);
-		}*/
 
 	}
 
@@ -60,6 +54,14 @@ public class PlayerInput : MonoBehaviour
 
 			if( mouseCursorInterface != null)
 			{
+
+				if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
+				{
+					currentMouseObject.OnMouseLeave();
+					currentMouseObject = null;
+				}
+
+				currentMouseObject = mouseCursorInterface;
 				MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
 
 				switch(newCursor)
@@ -90,6 +92,12 @@ public class PlayerInput : MonoBehaviour
 			else
 			{
 				Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+
+				if(currentMouseObject != null)
+				{
+					currentMouseObject.OnMouseLeave();
+					currentMouseObject = null;
+				}
 			}
 		}
 

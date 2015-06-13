@@ -19,6 +19,8 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 	public MouseCursorInput mouseCursorOver;
 
+	bool isOutlineEnabled = false;
+
 	public void Awake()
 	{
 		Dialoguer.Initialize ();
@@ -27,6 +29,8 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 	virtual public MouseCursorInput OnMouseOverCursor()
 	{
+		EnableOutline (true);
+
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
 			return MouseCursorInput.Talk;
@@ -36,6 +40,43 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 			return mouseCursorOver;
 		}
 	}
+
+	virtual public void OnMouseLeave()
+	{
+		EnableOutline (false);
+
+		return;
+	}
+
+
+	void EnableOutline(bool enable)
+	{
+
+		if (enable == isOutlineEnabled)
+		{
+			return;
+		}
+
+		Transform[] allTrans = GetComponentsInChildren<Transform> ();
+
+		if (enable) 
+		{
+			foreach (Transform comp in allTrans) {
+				comp.gameObject.layer = LayerMask.NameToLayer ("Outline");
+			}
+			isOutlineEnabled = true;
+		} 
+		else 
+		{
+			foreach (Transform comp in allTrans) 
+			{
+				comp.gameObject.layer = LayerMask.NameToLayer ("Default");
+			}
+			isOutlineEnabled = false;
+		}
+
+	}
+
 
 	virtual public void OnTalkTo()
 	{

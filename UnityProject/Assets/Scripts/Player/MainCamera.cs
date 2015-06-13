@@ -4,12 +4,16 @@ using System.Collections;
 public class MainCamera : MonoBehaviour {
 
 	public OutlineCamera outlineCamera;
+	public bool RenderOutlines;
 
 
 	// Use this for initialization	
 	void OnPostRender()
 	{
-		outlineCamera.RenderOutlines ();
+		if (RenderOutlines) 
+		{
+			outlineCamera.RenderOutlines ();
+		}
 	}
 
 }

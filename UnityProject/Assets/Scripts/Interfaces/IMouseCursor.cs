@@ -4,5 +4,6 @@ interface IMouseCursor
 {
 
 	MouseCursorInput OnMouseOverCursor();
+	void OnMouseLeave();
 
 }
