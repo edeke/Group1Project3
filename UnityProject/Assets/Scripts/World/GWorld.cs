@@ -68,7 +68,7 @@ public class GWorld : MonoBehaviour
 
 	static string sceneToLoad;
 
-	static bool loadLevel = false;
+	static public bool loadLevel = false;
 	static float loadLevelCountdownCurrentTime;
 	static float loadLevelCountdownTimerMax = 1.0f;
 
@@ -275,7 +275,6 @@ public class GWorld : MonoBehaviour
 		} 
 		else 
 		{
-			Debug.Log ("Position : " + location.position );
 
 			PlayerMovement movComp = myPlayer.GetComponent<PlayerMovement>();
 			movComp.PlayerSetLocationOnSpawn(location.position);
@@ -297,7 +296,6 @@ public class GWorld : MonoBehaviour
 		} 
 		else 
 		{
-			Debug.Log ("Position : " + location.position );
 			
 			cameraFollow.transform.position = location.position;
 		}
@@ -466,8 +464,6 @@ public class GWorld : MonoBehaviour
 
 	public static void LoadScene( ZoneBase scene )
 	{
-		Debug.Log ("Load Level : " + scene);
-
 		mainUI.GetComponent<MainUI> ().GoBlack ( true );
 
 		string[] sceneArray = (string[]) sceneLoadTable[scene];

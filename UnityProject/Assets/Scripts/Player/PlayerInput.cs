@@ -41,8 +41,26 @@ public class PlayerInput : MonoBehaviour
 
 	}
 
+	void OnLevelWasLoaded()
+	{
+		currentMouseObject = null;
+	}
+
 	void TraceAndChangeMouseCursor ()
 	{
+		if (GWorld.loadLevel == true) 
+		{
+			Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+			
+			if(currentMouseObject != null)
+			{
+				currentMouseObject.OnMouseLeave();
+				currentMouseObject = null;
+			}
+
+			return;
+		}
+
 		RaycastHit hitInfo = new RaycastHit ();
 		Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
