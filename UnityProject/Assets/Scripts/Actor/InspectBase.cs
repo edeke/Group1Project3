@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InspectBase : MonoBehaviour, IInspectInterface {
+public class InspectBase : MonoBehaviour, IInspectInterface, IMouseCursor
+{
 
 	protected GameObject commentObject;
 	protected CommentController comment;
@@ -12,11 +13,25 @@ public class InspectBase : MonoBehaviour, IInspectInterface {
 	public int commentOffsetX;
 	public int commentOffsetY;
 
+	public MouseCursorInput mouseCursorOver;
+
 	virtual public void OnInspect()
 	{	
 		
 		DisplayComment ("I don't know what that is.");
 		
+	}
+
+	virtual public MouseCursorInput OnMouseOverCursor()
+	{
+		if (mouseCursorOver == MouseCursorInput.Default) 
+		{
+			return MouseCursorInput.Inspect;
+		} 
+		else 
+		{
+			return mouseCursorOver;
+		}
 	}
 	
 	public void DisplayComment ( string text )

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Item : MonoBehaviour, IAction, IInspectInterface {
+public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
+{
 
 	protected GameObject commentObject;
 	protected CommentController comment;
@@ -24,9 +25,13 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 	public int commentOffsetX;
 	public int commentOffsetY;
 
+	public MouseCursorInput mouseCursorOver;
+
 
 	// Use this for initialization
 	public void Start () {
+
+		mouseCursorOver = MouseCursorInput.Pickup;
 
 		itemData.itemTexture = itemTexture;
 		itemData.itemType = itemType;
@@ -38,6 +43,18 @@ public class Item : MonoBehaviour, IAction, IInspectInterface {
 		itemData.onPickupParticle = onPickupParticle;
 
 
+	}
+
+	virtual public MouseCursorInput OnMouseOverCursor()
+	{
+		if (mouseCursorOver == MouseCursorInput.Default) 
+		{
+			return MouseCursorInput.Pickup;
+		} 
+		else 
+		{
+			return mouseCursorOver;
+		}
 	}
 
 	virtual public void OnInspect()

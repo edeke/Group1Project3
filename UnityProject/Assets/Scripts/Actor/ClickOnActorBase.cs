@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITalkTo
+public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITalkTo, IMouseCursor
 {
 	
 	public DialoguerDialogues dialog;
@@ -17,10 +17,24 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	public int commentOffsetX;
 	public int commentOffsetY;
 
+	public MouseCursorInput mouseCursorOver;
+
 	public void Awake()
 	{
 		Dialoguer.Initialize ();
 
+	}
+
+	virtual public MouseCursorInput OnMouseOverCursor()
+	{
+		if (mouseCursorOver == MouseCursorInput.Default) 
+		{
+			return MouseCursorInput.Talk;
+		} 
+		else 
+		{
+			return mouseCursorOver;
+		}
 	}
 
 	virtual public void OnTalkTo()

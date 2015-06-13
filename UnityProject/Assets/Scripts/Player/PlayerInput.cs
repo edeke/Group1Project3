@@ -2,6 +2,15 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
+public enum MouseCursorInput
+{
+	Default,
+	Normal,
+	Inspect,
+	Talk,
+	Pickup
+}
+
 public class PlayerInput : MonoBehaviour 
 {
 
@@ -16,13 +25,82 @@ public class PlayerInput : MonoBehaviour
 
 	PlayerMovement movementScript;
 
+	Vector2 mouseHotSpot;
+
+	public Texture2D mouseTextureNormal;
+	public Texture2D mouseTextureInspect;
+	public Texture2D mouseTextureTalk;
+	public Texture2D mouseTexturePickup;
+
 	void Start () 
 	{
 		movementScript = GetComponentInChildren<PlayerMovement>();
+		mouseHotSpot = new Vector2 (16.0f, 16.0f);
+
+		/*string path = "Textures/Mouse/InspectCursor";
+		mouseTextureInspect = (Texture2D)Resources.Load(path,typeof(Texture2D));
+		
+		if (!mouseTextureInspect)
+		{
+			Debug.Log("Player Input : Failed to load mouse cursor - " + path);
+		}*/
+
+	}
+
+	void TraceAndChangeMouseCursor ()
+	{
+		RaycastHit hitInfo = new RaycastHit ();
+		Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+		bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
+
+		if( traceHit && dragging == false )
+		{
+			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
+
+
+			if( mouseCursorInterface != null)
+			{
+				MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
+
+				switch(newCursor)
+				{
+					case MouseCursorInput.Inspect :
+						Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
+					break;
+
+
+					case MouseCursorInput.Normal :
+						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+					break;
+
+					case MouseCursorInput.Talk :
+						Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
+					break;
+
+					case MouseCursorInput.Pickup :
+						Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+					break;
+
+					default :
+						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+					break;
+				}
+
+			}
+			else
+			{
+				Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+			}
+		}
+
 	}
 
 	void Update () 
 	{
+
+		TraceAndChangeMouseCursor ();
+
+
 		//dont do anything is dialog is open
 		if (GWorld.dialogOpen)
 		{

@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseItem
+public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseItem, IMouseCursor
 {
 
 	protected GameObject commentObject;
@@ -14,12 +14,26 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 	public int commentOffsetX;
 	public int commentOffsetY;
 
+	public MouseCursorInput mouseCursorOver;
+
 	
 	virtual public void OnInspect()
 	{	
 
 		DisplayComment ("I don't know what that is.");
 
+	}
+
+	virtual public MouseCursorInput OnMouseOverCursor()
+	{
+		if (mouseCursorOver == MouseCursorInput.Default) 
+		{
+			return MouseCursorInput.Inspect;
+		} 
+		else 
+		{
+			return mouseCursorOver;
+		}
 	}
 
 	virtual public void OnAction()
