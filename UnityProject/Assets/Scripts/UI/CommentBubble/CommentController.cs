@@ -17,8 +17,8 @@ public class CommentController : MonoBehaviour {
 
 	float fadeSpeed = 0.5f;
 
-	const float textOpenTimeBase = 100.0f;
-	//const float textOpenTimeBase = 3.0f;
+
+	const float textOpenTimeBase = 3.0f;
 	const float textOpenTimePerLetter = 0.1f;
 
 	Camera mainCamera;
