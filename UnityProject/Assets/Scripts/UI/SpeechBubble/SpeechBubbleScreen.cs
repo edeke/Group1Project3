@@ -20,7 +20,8 @@ public class SpeechBubbleScreen : MonoBehaviour {
 
 	float currentOpenTime;
 
-	const float textOpenTimeBase = 3.0f;
+	const float textOpenTimeBase = 100.0f;
+	//const float textOpenTimeBase = 3.0f;
 	const float textOpenTimePerLetter = 0.1f;
 	
 	float fadeSpeed = 0.5f;
@@ -107,13 +108,17 @@ public class SpeechBubbleScreen : MonoBehaviour {
 			gameObject.transform.position = screenLocation;
 			return;
 		}
+
+		Vector3 offsetVectorWorldSpace = objectToFollow.transform.position;
+		offsetVectorWorldSpace.y += objectSetOffset_y + 4;
+		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 		
-		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
+		screenLocation = mainCamera.WorldToScreenPoint (offsetVectorWorldSpace);
 
-		int offsetY = Mathf.FloorToInt( sizeOfText.y + (Screen.height * 0.1f) );
-		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) + (Screen.width * 0.02f));
+		int offsetY = Mathf.FloorToInt( sizeOfText.y );
+		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) );
 
-		screenLocation.x += offsetX + objectSetOffset_x;
+		screenLocation.x += offsetX;
 		//Clamp X location to within screen
 		if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
 		{
@@ -126,7 +131,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 			screenLocation.x = deltaX + 5;
 		}
 		
-		screenLocation.y += offsetY + 5 + + objectSetOffset_y;
+		screenLocation.y += offsetY + 5;
 		//Clamp Y location to within screen
 		if ( screenLocation.y + ( (sizeOfText.y + yPadding) / 2) + 5 > Screen.height) 
 		{

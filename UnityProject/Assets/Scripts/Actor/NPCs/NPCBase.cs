@@ -29,7 +29,7 @@ public class NPCBase : ClickOnActorBase
 	public WalkMode currentWalkMode;
 
 	public bool wayPointIdleTime;
-	public float currentIdleTime;
+	float currentIdleTime;
 	public float idleTimeMax;
 
 	protected bool movingForward = true;

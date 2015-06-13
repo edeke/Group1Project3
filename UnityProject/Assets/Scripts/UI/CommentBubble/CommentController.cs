@@ -17,7 +17,8 @@ public class CommentController : MonoBehaviour {
 
 	float fadeSpeed = 0.5f;
 
-	const float textOpenTimeBase = 3.0f;
+	const float textOpenTimeBase = 100.0f;
+	//const float textOpenTimeBase = 3.0f;
 	const float textOpenTimePerLetter = 0.1f;
 
 	Camera mainCamera;
@@ -98,10 +99,11 @@ public class CommentController : MonoBehaviour {
 			return;
 		}
 
-		screenLocation = mainCamera.WorldToScreenPoint (objectToFollow.transform.position);
+		Vector3 offsetVectorWorldSpace = objectToFollow.transform.position;
+		offsetVectorWorldSpace.y += objectSetOffset_y + 1;
+		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 
-
-		screenLocation.y += objectSetOffset_x;
+		screenLocation = mainCamera.WorldToScreenPoint (offsetVectorWorldSpace);
 
 		//Clamp X location to within screen
 		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 
@@ -115,7 +117,7 @@ public class CommentController : MonoBehaviour {
 			screenLocation.x -= deltaX - xSpacing;
 		}
 
-		int offsetY = Mathf.FloorToInt(Screen.height * 0.05f) + objectSetOffset_y;
+		int offsetY = Mathf.FloorToInt(Screen.height * 0.05f);
 		screenLocation.y += offsetY;
 
 		if (screenLocation.y + (sizeOfText.y / 2) > Screen.height) 
