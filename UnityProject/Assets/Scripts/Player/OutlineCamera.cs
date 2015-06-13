@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class OutlineCamera : MonoBehaviour {
@@ -6,11 +7,11 @@ public class OutlineCamera : MonoBehaviour {
 	RenderTexture currentRT;
 	public Camera cam;
 
-	void OnGUI()
+	/*void OnGUI()
 	{
 		Rect newRect = new Rect (0, 0, Screen.width, Screen.height);
 		GUI.DrawTexture ( newRect, currentRT);
-	}
+	}*/
 
 	public void RenderOutlines()
 	{
@@ -25,6 +26,18 @@ public class OutlineCamera : MonoBehaviour {
 
 		cam.Render();
 		RenderTexture.active = prevRT;
+
+		RawImage[] imgComps = FindObjectsOfType<RawImage> ();
+
+		foreach (RawImage comp in imgComps)
+		{
+			if(comp.CompareTag("Outline"))
+			{
+
+				comp.texture = currentRT;
+			}
+		}
+
 
 	}
 }

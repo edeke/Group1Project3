@@ -285,7 +285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: commentOffsetY
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 20800712, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_Carve
@@ -342,6 +342,10 @@ Prefab:
     - target: {fileID: 19565796, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_Speed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: commentOffsetX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
@@ -17965,7 +17969,6 @@ MonoBehaviour:
   currentNPCState: 0
   currentWalkMode: 0
   wayPointIdleTime: 0
-  currentIdleTime: 0
   idleTimeMax: 0
   walkToLocation:
   - {x: -3.66497636, y: 6.78449345, z: -32.3537025}

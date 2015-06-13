@@ -57,6 +57,7 @@ public class GWorld : MonoBehaviour
 	public static GameObject mainUI;
 	public static GameObject myPlayer;
 	public static GameObject cameraFollow;
+	public static GameObject outlineCanvas;
 
 	static Hashtable eventTable = new Hashtable();
 	static Hashtable sceneLoadTable = new Hashtable();
@@ -118,13 +119,30 @@ public class GWorld : MonoBehaviour
 			
 			if(!mainUI)
 			{
-				Debug.Log ("Dialog Failed to Load - " + path);
+				Debug.Log ("mainDialog Failed to Load - " + path);
 			}
 			else
 			{
 				//Debug.Log ("mainDialog Loaded");
 			}
 
+		}
+
+		if (!outlineCanvas) 
+		{
+			string path = "Prefabs/UI/Outline";
+			outlineCanvas = (GameObject) Instantiate(Resources.Load(path));
+			DontDestroyOnLoad(outlineCanvas);
+			
+			if(!outlineCanvas)
+			{
+				Debug.Log ("outlineCanvas Failed to Load - " + path);
+			}
+			else
+			{
+				//Debug.Log ("mainDialog Loaded");
+			}
+			
 		}
 
 		CalcTimeOfDay ();
