@@ -9,7 +9,8 @@ public enum MouseCursorInput
 	Inspect,
 	Talk,
 	Pickup,
-	AreaChange
+	AreaChange,
+	Give
 }
 
 public class PlayerInput : MonoBehaviour 
@@ -35,6 +36,7 @@ public class PlayerInput : MonoBehaviour
 	public Texture2D mouseTextureTalk;
 	public Texture2D mouseTexturePickup;
 	public Texture2D mouseTextureAreaChange;
+	public Texture2D mouseTextureGiveItem;
 
 	void Start () 
 	{
@@ -77,11 +79,11 @@ public class PlayerInput : MonoBehaviour
 			return;
 		}
 			
-			RaycastHit hitInfo = new RaycastHit ();
+		RaycastHit hitInfo = new RaycastHit ();
 		Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
-		if( traceHit && dragging == false )
+		if( traceHit )
 		{
 			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
 
@@ -98,31 +100,47 @@ public class PlayerInput : MonoBehaviour
 				currentMouseObject = mouseCursorInterface;
 				MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
 
-				switch(newCursor)
+				if(!dragging)
 				{
-					case MouseCursorInput.Inspect :
-						Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
-					break;
+					switch(newCursor)
+					{
+						case MouseCursorInput.Inspect :
+							Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
+						break;
 
-					case MouseCursorInput.Normal :
+						case MouseCursorInput.Normal :
+							Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+						break;
+
+						case MouseCursorInput.Talk :
+							Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
+						break;
+
+						case MouseCursorInput.Pickup :
+							Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+						break;
+
+						case MouseCursorInput.AreaChange :
+							Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
+						break;
+
+						default :
+							Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+						break;
+					}
+				}
+				else
+				{
+					IUseItem itemInterface = hitInfo.collider.GetComponent<IUseItem>();
+
+					if(itemInterface != null)
+					{
+						Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpot, CursorMode.Auto );
+					}
+					else
+					{
 						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-					break;
-
-					case MouseCursorInput.Talk :
-						Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
-					break;
-
-					case MouseCursorInput.Pickup :
-						Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
-					break;
-
-					case MouseCursorInput.AreaChange :
-						Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
-					break;
-
-					default :
-						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-					break;
+					}
 				}
 
 			}
@@ -137,6 +155,48 @@ public class PlayerInput : MonoBehaviour
 				}
 			}
 		}
+
+		/*//Ondragging item
+		else if ( traceHit && dragging == true)
+		{		
+			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
+
+			if( mouseCursorInterface != null)
+			{
+					
+				if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
+				{
+					currentMouseObject.OnMouseLeave();
+					currentMouseObject = null;
+				}
+					
+				mouseCursorInterface.OnMouseOverCursor();
+
+				Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpot, CursorMode.Auto );
+
+				}
+				else
+				{
+					Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+					
+					if(currentMouseObject != null)
+					{
+						currentMouseObject.OnMouseLeave();
+						currentMouseObject = null;
+					}
+				}
+
+			}
+			else
+			{
+				Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+				
+				if(currentMouseObject != null)
+				{
+					currentMouseObject.OnMouseLeave();
+					currentMouseObject = null;
+				}
+			}*/
 
 	}
 

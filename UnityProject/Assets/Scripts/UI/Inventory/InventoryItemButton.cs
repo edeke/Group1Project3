@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class InventoryItemButton : MonoBehaviour {
 
@@ -58,6 +59,23 @@ public class InventoryItemButton : MonoBehaviour {
 		{
 			imageComp.enabled = false;
 			textComp.text = "";
+		}
+
+		if (isDragged && EventSystem.current.IsPointerOverGameObject () == false) {
+
+			Image[] allImages = FindObjectsOfType<Image> ();
+			
+			foreach (Image comp in allImages) {
+				if (comp.CompareTag ("InventoryButtons")) {
+					Color newColor = comp.color;
+					newColor.a = 0.0f;
+					comp.color = newColor;
+				} else if (comp.CompareTag ("MainPanel")) {
+					Color newColor = comp.color;
+					newColor.a = 0.0f;
+					comp.color = newColor;
+				}
+			}
 		}
 
 	}
@@ -132,26 +150,6 @@ public class InventoryItemButton : MonoBehaviour {
 			Inventory.myInv.SelectItem (index);
 			imageComp.enabled = false;
 
-			Image[] allImages = FindObjectsOfType<Image>();
-
-			foreach(Image comp in allImages)
-			{
-				if( comp.CompareTag("InventoryButtons") )
-				{
-					Color newColor = comp.color;
-					newColor.a = 0.0f;
-					comp.color = newColor;
-				}
-
-				else if ( comp.CompareTag("MainPanel") )
-				{
-					Color newColor = comp.color;
-					newColor.a = 0.0f;
-					comp.color = newColor;
-				}
-			}
-
-
 		}
 
 	}
@@ -161,9 +159,14 @@ public class InventoryItemButton : MonoBehaviour {
 		anim.SetBool (animMouseOverHash, false);
 		isDragged = false;
 
+		//make sure we have an item before enable again
+		if (Inventory.myInv.CheckIfItemExist (index)) {
+			imageComp.enabled = true;
+			
+		} 
 
 		Image[] allImages = FindObjectsOfType<Image>();
-
+		
 		foreach(Image comp in allImages)
 		{
 			if( comp.CompareTag("InventoryButtons") )
@@ -176,16 +179,10 @@ public class InventoryItemButton : MonoBehaviour {
 			else if ( comp.CompareTag("MainPanel") )
 			{
 				Color newColor = comp.color;
-				newColor.a = 0.4f;
+				newColor.a = 0.3f;
 				comp.color = newColor;
 			}
 		}
-
-		//make sure we have an item before enable again
-		if (Inventory.myInv.CheckIfItemExist (index)) {
-			imageComp.enabled = true;
-			
-		} 
 
 
 	}
