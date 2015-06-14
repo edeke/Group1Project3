@@ -39,7 +39,8 @@ public class PlayerInput : MonoBehaviour
 	void Start () 
 	{
 		movementScript = GetComponentInChildren<PlayerMovement>();
-		mouseHotSpot = new Vector2 (16.0f, 16.0f);
+		mouseHotSpot = new Vector2 ( 32.0f, 32.0f);
+		//mouseHotSpot = new Vector2 (0.5f, 0.5f);
 
 	}
 
@@ -90,7 +91,6 @@ public class PlayerInput : MonoBehaviour
 						Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
 					break;
 
-
 					case MouseCursorInput.Normal :
 						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
 					break;
@@ -104,11 +104,11 @@ public class PlayerInput : MonoBehaviour
 					break;
 
 					case MouseCursorInput.AreaChange :
-						Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+						Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
 					break;
 
 					default :
-						Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
+						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
 					break;
 				}
 
