@@ -131,6 +131,27 @@ public class InventoryItemButton : MonoBehaviour {
 			isDragged = true;
 			Inventory.myInv.SelectItem (index);
 			imageComp.enabled = false;
+
+			Image[] allImages = FindObjectsOfType<Image>();
+
+			foreach(Image comp in allImages)
+			{
+				if( comp.CompareTag("InventoryButtons") )
+				{
+					Color newColor = comp.color;
+					newColor.a = 0.0f;
+					comp.color = newColor;
+				}
+
+				else if ( comp.CompareTag("MainPanel") )
+				{
+					Color newColor = comp.color;
+					newColor.a = 0.0f;
+					comp.color = newColor;
+				}
+			}
+
+
 		}
 
 	}
@@ -140,11 +161,32 @@ public class InventoryItemButton : MonoBehaviour {
 		anim.SetBool (animMouseOverHash, false);
 		isDragged = false;
 
-		//make sure we have an item before enable again
-		if (Inventory.myInv.CheckIfItemExist (index)) 
+
+		Image[] allImages = FindObjectsOfType<Image>();
+
+		foreach(Image comp in allImages)
 		{
-			imageComp.enabled = true;
+			if( comp.CompareTag("InventoryButtons") )
+			{
+				Color newColor = comp.color;
+				newColor.a = 1.0f;
+				comp.color = newColor;
+			}
+			
+			else if ( comp.CompareTag("MainPanel") )
+			{
+				Color newColor = comp.color;
+				newColor.a = 0.4f;
+				comp.color = newColor;
+			}
 		}
+
+		//make sure we have an item before enable again
+		if (Inventory.myInv.CheckIfItemExist (index)) {
+			imageComp.enabled = true;
+			
+		} 
+
 
 	}
 
