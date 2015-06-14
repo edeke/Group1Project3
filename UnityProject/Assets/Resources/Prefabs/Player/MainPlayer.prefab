@@ -3369,6 +3369,8 @@ MonoBehaviour:
   mouseTextureInspect: {fileID: 2800000, guid: 4cd35664d9d0fda46bda24ee785e6e7c, type: 3}
   mouseTextureTalk: {fileID: 2800000, guid: 498f05fbf4cdf2f4baca7425c96fc20f, type: 3}
   mouseTexturePickup: {fileID: 2800000, guid: 5ffb19a5ce4035d4a87eb23dba301328, type: 3}
+  mouseTextureAreaChange: {fileID: 2800000, guid: f2d5dbb7e9d740847850261fa15a88ed,
+    type: 3}
 --- !u!114 &11427670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3380,6 +3382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e04176e394b7a94284b33eabc007c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commentOffsetX: 0
+  commentOffsetY: -1
 --- !u!136 &13624056
 CapsuleCollider:
   m_ObjectHideFlags: 1

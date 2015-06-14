@@ -8,7 +8,8 @@ public enum MouseCursorInput
 	Normal,
 	Inspect,
 	Talk,
-	Pickup
+	Pickup,
+	AreaChange
 }
 
 public class PlayerInput : MonoBehaviour 
@@ -33,6 +34,7 @@ public class PlayerInput : MonoBehaviour
 	public Texture2D mouseTextureInspect;
 	public Texture2D mouseTextureTalk;
 	public Texture2D mouseTexturePickup;
+	public Texture2D mouseTextureAreaChange;
 
 	void Start () 
 	{
@@ -101,8 +103,12 @@ public class PlayerInput : MonoBehaviour
 						Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
 					break;
 
+					case MouseCursorInput.AreaChange :
+						Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+					break;
+
 					default :
-						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+						Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
 					break;
 				}
 

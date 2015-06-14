@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	EAnimationState currentAnimationState;
 
+	public int commentOffsetX;
+	public int commentOffsetY;
+
 	ActionData currentState;
 	private List<ActionData> actionList = new List<ActionData>();
 
@@ -693,7 +696,7 @@ public class PlayerMovement : MonoBehaviour {
 		speech = speechObject.GetComponentInChildren<SpeechBubbleScreen> ();
 		speech.SetName ("Player");
 		speech.SetObjectFollow (gameObject);
-		//speech.SetOffset (commentOffsetX, commentOffsetY);
+		speech.SetOffset (commentOffsetX, commentOffsetY);
 		
 		if (speech != null) 
 		{
