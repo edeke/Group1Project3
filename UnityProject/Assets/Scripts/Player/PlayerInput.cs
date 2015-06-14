@@ -64,7 +64,20 @@ public class PlayerInput : MonoBehaviour
 			return;
 		}
 
-		RaycastHit hitInfo = new RaycastHit ();
+		if (EventSystem.current.IsPointerOverGameObject () ) 
+		{
+			Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+			
+			if(currentMouseObject != null)
+			{
+				currentMouseObject.OnMouseLeave();
+				currentMouseObject = null;
+			}
+
+			return;
+		}
+			
+			RaycastHit hitInfo = new RaycastHit ();
 		Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
