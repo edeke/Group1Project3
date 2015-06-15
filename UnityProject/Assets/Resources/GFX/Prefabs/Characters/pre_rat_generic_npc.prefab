@@ -837,10 +837,9 @@ GameObject:
   - 95: {fileID: 9535856}
   - 65: {fileID: 6513676}
   - 114: {fileID: 11483404}
-  - 208: {fileID: 20800712}
   - 195: {fileID: 19565796}
   m_Layer: 0
-  m_Name: pre_soldier_in_cove
+  m_Name: pre_rat_generic_npc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1491,7 +1490,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174264}
   m_LocalRotation: {x: 0, y: -.962561131, z: 0, w: .271064728}
-  m_LocalPosition: {x: 99.0010376, y: 5.20940399, z: -128.634369}
+  m_LocalPosition: {x: 153.286041, y: 5.20940304, z: -135.271591}
   m_LocalScale: {x: .681415558, y: .681415558, z: .681415558}
   m_Children:
   - {fileID: 400022}
@@ -2114,23 +2113,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 174264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2494e06c01101124d8600ae53e042117, type: 3}
+  m_Script: {fileID: 11500000, guid: dd8832dd245c69f40a4a52e0a6c4123d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: 1
-  actorName: Soldier
-  commentOffsetX: 2
+  dialog: 5
+  actorName: Rat
+  commentOffsetX: 0
   commentOffsetY: 0
   mouseCursorOver: 0
   currentNPCState: 0
   currentWalkMode: 1
   wayPointIdleTime: 0
   idleTimeMax: 2
-  walkToLocation:
-  - {x: 6.53868628, y: .0299999993, z: 5.84081745}
-  - {x: 7.95456266, y: .0299999993, z: -10.0071468}
-  - {x: -.175847054, y: .0299999993, z: -2.92776179}
-  - {x: 5.48656178, y: .0299999993, z: -3.00615764}
+  walkToLocation: []
   disableAnimatons: 0
 --- !u!137 &13793306
 SkinnedMeshRenderer:
@@ -2251,21 +2246,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!208 &20800712
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174264}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.34000003, y: 2.54999995, z: .870000005}
-  m_MoveThreshold: .100000001
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 2.68000007, z: 0}
-  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
