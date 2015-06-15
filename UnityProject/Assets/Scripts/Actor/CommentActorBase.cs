@@ -32,7 +32,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
-			return MouseCursorInput.Inspect;
+			return MouseCursorInput.Normal;
 		} 
 		else 
 		{

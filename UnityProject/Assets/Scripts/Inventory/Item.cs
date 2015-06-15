@@ -33,8 +33,6 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 	// Use this for initialization
 	public void Start () {
 
-		mouseCursorOver = MouseCursorInput.Pickup;
-
 		itemData.itemTexture = itemTexture;
 		itemData.itemType = itemType;
 		itemData.soundOnPickup = soundOnPickup;
@@ -54,7 +52,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
-			return MouseCursorInput.Pickup;
+			return MouseCursorInput.Normal;
 		} 
 		else 
 		{
