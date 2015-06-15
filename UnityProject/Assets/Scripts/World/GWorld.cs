@@ -58,6 +58,7 @@ public class GWorld : MonoBehaviour
 	public static GameObject myPlayer;
 	public static GameObject cameraFollow;
 	public static GameObject outlineCanvas;
+	public static GameObject pauseUI;
 
 	static Hashtable eventTable = new Hashtable();
 	static Hashtable sceneLoadTable = new Hashtable();
@@ -126,6 +127,23 @@ public class GWorld : MonoBehaviour
 				//Debug.Log ("mainDialog Loaded");
 			}
 
+		}
+
+		if (!pauseUI) 
+		{
+			string path = "Prefabs/UI/PauseUI";
+			pauseUI = (GameObject) Instantiate(Resources.Load(path));
+			DontDestroyOnLoad(pauseUI);
+			
+			if(!pauseUI)
+			{
+				Debug.Log ("mainDialog Failed to Load - " + path);
+			}
+			else
+			{
+				//Debug.Log ("mainDialog Loaded");
+			}
+			
 		}
 
 		if (!outlineCanvas) 

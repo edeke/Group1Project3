@@ -53,8 +53,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115128}
-  m_LocalRotation: {x: 0, y: 0, z: -.744936228, w: .667135715}
-  m_LocalPosition: {x: 135.860001, y: 5.11999989, z: -135.070007}
+  m_LocalRotation: {x: .253883272, y: -.227368027, z: -.700338006, w: .627195239}
+  m_LocalPosition: {x: 179.970001, y: 5.11999989, z: -128.169998}
   m_LocalScale: {x: .0030400001, y: .00304000033, z: .00304000033}
   m_Children:
   - {fileID: 416100}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 5
-  itemTexture: {fileID: 2800000, guid: a14c933362c5d2a4ba4bfd830941c4a7, type: 3}
+  itemTexture: {fileID: 2800000, guid: 2ee2e59fb6267334f8b5ba600b6feeb7, type: 3}
   soundOnPickup: {fileID: 0}
   soundOnUse: {fileID: 0}
   onDragParticle: {fileID: 0}
@@ -125,6 +125,7 @@ MonoBehaviour:
   animationOnAction: 4
   commentOffsetX: 0
   commentOffsetY: 0
+  mouseCursorOver: 0
 --- !u!208 &20808706
 NavMeshObstacle:
   m_ObjectHideFlags: 1
