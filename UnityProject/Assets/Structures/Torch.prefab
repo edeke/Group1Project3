@@ -27,8 +27,6 @@ GameObject:
   - 4: {fileID: 473140}
   - 33: {fileID: 3310196}
   - 23: {fileID: 2308704}
-  - 65: {fileID: 6512860}
-  - 114: {fileID: 11463356}
   m_Layer: 0
   m_Name: pre_stick_beam_01
   m_TagString: Untagged
@@ -62,6 +60,8 @@ GameObject:
   - 4: {fileID: 479014}
   - 33: {fileID: 3300356}
   - 23: {fileID: 2310586}
+  - 65: {fileID: 6553606}
+  - 114: {fileID: 11429474}
   m_Layer: 0
   m_Name: pre_chimney_02
   m_TagString: Untagged
@@ -114,8 +114,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.5759125, y: -5.45884943, z: 32.210083}
+  m_LocalRotation: {x: 0, y: -.373798341, z: 0, w: .927510023}
+  m_LocalPosition: {x: 15.023201, y: -6.64884663, z: 11.1453552}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479014}
@@ -210,17 +210,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134898}
   m_Mesh: {fileID: 4300000, guid: 4b3f8013fb82c6240aa9a7efc767d7cd, type: 3}
---- !u!65 &6512860
+--- !u!65 &6553606
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134898}
+  m_GameObject: {fileID: 166052}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .270000011, y: .0194279831, z: .0202660095}
+  m_Size: {x: 1.71000004, y: 1.48000002, z: 7.96000004}
   m_Center: {x: 9.92454807e-05, y: .000467860256, z: .000510265119}
 --- !u!108 &10822528
 Light:
@@ -254,12 +254,12 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11463356
+--- !u!114 &11429474
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134898}
+  m_GameObject: {fileID: 166052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e0d6a1831359414a8add3c3d3ed0c80, type: 3}
@@ -269,6 +269,7 @@ MonoBehaviour:
   animationOnAction: 9
   commentOffsetX: 0
   commentOffsetY: 0
+  mouseCursorOver: 0
 --- !u!198 &19830800
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -32,7 +32,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
-			return MouseCursorInput.Inspect;
+			return MouseCursorInput.Normal;
 		} 
 		else 
 		{
@@ -61,7 +61,9 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		{
 			foreach (Transform comp in allTrans) 
 			{
+
 				comp.gameObject.layer = LayerMask.NameToLayer ("Outline");
+
 			}
 
 			isOutlineEnabled = true;
@@ -70,7 +72,9 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		{
 			foreach (Transform comp in allTrans) 
 			{
+
 				comp.gameObject.layer = LayerMask.NameToLayer ("Default");
+
 			}
 			isOutlineEnabled = false;
 		}

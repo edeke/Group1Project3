@@ -30,7 +30,7 @@ public class InspectBase : MonoBehaviour, IInspectInterface, IMouseCursor
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
-			return MouseCursorInput.Inspect;
+			return MouseCursorInput.Normal;
 		} 
 		else 
 		{

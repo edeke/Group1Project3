@@ -85,16 +85,23 @@ public class PlayerInput : MonoBehaviour
 
 		if( traceHit )
 		{
-			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
 
+			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
 
 			if( mouseCursorInterface != null)
 			{
 
 				if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
 				{
-					currentMouseObject.OnMouseLeave();
-					currentMouseObject = null;
+					try
+					{
+						currentMouseObject.OnMouseLeave();
+						currentMouseObject = null;
+					}
+					catch(MissingReferenceException e)
+					{
+						currentMouseObject = null;
+					}
 				}
 
 				currentMouseObject = mouseCursorInterface;
@@ -149,9 +156,16 @@ public class PlayerInput : MonoBehaviour
 				Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
 
 				if(currentMouseObject != null)
-				{
-					currentMouseObject.OnMouseLeave();
-					currentMouseObject = null;
+				{	
+					try
+					{
+						currentMouseObject.OnMouseLeave();
+						currentMouseObject = null;
+					}
+					catch(MissingReferenceException e)
+					{
+						currentMouseObject = null;
+					}
 				}
 			}
 		}
