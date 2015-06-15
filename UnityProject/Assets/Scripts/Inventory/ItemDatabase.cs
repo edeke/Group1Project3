@@ -40,6 +40,7 @@ static public class ItemDatabase
 		banan.onUseParticle = null;
 		banan.soundOnPickup = null;
 		banan.soundOnUse = null;
+		banan.itemDescription = "It's a banana";
 		items.Add ("Banana", banan );
 
 		//Add Item to Itemdb
@@ -61,6 +62,7 @@ static public class ItemDatabase
 		JarWithFireflies.onUseParticle = null;
 		JarWithFireflies.soundOnPickup = null;
 		JarWithFireflies.soundOnUse = null;
+		JarWithFireflies.itemDescription = "It's a jar filled with fireflies";
 		items.Add ("JarWithFireflies", JarWithFireflies );
 
 		//Add Item to Itemdb
@@ -82,6 +84,7 @@ static public class ItemDatabase
 		unlitTorch.onUseParticle = null;
 		unlitTorch.soundOnPickup = null;
 		unlitTorch.soundOnUse = null;
+		unlitTorch.itemDescription = "It's an unlit torch";
 		items.Add ("UnlitTorch", unlitTorch );
 
 		//Add Item to Itemdb
@@ -103,6 +106,7 @@ static public class ItemDatabase
 		litTorch.onUseParticle = null;
 		litTorch.soundOnPickup = null;
 		litTorch.soundOnUse = null;
+		litTorch.itemDescription = "It's a lit torch";
 		items.Add ("LitTorch", litTorch );
 
 		//Add combine data to array

@@ -28,6 +28,7 @@ public class ItemStruct
 	public GameObject onDragParticle;
 	public GameObject onUseParticle;
 	public GameObject onPickupParticle;
+	public string itemDescription;
 	[HideInInspector]
 	public int numberOfItemsInStack;
 

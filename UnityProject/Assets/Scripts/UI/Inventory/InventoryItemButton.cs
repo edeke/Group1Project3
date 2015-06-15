@@ -112,7 +112,7 @@ public class InventoryItemButton : MonoBehaviour {
 
 	public void OnMouseOver()
 	{
-
+		
 		if (Inventory.myInv.CurrentSelectedItem != -1) 
 		{
 			ItemStruct itemData = new ItemStruct();
@@ -127,6 +127,9 @@ public class InventoryItemButton : MonoBehaviour {
 		if (Inventory.myInv.itemArray [index] != null) 
 		{
 			anim.SetBool (animMouseOverHash, true);
+
+			ShowItemDescription(Inventory.myInv.itemArray [index].itemDescription);
+
 		}
 	}
 
@@ -134,9 +137,24 @@ public class InventoryItemButton : MonoBehaviour {
 	{
 		Inventory.myInv.CombineItemIndex = -1;
 
+		ShowItemDescription("");
+
 		if (!isDragged) 
 		{
 			anim.SetBool (animMouseOverHash, false);
+		}
+	}
+
+	public void ShowItemDescription(string newText)
+	{
+		Text[] allText = FindObjectsOfType<Text> ();
+
+		foreach (Text comp in allText)
+		{
+			if( comp.CompareTag("ItemText") )
+			{
+				comp.text = newText;
+			}
 		}
 	}
 

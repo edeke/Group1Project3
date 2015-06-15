@@ -14,6 +14,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 	public GameObject onDragParticle;
 	public GameObject onUseParticle;
 	public GameObject onPickupParticle;
+	public string itemDescription;
 	public int numberOfItemsInStack = 1;
 
 	public EAnimationState animationOnAction;
@@ -41,6 +42,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 		itemData.onDragParticle = onDragParticle;
 		itemData.onUseParticle = onUseParticle;
 		itemData.onPickupParticle = onPickupParticle;
+		itemData.itemDescription = itemDescription;
 
 
 	}
