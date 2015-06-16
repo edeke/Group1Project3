@@ -5,6 +5,7 @@ using System.Collections;
 public class OutlineCamera : MonoBehaviour {
 	
 	RenderTexture currentRT;
+	public RenderTexture mainRT_Depth;
 	public Camera cam;
 
 	public Material mat;
@@ -35,7 +36,7 @@ public class OutlineCamera : MonoBehaviour {
 		Graphics.Blit (currentRT,rtTemp, mat);
 
 
-		RenderTexture.active = prevRT;
+		RenderTexture.active = prevRT;*/
 
 		RawImage[] imgComps = FindObjectsOfType<RawImage> ();
 
@@ -44,10 +45,8 @@ public class OutlineCamera : MonoBehaviour {
 			if(comp.CompareTag("Outline"))
 			{
 
-				comp.texture = currentRT;
+				comp.texture = mainRT_Depth;
 			}
-		}*/
-
-
+		}
 	}
 }

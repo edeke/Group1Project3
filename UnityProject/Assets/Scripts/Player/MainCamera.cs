@@ -37,16 +37,7 @@ public class MainCamera : MonoBehaviour {
 
 		Graphics.Blit (src, dest );
 
-		RawImage[] imgComps = FindObjectsOfType<RawImage> ();
-		
-		foreach (RawImage comp in imgComps)
-		{
-			if(comp.CompareTag("Outline"))
-			{
-				
-				comp.texture = newRT;
-			}
-		}
+		outlineCamera.mainRT_Depth = newRT;
 
 	}
 
