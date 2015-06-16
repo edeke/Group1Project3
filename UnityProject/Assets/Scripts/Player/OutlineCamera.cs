@@ -7,6 +7,9 @@ public class OutlineCamera : MonoBehaviour {
 	RenderTexture currentRT;
 	public Camera cam;
 
+	public Material mat;
+	public Shader shader;
+
 	/*void OnGUI()
 	{
 		Rect newRect = new Rect (0, 0, Screen.width, Screen.height);
@@ -15,7 +18,7 @@ public class OutlineCamera : MonoBehaviour {
 
 	public void RenderOutlines()
 	{
-		if (currentRT == null || currentRT.width != Screen.width || currentRT.height != Screen.height) 
+		/*if (currentRT == null || currentRT.width != Screen.width || currentRT.height != Screen.height) 
 		{
 			currentRT = new RenderTexture(Screen.width, Screen.height, 16, RenderTextureFormat.ARGB32);
 		}
@@ -24,7 +27,14 @@ public class OutlineCamera : MonoBehaviour {
 		RenderTexture.active = currentRT;
 		cam.targetTexture = currentRT;
 
-		cam.Render();
+		cam.Render() ;
+		//cam.RenderWithShader (shader, "Opaque");
+
+		RenderTexture rtTemp = RenderTexture.GetTemporary(Screen.width, Screen.height, 16, RenderTextureFormat.ARGB32);
+		//mat.SetTexture ("_MainTex", currentRT);
+		Graphics.Blit (currentRT,rtTemp, mat);
+
+
 		RenderTexture.active = prevRT;
 
 		RawImage[] imgComps = FindObjectsOfType<RawImage> ();
@@ -36,7 +46,7 @@ public class OutlineCamera : MonoBehaviour {
 
 				comp.texture = currentRT;
 			}
-		}
+		}*/
 
 
 	}
