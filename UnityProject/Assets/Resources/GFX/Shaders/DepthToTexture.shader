@@ -38,14 +38,15 @@ half4 frag (v2f i) : COLOR{
 
  fixed4 color = tex2D(_MainTex, i.uv);
    float depthValue = Linear01Depth (tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.scrPos)).r);
+   //float depthValue = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture,i.scrPos);
    half4 depth;
 
 
    //depth.rgb = color.rgb;
    //depth.a = 1;
-   depth.r = 1 - depthValue ;
-   depth.g = 1 - depthValue;
-   depth.b = 1 - depthValue;
+   depth.r = depthValue ;
+   depth.g = depthValue;
+   depth.b = depthValue;
    depth.a = 1;
    
    //depth.a = 1 - depthValue;

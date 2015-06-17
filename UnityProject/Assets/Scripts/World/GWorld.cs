@@ -146,7 +146,7 @@ public class GWorld : MonoBehaviour
 			
 		}
 
-		if (!outlineCanvas) 
+		/*if (!outlineCanvas) 
 		{
 			string path = "Prefabs/UI/Outline";
 			outlineCanvas = (GameObject) Instantiate(Resources.Load(path));
@@ -161,7 +161,7 @@ public class GWorld : MonoBehaviour
 				//Debug.Log ("mainDialog Loaded");
 			}
 			
-		}
+		}*/
 
 		CalcTimeOfDay ();
 
