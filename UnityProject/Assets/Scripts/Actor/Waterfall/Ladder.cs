@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ladder : CommentActorBase {
+public class Ladder : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		

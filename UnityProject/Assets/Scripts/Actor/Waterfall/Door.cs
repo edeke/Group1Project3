@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Door : CommentActorBase {
+public class Door : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		
