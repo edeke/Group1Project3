@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_rucksack_01
-  m_Shader: {fileID: 4800000, guid: d66bd06643320294da14684a9382c7ca, type: 3}
-  m_ShaderKeywords: _DISTANCEFADE_ON
+  m_Name: mat_rat_06
+  m_Shader: {fileID: 4800000, guid: 9b1c6c919dae7c0478718cf545c467ed, type: 3}
+  m_ShaderKeywords: _HARDSKINCOLOR_ON _USEBLUE_ON _USEMASKS_ON _USERED_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -39,14 +39,14 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 2800000, guid: 380f72e286964ed4e8d449a4625b288d, type: 3}
+          m_Texture: {fileID: 2800000, guid: e16f590b6cc765c4a97c77b68a2333e9, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normals
         second:
-          m_Texture: {fileID: 2800000, guid: b8e14493a7c193d41995d40cc6021baa, type: 3}
+          m_Texture: {fileID: 2800000, guid: 1927898f8b7abb34ea2385333c6a22c5, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -95,21 +95,14 @@ Material:
         first:
           name: _AO
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 543adb23e87139e4ab33f11f1a61b9aa, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Masks
         second:
-          m_Texture: {fileID: 2800000, guid: 380f72e286964ed4e8d449a4625b288d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _LerpMask
-        second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 3bf104cd84ae9e94484665bc4affb5cd, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -136,7 +129,7 @@ Material:
       data:
         first:
           name: _MinLight
-        second: 0
+        second: 1
       data:
         first:
           name: _MaxLight
@@ -144,27 +137,7 @@ Material:
       data:
         first:
           name: _Outline
-        second: .00499999989
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
-          name: _DistanceFade
-        second: .523788929
-      data:
-        first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
+        second: .000500000024
       data:
         first:
           name: _Metallic
@@ -208,31 +181,31 @@ Material:
       data:
         first:
           name: _AOIntensity
-        second: 1
+        second: .662
       data:
         first:
           name: _UseMasks
-        second: .623529375
+        second: 1
       data:
         first:
           name: _UseBlack
-        second: 1
+        second: 0
       data:
         first:
           name: _UseCyan
-        second: 1
+        second: 0
       data:
         first:
           name: _UseYellow
-        second: 1
+        second: 0
       data:
         first:
           name: _UsePurple
-        second: 1
+        second: 0
       data:
         first:
           name: _UseWhite
-        second: 1
+        second: 0
       data:
         first:
           name: _UseRed
@@ -240,10 +213,18 @@ Material:
       data:
         first:
           name: _UseGreen
-        second: 1
+        second: 0
       data:
         first:
           name: _UseBlue
+        second: 1
+      data:
+        first:
+          name: _SkinColorOpacity
+        second: .356999993
+      data:
+        first:
+          name: _HardSkinColor
         second: 1
     m_Colors:
       data:
@@ -257,11 +238,7 @@ Material:
       data:
         first:
           name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
+        second: {r: .176470578, g: .176470578, b: .176470578, a: 0}
       data:
         first:
           name: _EmissionColorUI
@@ -269,7 +246,7 @@ Material:
       data:
         first:
           name: _RedColor
-        second: {r: .735294104, g: .194636703, b: .194636703, a: 1}
+        second: {r: .158953294, g: .236994416, b: .257352948, a: 1}
       data:
         first:
           name: _BlackColor
@@ -293,16 +270,32 @@ Material:
       data:
         first:
           name: _GreenColor
-        second: {r: .590986371, g: .904411793, b: .56525737, a: 1}
+        second: {r: .448529422, g: .435337394, b: .435337394, a: 1}
       data:
         first:
           name: _BlueColor
         second: {r: .286958486, g: .269896209, b: .764705896, a: 1}
       data:
         first:
-          name: _LowColor
-        second: {r: .816176474, g: .588127196, b: .246053189, a: 1}
+          name: _SkinColor2
+        second: {r: .214370668, g: .312878817, b: .448529422, a: 1}
       data:
         first:
-          name: _HighColor
-        second: {r: .365350217, g: .314878881, b: .470588207, a: 1}
+          name: _SkinColor1
+        second: {r: .727941155, g: .573419809, b: .240862891, a: 1}
+      data:
+        first:
+          name: _ButtonColor
+        second: {r: .647058845, g: .271193773, b: .271193773, a: 1}
+      data:
+        first:
+          name: _VestColor
+        second: {r: .191176474, g: .105883852, b: .0745026022, a: 1}
+      data:
+        first:
+          name: _HardSkinColor1
+        second: {r: .0900194719, g: .151481003, b: .33088237, a: 1}
+      data:
+        first:
+          name: _HardSkinColor2
+        second: {r: .502811432, g: .541403174, b: .551470578, a: 1}
