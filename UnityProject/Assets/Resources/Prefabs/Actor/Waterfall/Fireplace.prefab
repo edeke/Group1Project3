@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.44999981, y: .50999999, z: -.430000007}
+  m_LocalPosition: {x: 60.5830002, y: 5.20900011, z: -130.561996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461758}
@@ -68,7 +68,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -106,6 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: Fireplace
   animationOnAction: 7
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 0
 --- !u!135 &13581154
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -116,8 +119,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.29999995
+  m_Center: {x: 0, y: .75999999, z: 0}
 --- !u!198 &19883070
 ParticleSystem:
   m_ObjectHideFlags: 1
