@@ -25,9 +25,7 @@ GameObject:
   - 4: {fileID: 417376}
   - 33: {fileID: 3341998}
   - 23: {fileID: 2368410}
-  - 65: {fileID: 6562888}
   - 208: {fileID: 20832734}
-  - 114: {fileID: 11478992}
   m_Layer: 0
   m_Name: Mesh_thimble_Lo:pCylinder1
   m_TagString: Untagged
@@ -91,33 +89,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163316}
   m_Mesh: {fileID: 4300000, guid: 3b52d7deff02872449ec6ef597b9dc2d, type: 3}
---- !u!65 &6562888
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163316}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 733.435547, y: 2557, z: 736.712402}
-  m_Center: {x: 0, y: 912.400024, z: 6.10351562e-05}
---- !u!114 &11478992
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e013d8fcc6a2484409520d2e7d31c797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorName: 
-  animationOnAction: 9
-  commentOffsetX: 0
-  commentOffsetY: 0
 --- !u!208 &20832734
 NavMeshObstacle:
   m_ObjectHideFlags: 1

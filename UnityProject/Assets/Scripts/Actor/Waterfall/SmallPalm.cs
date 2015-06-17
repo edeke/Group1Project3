@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SmallPalm : CommentActorBase {
+public class SmallPalm : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		
