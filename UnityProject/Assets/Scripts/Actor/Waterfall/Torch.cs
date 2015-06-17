@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Torch : CommentActorBaseTest {
+public class Torch : CommentActorBase {
 
 	override public void OnInspect()
 	{	

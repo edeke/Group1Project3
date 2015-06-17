@@ -49,32 +49,30 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 	}
 
 
-	void EnableOutline(bool enable)
+	void EnableOutline (bool enable) 
 	{
-
+		
 		if (enable == isOutlineEnabled)
 		{
+			
 			return;
+			
 		}
-
-		Transform[] allTrans = GetComponentsInChildren<Transform> ();
-
-		if (enable) 
+		
+		MeshRenderer[] allMesh = GetComponentsInChildren<MeshRenderer> ();
+		
+		float outlineWidth = enable ? 1 : 0;
+		Color highlightColor = enable ? Color.red * 0.7f : Color.black;
+		
+		foreach (MeshRenderer rnd in allMesh) 
 		{
-			foreach (Transform comp in allTrans) {
-				comp.gameObject.layer = LayerMask.NameToLayer ("Outline");
-			}
-			isOutlineEnabled = true;
-		} 
-		else 
-		{
-			foreach (Transform comp in allTrans) 
-			{
-				comp.gameObject.layer = LayerMask.NameToLayer ("Default");
-			}
-			isOutlineEnabled = false;
+			//			rnd.material.SetColor("_OutlineColor", Color.red);
+			//			rnd.material.SetFloat("_Outline", outlineWidth);
+			rnd.material.SetColor("_Highlight", highlightColor);
+			
 		}
-
+		isOutlineEnabled = enable;
+		
 	}
 
 

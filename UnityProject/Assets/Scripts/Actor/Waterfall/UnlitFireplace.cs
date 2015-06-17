@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnlitFireplace : CommentActorBaseTest {
+public class UnlitFireplace : CommentActorBase
+{
 
 	override public void OnInspect()
 	{		
