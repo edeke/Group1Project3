@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BarrelWithFruit : CommentActorBase {
+public class BarrelWithFruit : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		

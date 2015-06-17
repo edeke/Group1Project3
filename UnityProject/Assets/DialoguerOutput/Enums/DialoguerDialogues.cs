@@ -14,4 +14,5 @@ public enum DialoguerDialogues{
 	Lizard_on_beach = 10,
 	Willy = 11,
 	Billy = 12,
+	Old_Coot = 13,
 }

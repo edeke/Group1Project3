@@ -16,7 +16,10 @@ public enum EItem {
 	HangingCloth,
 	GlassJar,
 	JarWithFireflies,
-	OldMirror
+	OldMirror,
+	Bottle1,
+	Bottle2,
+	Bottle3
 };
 
 public class ItemStruct
