@@ -116,7 +116,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1000
+  far clip plane: 300
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -148,7 +148,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 1000
+  far clip plane: 300
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineCamera: {fileID: 11455718}
   RenderOutlines: 1
+  mat: {fileID: 2100000, guid: 5da1169c0bda0674391b64bbbb31af55, type: 2}
 --- !u!114 &11421828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +237,7 @@ MonoBehaviour:
   heightDensity: 2
   startDistance: 0
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
+  fogDistanceCOlor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &11434134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,7 +289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f536878e140a246993988cc00e8bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainRT_Depth: {fileID: 0}
   cam: {fileID: 2030404}
+  mat: {fileID: 0}
+  shader: {fileID: 0}
 --- !u!114 &11459614
 MonoBehaviour:
   m_ObjectHideFlags: 1

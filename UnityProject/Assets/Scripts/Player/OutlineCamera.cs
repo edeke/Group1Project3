@@ -19,12 +19,18 @@ public class OutlineCamera : MonoBehaviour {
 
 	public void RenderOutlines()
 	{
-		/*if (currentRT == null || currentRT.width != Screen.width || currentRT.height != Screen.height) 
+		if (mainRT_Depth == null || mainRT_Depth.width != Screen.width || mainRT_Depth.height != Screen.height) 
 		{
-			currentRT = new RenderTexture(Screen.width, Screen.height, 16, RenderTextureFormat.ARGB32);
+			if(mainRT_Depth != null)
+			{
+				mainRT_Depth.Release ();
+			}
+
+			mainRT_Depth = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.Default);
+			mainRT_Depth.Create();
 		}
 
-		RenderTexture prevRT = RenderTexture.active;
+		/*RenderTexture prevRT = RenderTexture.active;
 		RenderTexture.active = currentRT;
 		cam.targetTexture = currentRT;
 

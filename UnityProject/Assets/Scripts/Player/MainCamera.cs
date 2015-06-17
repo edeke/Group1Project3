@@ -10,6 +10,8 @@ public class MainCamera : MonoBehaviour {
 	Camera mainCamera;
 
 	public Material mat;
+
+	// newRT;
 	
 	// Use this for initialization	
 	//void Update()
@@ -26,18 +28,22 @@ public class MainCamera : MonoBehaviour {
 
 	void OnRenderImage(RenderTexture src, RenderTexture dest)
 	{
+		//newRT.Release ();
 		RenderTexture newRT = new RenderTexture(Screen.width, Screen.height, src.depth, src.format);
 		newRT.Create ();
 
 		mainCamera.targetTexture = newRT;
 
 		Graphics.Blit (src, newRT, mat);
+		Graphics.Blit ( newRT, outlineCamera.mainRT_Depth );
 
 		mainCamera.targetTexture = null;
 
 		Graphics.Blit (src, dest );
 
-		outlineCamera.mainRT_Depth = newRT;
+		//outlineCamera.mainRT_Depth = newRT;
+
+		newRT.Release ();
 
 	}
 
