@@ -7,7 +7,7 @@ public class ItemJar : Item {
 
 	void Start (){
 
-		skyler = GameObject.Find ("Skyler");
+		skyler = GameObject.Find ("pre_skyler");
 
 	}
 
