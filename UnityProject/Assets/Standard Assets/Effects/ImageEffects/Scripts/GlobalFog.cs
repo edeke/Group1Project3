@@ -24,6 +24,7 @@ namespace UnityStandardAssets.ImageEffects
         public Shader fogShader = null;
         private Material fogMaterial = null;
 
+		public Color fogDistanceCOlor;
 
         public override bool CheckResources ()
 		{
@@ -44,6 +45,8 @@ namespace UnityStandardAssets.ImageEffects
                 Graphics.Blit (source, destination);
                 return;
             }
+
+			RenderSettings.fogColor = fogDistanceCOlor;
 
 			Camera cam = GetComponent<Camera>();
 			Transform camtr = cam.transform;
