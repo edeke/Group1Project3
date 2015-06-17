@@ -38,44 +38,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Masks
-        second:
-          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse_copy
-        second:
-          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _WoodMerge
-        second:
-          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
-          m_Scale: {x: 15, y: 15}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Wood
-        second:
-          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
-          m_Scale: {x: 2, y: 10}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Diffuse
         second:
           m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 0b851e21376c2bc4fa4ffe87f72250dc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -122,10 +94,38 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Diffuse_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Masks
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ToonShade
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WoodMerge
+        second:
+          m_Texture: {fileID: 2800000, guid: e9df5b05ad051ce4cad905853c710bcd, type: 3}
+          m_Scale: {x: 15, y: 15}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Wood
+        second:
+          m_Texture: {fileID: 2800000, guid: 3d3167b16cc4b1c44af73f09ce2a316e, type: 3}
+          m_Scale: {x: 2, y: 10}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -176,76 +176,12 @@ Material:
         second: 0
       data:
         first:
-          name: _UseMasks
-        second: 1
-      data:
-        first:
-          name: _UseBlack
-        second: 1
-      data:
-        first:
-          name: _UseCyan
-        second: 1
-      data:
-        first:
-          name: _UseYellow
-        second: 1
-      data:
-        first:
-          name: _UsePurple
-        second: 1
-      data:
-        first:
-          name: _UseWhite
-        second: 1
-      data:
-        first:
-          name: _UseRed
-        second: 1
-      data:
-        first:
-          name: _UseGreen
-        second: 1
-      data:
-        first:
-          name: _UseBlue
-        second: 1
-      data:
-        first:
-          name: _HullTiling
-        second: 1
-      data:
-        first:
-          name: _DeckTiling
-        second: .699999988
-      data:
-        first:
-          name: _BoardTiling
-        second: .49000001
-      data:
-        first:
-          name: _WearThreshold
-        second: .200000003
-      data:
-        first:
-          name: _WearExp
-        second: 48.0900002
-      data:
-        first:
           name: _Autotiletoscale
         second: 0
       data:
         first:
           name: _BaseScale
         second: 1
-      data:
-        first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
       data:
         first:
           name: _Parallax
@@ -290,6 +226,70 @@ Material:
         first:
           name: _DistanceFade
         second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
+          name: _UseMasks
+        second: 1
+      data:
+        first:
+          name: _UseBlack
+        second: 1
+      data:
+        first:
+          name: _UseCyan
+        second: 1
+      data:
+        first:
+          name: _UseYellow
+        second: 1
+      data:
+        first:
+          name: _UsePurple
+        second: 1
+      data:
+        first:
+          name: _UseWhite
+        second: 1
+      data:
+        first:
+          name: _UseRed
+        second: 1
+      data:
+        first:
+          name: _UseGreen
+        second: 1
+      data:
+        first:
+          name: _UseBlue
+        second: 1
+      data:
+        first:
+          name: _WearThreshold
+        second: .200000003
+      data:
+        first:
+          name: _HullTiling
+        second: 1
+      data:
+        first:
+          name: _DeckTiling
+        second: .699999988
+      data:
+        first:
+          name: _BoardTiling
+        second: .49000001
+      data:
+        first:
+          name: _WearExp
+        second: 48.0900002
     m_Colors:
       data:
         first:
@@ -305,12 +305,16 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _RedColor
-        second: {r: .547264516, g: .245242193, b: .595588207, a: 1}
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _BlueColor
-        second: {r: .992647052, g: .417780042, b: .240862876, a: 1}
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _RedColor
+        second: {r: .465570956, g: .432742208, b: .639705896, a: 1}
       data:
         first:
           name: _BlackColor
@@ -337,9 +341,5 @@ Material:
         second: {r: .948529422, g: .879293799, b: .474264711, a: 1}
       data:
         first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+          name: _BlueColor
+        second: {r: .992647052, g: .417780042, b: .240862876, a: 1}
