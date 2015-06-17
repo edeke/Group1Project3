@@ -58,7 +58,7 @@ public class CommentActorBaseTest : MonoBehaviour, IInspectInterface, IAction, I
 		MeshRenderer[] allMesh = GetComponentsInChildren<MeshRenderer> ();
 
 		float outlineWidth = enable ? 1 : 0;
-		Color highlightColor = enable ? Color.red * 0.5f : Color.black;
+		Color highlightColor = enable ? Color.red * 0.7f : Color.black;
 
 		foreach (MeshRenderer rnd in allMesh) 
 		{
