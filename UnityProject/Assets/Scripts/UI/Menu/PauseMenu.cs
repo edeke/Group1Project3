@@ -19,7 +19,9 @@ public class PauseMenu : MonoBehaviour {
 		PauseUI = GameObject.Find ("PauseMenu");
 		rpgGUI = GWorld.mainDialog;
 
-		PauseUI.gameObject.SetActive (false);
+		//if(PauseUI.gameObject.SetActive(true)){
+			PauseUI.gameObject.SetActive (false);
+		//}
 
 		UnpauseGame();
 

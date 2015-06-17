@@ -5,7 +5,7 @@ public class BarrelWithFruit : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		
-		DisplayComment ("Those barries look delicious.!");
+		DisplayComment ("Those barries look delicious!");
 	}
 
 	override public void OnAction()

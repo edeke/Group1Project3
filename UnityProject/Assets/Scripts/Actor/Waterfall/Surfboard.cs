@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Surfboard : CommentActorBase {
+public class Surfboard : CommentActorBaseTest {
 
 	override public void OnInspect()
 	{		

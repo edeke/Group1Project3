@@ -25,8 +25,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448324}
-  - 114: {fileID: 11467620}
-  - 65: {fileID: 6594826}
   m_Layer: 0
   m_Name: Mesh_BarrelWithFruit
   m_TagString: Untagged
@@ -45,6 +43,8 @@ GameObject:
   - 33: {fileID: 3331462}
   - 23: {fileID: 2342664}
   - 208: {fileID: 20807380}
+  - 114: {fileID: 11429762}
+  - 65: {fileID: 6537186}
   m_Layer: 0
   m_Name: polySurface9
   m_TagString: Untagged
@@ -152,24 +152,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164744}
   m_Mesh: {fileID: 4300000, guid: 3ac672fd552717c4bb15b56336a4669a, type: 3}
---- !u!65 &6594826
+--- !u!65 &6537186
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 172972}
+  m_GameObject: {fileID: 199720}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 122.456772, y: 144.132187, z: 124.223083}
-  m_Center: {x: .633398056, y: 72.1930313, z: .295980453}
---- !u!114 &11467620
+  m_Center: {x: .633642197, y: 72.1930618, z: .295492172}
+--- !u!114 &11429762
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 172972}
+  m_GameObject: {fileID: 199720}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87333009c31f4334da3df572146c0fe2, type: 3}
