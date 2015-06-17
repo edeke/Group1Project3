@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Line001Mat
-  m_Shader: {fileID: 4800000, guid: a09b2923d11af914f947bc9b3907e94f, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 9f796bced76d70a4fb0c5f2c1a79996a, type: 3}
+  m_ShaderKeywords: _DISTANCEFADE_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -37,6 +37,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Normals
         second:
           m_Texture: {fileID: 0}
@@ -47,13 +54,6 @@ Material:
           name: _Diffuse
         second:
           m_Texture: {fileID: 2800000, guid: 5bf1cb9eddb2657418899054456988ee, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -110,6 +110,18 @@ Material:
         second: 0
       data:
         first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
           name: _Reach
         second: .5
       data:
@@ -122,11 +134,11 @@ Material:
         second: 1
       data:
         first:
-          name: _Outline
+          name: _WearThreshold
         second: 0
       data:
         first:
-          name: _WearThreshold
+          name: _Autotiletoscale
         second: 0
       data:
         first:
@@ -134,16 +146,8 @@ Material:
         second: 1
       data:
         first:
-          name: _WearExponent
-        second: 1
-      data:
-        first:
-          name: _PaintOpacity
-        second: 0
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
+          name: _DistanceFade
+        second: .352941185
       data:
         first:
           name: _FadeDistance
@@ -154,8 +158,12 @@ Material:
         second: 0
       data:
         first:
-          name: _Parallax
-        second: .0199999996
+          name: _WearExponent
+        second: 1
+      data:
+        first:
+          name: _PaintOpacity
+        second: 0
       data:
         first:
           name: _ZWrite
@@ -188,10 +196,6 @@ Material:
         first:
           name: _Mode
         second: 0
-      data:
-        first:
-          name: _Metallic
-        second: 0
     m_Colors:
       data:
         first:
@@ -207,12 +211,12 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _PaintColor
-        second: {r: .882352889, g: .408737093, b: .408737093, a: 1}
-      data:
-        first:
           name: _DistanceColor
         second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _PaintColor
+        second: {r: .882352889, g: .408737093, b: .408737093, a: 1}
       data:
         first:
           name: _PaintMaskChannel
@@ -221,3 +225,7 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
