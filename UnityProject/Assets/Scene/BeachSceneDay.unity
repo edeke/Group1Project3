@@ -15,16 +15,16 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 0
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 0}
   m_FogMode: 3
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientIntensity: .586000025
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
@@ -12336,31 +12336,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -14.5
+      value: -8.46000004
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -65.9000015
+      value: -84.8099976
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 108.300003
+      value: 124.040001
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .29904297
+      value: .0591250248
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .1738078
+      value: .182121307
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.0554922484
+      value: -.0109715778
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .936634839
+      value: .981435537
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_RootOrder
@@ -15117,8 +15117,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
-  m_Intensity: 1
+  m_Color: {r: .889705896, g: .977180481, b: 1, a: 1}
+  m_Intensity: .850000024
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
