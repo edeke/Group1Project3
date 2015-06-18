@@ -204,6 +204,18 @@ Material:
         second: 50
       data:
         first:
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -244,28 +256,16 @@ Material:
         second: 0
       data:
         first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
-      data:
-        first:
-          name: _DistanceFade
-        second: .352941185
-      data:
-        first:
-          name: _WearThreshold
-        second: .190321699
-      data:
-        first:
           name: _WaterHeight
         second: 0
       data:
         first:
           name: _Wetlinesharpness
         second: 1.29999995
+      data:
+        first:
+          name: _WearThreshold
+        second: .190321699
       data:
         first:
           name: _PaintOpacity
@@ -278,6 +278,10 @@ Material:
         first:
           name: _ColorShift
         second: 0
+      data:
+        first:
+          name: _WearPower
+        second: 1
       data:
         first:
           name: _Tiling2
@@ -304,10 +308,6 @@ Material:
         second: 0
       data:
         first:
-          name: _WearPower
-        second: 1
-      data:
-        first:
           name: _WeedDepth
         second: -.100000001
       data:
@@ -321,15 +321,15 @@ Material:
       data:
         first:
           name: _FresnelExp
-        second: 5.11999989
+        second: 4.4000001
       data:
         first:
           name: _BaseOpacity
-        second: .639999986
+        second: .50999999
       data:
         first:
           name: _FresnelMult
-        second: 20.3899994
+        second: 20.1700001
     m_Colors:
       data:
         first:
@@ -345,10 +345,6 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _DistanceColor
         second: {r: 1, g: 0, b: 0, a: 1}
       data:
@@ -357,12 +353,16 @@ Material:
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
-          name: _PaintColor
-        second: {r: 1, g: .397058815, b: .397058815, a: 1}
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _WetColor
         second: {r: .119797602, g: .0499567389, b: .970588207, a: 1}
+      data:
+        first:
+          name: _PaintColor
+        second: {r: 1, g: .397058815, b: .397058815, a: 1}
       data:
         first:
           name: _WoodColor1
@@ -378,4 +378,4 @@ Material:
       data:
         first:
           name: _GlassColor
-        second: {r: .236321345, g: .345588207, b: .237074912, a: 1}
+        second: {r: .49334991, g: .91911763, b: .91911763, a: 1}
