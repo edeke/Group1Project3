@@ -119,8 +119,10 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) );
 
 		screenLocation.x += offsetX;
+		screenLocation.y += offsetY + 5;
+
 		//Clamp X location to within screen
-		if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
+		/*if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
 		{
 			int deltaX = Screen.width - Mathf.FloorToInt ( (sizeOfText.x + xPadding) / 2);
 			screenLocation.x = deltaX;
@@ -131,7 +133,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 			screenLocation.x = deltaX + 5;
 		}
 		
-		screenLocation.y += offsetY + 5;
+
 		//Clamp Y location to within screen
 		if ( screenLocation.y + ( (sizeOfText.y + yPadding) / 2) + 5 > Screen.height) 
 		{
@@ -142,7 +144,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		{
 			int deltaY = Mathf.FloorToInt ( (sizeOfText.y + yPadding) / 2);
 			screenLocation.y = deltaY;
-		}
+		}*/
 		
 		mainCanvas.transform.position = screenLocation;
 
