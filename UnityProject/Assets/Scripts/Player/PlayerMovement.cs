@@ -61,6 +61,8 @@ public class PlayerMovement : MonoBehaviour {
 	bool spawning = false;
 	Vector3 spawnLocation;
 
+	bool dialogOpen = false;
+
 	// Use this for initialization
 	void Start () {
 		currentAnimationState = EAnimationState.Idle;
@@ -457,6 +459,7 @@ public class PlayerMovement : MonoBehaviour {
 		switch (currentState.state) 
 		{
 			case EPlayerState.Idle :
+				dialogOpen = false;
 				//currentAnimationState = EAnimationState.Idle;
 				if(actionList.Count > 0)
 				{
@@ -602,8 +605,10 @@ public class PlayerMovement : MonoBehaviour {
 				if(currentState.objectToUse != null)
 				{
 					talkObject = currentState.objectToUse.GetComponent<ITalkTo>();
-					RotateTowards(currentState.objectToUse.transform.position);
+					
 				}
+
+				RotateTowards(currentState.objectToUse.transform.position);
 				
 				if(talkObject != null)
 				{
@@ -611,20 +616,22 @@ public class PlayerMovement : MonoBehaviour {
 					//within range
 					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
+
 						RotateTowards(currentState.objectToUse.transform.position);
 
-
-						
 						//remove the state from the queue
 						currentAnimationState = EAnimationState.Talk;
 
-						if(GWorld.dialogOpen == false)
+						if(dialogOpen == false)
 						{
+							dialogOpen = true;
 							talkObject.OnTalkTo();
 						}
-						else
+
+
+						if(GWorld.dialogOpen == false)
 						{
-							currentState.state = EPlayerState.Idle;
+							currentAnimationState = EAnimationState.Idle;
 						}
 
 					}
