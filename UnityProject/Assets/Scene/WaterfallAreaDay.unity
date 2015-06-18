@@ -15,15 +15,15 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 0
-  m_FogColor: {r: 0, g: 0, b: 0, a: 0}
+  m_FogColor: {r: .262975752, g: .410452187, b: .470588207, a: 0}
   m_FogMode: 3
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .264651835, g: .317348182, b: .404411793, a: 1}
+  m_AmbientSkyColor: {r: .984787047, g: 1, b: .889705896, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: .569999993
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 2100000, guid: 12ccb828343c3405fb94289774b51aad, type: 2}
   m_HaloStrength: .5
@@ -83,7 +83,7 @@ NavMeshSettings:
     agentClimb: .400000006
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    accuratePlacement: 0
+    accuratePlacement: 1
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
@@ -9785,23 +9785,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .30414784
+      value: .0181482937
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.140629083
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -.00257823803
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .952624857
+      value: .989892721
       objectReference: {fileID: 0}
     - target: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: fogDistanceCOlor.r
+      value: .262975752
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: fogDistanceCOlor.g
+      value: .410452187
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: fogDistanceCOlor.b
+      value: .470588207
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: heightFog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: distanceFog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421828, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
+      propertyPath: startDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
@@ -16822,7 +16846,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
-  m_Intensity: .800000012
+  m_Intensity: .860000014
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -23156,6 +23180,18 @@ Prefab:
     - target: {fileID: 425456, guid: 133edcf967ad0834bbfdd8bd3d4db458, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 18226552, guid: 133edcf967ad0834bbfdd8bd3d4db458, type: 2}
+      propertyPath: m_WindMain
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 18226552, guid: 133edcf967ad0834bbfdd8bd3d4db458, type: 2}
+      propertyPath: m_WindTurbulence
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 18226552, guid: 133edcf967ad0834bbfdd8bd3d4db458, type: 2}
+      propertyPath: m_WindPulseFrequency
+      value: .0500000007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 133edcf967ad0834bbfdd8bd3d4db458, type: 2}
