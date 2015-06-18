@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Cylinder001Mat 1
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_Shader: {fileID: 4800000, guid: 41996794e51f17b42b155e96a86c3069, type: 3}
+  m_ShaderKeywords: _DISTANCEFADE_ON _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -77,11 +77,29 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Cutoff
         second: .5
+      data:
+        first:
+          name: _Smoothness
+        second: .303000003
       data:
         first:
           name: _SrcBlend
@@ -130,6 +148,42 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _Reach
+        second: .828999996
+      data:
+        first:
+          name: _MinLight
+        second: 0
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: 0
+      data:
+        first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
+      data:
+        first:
+          name: _FadeDistance
+        second: 10
+      data:
+        first:
+          name: _DistanceFade_copy
+        second: 0
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
     m_Colors:
       data:
         first:
@@ -143,3 +197,23 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: .33088237, g: .174837425, b: .104617223, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color1
+        second: {r: 1, g: .641379297, b: 0, a: 1}
+      data:
+        first:
+          name: _Color2
+        second: {r: 1, g: .819472611, b: .345588207, a: 1}
