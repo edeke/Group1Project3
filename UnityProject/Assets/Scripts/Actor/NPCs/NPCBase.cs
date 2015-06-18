@@ -7,7 +7,7 @@ public enum NPCState
 	idle,
 	walking,
 	talking,
-	idle2sec
+	itemGiven
 }
 
 public enum WalkMode 
@@ -24,6 +24,7 @@ public class NPCBase : ClickOnActorBase
 
 	protected Vector3 posPrev;
 	protected float maxSpeed = 2.0f;
+	protected float rotationSpeed = 6.0f;
 
 	public NPCState currentNPCState;
 	NPCState defaultNPCState;
@@ -107,6 +108,20 @@ public class NPCBase : ClickOnActorBase
 		}
 	}
 
+	void RotateTowards(Vector3 location)
+	{
+		if (!disableAnimatons) 
+		{
+
+			Vector3 targetDir = location - transform.position;
+			float step = rotationSpeed * Time.deltaTime;
+			Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);
+			Debug.DrawRay (transform.position, newDir, Color.red);
+			transform.rotation = Quaternion.LookRotation (newDir);
+		}
+	}
+
+
 	void Update (){
 		
 		//calculate speed
@@ -118,12 +133,14 @@ public class NPCBase : ClickOnActorBase
 				OnIdleLogic();
 			break;
 
-			case NPCState.idle2sec :
-				OnIdle2secLogic();
+			case NPCState.itemGiven :
+				ItemGivenLogic();
+				RotateTowards(GWorld.myPlayer.transform.position);
 			break;
 
 			case NPCState.talking :
 				OnTalkLogic();
+				RotateTowards(GWorld.myPlayer.transform.position);
 			break;
 
 			case NPCState.walking :
@@ -146,7 +163,7 @@ public class NPCBase : ClickOnActorBase
 
 	}
 
-	public void OnIdle2secLogic()
+	public void ItemGivenLogic()
 	{
 
 		currentIdleTime -= Time.deltaTime;
@@ -256,11 +273,6 @@ public class NPCBase : ClickOnActorBase
 
 	void OnTalkLogic()
 	{
-		if (!disableAnimatons) 
-		{
-			transform.LookAt (GWorld.myPlayer.transform.position);
-		}
-
 		if (anim && !disableAnimatons)
 		{
 			anim.SetBool ("Talk", true);
@@ -278,10 +290,10 @@ public class NPCBase : ClickOnActorBase
 
 	}
 
-	virtual public void StopWalking()
+	virtual public void GiveItem()
 	{
 		currentIdleTime = 2.0f;
-		currentNPCState = NPCState.idle2sec;
+		currentNPCState = NPCState.itemGiven;
 		agent.Stop (); 
 	}
 

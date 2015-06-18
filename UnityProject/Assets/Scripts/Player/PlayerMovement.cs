@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour {
 	public int commentOffsetX;
 	public int commentOffsetY;
 
+	float rotationSpeed = 6.0f;
+
 	ActionData currentState;
 	private List<ActionData> actionList = new List<ActionData>();
 
@@ -554,7 +556,7 @@ public class PlayerMovement : MonoBehaviour {
 				//make sure npc dont walk away when giving them items
 				if( npcBase != null)
 				{
-					npcBase.StopWalking();
+					npcBase.GiveItem();
 				}
 				
 				if(useItem != null)
@@ -600,6 +602,7 @@ public class PlayerMovement : MonoBehaviour {
 				if(currentState.objectToUse != null)
 				{
 					talkObject = currentState.objectToUse.GetComponent<ITalkTo>();
+					RotateTowards(currentState.objectToUse.transform.position);
 				}
 				
 				if(talkObject != null)
@@ -609,16 +612,23 @@ public class PlayerMovement : MonoBehaviour {
 					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
 						RotateTowards(currentState.objectToUse.transform.position);
-						talkObject.OnTalkTo();
+
+
 						
 						//remove the state from the queue
-						currentState.state = EPlayerState.Idle; //fix not to try open the dialog every frame, makes the dialog hang
 						currentAnimationState = EAnimationState.Talk;
+
+						if(GWorld.dialogOpen == false)
+						{
+							talkObject.OnTalkTo();
+						}
+						else
+						{
+							currentState.state = EPlayerState.Idle;
+						}
+
 					}
-					/*else
-					{
-						DisplayComment("I can't reach it.");
-					}*/
+
 				}
 			break;
 
@@ -627,15 +637,6 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		}
-	}
-
-	void RotateTowards(Vector3 target)
-	{
-		Vector3 targetDir = target - transform.position;
-		float step = 10.0f * Time.deltaTime;
-		Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0f);
-		newDir.y = 0.0f;
-		transform.rotation = Quaternion.LookRotation (newDir);
 	}
 
 	public void DisplayComment ( string text )
@@ -711,5 +712,16 @@ public class PlayerMovement : MonoBehaviour {
 			speech.SetText(text);	
 		}
 		
+	}
+
+	void RotateTowards(Vector3 location)
+	{
+
+			Vector3 targetDir = location - transform.position;
+			float step = rotationSpeed * Time.deltaTime;
+			Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);
+			Debug.DrawRay (transform.position, newDir, Color.red);
+			transform.rotation = Quaternion.LookRotation (newDir);
+
 	}
 }
