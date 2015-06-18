@@ -6,7 +6,8 @@ public enum NPCState
 {
 	idle,
 	walking,
-	talking
+	talking,
+	idle2sec
 }
 
 public enum WalkMode 
@@ -25,7 +26,8 @@ public class NPCBase : ClickOnActorBase
 	protected float maxSpeed = 2.0f;
 
 	public NPCState currentNPCState;
-	NPCState prevNPCState;
+	NPCState defaultNPCState;
+
 	public WalkMode currentWalkMode;
 
 	public bool wayPointIdleTime;
@@ -43,6 +45,8 @@ public class NPCBase : ClickOnActorBase
 	{
 		anim = GetComponentInChildren<Animator> ();
 		agent = GetComponent<NavMeshAgent> ();
+
+		defaultNPCState = currentNPCState;
 
 		if (disableAnimatons)
 		{
@@ -95,7 +99,6 @@ public class NPCBase : ClickOnActorBase
 	override public void OnTalkTo()
 	{
 		Dialoguer.StartDialogue (dialog, null);
-		prevNPCState = currentNPCState;
 		currentNPCState = NPCState.talking;
 
 		if (agent) 
@@ -113,6 +116,10 @@ public class NPCBase : ClickOnActorBase
 		{
 			case NPCState.idle :
 				OnIdleLogic();
+			break;
+
+			case NPCState.idle2sec :
+				OnIdle2secLogic();
 			break;
 
 			case NPCState.talking :
@@ -135,6 +142,19 @@ public class NPCBase : ClickOnActorBase
 			{
 				currentNPCState = NPCState.walking;
 			}
+		}
+
+	}
+
+	public void OnIdle2secLogic()
+	{
+
+		currentIdleTime -= Time.deltaTime;
+			
+		if( currentIdleTime <= 0.0f )
+		{
+			currentNPCState = defaultNPCState;
+			agent.Resume();
 		}
 
 	}
@@ -253,9 +273,16 @@ public class NPCBase : ClickOnActorBase
 				anim.SetBool ("Talk", false);
 			}
 
-			currentNPCState = prevNPCState;
+			currentNPCState = defaultNPCState;
 		}
 
 	}
-	
+
+	virtual public void StopWalking()
+	{
+		currentIdleTime = 2.0f;
+		currentNPCState = NPCState.idle2sec;
+		agent.Stop (); 
+	}
+
 }
