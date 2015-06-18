@@ -543,10 +543,18 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.UseItem :
 				IUseItem useItem = null;
-				
+				NPCBase npcBase = null;
+
 				if(currentState.objectToUse != null)
 				{
 					useItem = currentState.objectToUse.GetComponent<IUseItem>();
+					npcBase = currentState.objectToUse.GetComponent<NPCBase>();
+				}
+
+				//make sure npc dont walk away when giving them items
+				if( npcBase != null)
+				{
+					npcBase.StopWalking();
 				}
 				
 				if(useItem != null)

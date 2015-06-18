@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 0
-  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 0}
   m_FogMode: 3
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
@@ -645,6 +645,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 430524, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_LocalPosition.x
       value: .699999988
@@ -676,6 +680,50 @@ Prefab:
     - target: {fileID: 430524, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[3].x
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[3].y
+      value: .0299999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[3].z
+      value: -.730000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[0].z
+      value: -12.6643085
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[0].y
+      value: -.127099514
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[0].x
+      value: 2.83903599
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: idleTimeMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: wayPointIdleTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[1].x
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[1].y
+      value: .0299999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483404, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
+      propertyPath: walkToLocation.Array.data[1].z
+      value: -.730000019
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c29fe5163ff2b394fba4d035c6b124b4, type: 2}
