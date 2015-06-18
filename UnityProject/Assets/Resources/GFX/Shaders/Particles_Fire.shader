@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.13 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:0,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:3,bdst:7,culm:0,dpts:2,wrdp:False,dith:0,ufog:False,aust:False,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:9383,x:32817,y:32553,varname:node_9383,prsc:2|emission-4093-OUT,clip-2539-OUT;n:type:ShaderForge.SFN_Tex2d,id:313,x:32294,y:32576,ptovrint:False,ptlb:FireSprite,ptin:_FireSprite,varname:node_313,prsc:2,tex:1bc745911218aae44b351d85ffa08d86,ntxv:0,isnm:False;n:type:ShaderForge.SFN_VertexColor,id:2792,x:32268,y:32789,varname:node_2792,prsc:2;n:type:ShaderForge.SFN_Multiply,id:4093,x:32567,y:32620,varname:node_4093,prsc:2|A-313-R,B-2792-RGB;n:type:ShaderForge.SFN_Multiply,id:2539,x:32553,y:32850,varname:node_2539,prsc:2|A-313-R,B-2792-A;proporder:313;pass:END;sub:END;*/
+/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:0,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:3,bdst:7,culm:0,dpts:2,wrdp:True,dith:0,ufog:False,aust:False,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:9383,x:32817,y:32553,varname:node_9383,prsc:2|emission-4093-OUT,clip-2539-OUT;n:type:ShaderForge.SFN_Tex2d,id:313,x:32294,y:32576,ptovrint:False,ptlb:FireSprite,ptin:_FireSprite,varname:node_313,prsc:2,tex:1bc745911218aae44b351d85ffa08d86,ntxv:0,isnm:False;n:type:ShaderForge.SFN_VertexColor,id:2792,x:32268,y:32789,varname:node_2792,prsc:2;n:type:ShaderForge.SFN_Multiply,id:4093,x:32567,y:32620,varname:node_4093,prsc:2|A-313-R,B-2792-RGB;n:type:ShaderForge.SFN_Multiply,id:2539,x:32553,y:32850,varname:node_2539,prsc:2|A-313-R,B-2792-A;proporder:313;pass:END;sub:END;*/
 
 Shader "Shader Forge/Particles_Fire" {
     Properties {
@@ -19,7 +19,7 @@ Shader "Shader Forge/Particles_Fire" {
                 "LightMode"="ForwardBase"
             }
             Blend SrcAlpha OneMinusSrcAlpha
-            ZWrite Off
+            
             
             CGPROGRAM
             #pragma vertex vert

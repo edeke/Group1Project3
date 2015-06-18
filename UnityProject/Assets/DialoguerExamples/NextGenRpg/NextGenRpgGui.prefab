@@ -74,6 +74,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 1
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -87,6 +88,7 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400000}
   m_Father: {fileID: 400006}
+  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -98,6 +100,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -110,6 +113,7 @@ Transform:
   m_Children:
   - {fileID: 400002}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -117,7 +121,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bcf0ba35785034bfeb839b47955a2530, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -152,13 +157,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -175,7 +190,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 81a368c593ee64ce6bbd77c41bf49e28, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -210,13 +226,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -240,7 +266,7 @@ MonoBehaviour:
   guiSkin: {fileID: 11400000, guid: 6036ebbffb9d0441abed438a897fdac4, type: 2}
   audioChoice: {fileID: 8200002}
   audioSelect: {fileID: 8200000}
-  ringBase: {fileID: 2800000, guid: 17e6c7af4d38048ebb337965b5bad509, type: 3}
+  ringBase: {fileID: 2800000, guid: acd4929aaca8c934f8472ed6ef8ab21e, type: 3}
   ringTop: {fileID: 2800000, guid: 6cdc706c4c8a24128ac98fbe02087f2f, type: 3}
   ringBottom: {fileID: 2800000, guid: cab55b756fb794468ad88390d9b1ff07, type: 3}
   ringNormal:
@@ -268,4 +294,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100006}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
