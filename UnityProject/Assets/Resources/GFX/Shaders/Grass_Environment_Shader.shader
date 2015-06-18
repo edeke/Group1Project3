@@ -28,7 +28,7 @@ Shader "Shader Forge/Examples/Grass_Environment_Shader" {
         _GrassHeight ("Grass Height", Float ) = 1
         _Scrollspeed ("Scroll speed", Float ) = 1
         _CloudPower ("Cloud Power", Float ) = 1
-        [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
+        //[HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
     }
     SubShader {
         Tags {
