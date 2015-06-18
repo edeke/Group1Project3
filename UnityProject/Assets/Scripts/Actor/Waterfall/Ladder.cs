@@ -11,7 +11,7 @@ public class Ladder : CommentActorBase
 
 	override public void OnAction()
 	{
-		DisplayComment ("My animations doesn't allow me to climb.");
+		DisplayComment ("I don't want to climb this.");
 	}
 
 }

@@ -59,12 +59,12 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 			
 		}
 		
-		MeshRenderer[] allMesh = GetComponentsInChildren<MeshRenderer> ();
+		SkinnedMeshRenderer[] allMesh = GetComponentsInChildren<SkinnedMeshRenderer> ();
 		
 		float outlineWidth = enable ? 1 : 0;
-		Color highlightColor = enable ? Color.red * 0.7f : Color.black;
+		Color highlightColor = enable ? Color.yellow * 0.7f : Color.black;
 		
-		foreach (MeshRenderer rnd in allMesh) 
+		foreach (SkinnedMeshRenderer rnd in allMesh) 
 		{
 			//			rnd.material.SetColor("_OutlineColor", Color.red);
 			//			rnd.material.SetFloat("_Outline", outlineWidth);
