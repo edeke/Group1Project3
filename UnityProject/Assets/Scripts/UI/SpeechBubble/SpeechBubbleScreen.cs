@@ -110,7 +110,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		}
 
 		Vector3 offsetVectorWorldSpace = objectToFollow.transform.position;
-		offsetVectorWorldSpace.y += objectSetOffset_y + 4;
+		offsetVectorWorldSpace.y += objectSetOffset_y + 5;
 		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 		
 		screenLocation = mainCamera.WorldToScreenPoint (offsetVectorWorldSpace);
@@ -118,8 +118,8 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		int offsetY = Mathf.FloorToInt( sizeOfText.y );
 		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) );
 
-		screenLocation.x += offsetX;
-		screenLocation.y += offsetY + 5;
+		//screenLocation.x += offsetX;
+		//screenLocation.y += offsetY + 5;
 
 		//Clamp X location to within screen
 		/*if ( screenLocation.x + ( (sizeOfText.x + xPadding) / 2) > Screen.width) 
@@ -193,7 +193,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	{
 		if (newName != null) 
 		{
-			nameComp.text = newName;
+			//nameComp.text = newName;
 		} 
 	}
 
