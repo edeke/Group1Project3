@@ -40,7 +40,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &465808
 Transform:
   m_ObjectHideFlags: 1
@@ -59,8 +59,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109246}
-  m_LocalRotation: {x: .0591250248, y: .182121307, z: -.0109715778, w: .981435537}
-  m_LocalPosition: {x: -8.46000004, y: -84.8099976, z: 124.040001}
+  m_LocalRotation: {x: .103291713, y: -.240695044, z: .00972040463, w: .965040088}
+  m_LocalPosition: {x: 369.130005, y: 12.6499996, z: 74.1299973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465808}
@@ -158,7 +158,7 @@ MonoBehaviour:
   heightDensity: 2
   startDistance: 0
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
-  fogDistanceCOlor: {r: 0, g: 0, b: 0, a: 0}
+  fogDistanceCOlor: {r: .397058845, g: .397058845, b: .397058845, a: 0}
 --- !u!114 &11450406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,7 +306,7 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-  saturation: 1.29999995
+  saturation: 1.10000002
   selectiveCc: 0
   selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
   selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
