@@ -146,23 +146,6 @@ public class GWorld : MonoBehaviour
 			
 		}
 
-		/*if (!outlineCanvas) 
-		{
-			string path = "Prefabs/UI/Outline";
-			outlineCanvas = (GameObject) Instantiate(Resources.Load(path));
-			DontDestroyOnLoad(outlineCanvas);
-			
-			if(!outlineCanvas)
-			{
-				Debug.Log ("outlineCanvas Failed to Load - " + path);
-			}
-			else
-			{
-				//Debug.Log ("mainDialog Loaded");
-			}
-			
-		}*/
-
 		CalcTimeOfDay ();
 
 		loadLevelCountdownCurrentTime = loadLevelCountdownTimerMax;
