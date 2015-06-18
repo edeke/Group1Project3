@@ -313,6 +313,7 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.WalkToLocation :
 			case EPlayerState.Action :
 				
+
 				if( WalkToObject( objectToTalkTo )  )
 				{
 					ActionData newAction = new ActionData();
@@ -475,7 +476,7 @@ public class PlayerMovement : MonoBehaviour {
 				
 				distanceToActor = (currentState.objectToUse.transform.position - transform.position).magnitude;
 				
-				if (distanceToActor <= 2.5f) 
+				if (distanceToActor <= 4.0f) 
 				{
 					currentState.state = EPlayerState.Idle;
 					agent.ResetPath(); 
