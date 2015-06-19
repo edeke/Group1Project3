@@ -36,8 +36,8 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	Vector2 sizeOfText;
 	GUIStyle myStyle;
 
-	int objectSetOffset_x = 0;
-	int objectSetOffset_y = 0;
+	int objectSetOffset_x;
+	int objectSetOffset_y;
 
 	// Use this for initialization
 	void Awake () {
@@ -110,6 +110,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		}
 
 		Vector3 offsetVectorWorldSpace = objectToFollow.transform.position;
+
 		offsetVectorWorldSpace.y += objectSetOffset_y + 5;
 		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 		
@@ -219,6 +220,12 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	void OnGUI()
 	{
 		sizeOfText = myStyle.CalcSize (new GUIContent (textComp.text));
+	}
+
+	
+	public void SetSortOrder( int order )
+	{
+		GetComponent<Canvas> ().sortingOrder = order;
 	}
 
 }

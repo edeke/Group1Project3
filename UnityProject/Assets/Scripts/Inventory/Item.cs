@@ -82,7 +82,7 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 		MeshRenderer[] allMesh = GetComponentsInChildren<MeshRenderer> ();
 		
 		float outlineWidth = enable ? 1 : 0;
-		Color highlightColor = enable ? Color.red * 0.7f : Color.black;
+		Color highlightColor = enable ? Color.yellow * 0.7f : Color.black;
 		
 		foreach (MeshRenderer rnd in allMesh) 
 		{
