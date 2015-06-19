@@ -1922,7 +1922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 65
 --- !u!1001 &228202373
 Prefab:
   m_ObjectHideFlags: 0
@@ -5416,7 +5416,7 @@ Transform:
   m_Children:
   - {fileID: 1312652123}
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 90
 --- !u!4 &676133616 stripped
 Transform:
   m_PrefabParentObject: {fileID: 469176, guid: db21d15b429877c4ab2d705d14298c04, type: 2}
@@ -5945,7 +5945,7 @@ Transform:
   - {fileID: 2111577198}
   - {fileID: 392578069}
   m_Father: {fileID: 0}
-  m_RootOrder: 97
+  m_RootOrder: 104
 --- !u!1001 &756689429
 Prefab:
   m_ObjectHideFlags: 0
@@ -6319,7 +6319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!1001 &766757220
 Prefab:
   m_ObjectHideFlags: 0
@@ -6914,7 +6914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 72
 --- !u!1 &906115113
 GameObject:
   m_ObjectHideFlags: 0
@@ -8263,6 +8263,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1066171920}
+  - 65: {fileID: 1066171922}
+  - 114: {fileID: 1066171921}
   m_Layer: 0
   m_Name: MushRooms
   m_TagString: Untagged
@@ -8286,6 +8288,34 @@ Transform:
   - {fileID: 144390441}
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &1066171921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1066171919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb7adb3f6c7bb458c524b07def2738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!65 &1066171922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1066171919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.02999997, z: 0}
 --- !u!1001 &1068211282
 Prefab:
   m_ObjectHideFlags: 0
@@ -9523,7 +9553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
 --- !u!1 &1237272332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9961,7 +9991,7 @@ Transform:
   m_Children:
   - {fileID: 1723662786}
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 80
 --- !u!1001 &1280187185
 Prefab:
   m_ObjectHideFlags: 0
@@ -10086,6 +10116,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1285378302}
+  - 65: {fileID: 1285378304}
+  - 114: {fileID: 1285378303}
   m_Layer: 0
   m_Name: Mushrooms3
   m_TagString: Untagged
@@ -10108,6 +10140,34 @@ Transform:
   - {fileID: 254705391}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1285378303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285378301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb7adb3f6c7bb458c524b07def2738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!65 &1285378304
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1285378301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3.1099999, z: 2}
+  m_Center: {x: -.25999999, y: 1.72000003, z: 1.20000005}
 --- !u!1 &1286359684
 GameObject:
   m_ObjectHideFlags: 0
@@ -10116,6 +10176,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1286359685}
+  - 65: {fileID: 1286359686}
+  - 114: {fileID: 1286359687}
   m_Layer: 0
   m_Name: Mushrooms4
   m_TagString: Untagged
@@ -10139,6 +10201,34 @@ Transform:
   - {fileID: 1080577871}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!65 &1286359686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286359684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1.38, z: -.129999995}
+--- !u!114 &1286359687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286359684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb7adb3f6c7bb458c524b07def2738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
 --- !u!1001 &1303973767
 Prefab:
   m_ObjectHideFlags: 0
@@ -10876,6 +10966,22 @@ Prefab:
     - target: {fileID: 447218, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527810, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: m_Size.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527810, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: m_Size.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434948, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: itemDescription
+      value: It's an old mirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434948, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: mouseCursorOver
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
@@ -11974,7 +12080,7 @@ Transform:
   m_LocalScale: {x: .600000143, y: .600000143, z: .600000143}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 56
 --- !u!1 &1528610452
 GameObject:
   m_ObjectHideFlags: 0
@@ -13799,7 +13905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 28
 --- !u!1001 &1688684499
 Prefab:
   m_ObjectHideFlags: 0
@@ -14357,7 +14463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 31
 --- !u!1 &1745809865
 GameObject:
   m_ObjectHideFlags: 0
@@ -14490,6 +14596,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1761597219}
+  - 65: {fileID: 1761597221}
+  - 114: {fileID: 1761597220}
   m_Layer: 0
   m_Name: Mushrooms2
   m_TagString: Untagged
@@ -14513,7 +14621,35 @@ Transform:
   - {fileID: 1617477820}
   - {fileID: 1320467288}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+--- !u!114 &1761597220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761597218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dcb7adb3f6c7bb458c524b07def2738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!65 &1761597221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761597218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.86999989, z: 2}
+  m_Center: {x: 0, y: 1.63, z: 0}
 --- !u!1 &1766855972
 GameObject:
   m_ObjectHideFlags: 0
@@ -14697,7 +14833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 127
+  m_RootOrder: 129
 --- !u!1 &1775890894
 GameObject:
   m_ObjectHideFlags: 0
@@ -14953,7 +15089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 53
 --- !u!1 &1825369176
 GameObject:
   m_ObjectHideFlags: 0
@@ -16424,7 +16560,7 @@ Transform:
   - {fileID: 1002744363}
   - {fileID: 305151466}
   m_Father: {fileID: 0}
-  m_RootOrder: 114
+  m_RootOrder: 121
 --- !u!1 &1984101369
 GameObject:
   m_ObjectHideFlags: 0
