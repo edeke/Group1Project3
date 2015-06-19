@@ -12,7 +12,18 @@ public class LadderToLookout : CommentActorBase
 
 	override public void OnAction()
 	{
+
+		GWorld.FadeToBlack (true);
+		Invoke ("RemoveBlack", 1.0f);
+
+	}
+
+	private void RemoveBlack()
+	{
+
 		GWorld.SpawnPlayer (target);
+		GWorld.FadeToBlack (false);
+
 	}
 
 }

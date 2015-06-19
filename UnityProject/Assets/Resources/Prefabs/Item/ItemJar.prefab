@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -360, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 465666}
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 114.942001, y: 5.81699991, z: -128.016998}
+  m_LocalPosition: {x: 98.9300003, y: 8.38000011, z: -124.199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465666}
@@ -157,10 +157,12 @@ MonoBehaviour:
   onDragParticle: {fileID: 0}
   onUseParticle: {fileID: 0}
   onPickupParticle: {fileID: 0}
+  itemDescription: 
   numberOfItemsInStack: 1
   animationOnAction: 5
   commentOffsetX: 0
   commentOffsetY: 0
+  mouseCursorOver: 4
   skyler: {fileID: 0}
 --- !u!208 &20867884
 NavMeshObstacle:

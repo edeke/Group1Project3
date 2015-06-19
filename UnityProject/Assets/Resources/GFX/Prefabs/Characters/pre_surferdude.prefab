@@ -1812,6 +1812,7 @@ MonoBehaviour:
   actorName: Surfer
   commentOffsetX: -1
   commentOffsetY: 0
+  speechOrder: 0
   mouseCursorOver: 0
   currentNPCState: 1
   currentWalkMode: 0
@@ -1819,8 +1820,8 @@ MonoBehaviour:
   idleTimeMax: 5
   walkToLocation:
   - {x: 111.68, y: 5.65999985, z: -121.980003}
-  - {x: 153.991592, y: 5.65999985, z: -131.847168}
-  - {x: 87.3073502, y: 5.65999985, z: -122.560921}
+  - {x: 112.565132, y: 5.65999985, z: -134.254822}
+  - {x: 53.1738853, y: 5.65999985, z: -141.315948}
   disableAnimatons: 0
 --- !u!137 &13776362
 SkinnedMeshRenderer:
@@ -1912,7 +1913,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 171742}
   m_Enabled: 1
   m_Radius: 1.46000004
-  m_Speed: 2.5
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
