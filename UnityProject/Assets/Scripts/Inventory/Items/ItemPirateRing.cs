@@ -44,6 +44,10 @@ public class ItemPirateRing : Item {
 			{
 				if (Inventory.myInv.AddItem (itemData, transform.position)) 
 				{
+					PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+					movComp.DisplaySpeechBubble("Now I just have to return it to the owner");
+
+
 					GWorld.MarkEventDone (eventID);
 					Destroy (gameObject);
 				} 

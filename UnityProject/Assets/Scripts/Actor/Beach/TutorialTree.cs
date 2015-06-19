@@ -4,6 +4,7 @@ using System.Collections;
 public class TutorialTree : MonoBehaviour {
 
 	string EventID = "RucksackFallDown";
+	string EventIDBackpack = "RuckSackPickedUp";
 
 	int triggerCount = 0;
 
@@ -23,7 +24,7 @@ public class TutorialTree : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (triggerCount > 0) 
@@ -33,7 +34,10 @@ public class TutorialTree : MonoBehaviour {
 			
 			if(tempData.hasEventOccured)
 			{
-				Destroy(gameObject);
+
+
+
+				//Destroy(gameObject);
 			}
 			else if( other.CompareTag ("Player")) 
 			{
@@ -48,4 +52,29 @@ public class TutorialTree : MonoBehaviour {
 		triggerCount++;
 
 	}
+
+	void OnTriggerExit(Collider other)
+	{
+
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventIDBackpack,ref tempData);
+			
+		if(tempData.hasEventOccured)
+		{
+			if( other.CompareTag ("Player")) 
+			{
+					
+				PlayerMovement movComp = other.GetComponent<PlayerMovement> ();
+				movComp.DisplaySpeechBubble ("That was easy, now I should try and find out where I am");
+					
+			}
+				
+			Destroy(gameObject);
+		}
+		
+	}
+
 }
+
+
+

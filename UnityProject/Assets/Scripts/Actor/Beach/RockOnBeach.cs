@@ -76,7 +76,7 @@ public class RockOnBeach : CommentActorBase
 		
 		if (tempData.hasEventOccured) 
 		{
-			DisplayComment ("I should watch my toes!");
+			//DisplayComment ("I should watch my toes!");
 		} 
 		else 
 		{
@@ -123,6 +123,9 @@ public class RockOnBeach : CommentActorBase
 					body.mass = 1000;
 					body.drag = 2;
 				}
+
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+				movComp.DisplaySpeechBubble("Yikes, I should watch my toes");
 
 				GWorld.MarkEventDone (EventID);
 			return true;

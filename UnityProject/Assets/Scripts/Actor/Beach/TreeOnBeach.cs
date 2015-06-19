@@ -76,6 +76,7 @@ public class TreeOnBeach : CommentActorBase
 		{
 			GWorld.MarkEventDone (EventID);
 			rucksack.AddComponent<Rigidbody> ();
+		
 		}
 
 		part.Play ();

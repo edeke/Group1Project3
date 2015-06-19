@@ -19,6 +19,10 @@ public class ItemMetalPipe : Item {
 		{
 			if (Inventory.myInv.AddItem (itemData, transform.position)) 
 			{
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+				movComp.DisplaySpeechBubble("This will come in handy, I'm sure of it");
+
+
 				GWorld.MarkEventDone (eventID);
 				Destroy (gameObject);
 			} 

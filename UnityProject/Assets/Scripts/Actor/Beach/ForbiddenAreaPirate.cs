@@ -48,8 +48,16 @@ public class ForbiddenAreaPirate : MonoBehaviour
 			
 			PlayerMovement movementComp = GWorld.myPlayer.GetComponentInChildren<PlayerMovement> ();
 			movementComp.ForceMoveToLocation (transform.position + walkToTarget);
+
+			Invoke ("DisplayYikes", 0.5f);
 		}
 
+	}
+
+	void DisplayYikes()
+	{
+		PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+		movComp.DisplaySpeechBubble("Yikes! I Better not make him angry");
 	}
 
 	public void DisplayComment ( string text )

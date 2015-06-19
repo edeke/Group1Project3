@@ -741,7 +741,7 @@ public class PlayerMovement : MonoBehaviour {
 	void PlayerDisplayStartLine1()
 	{
 		PlayerMovement movComp = GetComponent<PlayerMovement>();
-		movComp.DisplaySpeechBubble("What a crash, where am I ? I should try find my backpack.");
+		movComp.DisplaySpeechBubble("What a crash, where am I? I should try find my backpack.");
 	}
 
 }

@@ -21,8 +21,8 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	float currentOpenTime;
 
 
-	const float textOpenTimeBase = 3.0f;
-	const float textOpenTimePerLetter = 0.1f;
+	const float textOpenTimeBase = 2.0f;
+	const float textOpenTimePerLetter = 0.07f;
 	
 	float fadeSpeed = 0.5f;
 	Vector3 screenLocation;
