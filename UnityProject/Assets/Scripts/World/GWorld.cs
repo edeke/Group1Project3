@@ -277,6 +277,7 @@ public class GWorld : MonoBehaviour
 		return timeOfTheDay;
 	}
 
+	
 	public static void SpawnPlayer(Transform location)
 	{
 		//Debug.Log ("Spawning Player");

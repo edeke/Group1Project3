@@ -16,6 +16,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 	public int commentOffsetX;
 	public int commentOffsetY;
+	public int speechOrder;
 
 	public MouseCursorInput mouseCursorOver;
 
@@ -122,6 +123,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		speech.SetName (actorName);
 		speech.SetObjectFollow (gameObject);
 		speech.SetOffset (commentOffsetX, commentOffsetY);
+		speech.SetSortOrder(speechOrder);
 		
 		if (speech != null) 
 		{
@@ -129,6 +131,8 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		}
 
 	}
+
+
 	
 	virtual public bool UseItemOnObject(EItem itemType)
 	{

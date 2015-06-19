@@ -38,7 +38,8 @@ public class PlayerMovement : MonoBehaviour {
 	EAnimationState currentAnimationState;
 
 	public int commentOffsetX;
-	public int commentOffsetY;
+	public int commentOffsetY = -1;
+	public int sortOrder = 1;
 
 	float rotationSpeed = 6.0f;
 
@@ -80,6 +81,9 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			EnableBackpack (false);
 		}
+
+		Invoke("PlayerDisplayStartLine1", 1.0f);
+
 	}
 
 	void OnLevelWasLoaded()
@@ -714,6 +718,7 @@ public class PlayerMovement : MonoBehaviour {
 		speech.SetName ("Player");
 		speech.SetObjectFollow (gameObject);
 		speech.SetOffset (commentOffsetX, commentOffsetY);
+		speech.SetSortOrder (sortOrder);
 		
 		if (speech != null) 
 		{
@@ -732,4 +737,11 @@ public class PlayerMovement : MonoBehaviour {
 			transform.rotation = Quaternion.LookRotation (newDir);
 
 	}
+
+	void PlayerDisplayStartLine1()
+	{
+		PlayerMovement movComp = GetComponent<PlayerMovement>();
+		movComp.DisplaySpeechBubble("What a crash, where am I ? I should try find my backpack.");
+	}
+
 }
