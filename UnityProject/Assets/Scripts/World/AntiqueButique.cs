@@ -24,12 +24,12 @@ public class AntiqueButique : MonoBehaviour {
 			break;
 
 			default :
-				GWorld.SpawnPlayer(  spawnFromCave.transform  );
+				GWorld.SpawnPlayer(  spawnFromCove.transform  );
 			break;
 
 		}
 
-		GWorld.currentZone = ZoneBase.Cove;
+		GWorld.currentZone = ZoneBase.AntiqueButique;
 
 	}
 

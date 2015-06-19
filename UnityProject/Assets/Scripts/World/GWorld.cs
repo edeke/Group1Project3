@@ -16,6 +16,7 @@ public enum ZoneBase
 	WaterFall,
 	Cave,
 	Cove,
+	AntiqueButique,
 	Testscene1,
 	Testscene2,
 	Testscene3
@@ -477,6 +478,15 @@ public class GWorld : MonoBehaviour
 			"CoveAreaNight"	//Night
 		};
 		sceneLoadTable.Add (scene6, sceneArray6);
+
+		ZoneBase scene7 = ZoneBase.AntiqueButique;
+		string[] sceneArray7 = {
+			//"CoveAreaNight",	//Dawn
+			"AntiqueBoutiqueDay",	//Day
+			//"CoveAreaDay",	//Dusk
+			"AntiqueBoutiqueNight"	//Night
+		};
+		sceneLoadTable.Add (scene7, sceneArray7);
 
 		sceneAlreadyLoaded = true;
 	

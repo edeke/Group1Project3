@@ -10,7 +10,7 @@ public class CaveLadder : CommentActorBase {
 
 	override public void OnAction()
 	{
-		GWorld.LoadScene (ZoneBase.Cove);
+		GWorld.LoadScene (ZoneBase.AntiqueButique);
 	}
 
 }

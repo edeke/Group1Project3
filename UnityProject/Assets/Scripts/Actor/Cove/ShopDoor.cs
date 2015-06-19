@@ -11,7 +11,7 @@ public class ShopDoor : CommentActorBase
 
 	override public void OnAction()
 	{
-		GWorld.LoadScene (ZoneBase.Cave);
+		GWorld.LoadScene (ZoneBase.AntiqueButique);
 	}
 
 }
