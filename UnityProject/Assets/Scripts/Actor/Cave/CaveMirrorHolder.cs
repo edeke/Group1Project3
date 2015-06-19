@@ -6,6 +6,7 @@ public class CaveMirrorHolder : CommentActorBase
 {
 	public GameObject mirror;
 	public Light lightToEnable;
+	public Light lightToEnable2;
 	MeshRenderer mirrorRenderer;
 
 	string EventID = "MirrorPlacedCave";
@@ -23,6 +24,7 @@ public class CaveMirrorHolder : CommentActorBase
 			{
 				mirrorRenderer.enabled = true;
 				lightToEnable.GetComponent<CaveReflectedLight>().TurnOnLight();
+				lightToEnable2.GetComponent<CaveReflectedLight>().TurnOnLight();
 			}
 			else
 			{
@@ -76,7 +78,9 @@ public class CaveMirrorHolder : CommentActorBase
 			case EItem.OldMirror :
 				GWorld.MarkEventDone(EventID);
 				mirrorRenderer.enabled = true;
+		
 				lightToEnable.GetComponent<CaveReflectedLight>().TurnOnLight();
+				lightToEnable2.GetComponent<CaveReflectedLight>().TurnOnLight();
 			return true;
 		}
 		

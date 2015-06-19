@@ -82,7 +82,10 @@ public class PlayerMovement : MonoBehaviour {
 			EnableBackpack (false);
 		}
 
-		Invoke("PlayerDisplayStartLine1", 1.0f);
+		if (GWorld.currentZone == ZoneBase.Beach) 
+		{
+			Invoke ("PlayerDisplayStartLine1", 1.0f);
+		}
 
 	}
 
