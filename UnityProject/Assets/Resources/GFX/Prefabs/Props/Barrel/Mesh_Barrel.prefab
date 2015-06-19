@@ -26,8 +26,8 @@ GameObject:
   - 33: {fileID: 3393326}
   - 23: {fileID: 2344204}
   - 114: {fileID: 11478748}
-  - 65: {fileID: 6544400}
   - 208: {fileID: 20834812}
+  - 136: {fileID: 13655586}
   m_Layer: 0
   m_Name: polySurface9
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83.7997589, y: -7.32419252, z: -11.1695099}
+  m_LocalPosition: {x: 26.6709995, y: .340000004, z: -17.3540001}
   m_LocalScale: {x: .0173039064, y: .0173039101, z: .0173039101}
   m_Children:
   - {fileID: 489990}
@@ -91,18 +91,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122036}
   m_Mesh: {fileID: 4300000, guid: 170581cf7cd170347b384b36b3355c0c, type: 3}
---- !u!65 &6544400
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122036}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 122.456772, y: 144.132187, z: 124.223083}
-  m_Center: {x: .633398056, y: 72.1930313, z: .295980453}
 --- !u!114 &11478748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,9 +103,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorName: 
-  animationOnAction: 9
   commentOffsetX: 0
   commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!136 &13655586
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 62.1115417
+  m_Height: 144.132187
+  m_Direction: 1
+  m_Center: {x: .631444931, y: 72.1930618, z: .29451561}
 --- !u!208 &20834812
 NavMeshObstacle:
   m_ObjectHideFlags: 1

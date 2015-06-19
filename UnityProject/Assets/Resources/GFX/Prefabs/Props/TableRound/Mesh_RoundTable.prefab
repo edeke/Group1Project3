@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480662}
+  - 208: {fileID: 20811608}
   m_Layer: 0
   m_Name: Mesh_RoundTable
   m_TagString: Untagged
@@ -25,6 +26,8 @@ GameObject:
   - 4: {fileID: 407566}
   - 33: {fileID: 3367960}
   - 23: {fileID: 2390220}
+  - 65: {fileID: 6599052}
+  - 114: {fileID: 11466132}
   m_Layer: 0
   m_Name: polySurface13
   m_TagString: Untagged
@@ -51,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 117.809998, y: 5.28000021, z: -128.740005}
+  m_LocalPosition: {x: 1.13, y: .25999999, z: -8.92000008}
   m_LocalScale: {x: .00400000019, y: .00400000019, z: .00400000019}
   m_Children:
   - {fileID: 407566}
@@ -88,6 +91,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169118}
   m_Mesh: {fileID: 4300000, guid: 597d6fe5ed2d89b4fbcced256cc17825, type: 3}
+--- !u!65 &6599052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 872.079468, y: 42.7000008, z: 872.058228}
+  m_Center: {x: -.583236694, y: 461.399994, z: -.0435333252}
+--- !u!114 &11466132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0808bb7feb06d3d4892eccb646c2ba95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorName: 
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!208 &20811608
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102330}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: .5, y: .5, z: .5}
+  m_MoveThreshold: .100000001
+  m_Carve: 0
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

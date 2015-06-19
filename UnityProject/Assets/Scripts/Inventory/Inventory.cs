@@ -19,7 +19,8 @@ public enum EItem {
 	OldMirror,
 	Bottle1,
 	Bottle2,
-	Bottle3
+	Bottle3,
+	Carpet
 };
 
 public class ItemStruct

@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &121052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483112}
+  - 33: {fileID: 3356418}
+  - 64: {fileID: 6485738}
+  - 23: {fileID: 2332980}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
 --- !u!1 &168530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,6 +28,8 @@ GameObject:
   - 4: {fileID: 438714}
   - 33: {fileID: 3343524}
   - 23: {fileID: 2343944}
+  - 65: {fileID: 6514996}
+  - 114: {fileID: 11466826}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -50,13 +70,50 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189036}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300.23999, y: 8.77000046, z: 181.830002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -.00504855765, y: 0, z: 0, w: .999987245}
+  m_LocalPosition: {x: 299.970001, y: 8.72500038, z: 185.860001}
+  m_LocalScale: {x: 1.1626426, y: 1.16264236, z: 1.16264236}
   m_Children:
   - {fileID: 438714}
+  - {fileID: 483112}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &483112
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121052}
+  m_LocalRotation: {x: .710667372, y: 0, z: 0, w: .703528166}
+  m_LocalPosition: {x: -.00860949513, y: -.0220231898, z: .0513847359}
+  m_LocalScale: {x: 3.9285357, y: 3.92853498, z: 3.92853498}
+  m_Children: []
+  m_Father: {fileID: 458910}
+  m_RootOrder: 1
+--- !u!23 &2332980
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121052}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2343944
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -88,6 +145,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168530}
   m_Mesh: {fileID: 4300000, guid: 6f785a63f32e4114facfc0e5b6ecc176, type: 3}
+--- !u!33 &3356418
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121052}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &6485738
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6514996
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: .280000001, z: 4.00000048}
+  m_Center: {x: 0, y: .0700000003, z: 1.52587891e-05}
+--- !u!114 &11466826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765065e2f2854bb46b3e0ed03b0fbde2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 16
+  itemTexture: {fileID: 0}
+  soundOnPickup: {fileID: 0}
+  soundOnUse: {fileID: 0}
+  onDragParticle: {fileID: 0}
+  onUseParticle: {fileID: 0}
+  onPickupParticle: {fileID: 0}
+  itemDescription: 
+  numberOfItemsInStack: 1
+  animationOnAction: 4
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

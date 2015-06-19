@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Barrel : InspectBase 
+
+public class Table : InspectBase
 {
 
 	override public void OnInspect()
-	{		
-		DisplayComment ("It's just a barrel!");
+	{	
+
+		DisplayComment("That's one big table!");
+
 	}
 
 }

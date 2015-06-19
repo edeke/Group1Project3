@@ -27,12 +27,13 @@ GameObject:
   - 23: {fileID: 2379080}
   - 65: {fileID: 6513926}
   - 114: {fileID: 11461736}
+  - 208: {fileID: 20891306}
   m_Layer: 0
   m_Name: Chest_BaseMesh:Mesh_Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &430396
 Transform:
@@ -52,9 +53,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122520}
-  m_LocalRotation: {x: 0, y: -.988770723, z: 0, w: .149440587}
-  m_LocalPosition: {x: 27.6280003, y: -8.63000011, z: 36.4290009}
-  m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
+  m_LocalRotation: {x: 0, y: -.917513549, z: 0, w: .397704571}
+  m_LocalPosition: {x: 8.06000042, y: .379999995, z: -3.74000001}
+  m_LocalScale: {x: .0143064484, y: .0143064409, z: .0143064409}
   m_Children:
   - {fileID: 430396}
   m_Father: {fileID: 0}
@@ -115,6 +116,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: 
   animationOnAction: 9
+  commentOffsetX: 0
+  commentOffsetY: 0
+  mouseCursorOver: 2
+--- !u!208 &20891306
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191126}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 72.8240051, y: 64.7750015, z: 63.9590034}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -14.7250004, y: 68.5530014, z: 6.15400028}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
