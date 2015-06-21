@@ -37,10 +37,10 @@ public class SmoothFollow : MonoBehaviour
 		float currentHeight = transform.position.y;
 
 
-		currentRotationAngle = Mathf.LerpAngle (currentRotationAngle, wantedRotationAngle, rotationDamping * Time.deltaTime);
+		currentRotationAngle = Mathf.LerpAngle (currentRotationAngle, wantedRotationAngle, rotationDamping * Time.smoothDeltaTime);
 
 
-		currentHeight = Mathf.Lerp (currentHeight, wantedHeight, heightDamping * Time.deltaTime);
+		currentHeight = Mathf.Lerp (currentHeight, wantedHeight, heightDamping * Time.smoothDeltaTime);
 
 
 		Quaternion currentRotation = Quaternion.Euler (0, currentRotationAngle, 0);

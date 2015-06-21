@@ -42,7 +42,7 @@ public class Fireplace : CommentActorBase
 		switch (itemType) 
 		{
 			case EItem.UnlitTorch :
-				return EAnimationState.UseLow;
+				return EAnimationState.Use;
 				
 			default :
 				return EAnimationState.Error;
