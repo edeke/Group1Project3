@@ -59,13 +59,16 @@ public class PlayerMovement : MonoBehaviour {
 	protected GameObject speechObject;
 	protected SpeechBubbleScreen speech;
 
+	Vector3 rotateTarget;
+
 	bool spawning = false;
 	Vector3 spawnLocation;
 
 	bool dialogOpen = false;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		currentAnimationState = EAnimationState.Idle;
 
 		currentState = new ActionData ();
@@ -505,19 +508,25 @@ public class PlayerMovement : MonoBehaviour {
 			break;
 
 			case EPlayerState.Action :
-				IAction actionObject = null;
 
+				
+
+				IAction actionObject = null;
+				
 				if(currentState.objectToUse != null)
 				{
 					actionObject = currentState.objectToUse.GetComponent<IAction>();
+					rotateTarget = currentState.objectToUse.transform.position;
 				}
+
+				
+				RotateTowards();
 
 				if(actionObject != null)
 				{
 					//within range
 					if( TraceObject(currentState.objectToUse, 1.5f) )
 					{
-						RotateTowards(currentState.objectToUse.transform.position);
 						currentAnimationState = actionObject.AnimationOnAction();
 
 						if( currentAnimationState == EAnimationState.None || 
@@ -562,8 +571,10 @@ public class PlayerMovement : MonoBehaviour {
 				{
 					useItem = currentState.objectToUse.GetComponent<IUseItem>();
 					npcBase = currentState.objectToUse.GetComponent<NPCBase>();
+					rotateTarget = currentState.objectToUse.transform.position;
 				}
 
+				RotateTowards();
 				//make sure npc dont walk away when giving them items
 				if( npcBase != null)
 				{
@@ -575,7 +586,7 @@ public class PlayerMovement : MonoBehaviour {
 					//within range
 					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
-						RotateTowards(currentState.objectToUse.transform.position);
+						
 						ItemStruct itemToUse = new ItemStruct();
 						if( Inventory.myInv.GetItemFromIndex(currentState.inventoryIndex, ref itemToUse) )
 						{
@@ -613,10 +624,10 @@ public class PlayerMovement : MonoBehaviour {
 				if(currentState.objectToUse != null)
 				{
 					talkObject = currentState.objectToUse.GetComponent<ITalkTo>();
-					
+					rotateTarget = currentState.objectToUse.transform.position;
 				}
 
-				RotateTowards(currentState.objectToUse.transform.position);
+				RotateTowards();
 				
 				if(talkObject != null)
 				{
@@ -624,8 +635,6 @@ public class PlayerMovement : MonoBehaviour {
 					//within range
 					if( TraceObject(currentState.objectToUse, 4.0f) )
 					{
-
-						RotateTowards(currentState.objectToUse.transform.position);
 
 						//remove the state from the queue
 						currentAnimationState = EAnimationState.Talk;
@@ -730,10 +739,13 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 
-	void RotateTowards(Vector3 location)
+	void RotateTowards()
 	{
+			Vector3 location = new Vector3 (rotateTarget.x, transform.position.y, rotateTarget.z);
+			Vector3 position = new Vector3 (transform.position.x, transform.position.y , transform.position.z);
 
-			Vector3 targetDir = location - transform.position;
+			
+			Vector3 targetDir = location - position;
 			float step = rotationSpeed * Time.deltaTime;
 			Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);
 			Debug.DrawRay (transform.position, newDir, Color.red);

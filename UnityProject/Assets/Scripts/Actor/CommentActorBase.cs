@@ -38,6 +38,7 @@ public class CommentActorBase : MonoBehaviour, IInspectInterface, IAction, IUseI
 		{
 			return mouseCursorOver;
 		}
+
 	}
 
 	virtual public void OnMouseLeave()
