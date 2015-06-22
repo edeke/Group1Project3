@@ -94,16 +94,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse_copy
+          name: _Masks
         second:
-          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
+          m_Texture: {fileID: 2800000, guid: b4f8b991bd794b547a143f010fc0cb02, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Masks
+          name: _Diffuse_copy
         second:
-          m_Texture: {fileID: 2800000, guid: 7d0855288b5ab9948b251204cc428447, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5ac62944395f5b74a97e77591c77a96d, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -290,6 +290,10 @@ Material:
         first:
           name: _WearExp
         second: 48.0900002
+      data:
+        first:
+          name: _PurpleTiling
+        second: .970000029
     m_Colors:
       data:
         first:
@@ -313,6 +317,10 @@ Material:
         second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _RedColor
         second: {r: .279411793, g: .0184904877, b: .16424647, a: 1}
       data:
@@ -330,7 +338,7 @@ Material:
       data:
         first:
           name: _PurpleColor
-        second: {r: .0665008575, g: .602941155, b: .114595495, a: 1}
+        second: {r: .278431386, g: .0196078438, b: .164705887, a: 1}
       data:
         first:
           name: _WhiteColor
