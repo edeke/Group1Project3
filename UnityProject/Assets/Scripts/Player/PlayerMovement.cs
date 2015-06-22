@@ -489,10 +489,22 @@ public class PlayerMovement : MonoBehaviour {
 				
 				distanceToActor = (currentState.objectToUse.transform.position - transform.position).magnitude;
 				
-				if (distanceToActor <= 4.0f) 
+				NPCBase npcObject = currentState.objectToUse.GetComponent<NPCBase>();
+				if( npcObject != null)
 				{
-					currentState.state = EPlayerState.Idle;
-					agent.ResetPath(); 
+					if (distanceToActor <= 4.0f) 
+					{
+						currentState.state = EPlayerState.Idle;
+						agent.ResetPath(); 
+					}
+				}
+				else
+				{
+					if (distanceToActor <= 2.0f) 
+					{
+						currentState.state = EPlayerState.Idle;
+						agent.ResetPath(); 
+					}
 				}
 			break;
 			case EPlayerState.ForceWalkToLocation :
@@ -596,7 +608,11 @@ public class PlayerMovement : MonoBehaviour {
 						ItemStruct itemToUse = new ItemStruct();
 						if( Inventory.myInv.GetItemFromIndex(currentState.inventoryIndex, ref itemToUse) )
 						{
-							currentAnimationState = useItem.AnimationOnItem( itemToUse.itemType );
+							
+							if(currentAnimationState == EAnimationState.Idle || currentAnimationState == EAnimationState.Running || currentAnimationState == EAnimationState.Talk)
+							{
+								currentAnimationState = useItem.AnimationOnItem( itemToUse.itemType );
+							}
 
 							if( currentAnimationState == EAnimationState.None || 
 							   	currentAnimationState == EAnimationState.Idle ||
@@ -614,6 +630,8 @@ public class PlayerMovement : MonoBehaviour {
 								break;
 							}
 						}
+
+						//currentState.state = EPlayerState.Idle;
 					}
 					else
 					{
