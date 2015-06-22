@@ -509,7 +509,7 @@ public class PlayerMovement : MonoBehaviour {
 
 			case EPlayerState.Action :
 
-				
+				agent.ResetPath();
 
 				IAction actionObject = null;
 				
@@ -564,8 +564,11 @@ public class PlayerMovement : MonoBehaviour {
 			break;
 
 			case EPlayerState.UseItem :
+				
 				IUseItem useItem = null;
 				NPCBase npcBase = null;
+
+				agent.ResetPath();
 
 				if(currentState.objectToUse != null)
 				{
@@ -744,7 +747,6 @@ public class PlayerMovement : MonoBehaviour {
 			Vector3 location = new Vector3 (rotateTarget.x, transform.position.y, rotateTarget.z);
 			Vector3 position = new Vector3 (transform.position.x, transform.position.y , transform.position.z);
 
-			
 			Vector3 targetDir = location - position;
 			float step = rotationSpeed * Time.deltaTime;
 			Vector3 newDir = Vector3.RotateTowards (transform.forward, targetDir, step, 0.0F);
