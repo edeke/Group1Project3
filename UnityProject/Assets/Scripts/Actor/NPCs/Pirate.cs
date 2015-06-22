@@ -26,7 +26,17 @@ public class Pirate : NPCBase
 	
 	override public void OnInspect()
 	{	
-		DisplaySpeechBubble ( "How could I loose it..." );
+		EventData tempData = new EventData();
+		GWorld.FindEvent(EventID,ref tempData);
+		
+		if(tempData.hasEventOccured)
+		{
+			DisplaySpeechBubble ( "Thank you for finding my ring." );
+		}
+		else
+		{
+			DisplaySpeechBubble ( "How could I loose it..." );
+		}
 	}
 
 	override public bool UseItemOnObject(EItem itemType)
