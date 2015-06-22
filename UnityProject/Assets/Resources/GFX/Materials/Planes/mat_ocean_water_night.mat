@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Mat_Window_inside
-  m_Shader: {fileID: 4800000, guid: e2036b326bab128468c064d0880157a8, type: 3}
-  m_ShaderKeywords: _DISTANCEFADE_ON
+  m_Name: mat_ocean_water_night
+  m_Shader: {fileID: 4800000, guid: 4dcdd5f731e301a408659ac880c8e1a3, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -30,6 +30,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _NormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 6ad9ac4bb377abe44ae01bbeab2f5d1d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
@@ -40,20 +47,6 @@ Material:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 10edc4278bf351b4699dbaf3e030e294, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 79fb3fe1d0086304ca3183d32e48e2ad, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -93,9 +86,51 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _EmissiveMap
+          name: _OceanTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 29d4828faf4470e47a2ecf4a3ccaf38d, type: 3}
+          m_Texture: {fileID: 2800000, guid: 769ddf77be1403d42a3febf63e58c8c7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OceanTexture_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 769ddf77be1403d42a3febf63e58c8c7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalMap_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 6ad9ac4bb377abe44ae01bbeab2f5d1d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _height
+        second:
+          m_Texture: {fileID: 2800000, guid: 9090b15ed488e4b4d9882de5ab9d5f5c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _height_copy
+        second:
+          m_Texture: {fileID: 2800000, guid: 9090b15ed488e4b4d9882de5ab9d5f5c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BeachTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 10ab5b50a612bf742a80a74eaf5c16e3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FoamTexture
+        second:
+          m_Texture: {fileID: 2800000, guid: 10ab5b50a612bf742a80a74eaf5c16e3, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -103,10 +138,6 @@ Material:
         first:
           name: _Cutoff
         second: .5
-      data:
-        first:
-          name: _Smoothness
-        second: .0460000001
       data:
         first:
           name: _SrcBlend
@@ -117,48 +148,12 @@ Material:
         second: 0
       data:
         first:
-          name: _Outline
-        second: 0
-      data:
-        first:
           name: _Metallic
         second: 0
       data:
         first:
           name: _Parallax
         second: .0199999996
-      data:
-        first:
-          name: _Reach
-        second: .600000024
-      data:
-        first:
-          name: _MinLight
-        second: 0
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
-          name: _DistanceFade
-        second: .352941185
-      data:
-        first:
-          name: _FadeDistance
-        second: 10
-      data:
-        first:
-          name: _DistanceFade_copy
-        second: 0
       data:
         first:
           name: _ZWrite
@@ -193,8 +188,36 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissiveIntensity
-        second: 5
+          name: _Tiling2
+        second: 2
+      data:
+        first:
+          name: _Tiling3
+        second: 1.23000002
+      data:
+        first:
+          name: _Fadedepth
+        second: 0
+      data:
+        first:
+          name: _VertexOffset
+        second: .5
+      data:
+        first:
+          name: _BeachDepth
+        second: 6.69000006
+      data:
+        first:
+          name: _OpacityFade
+        second: 1.33000004
+      data:
+        first:
+          name: _Contrast
+        second: 2
+      data:
+        first:
+          name: _Contrastshift
+        second: -0
     m_Colors:
       data:
         first:
@@ -206,21 +229,9 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Highlight
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _EmissiveColor
-        second: {r: 1, g: .839655161, b: .316176474, a: 1}
+          name: _FadeColor
+        second: {r: .256433815, g: .489287615, b: .683823526, a: 1}
