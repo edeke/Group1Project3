@@ -42,7 +42,8 @@ public class PauseMenu : MonoBehaviour {
 
 	}
 
-	public void PauseGame (){
+	public void PauseGame ()
+	{
 
 		isPaused = true; 
 		Time.timeScale = 0.0f;
@@ -54,9 +55,17 @@ public class PauseMenu : MonoBehaviour {
 
 		rpgGUI.SetActive (false);
 
+		ChangeColorOnEnter[] allComp = FindObjectsOfType<ChangeColorOnEnter> ();
+
+		foreach (ChangeColorOnEnter comp in allComp)
+		{
+			comp.ResetColor();
+		}
+
 	}
 
-	public void UnpauseGame (){
+	public void UnpauseGame ()
+	{
 
 		isPaused = false;
 		Time.timeScale = 1.0f;
@@ -84,18 +93,24 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 
-	public void MainMenu(){
+	public void MainMenu()
+	{
 
 		Application.LoadLevel ("MainMenu");
 
-		if (GWorld.dialogOpen == true) {
+		if (GWorld.dialogOpen == true) 
+		{
 			Dialoguer.EndDialogue ();
 		}
 
+		GWorld.QuitGame ();
 
 	}
 
-	public void QuitGame (){
+	public void QuitGame ()
+	{
+
+		GWorld.QuitGame ();
 
 		Application.Quit();
 

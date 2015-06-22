@@ -4345,8 +4345,8 @@ MonoBehaviour:
         outs: 04000000
         advanced: 0
         metadata: 
-        text: '...I''m Zaaaack... I have my daily siesta. You mind taking a nap ..
-          yawn.. and come see me at night maaaan?'
+        text: '...I''m Zaaaack... I have my daily siesta. You mind taking a nap (click
+          coin icon) .. yawn.. and come see me at night maaaan?'
         name: Zack
         portrait: 
         audio: 
@@ -4373,7 +4373,7 @@ MonoBehaviour:
       - id: 2
         type: 1
         theme: 
-        position: {x: 426, y: 201}
+        position: {x: 425, y: 220}
         outs: 01000000ffffffff
         advanced: 0
         metadata: 
@@ -4428,7 +4428,7 @@ MonoBehaviour:
         variableScope: 0
         variableType: 0
         variableId: 5
-        variableScrollPosition: {x: 0, y: 14}
+        variableScrollPosition: {x: 0, y: 71}
         variableSetEquation: 0
         variableSetValue: true
         variableGetEquation: 0
@@ -4459,7 +4459,7 @@ MonoBehaviour:
         variableScope: 0
         variableType: 0
         variableId: 5
-        variableScrollPosition: {x: 0, y: 14}
+        variableScrollPosition: {x: 0, y: 0}
         variableSetEquation: 0
         variableSetValue: true
         variableGetEquation: 0
@@ -5272,6 +5272,113 @@ MonoBehaviour:
       booleans:
         variables: []
         selection: 0
+    - id: 14
+      name: Lizard on beach Night scene
+      startPage: 0
+      scrollPosition: {x: 0, y: 92}
+      phases:
+      - id: 0
+        type: 4
+        theme: 
+        position: {x: 205, y: 134}
+        outs: 0100000002000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 9
+        variableScrollPosition: {x: 0, y: 90}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 1
+        type: 0
+        theme: 
+        position: {x: 588, y: 71}
+        outs: ffffffff
+        advanced: 0
+        metadata: 
+        text: 
+        name: Zack
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 2
+        type: 0
+        theme: 
+        position: {x: 595, y: 261}
+        outs: ffffffff
+        advanced: 1
+        metadata: 
+        text: 
+        name: Zack
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      floats:
+        variables: []
+        selection: 0
+      strings:
+        variables: []
+        selection: 0
+      booleans:
+        variables: []
+        selection: 0
     globals:
       booleans:
         variables:
@@ -5302,7 +5409,10 @@ MonoBehaviour:
         - name: OldCootBottle3
           variable: false
           id: 8
-        selection: 8
+        - name: Talked to Lizard on beach Night Scene
+          variable: false
+          id: 9
+        selection: 9
       floats:
         variables: []
         selection: 0

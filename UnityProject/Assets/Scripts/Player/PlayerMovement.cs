@@ -94,7 +94,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnLevelWasLoaded()
 	{
-		currentState.state = EPlayerState.Idle;
+		if (currentState != null)
+		{
+			currentState.state = EPlayerState.Idle;
+		}
 		actionList.Clear ();
 	}
 

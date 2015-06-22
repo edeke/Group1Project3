@@ -58,7 +58,6 @@ public class GWorld : MonoBehaviour
 	public static GameObject mainUI;
 	public static GameObject myPlayer;
 	public static GameObject cameraFollow;
-	public static GameObject outlineCanvas;
 	public static GameObject pauseUI;
 
 	static Hashtable eventTable = new Hashtable();
@@ -502,6 +501,49 @@ public class GWorld : MonoBehaviour
 		//Invoke("InternalLoadScene", 1);
 		loadLevel = true;
 		//Application.LoadLevel (sceneToLoad)
+
+	}
+
+	public static void QuitGame()
+	{
+		//reset game by destroying all objects
+
+		if (myPlayer != null)
+		{
+			Destroy(myPlayer);
+		}
+
+		if (cameraFollow != null)
+		{
+			Destroy(cameraFollow);
+		}
+
+		if (pauseUI != null)
+		{
+			Destroy(pauseUI);
+		}
+
+		if (mainDialog != null)
+		{
+			Destroy(mainDialog);
+		}
+
+		if (mainUI != null)
+		{
+			Destroy(mainUI);
+		}
+
+		eventTable.Clear ();
+		sceneLoadTable.Clear ();
+
+		dialogOpen = false;
+		currentZone = 0;
+		isInvEnabled = false;
+		sceneAlreadyLoaded = false;
+		loadLevel = false;
+		currentTimeInMin = HOUR * 10 + 1;
+	
+
 
 	}
 

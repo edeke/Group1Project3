@@ -87,6 +87,9 @@ public class CPEPlayerPathFollow : MonoBehaviour
     //Update the cam animation 
     void LateUpdate()
     {
+		if (GWorld.myPlayer == null)
+			return;
+
         float nearestPercent = path.GetNearestPoint(player.position, ignoreNormalise, accuracy);
         float theta = nearestPercent - lastPercent;
         if (theta > 0.5f)
