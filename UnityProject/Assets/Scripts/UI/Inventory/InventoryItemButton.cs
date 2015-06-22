@@ -61,20 +61,37 @@ public class InventoryItemButton : MonoBehaviour {
 			textComp.text = "";
 		}
 
-		if (isDragged && EventSystem.current.IsPointerOverGameObject () == false) {
+		if (isDragged && EventSystem.current.IsPointerOverGameObject () == false)
+		{
 
 			Image[] allImages = FindObjectsOfType<Image> ();
 			
-			foreach (Image comp in allImages) {
-				if (comp.CompareTag ("InventoryButtons")) {
+			foreach (Image comp in allImages)
+			{
+				if (comp.CompareTag ("InventoryButtons"))
+				{
 					Color newColor = comp.color;
 					newColor.a = 0.0f;
 					comp.color = newColor;
-				} else if (comp.CompareTag ("MainPanel")) {
+				} 
+				else if (comp.CompareTag ("MainPanel")) 
+				{
 					Color newColor = comp.color;
 					newColor.a = 0.0f;
 					comp.color = newColor;
 				}
+			}
+
+			RawImage[] allRawImages = FindObjectsOfType<RawImage> ();
+			
+			foreach (RawImage comp in allRawImages)
+			{
+				if (comp.CompareTag ("InventoryButtons"))
+				{
+					Color newColor = comp.color;
+					newColor.a = 0.0f;
+					comp.color = newColor;
+				} 
 			}
 		}
 
@@ -200,6 +217,18 @@ public class InventoryItemButton : MonoBehaviour {
 				newColor.a = 0.3f;
 				comp.color = newColor;
 			}
+		}
+
+		RawImage[] allRawImages = FindObjectsOfType<RawImage> ();
+		
+		foreach (RawImage comp in allRawImages)
+		{
+			if (comp.CompareTag ("InventoryButtons"))
+			{
+				Color newColor = comp.color;
+				newColor.a = 1.0f;
+				comp.color = newColor;
+			} 
 		}
 
 

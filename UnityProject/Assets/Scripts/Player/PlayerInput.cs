@@ -581,6 +581,8 @@ public class PlayerInput : MonoBehaviour
 			
 			Inventory.myInv.DeselectItem();
 
+			FindObjectOfType<InventoryOpenButton>().OnClick();
+
 			return true;
 		}
 		else
