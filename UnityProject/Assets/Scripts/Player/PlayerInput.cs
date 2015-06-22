@@ -432,20 +432,22 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
+					if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
 					{
-						//if no interface on object and pointer is not over a UI element
-						if( EventSystem.current.IsPointerOverGameObject() == false )
+						if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 						{
-							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							//if no interface on object and pointer is not over a UI element
+							if( EventSystem.current.IsPointerOverGameObject() == false )
 							{
-								movementScript.WalkToLocation(hitInfo.point);
+								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+								{
+									movementScript.WalkToLocation(hitInfo.point);
+								}
+
 							}
 
 						}
-
 					}
-
 				}
 				//try use item on actor
 				else if( Inventory.myInv.CurrentSelectedItem != -1 && !EventSystem.current.IsPointerOverGameObject() && traceHit)
@@ -459,20 +461,22 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( traceHit && dragging == false )
 				{
-					if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
+					if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
 					{
-						//if no interface on object and pointer is not over a UI element
-						if( EventSystem.current.IsPointerOverGameObject() == false )
+						if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 						{
-							if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+							//if no interface on object and pointer is not over a UI element
+							if( EventSystem.current.IsPointerOverGameObject() == false )
 							{
-								movementScript.WalkToLocation(hitInfo.point);
+								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
+								{
+									movementScript.WalkToLocation(hitInfo.point);
+								}
+								
 							}
 							
 						}
-						
 					}
-					
 				}
 			}
 
