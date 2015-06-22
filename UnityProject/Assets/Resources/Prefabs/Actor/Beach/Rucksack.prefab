@@ -28,7 +28,6 @@ GameObject:
   - 114: {fileID: 11452950}
   - 65: {fileID: 6543008}
   - 208: {fileID: 20838344}
-  - 54: {fileID: 5465838}
   m_Layer: 0
   m_Name: Rucksack
   m_TagString: Untagged
@@ -83,9 +82,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121922}
-  m_LocalRotation: {x: 0, y: -.947280109, z: 0, w: .320406646}
-  m_LocalPosition: {x: 289.714355, y: 9.76906776, z: 184.603271}
-  m_LocalScale: {x: 2.13430405, y: 2.13430357, z: 2.13430357}
+  m_LocalRotation: {x: -.0201088451, y: -.945412695, z: .0594516769, w: .319774985}
+  m_LocalPosition: {x: -8.38099957, y: 11.6350002, z: -22.7859993}
+  m_LocalScale: {x: 1.26133752, y: 1.26133728, z: 1.26133728}
   m_Children:
   - {fileID: 481442}
   - {fileID: 480608}
@@ -153,21 +152,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109002}
   m_Mesh: {fileID: 4300002, guid: 7aa6d10d7fdd48b439be3f4bc13dcbea, type: 3}
---- !u!54 &5465838
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121922}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &6543008
 BoxCollider:
   m_ObjectHideFlags: 1
