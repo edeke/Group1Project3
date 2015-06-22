@@ -34,7 +34,7 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{
-			return MouseCursorInput.Normal;
+			return MouseCursorInput.Talk;
 		} 
 		else 
 		{
