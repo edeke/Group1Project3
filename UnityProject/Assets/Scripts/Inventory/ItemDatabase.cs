@@ -68,7 +68,7 @@ static public class ItemDatabase
 		//Add Item to Itemdb
 		ItemStruct unlitTorch = new ItemStruct ();
 		
-		path = "Textures/ItemTextures/UnlitTorch";
+		path = "Textures/ItemTextures/inventory_bone_with_cloth";
 		newTex = (Texture)Resources.Load(path,typeof(Texture));
 		
 		if (!newTex)
@@ -90,7 +90,7 @@ static public class ItemDatabase
 		//Add Item to Itemdb
 		ItemStruct litTorch = new ItemStruct ();
 		
-		path = "Textures/ItemTextures/LitTorch";
+		path = "Textures/ItemTextures/inventory_torch";
 		newTex = (Texture)Resources.Load(path,typeof(Texture));
 		
 		if (!newTex)
