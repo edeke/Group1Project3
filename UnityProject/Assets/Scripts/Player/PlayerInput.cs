@@ -83,93 +83,144 @@ public class PlayerInput : MonoBehaviour
 		Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
-		if( traceHit )
+		if( Input.GetMouseButton(1) != true )
 		{
 
-			IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
-
-			if( mouseCursorInterface != null)
+			if( traceHit )
 			{
 
-				if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
+				IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
+
+				if( mouseCursorInterface != null)
 				{
-					try
+
+					if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
 					{
-						currentMouseObject.OnMouseLeave();
-						currentMouseObject = null;
+						try
+						{
+							currentMouseObject.OnMouseLeave();
+							currentMouseObject = null;
+						}
+						catch(MissingReferenceException e)
+						{
+							currentMouseObject = null;
+						}
 					}
-					catch(MissingReferenceException e)
+
+					currentMouseObject = mouseCursorInterface;
+					MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
+
+					if(!dragging)
 					{
-						currentMouseObject = null;
+						switch(newCursor)
+						{
+							case MouseCursorInput.Inspect :
+								Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
+							break;
+
+							case MouseCursorInput.Normal :
+								Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+							break;
+
+							case MouseCursorInput.Talk :
+								Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
+							break;
+
+							case MouseCursorInput.Pickup :
+								Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+							break;
+
+							case MouseCursorInput.AreaChange :
+								Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
+							break;
+
+							default :
+								Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+							break;
+						}
 					}
-				}
-
-				currentMouseObject = mouseCursorInterface;
-				MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
-
-				if(!dragging)
-				{
-					switch(newCursor)
+					else  if (GWorld.isInvEnabled && dragging && Inventory.myInv.CurrentSelectedItem != -1)
 					{
-						case MouseCursorInput.Inspect :
-							Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
-						break;
+						IUseItem itemInterface = hitInfo.collider.GetComponent<IUseItem>();
 
-						case MouseCursorInput.Normal :
+						if(itemInterface != null)
+						{
+							Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpot, CursorMode.Auto );
+						}
+						else
+						{
 							Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-						break;
-
-						case MouseCursorInput.Talk :
-							Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
-						break;
-
-						case MouseCursorInput.Pickup :
-							Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
-						break;
-
-						case MouseCursorInput.AreaChange :
-							Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
-						break;
-
-						default :
-							Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-						break;
+						}
 					}
+
 				}
-				else  if (GWorld.isInvEnabled && dragging && Inventory.myInv.CurrentSelectedItem != -1)
+				else
 				{
-					IUseItem itemInterface = hitInfo.collider.GetComponent<IUseItem>();
+					Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
 
-					if(itemInterface != null)
-					{
-						Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpot, CursorMode.Auto );
-					}
-					else
-					{
-						Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-					}
-				}
-
-			}
-			else
-			{
-				Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
-
-				if(currentMouseObject != null)
-				{	
-					try
-					{
-						currentMouseObject.OnMouseLeave();
-						currentMouseObject = null;
-					}
-					catch(MissingReferenceException e)
-					{
-						currentMouseObject = null;
+					if(currentMouseObject != null)
+					{	
+						try
+						{
+							currentMouseObject.OnMouseLeave();
+							currentMouseObject = null;
+						}
+						catch(MissingReferenceException e)
+						{
+							currentMouseObject = null;
+						}
 					}
 				}
 			}
 		}
+		else if ( Input.GetMouseButton(1) == true )
+		{
+			
+			Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
 
+			if( traceHit )
+			{
+
+				IMouseCursor mouseCursorInterface = hitInfo.collider.GetComponent<IMouseCursor>();
+				
+				if( mouseCursorInterface != null)
+				{
+					
+					if(currentMouseObject != null && mouseCursorInterface != currentMouseObject)
+					{
+						try
+						{
+							currentMouseObject.OnMouseLeave();
+							currentMouseObject = null;
+						}
+						catch(MissingReferenceException e)
+						{
+							currentMouseObject = null;
+						}
+					}
+					
+					currentMouseObject = mouseCursorInterface;
+					MouseCursorInput newCursor = mouseCursorInterface.OnMouseOverCursor();
+				}
+				else
+				{
+
+					if(currentMouseObject != null)
+					{	
+						try
+						{
+							currentMouseObject.OnMouseLeave();
+							currentMouseObject = null;
+						}
+						catch(MissingReferenceException e)
+						{
+							currentMouseObject = null;
+						}
+					}
+				}
+			}
+
+		}
 		/*//Ondragging item
 		else if ( traceHit && dragging == true)
 		{		
@@ -240,9 +291,9 @@ public class PlayerInput : MonoBehaviour
 			{
 				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					if( !TryTalkToObject( hitInfo.collider.gameObject, hitInfo.point ))
+					if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
 					{
-						TryUseActionOnObject( hitInfo.collider.gameObject, hitInfo.point);
+
 					}
 				}
 			}
@@ -250,9 +301,9 @@ public class PlayerInput : MonoBehaviour
 			{	
 				if( traceHit && dragging == false )
 				{
-					if( !TryTalkToObject( hitInfo.collider.gameObject , hitInfo.point ))
+					if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
 					{
-						TryUseActionOnObject( hitInfo.collider.gameObject, hitInfo.point );
+						
 					}
 				}
 			}
@@ -293,7 +344,7 @@ public class PlayerInput : MonoBehaviour
 						//if no interface on object and pointer is not over a UI element
 						if( EventSystem.current.IsPointerOverGameObject() == false )
 						{	
-							if(! TryInspectOnObject( hitInfo.collider.gameObject, false ) )
+							if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 							{
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
@@ -310,7 +361,7 @@ public class PlayerInput : MonoBehaviour
 						//if no interface on object and pointer is not over a UI element
 						if( EventSystem.current.IsPointerOverGameObject() == false )
 						{
-							if(! TryInspectOnObject( hitInfo.collider.gameObject, false ) )
+							if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 							{
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
@@ -375,7 +426,7 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
+					if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 					{
 						//if no interface on object and pointer is not over a UI element
 						if( EventSystem.current.IsPointerOverGameObject() == false )
@@ -402,7 +453,7 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( traceHit && dragging == false )
 				{
-					if(! TryInspectOnObject( hitInfo.collider.gameObject ))
+					if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 					{
 						//if no interface on object and pointer is not over a UI element
 						if( EventSystem.current.IsPointerOverGameObject() == false )
