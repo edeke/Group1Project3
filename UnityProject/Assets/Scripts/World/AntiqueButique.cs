@@ -11,9 +11,9 @@ public class AntiqueButique : MonoBehaviour {
 
 		switch (GWorld.currentZone) 
 		{
-//			case ZoneBase.Cove :
-//				//GWorld.SpawnPlayer(  spawnFromTest2.transform  );
-//			break;
+			case ZoneBase.AntiqueButique :
+				//GWorld.SpawnPlayer(  spawnFromTest2.transform  );
+			break;
 
 			case ZoneBase.Cove :
 			GWorld.SpawnPlayer(  spawnFromCove.transform  );
