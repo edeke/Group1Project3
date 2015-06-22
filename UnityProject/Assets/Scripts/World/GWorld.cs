@@ -542,6 +542,8 @@ public class GWorld : MonoBehaviour
 		sceneAlreadyLoaded = false;
 		loadLevel = false;
 		currentTimeInMin = HOUR * 10 + 1;
+	
+
 
 	}
 
