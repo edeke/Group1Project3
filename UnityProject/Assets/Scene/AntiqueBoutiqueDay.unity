@@ -9675,7 +9675,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 582690987}
   - 114: {fileID: 582690986}
-  - 114: {fileID: 582690988}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -9706,19 +9705,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 70
---- !u!114 &582690988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 582690985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f60fc39068e4a409e8a8097adecc8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnFromTest2: {fileID: 699896634}
-  defaultSpawn: {fileID: 699896634}
 --- !u!1 &582916051
 GameObject:
   m_ObjectHideFlags: 0

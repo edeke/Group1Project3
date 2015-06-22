@@ -16,7 +16,7 @@ public class AntiqueButique : MonoBehaviour {
 			break;
 
 			case ZoneBase.Cove :
-			GWorld.SpawnPlayer(  spawnFromCove.transform  );
+				GWorld.SpawnPlayer(  spawnFromCove.transform  );
 			break;
 
 			case ZoneBase.Cave :
