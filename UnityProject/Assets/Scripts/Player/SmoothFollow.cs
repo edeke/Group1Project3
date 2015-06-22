@@ -24,7 +24,7 @@ public class SmoothFollow : MonoBehaviour
 
 	}
 	
-	void  LateUpdate ()
+	void  FixedUpdate ()
 	{
 
 		if (!target) {

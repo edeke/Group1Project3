@@ -31,6 +31,8 @@ public class NextGenRpgGui : MonoBehaviour {
 	private string _text;
 	private string[] _choices;
 
+	public Color highlightColor;
+
 	void Awake(){
 		Dialoguer.Initialize();
 	}
@@ -190,7 +192,7 @@ public class NextGenRpgGui : MonoBehaviour {
 				
 				if(_currentChoice == i){
 					GUI.DrawTexture(ringRect, ringHover.getPieces()[i]);
-				}else{
+				}else if(ringNormal.getPieces()[i] != null){
 					GUI.DrawTexture(ringRect, ringNormal.getPieces()[i]);
 				}
 				
@@ -201,8 +203,9 @@ public class NextGenRpgGui : MonoBehaviour {
 				}else{
 					style.alignment = TextAnchor.MiddleLeft;
 				}
+				style.normal.textColor = _currentChoice == i?highlightColor:Color.white;
 				drawText(_choices[i], _choicesTextRects[i], style);
-				
+//				GUI.color = Color.white;
 			}
 		}
 	}
