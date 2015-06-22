@@ -17,7 +17,7 @@ MonoBehaviour:
     - id: 0
       name: Barnacle Bill
       startPage: 2
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 0, y: 60}
       phases:
       - id: 0
         type: 1
@@ -3740,7 +3740,7 @@ MonoBehaviour:
     - id: 8
       name: Random person in bar (3)
       startPage: 0
-      scrollPosition: {x: 0, y: 0}
+      scrollPosition: {x: 99.0000229, y: 0}
       phases:
       - id: 0
         type: 1
@@ -4539,7 +4539,7 @@ MonoBehaviour:
     - id: 11
       name: Willy
       startPage: 1
-      scrollPosition: {x: 138.59996, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 6
@@ -5275,7 +5275,7 @@ MonoBehaviour:
     - id: 14
       name: Lizard on beach Night scene
       startPage: 0
-      scrollPosition: {x: 0, y: 92}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 4
@@ -5380,18 +5380,18 @@ MonoBehaviour:
         variables: []
         selection: 0
     - id: 15
-      name: Barry
+      name: Barry (Day)
       startPage: 1
-      scrollPosition: {x: 88.0000153, y: 207.900101}
+      scrollPosition: {x: 1811.69995, y: 542.400024}
       phases:
       - id: 0
         type: 0
         theme: 
-        position: {x: 493, y: 10}
-        outs: 10000000
+        position: {x: 486, y: 10}
+        outs: 0e000000
         advanced: 0
         metadata: 
-        text: You'll do juuust fine here, kiddo. I know it!
+        text: I believe in you, Ash!
         name: 
         portrait: 
         audio: 
@@ -5419,7 +5419,7 @@ MonoBehaviour:
         type: 4
         theme: 
         position: {x: 167, y: 10}
-        outs: 0000000012000000
+        outs: 0000000010000000
         advanced: 0
         metadata: 
         text: 
@@ -5447,72 +5447,10 @@ MonoBehaviour:
         variableGetValue: true
         messageName: 
       - id: 2
-        type: 0
-        theme: 
-        position: {x: 487, y: 188}
-        outs: 03000000
-        advanced: 0
-        metadata: 
-        text: Hello there. I can't recall seeing you around. You must be new in town!
-        name: Stranger
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 3
-        type: 0
-        theme: 
-        position: {x: 788, y: 188}
-        outs: 04000000
-        advanced: 0
-        metadata: 
-        text: Yes, I am! My name is Ash!
-        name: Ash
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 4
         type: 1
         theme: 
         position: {x: 1089, y: 188.400024}
-        outs: 050000000600000007000000
+        outs: 030000000400000005000000
         advanced: 0
         metadata: 
         text: Well, it's a pleasure to meet you Ash! They call me Barry! What brings
@@ -5544,11 +5482,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 5
+      - id: 3
         type: 0
         theme: 
         position: {x: 1390, y: 187}
-        outs: 08000000
+        outs: 06000000
         advanced: 0
         metadata: 
         text: 'Oh, I''m sorry, I haven''t. But if someone would know, it would be
@@ -5576,11 +5514,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 6
+      - id: 4
         type: 0
         theme: 
         position: {x: 1390.26587, y: 321}
-        outs: 09000000
+        outs: 07000000
         advanced: 0
         metadata: 
         text: That sounds dreadful! Are you sure you're okay?
@@ -5607,11 +5545,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 7
+      - id: 5
         type: 0
         theme: 
         position: {x: 1390.26587, y: 455}
-        outs: 0a000000
+        outs: 08000000
         advanced: 0
         metadata: 
         text: Haha, you got that right, Ash! It sure is a wonderful island!
@@ -5638,11 +5576,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 8
+      - id: 6
         type: 0
         theme: 
         position: {x: 1694.26587, y: 186.109222}
-        outs: 0b000000
+        outs: 09000000
         advanced: 0
         metadata: 
         text: Barnacle Bill? Who's that?
@@ -5669,11 +5607,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 9
+      - id: 7
         type: 0
         theme: 
         position: {x: 1693.26587, y: 320.109253}
-        outs: 0c000000
+        outs: 0a000000
         advanced: 0
         metadata: 
         text: I'm just fine, thank you! I'm just a little tired.
@@ -5700,11 +5638,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 10
+      - id: 8
         type: 0
         theme: 
         position: {x: 1693.26587, y: 455.109222}
-        outs: 0d000000
+        outs: 0b000000
         advanced: 0
         metadata: 
         text: Do you know where to have a good time around here?
@@ -5731,11 +5669,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 11
+      - id: 9
         type: 0
         theme: 
         position: {x: 1996.26587, y: 186}
-        outs: 0e000000
+        outs: 0c000000
         advanced: 0
         metadata: 
         text: Ol' Bill is the owner of Barnacle Bill's Tavern, it's in the middle
@@ -5763,11 +5701,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 12
+      - id: 10
         type: 0
         theme: 
         position: {x: 1997.26587, y: 316}
-        outs: 0e000000
+        outs: 0c000000
         advanced: 0
         metadata: 
         text: I hear ya! You could rest up at our lovely tavern we got here. It's
@@ -5795,11 +5733,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 13
+      - id: 11
         type: 0
         theme: 
         position: {x: 1994.26587, y: 455.40921}
-        outs: 0e000000
+        outs: 0c000000
         advanced: 0
         metadata: 
         text: Now, I like that spirit, kiddo! We all gather at Barnacle Bills Tavern
@@ -5827,11 +5765,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 14
+      - id: 12
         type: 0
         theme: 
         position: {x: 2311.26587, y: 316.799988}
-        outs: 0f000000
+        outs: 0d000000
         advanced: 0
         metadata: 
         text: Oh okay, thank you Barry!
@@ -5858,11 +5796,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 15
+      - id: 13
         type: 0
         theme: 
         position: {x: 2617.26587, y: 316.799988}
-        outs: 11000000
+        outs: 0f000000
         advanced: 0
         metadata: 
         text: De nada, kiddo! De nada!
@@ -5889,10 +5827,10 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 16
+      - id: 14
         type: 6
         theme: 
-        position: {x: 3295.26587, y: 84.0996094}
+        position: {x: 3561.26587, y: 237.099609}
         outs: 
         advanced: 0
         metadata: 
@@ -5920,11 +5858,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 17
+      - id: 15
         type: 3
         theme: 
-        position: {x: 2918.26587, y: 315.100098}
-        outs: 10000000
+        position: {x: 2986.26587, y: 595.100098}
+        outs: 0e000000
         advanced: 0
         metadata: 
         text: 
@@ -5951,11 +5889,11 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: 
         messageName: 
-      - id: 18
+      - id: 16
         type: 4
         theme: 
-        position: {x: 168, y: 340}
-        outs: ffffffff02000000
+        position: {x: 163, y: 505}
+        outs: 1400000011000000
         advanced: 0
         metadata: 
         text: 
@@ -5982,6 +5920,388 @@ MonoBehaviour:
         variableGetEquation: 0
         variableGetValue: true
         messageName: 
+      - id: 17
+        type: 1
+        theme: 
+        position: {x: 568.800171, y: 285.100006}
+        outs: 0200000012000000
+        advanced: 0
+        metadata: 
+        text: Hello there. I can't recall seeing you around. You must be new in town!
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Yes, I am! My name is Ash!
+        - Sorry, I'm in a hurry!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 0
+        theme: 
+        position: {x: 1082.00012, y: 590}
+        outs: 13000000
+        advanced: 0
+        metadata: 
+        text: No problemo, kiddo! See ya around!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 19
+        type: 6
+        theme: 
+        position: {x: 1448.00012, y: 614}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 20
+        type: 1
+        theme: 
+        position: {x: 652.101562, y: 703.800232}
+        outs: 15000000160000001700000012000000
+        advanced: 0
+        metadata: 
+        text: Hey there Ash! Did you have a good time at the tavern? Did you get any
+          answers?
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Yeah, I had a great time! You was right about that place!
+        - No straight answers, but I think I'm on the right track.
+        - I'm bummed out. Still not any wiser.
+        - I can't talk right now, Barry. Sorry!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 21
+        type: 0
+        theme: 
+        position: {x: 1554.10083, y: 715}
+        outs: 18000000
+        advanced: 0
+        metadata: 
+        text: Yeah, I knew you would enjoy our little funky-town! Have a good one,
+          Ash!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 22
+        type: 0
+        theme: 
+        position: {x: 1554.10083, y: 851}
+        outs: 19000000
+        advanced: 0
+        metadata: 
+        text: I see, but that's good! It's like a riddle. You'll figure it out, kiddo.
+          I know it!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 23
+        type: 0
+        theme: 
+        position: {x: 1552.60059, y: 987}
+        outs: 1a000000
+        advanced: 0
+        metadata: 
+        text: Sorry to hear that. But don't you frown, kiddo! Keep asking people around
+          town and you'll find your family in no-time!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 24
+        type: 0
+        theme: 
+        position: {x: 1876.40063, y: 717}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: You too, Barry!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 25
+        type: 0
+        theme: 
+        position: {x: 1876.40063, y: 853}
+        outs: 1b000000
+        advanced: 0
+        metadata: 
+        text: Yeah! I can do this! See you later, Barry!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 26
+        type: 0
+        theme: 
+        position: {x: 1872.30115, y: 991}
+        outs: 1c000000
+        advanced: 0
+        metadata: 
+        text: You're right, Barry! I can't give up!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 27
+        type: 0
+        theme: 
+        position: {x: 2179.00146, y: 853.599854}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: Alright, kiddo! See you around!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 28
+        type: 0
+        theme: 
+        position: {x: 2178.50049, y: 989.700012}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: That's the spirit, Ash! Take care of yourself now, kiddo!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
       floats:
         variables: []
         selection: 0
@@ -5992,19 +6312,967 @@ MonoBehaviour:
         variables: []
         selection: 0
     - id: 16
-      name: Carey
+      name: Barry (Night)
       startPage: 0
       scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
+        type: 4
+        theme: 
+        position: {x: 169, y: 10}
+        outs: 0400000001000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 11
+        variableScrollPosition: {x: 0, y: 128}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 1
+        type: 4
+        theme: 
+        position: {x: 172, y: 335}
+        outs: 0200000003000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 10
+        variableScrollPosition: {x: 0, y: 128}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 2
+        type: 1
+        theme: 
+        position: {x: 541, y: 745}
+        outs: 16000000170000001800000006000000
+        advanced: 0
+        metadata: 
+        text: Hey there Ash! Are you having a good time? Did you get any answers?
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Yeah, I'm having a great time! You were right about this place!
+        - No straight answers, but I think I'm on the right track.
+        - I'm bummed out. Still not any wiser.
+        - I can't talk now, Barry. See you soon!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 3
+        type: 1
+        theme: 
+        position: {x: 555, y: 263}
+        outs: 0800000006000000
+        advanced: 0
+        metadata: 
+        text: Hey there, you seem new in town, kiddo!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Hi, I'm Ash! Yeah, I just got here!
+        - Sorry, I'm busy!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 4
+        type: 0
+        theme: 
+        position: {x: 516, y: 10}
+        outs: 1c000000
+        advanced: 0
+        metadata: 
+        text: I feel you're gonna like it here, Ash! Now let's keep partying!
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 5
         type: 6
         theme: 
-        position: {x: 200, y: 100}
+        position: {x: 1185, y: 50}
         outs: 
         advanced: 0
         metadata: 
         text: 
         name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 6
+        type: 0
+        theme: 
+        position: {x: 881, y: 586.299988}
+        outs: 07000000
+        advanced: 0
+        metadata: 
+        text: I got it, kiddo. Some other time!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 7
+        type: 6
+        theme: 
+        position: {x: 1236, y: 693.299988}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 8
+        type: 1
+        theme: 
+        position: {x: 885.199951, y: 262.600006}
+        outs: 090000000a0000000b000000
+        advanced: 0
+        metadata: 
+        text: 'Pleasure to meet you, Ash. I''m Barry! What brings you to this pristine
+          island of ours? '
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - I'm here to find my family. Have you seen anyone looking like me around
+          here?
+        - I got shipwrecked and woke up on the beach.
+        - Just vacation, it's a lovely island!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 9
+        type: 0
+        theme: 
+        position: {x: 1212, y: 264.700012}
+        outs: 0c000000
+        advanced: 0
+        metadata: 
+        text: Oh, I'm sorry, I haven't. But if     someone would know, it would be
+          ol' Barnacle Bill, oh yes!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 10
+        type: 0
+        theme: 
+        position: {x: 1212, y: 398.700012}
+        outs: 0d000000
+        advanced: 0
+        metadata: 
+        text: Yeah! I can do this! See you later, Barry!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 11
+        type: 0
+        theme: 
+        position: {x: 1212, y: 535.700012}
+        outs: 0e000000
+        advanced: 0
+        metadata: 
+        text: You're right! I can't give up!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 12
+        type: 0
+        theme: 
+        position: {x: 1520, y: 264.19989}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: Barnacle Bill? Who's that?
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 13
+        type: 0
+        theme: 
+        position: {x: 1518, y: 401.000061}
+        outs: 10000000
+        advanced: 0
+        metadata: 
+        text: I'm just fine, thank you! I'm just a little tired.
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 14
+        type: 0
+        theme: 
+        position: {x: 1518, y: 537.000061}
+        outs: 11000000
+        advanced: 0
+        metadata: 
+        text: Do you know where to have a good time around here?
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 15
+        type: 0
+        theme: 
+        position: {x: 1827, y: 262.500092}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Ol' Bill is the owner of this tavern! He's the big old frog behind the
+          bar!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 16
+        type: 0
+        theme: 
+        position: {x: 1827, y: 401.000092}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: I hear ya! You could rest up at our lovely tavern we got here. Say hi
+          to ol' Bill behind the bar for me!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 17
+        type: 0
+        theme: 
+        position: {x: 1824, y: 537.000122}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Now, I like that spirit, kiddo! We all gather here every night. This
+          is a good place to meet new people!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 0
+        theme: 
+        position: {x: 2186, y: 415.600098}
+        outs: 13000000
+        advanced: 0
+        metadata: 
+        text: Oh okay, thank you Barry!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 19
+        type: 0
+        theme: 
+        position: {x: 2494, y: 416.200073}
+        outs: 14000000
+        advanced: 0
+        metadata: 
+        text: De nada, kiddo! De nada!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 20
+        type: 3
+        theme: 
+        position: {x: 2899, y: 585.400085}
+        outs: 15000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 11
+        variableScrollPosition: {x: 0, y: 128}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 21
+        type: 6
+        theme: 
+        position: {x: 3269, y: 738.300049}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 22
+        type: 0
+        theme: 
+        position: {x: 891.89978, y: 755}
+        outs: 19000000
+        advanced: 0
+        metadata: 
+        text: Yeah, I knew you would enjoy our little funky town! Have a good one,
+          Ash!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 23
+        type: 0
+        theme: 
+        position: {x: 892.89978, y: 896}
+        outs: 1a000000
+        advanced: 0
+        metadata: 
+        text: I see, but that's good! It's like a riddle. You'll figure it out, kiddo.
+          I know it!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 24
+        type: 0
+        theme: 
+        position: {x: 895.89978, y: 1034}
+        outs: 1b000000
+        advanced: 0
+        metadata: 
+        text: Sorry to hear that. But don't you frown, kiddo! Keep asking people around
+          town and you'll find your family in no-time!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 25
+        type: 0
+        theme: 
+        position: {x: 1202.49988, y: 756.199951}
+        outs: 14000000
+        advanced: 0
+        metadata: 
+        text: You too, Barry!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 26
+        type: 0
+        theme: 
+        position: {x: 1202.49988, y: 894.199951}
+        outs: 1d000000
+        advanced: 0
+        metadata: 
+        text: Yeah! I can do this! See you later, Barry!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 27
+        type: 0
+        theme: 
+        position: {x: 1206.49988, y: 1035.19995}
+        outs: 1e000000
+        advanced: 0
+        metadata: 
+        text: You're right, Barry! I can't give up!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 28
+        type: 0
+        theme: 
+        position: {x: 823.000488, y: 10}
+        outs: 05000000
+        advanced: 0
+        metadata: 
+        text: Whooo!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 29
+        type: 0
+        theme: 
+        position: {x: 1515.40039, y: 894.30011}
+        outs: 14000000
+        advanced: 0
+        metadata: 
+        text: Alright, kiddo! See you around!
+        name: Barry
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 30
+        type: 0
+        theme: 
+        position: {x: 1517.40039, y: 1035.30005}
+        outs: 14000000
+        advanced: 0
+        metadata: 
+        text: 'That''s the spirit, Ash! Take care of yourself now, kiddo! '
+        name: Barry
         portrait: 
         audio: 
         audioDelay: 0
@@ -6069,10 +7337,10 @@ MonoBehaviour:
         - name: Talked to Lizard on beach Night Scene
           variable: false
           id: 9
-        - name: TalkedtoBarry
+        - name: TalkedtoBarryDay
           variable: false
           id: 10
-        - name: TalkedtoCarey
+        - name: TalkedtoBarryNight
           variable: false
           id: 11
         selection: 11
