@@ -55,6 +55,13 @@ public class PauseMenu : MonoBehaviour {
 
 		rpgGUI.SetActive (false);
 
+		ChangeColorOnEnter[] allComp = FindObjectsOfType<ChangeColorOnEnter> ();
+
+		foreach (ChangeColorOnEnter comp in allComp)
+		{
+			comp.ResetColor();
+		}
+
 	}
 
 	public void UnpauseGame ()
