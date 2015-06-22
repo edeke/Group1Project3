@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2391220}
   - 208: {fileID: 20847786}
   - 135: {fileID: 13509720}
-  - 114: {fileID: 11495766}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -27,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150088}
-  m_LocalRotation: {x: 0, y: -.344055235, z: 0, w: .938949406}
-  m_LocalPosition: {x: 1.49185944, y: -1.97712994, z: -39.5581894}
+  m_LocalRotation: {x: .112549625, y: -.467354119, z: .133407757, w: .866668999}
+  m_LocalPosition: {x: .439999998, y: 6.86000013, z: -67.5500031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6409,22 +6408,6 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 2139218}
   optimizedCutoutMaterial: {fileID: 2186430}
   isInPreviewMode: 0
---- !u!114 &11495766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccc7b8ee992cec40ba346cc9f2f2989, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorName: 
-  animationOnAction: 0
-  commentOffsetX: 0
-  commentOffsetY: 0
-  mouseCursorOver: 2
 --- !u!135 &13509720
 SphereCollider:
   m_ObjectHideFlags: 1
