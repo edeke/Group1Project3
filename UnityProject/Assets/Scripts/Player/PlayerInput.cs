@@ -136,7 +136,7 @@ public class PlayerInput : MonoBehaviour
 						break;
 					}
 				}
-				else
+				else  if (GWorld.isInvEnabled && dragging && Inventory.myInv.CurrentSelectedItem != -1)
 				{
 					IUseItem itemInterface = hitInfo.collider.GetComponent<IUseItem>();
 
