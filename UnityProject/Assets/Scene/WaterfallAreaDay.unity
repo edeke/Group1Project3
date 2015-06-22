@@ -132,8 +132,8 @@ Transform:
   - {fileID: 1515555398}
   - {fileID: 1717451316}
   - {fileID: 1957460898}
-  - {fileID: 728804265}
   - {fileID: 823014004}
+  - {fileID: 728804265}
   - {fileID: 819756637}
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -18053,7 +18053,6 @@ GameObject:
   - 4: {fileID: 1403596979}
   - 114: {fileID: 1403596981}
   - 65: {fileID: 1403596980}
-  - 114: {fileID: 1403596982}
   m_Layer: 0
   m_Name: FirePlace
   m_TagString: Untagged
@@ -18096,22 +18095,6 @@ BoxCollider:
   m_Size: {x: 1.78999996, y: 1, z: 1.59000003}
   m_Center: {x: 26.8500004, y: 28.25, z: -41.5999985}
 --- !u!114 &1403596981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1403596978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e82057362fa0543488251daffc6a61aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorName: 
-  animationOnAction: 0
-  commentOffsetX: 0
-  commentOffsetY: 0
-  mouseCursorOver: 0
---- !u!114 &1403596982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -18358,7 +18341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404208, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 10815492, guid: 474c7fc47c541d14c90d617835f78866, type: 2}
       propertyPath: m_Intensity
@@ -20557,7 +20540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 451626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 199626, guid: b9071e90b8eca424ab7b5576ed2c7d96, type: 2}
       propertyPath: m_Name
