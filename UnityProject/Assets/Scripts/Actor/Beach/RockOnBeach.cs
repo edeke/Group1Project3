@@ -125,7 +125,7 @@ public class RockOnBeach : CommentActorBase
 				}
 
 				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
-				movComp.DisplaySpeechBubble("Yikes, I should watch my toes");
+				movComp.DisplaySpeechBubble("Yikes! I should watch my toes!");
 
 				GWorld.MarkEventDone (EventID);
 			return true;

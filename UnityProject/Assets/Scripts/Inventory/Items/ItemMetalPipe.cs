@@ -20,7 +20,7 @@ public class ItemMetalPipe : Item {
 			if (Inventory.myInv.AddItem (itemData, transform.position)) 
 			{
 				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
-				movComp.DisplaySpeechBubble("This looks strong. It might come in handy.");
+				movComp.DisplaySpeechBubble("This spoon looks strong. It might come in handy.");
 
 
 				GWorld.MarkEventDone (eventID);
