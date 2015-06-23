@@ -31,6 +31,8 @@ public class Fireplace : CommentActorBase
 		{
 			case EItem.UnlitTorch :
 				Inventory.myInv.AddItem( ItemDatabase.GetItem("LitTorch"), Vector3.zero, false);
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+				movComp.DisplaySpeechBubble ("Now I have fire!");
 			return true;
 		}
 		
