@@ -23,7 +23,7 @@ public class LizardBeach : NPCBase {
 
 	override public void OnInspect()
 	{	
-		DisplayComment ("Looks like he is sleeping");
+		DisplayComment ("Looks like he is sleeping.");
 		//DisplaySpeechBubble ( "Zzzz..." );
 		
 	}
