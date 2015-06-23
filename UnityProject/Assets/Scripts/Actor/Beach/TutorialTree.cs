@@ -43,7 +43,7 @@ public class TutorialTree : MonoBehaviour {
 			{
 
 				PlayerMovement movComp = other.GetComponent<PlayerMovement> ();
-				movComp.DisplaySpeechBubble ("I should try interacting <b>(Right Mouse)</b> with that tree to get my backpack down.");
+				movComp.DisplaySpeechBubble ("I should try to shake <b>(Left Mouse)</b> that palm tree.");
 
 			}
 
