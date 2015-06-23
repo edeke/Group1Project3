@@ -35,7 +35,7 @@ public class Pirate : NPCBase
 		}
 		else
 		{
-			DisplaySpeechBubble ( "How could I loose it..." );
+			DisplaySpeechBubble ( "How could I loose it...?" );
 		}
 	}
 
@@ -57,7 +57,7 @@ public class Pirate : NPCBase
 
 	void RingGivenToPirate()
 	{
-		DisplaySpeechBubble("Okey, you can enter now.");
+		DisplaySpeechBubble("Oh my preeeeecious! Okey, you can enter now.");
 		ringGiven = true;
 		GWorld.MarkEventDone (EventID);
 	}
