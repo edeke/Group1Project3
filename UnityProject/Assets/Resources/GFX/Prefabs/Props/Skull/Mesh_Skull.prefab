@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2302222}
   - 65: {fileID: 6569110}
   - 114: {fileID: 11475052}
+  - 208: {fileID: 20824370}
   m_Layer: 0
   m_Name: polySurface37
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115204}
   m_LocalRotation: {x: .0125616184, y: -.968307555, z: -.0404922515, w: .246136382}
-  m_LocalPosition: {x: 24.5183105, y: .207307816, z: -5.14193726}
+  m_LocalPosition: {x: 22.2600002, y: .330000013, z: -6.80999994}
   m_LocalScale: {x: .00800000038, y: .00800000038, z: .00800000038}
   m_Children:
   - {fileID: 409454}
@@ -116,7 +117,22 @@ MonoBehaviour:
   actorName: 
   commentOffsetX: 0
   commentOffsetY: 0
-  mouseCursorOver: 2
+  mouseCursorOver: 1
+--- !u!208 &20824370
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100296}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 214.777008, y: 247.031006, z: 290.095001}
+  m_MoveThreshold: .100000001
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.38900018, y: 244.155014, z: -3.34300017}
+  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
