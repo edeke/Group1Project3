@@ -8,7 +8,7 @@ public class ItemMetalPipe : Item {
 
 	override public void OnInspect()
 	{
-		DisplayComment("It's a shovel.");
+		DisplayComment("It's a spoon.");
 
 	}
 
@@ -20,7 +20,7 @@ public class ItemMetalPipe : Item {
 			if (Inventory.myInv.AddItem (itemData, transform.position)) 
 			{
 				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
-				movComp.DisplaySpeechBubble("This will come in handy, I'm sure of it");
+				movComp.DisplaySpeechBubble("This looks strong. It might come in handy.");
 
 
 				GWorld.MarkEventDone (eventID);

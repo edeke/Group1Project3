@@ -65,7 +65,7 @@ public class TutorialTree : MonoBehaviour {
 			{
 					
 				PlayerMovement movComp = other.GetComponent<PlayerMovement> ();
-				movComp.DisplaySpeechBubble ("That was easy, now I should try and find out where I am");
+				movComp.DisplaySpeechBubble ("Yay! That wasn't too hard!");
 					
 			}
 				

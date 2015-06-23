@@ -87,7 +87,9 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (GWorld.currentZone == ZoneBase.Beach) 
 		{
+			//visar två speeach bubbles, en efter 1s, en efter 5s
 			Invoke ("PlayerDisplayStartLine1", 1.0f);
+			Invoke ("PlayerDisplayStartLine2", 5.0f);
 		}
 
 	}
@@ -779,7 +781,13 @@ public class PlayerMovement : MonoBehaviour {
 	void PlayerDisplayStartLine1()
 	{
 		PlayerMovement movComp = GetComponent<PlayerMovement>();
-		movComp.DisplaySpeechBubble("What a crash, where am I? I should try find my backpack.");
+		movComp.DisplaySpeechBubble("Whoa! What a crash!");
+	}
+
+	void PlayerDisplayStartLine2()
+	{
+		PlayerMovement movComp = GetComponent<PlayerMovement>();
+		movComp.DisplaySpeechBubble("Where'd my backpack go?");
 	}
 
 }
