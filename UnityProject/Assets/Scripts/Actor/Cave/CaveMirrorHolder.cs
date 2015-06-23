@@ -14,6 +14,7 @@ public class CaveMirrorHolder : CommentActorBase
 	void Start () 
 	{
 		mirrorRenderer = mirror.GetComponent<MeshRenderer> ();
+
 		
 		if (!GWorld.TryRegisterEvent (EventID, "Hello"))
 		{
@@ -22,13 +23,13 @@ public class CaveMirrorHolder : CommentActorBase
 			
 			if(tempData.hasEventOccured)
 			{
-				mirrorRenderer.enabled = true;
+				EnableMeshRenderers(true);
 				lightToEnable.GetComponent<CaveReflectedLight>().TurnOnLight();
 				lightToEnable2.GetComponent<CaveReflectedLight>().TurnOnLight();
 			}
 			else
 			{
-				mirrorRenderer.enabled = false;
+				EnableMeshRenderers(false);
 			}
 		}
 		
@@ -77,8 +78,8 @@ public class CaveMirrorHolder : CommentActorBase
 		{
 			case EItem.OldMirror :
 				GWorld.MarkEventDone(EventID);
-				mirrorRenderer.enabled = true;
-		
+
+				EnableMeshRenderers(true);
 				lightToEnable.GetComponent<CaveReflectedLight>().TurnOnLight();
 				lightToEnable2.GetComponent<CaveReflectedLight>().TurnOnLight();
 			return true;
@@ -96,6 +97,25 @@ public class CaveMirrorHolder : CommentActorBase
 				
 			default :
 				return EAnimationState.Error;
+		}
+	}
+
+	public void EnableMeshRenderers(bool enable)
+	{
+
+		mirrorRenderer.enabled = enable;
+
+		if (GWorld.GetTimeOfTheDay() == TimeOfDay.Night) 
+		{
+			MeshRenderer[] allComp = GetComponentsInChildren<MeshRenderer> ();
+			
+			foreach (MeshRenderer comp in allComp) 
+			{
+				if(comp.CompareTag("Godray"))
+				{
+					comp.enabled = enable;
+				}
+			}
 		}
 	}
 

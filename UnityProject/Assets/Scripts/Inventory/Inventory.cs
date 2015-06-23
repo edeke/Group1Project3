@@ -21,7 +21,9 @@ public enum EItem {
 	Bottle2,
 	Bottle3,
 	Carpet,
-	Letter1
+	Letter1,
+	Letter2,
+	Letter3
 };
 
 public class ItemStruct
