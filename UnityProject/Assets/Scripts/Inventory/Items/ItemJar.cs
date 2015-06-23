@@ -7,6 +7,17 @@ public class ItemJar : Item {
 
 	void Start (){
 
+		itemData.itemTexture = itemTexture;
+		itemData.itemType = itemType;
+		itemData.soundOnPickup = soundOnPickup;
+		itemData.soundOnUse = soundOnUse;
+		itemData.numberOfItemsInStack = numberOfItemsInStack;
+		itemData.onDragParticle = onDragParticle;
+		itemData.onUseParticle = onUseParticle;
+		itemData.onPickupParticle = onPickupParticle;
+		itemData.itemDescription = itemDescription;
+		itemData.itemScriptName = this.GetType ();
+
 		skyler = GameObject.Find ("pre_skyler");
 
 	}

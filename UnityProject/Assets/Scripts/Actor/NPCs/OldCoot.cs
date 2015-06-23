@@ -14,6 +14,11 @@ public class OldCoot : NPCBase {
 
 	
 	}
+
+	public void DontTouchTheJar ()
+	{
+		DisplaySpeechBubble ("You can't take that!");
+	}
 	
 	override public void OnInspect()
 	{	
@@ -45,6 +50,7 @@ public class OldCoot : NPCBase {
 				GottenThirdBottle();
 				heldBottles ++;
 				return true;
+				Dialoguer.SetGlobalBoolean(12, true);
 			} else {
 				DisplaySpeechBubble ( "I need something else first!" );
 			}
@@ -86,7 +92,7 @@ public class OldCoot : NPCBase {
 
 	void GottenThirdBottle(){
 		Dialoguer.SetGlobalBoolean (8, true);
-		DisplaySpeechBubble("That's enough!");
+		DisplaySpeechBubble("Thank you! Take this bottle next to me!");
 		GWorld.MarkEventDone (EventID3);
 	}
 
