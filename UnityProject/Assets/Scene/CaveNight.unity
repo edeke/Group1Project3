@@ -222,7 +222,7 @@ Transform:
   - {fileID: 1593739303}
   - {fileID: 1984101370}
   m_Father: {fileID: 0}
-  m_RootOrder: 152
+  m_RootOrder: 154
 --- !u!1001 &14722239
 Prefab:
   m_ObjectHideFlags: 0
@@ -411,7 +411,7 @@ Transform:
   m_LocalScale: {x: 16.3502884, y: 6.27800035, z: 4.80633688}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 151
+  m_RootOrder: 153
 --- !u!1 &43106836
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,12 +434,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43106836}
-  m_LocalRotation: {x: -.823459029, y: -.291058183, z: .146970019, w: -.464327753}
+  m_LocalRotation: {x: -.811085343, y: -.257685632, z: .204512656, w: -.483645797}
   m_LocalPosition: {x: -97.6999969, y: 62.9000015, z: -34.9000015}
   m_LocalScale: {x: -.0187299736, y: .0187558234, z: .0211656913}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 147
+  m_RootOrder: 149
 --- !u!108 &43106838
 Light:
   m_ObjectHideFlags: 0
@@ -449,10 +449,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 0
-  m_Color: {r: 1, g: .938945174, b: .683823526, a: 1}
+  m_Color: {r: 1, g: .889249384, b: .426470578, a: 1}
   m_Intensity: 6
-  m_Range: 85.6399994
-  m_SpotAngle: 60
+  m_Range: 53.9000015
+  m_SpotAngle: 26.6000004
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -561,7 +561,7 @@ Transform:
   - {fileID: 676133616}
   - {fileID: 84536719}
   m_Father: {fileID: 0}
-  m_RootOrder: 141
+  m_RootOrder: 143
 --- !u!1001 &64056168
 Prefab:
   m_ObjectHideFlags: 0
@@ -1138,7 +1138,7 @@ Transform:
   - {fileID: 2134148988}
   - {fileID: 1012690675}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 38
 --- !u!114 &117320168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,6 +1395,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 167108295}
   m_Mesh: {fileID: 4300000, guid: c0e1417a443d50c48ad6304e2cf1e147, type: 3}
+--- !u!1 &180761073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 180761074}
+  - 108: {fileID: 180761075}
+  m_Layer: 0
+  m_Name: Point light mushroom 05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180761074
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180761073}
+  m_LocalRotation: {x: .190777123, y: -.601673484, z: -.26654768, w: .728385568}
+  m_LocalPosition: {x: .25999999, y: 5.96000004, z: -5.0999999}
+  m_LocalScale: {x: 1.69768679, y: 1.72073054, z: 1.71201122}
+  m_Children: []
+  m_Father: {fileID: 1969835866}
+  m_RootOrder: 1
+--- !u!108 &180761075
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180761073}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: .669117689, g: .931541502, b: 1, a: 1}
+  m_Intensity: .629999995
+  m_Range: 11.5500002
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &184842059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 68
 --- !u!1 &240368506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,7 +2564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 153
+  m_RootOrder: 155
 --- !u!1 &325758382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,7 +2575,7 @@ GameObject:
   - 4: {fileID: 325758384}
   - 108: {fileID: 325758383}
   m_Layer: 0
-  m_Name: Point light 7
+  m_Name: Point light 7 cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2530,9 +2590,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: .91911763, g: 1, b: .976571977, a: 1}
-  m_Intensity: 2.5
-  m_Range: 33.7000008
+  m_Color: {r: .596078455, g: .898039222, b: 1, a: 1}
+  m_Intensity: 4.44999981
+  m_Range: 26.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2564,7 +2624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 12
 --- !u!1001 &332137804
 Prefab:
   m_ObjectHideFlags: 0
@@ -2633,7 +2693,7 @@ GameObject:
   - 4: {fileID: 334623416}
   - 108: {fileID: 334623415}
   m_Layer: 0
-  m_Name: Point light 4
+  m_Name: Point light 4 ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2649,7 +2709,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: .978904724, b: .808823526, a: 1}
-  m_Intensity: 1
+  m_Intensity: .680000007
   m_Range: 14.3900003
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2682,7 +2742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 146
+  m_RootOrder: 148
 --- !u!1 &338203780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,7 +3005,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453732, guid: 00021fe53537b3a41a5634286ac56ae7, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 107292, guid: 00021fe53537b3a41a5634286ac56ae7, type: 2}
       propertyPath: m_Name
@@ -3062,7 +3122,7 @@ GameObject:
   - 4: {fileID: 382270377}
   - 108: {fileID: 382270376}
   m_Layer: 0
-  m_Name: Point light 10
+  m_Name: Point light 10 beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3111,7 +3171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 121
+  m_RootOrder: 137
 --- !u!1 &393948879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,7 +3306,7 @@ GameObject:
   - 4: {fileID: 411031958}
   - 108: {fileID: 411031957}
   m_Layer: 0
-  m_Name: Point light 16
+  m_Name: Point light 16 beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3295,7 +3355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 14
 --- !u!1001 &425973492
 Prefab:
   m_ObjectHideFlags: 0
@@ -3592,7 +3652,7 @@ GameObject:
   - 4: {fileID: 466564387}
   - 108: {fileID: 466564388}
   m_Layer: 0
-  m_Name: Point light
+  m_Name: Point light mushroom 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3619,9 +3679,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: .382352948, g: .53995961, b: 1, a: 1}
-  m_Intensity: 1.60000002
-  m_Range: 10
+  m_Color: {r: .669117689, g: .931541502, b: 1, a: 1}
+  m_Intensity: 1.41999996
+  m_Range: 12.1000004
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3768,7 +3828,7 @@ GameObject:
   - 4: {fileID: 493709129}
   - 108: {fileID: 493709128}
   m_Layer: 0
-  m_Name: Point light 3
+  m_Name: Point light 3 ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3784,8 +3844,8 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: .978904724, b: .808823526, a: 1}
-  m_Intensity: 8
-  m_Range: 11.1899996
+  m_Intensity: 5.94000006
+  m_Range: 14.1000004
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3813,11 +3873,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 493709127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.9700012, y: 35.8800011, z: -47.2200012}
+  m_LocalPosition: {x: -100.370003, y: 40.3699989, z: -47.2200012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 142
+  m_RootOrder: 144
 --- !u!1001 &499116949
 Prefab:
   m_ObjectHideFlags: 0
@@ -4498,7 +4558,7 @@ GameObject:
   - 4: {fileID: 591383909}
   - 108: {fileID: 591383908}
   m_Layer: 0
-  m_Name: Point light 1
+  m_Name: Point light 1 beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4547,7 +4607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 144
+  m_RootOrder: 146
 --- !u!1 &608616691
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,7 +5394,7 @@ GameObject:
   - 4: {fileID: 658652950}
   - 108: {fileID: 658652951}
   m_Layer: 0
-  m_Name: Point light
+  m_Name: Point light mushroom 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5361,7 +5421,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: .382352948, g: .53995961, b: 1, a: 1}
+  m_Color: {r: .669117689, g: .931541502, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -5529,7 +5589,7 @@ Transform:
   - {fileID: 1551738350}
   - {fileID: 1516070544}
   m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_RootOrder: 95
 --- !u!4 &676133616 stripped
 Transform:
   m_PrefabParentObject: {fileID: 469176, guid: db21d15b429877c4ab2d705d14298c04, type: 2}
@@ -5996,7 +6056,7 @@ GameObject:
   - 4: {fileID: 738283500}
   - 108: {fileID: 738283499}
   m_Layer: 0
-  m_Name: Point light 6
+  m_Name: Point light 6 moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6045,7 +6105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 137
+  m_RootOrder: 139
 --- !u!1 &748807495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,7 +6164,7 @@ Transform:
   - {fileID: 856707769}
   - {fileID: 1260312345}
   m_Father: {fileID: 0}
-  m_RootOrder: 91
+  m_RootOrder: 119
 --- !u!1001 &756689429
 Prefab:
   m_ObjectHideFlags: 0
@@ -6478,7 +6538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 51
 --- !u!1001 &766757220
 Prefab:
   m_ObjectHideFlags: 0
@@ -6547,7 +6607,7 @@ GameObject:
   - 4: {fileID: 766898424}
   - 108: {fileID: 766898423}
   m_Layer: 0
-  m_Name: Point light 11
+  m_Name: Point light 11 cleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6596,7 +6656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 111
+  m_RootOrder: 136
 --- !u!4 &804012884 stripped
 Transform:
   m_PrefabParentObject: {fileID: 450928, guid: c7afdc4fc8263aa4eb890032a73e39b0, type: 2}
@@ -6965,6 +7025,68 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03313d1adc135534782f6826a3c76843, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &853615001
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -33.6899986
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 34.2299995
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -64.7099991
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .764425159
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .159283474
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.6144467
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .112864271
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 9.02586746
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.02398896
+      objectReference: {fileID: 0}
+    - target: {fileID: 445412, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 166.875214
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329310, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 341f5a279c0b22f40a2dabcd241b6b4c, type: 2}
+    - target: {fileID: 2387042, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 341f5a279c0b22f40a2dabcd241b6b4c, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 529a62a09e790f843b25acda05d7f6af, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &856707769 stripped
 Transform:
   m_PrefabParentObject: {fileID: 428438, guid: bc3e7c561c38df249934b9cbaee41667, type: 2}
@@ -7083,7 +7205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 35
 --- !u!1001 &890491766
 Prefab:
   m_ObjectHideFlags: 0
@@ -7197,7 +7319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 78
 --- !u!1001 &909915521
 Prefab:
   m_ObjectHideFlags: 0
@@ -7743,7 +7865,7 @@ GameObject:
   - 4: {fileID: 961289443}
   - 108: {fileID: 961289442}
   m_Layer: 0
-  m_Name: Point light 8
+  m_Name: Point light 8 ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7792,7 +7914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 130
+  m_RootOrder: 138
 --- !u!1 &969116321
 GameObject:
   m_ObjectHideFlags: 0
@@ -8087,7 +8209,67 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 138
+  m_RootOrder: 140
+--- !u!1 &1005974871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1005974873}
+  - 108: {fileID: 1005974872}
+  m_Layer: 0
+  m_Name: Point light 7 cave 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1005974872
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005974871}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: .596078455, g: .898039222, b: 1, a: 1}
+  m_Intensity: 4.01000023
+  m_Range: 5.05000019
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1005974873
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005974871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -97.7030029, y: 30.1700001, z: -66.9899979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1001 &1007687428
 Prefab:
   m_ObjectHideFlags: 0
@@ -8272,7 +8454,7 @@ Transform:
   - {fileID: 1453994138}
   - {fileID: 1802808989}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!114 &1022088060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8360,7 +8542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 149
+  m_RootOrder: 151
 --- !u!1 &1025813257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +9043,7 @@ GameObject:
   - 108: {fileID: 1087794869}
   - 114: {fileID: 1087794868}
   m_Layer: 0
-  m_Name: Point light 15
+  m_Name: Spot light mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8884,7 +9066,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1087794867}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
   m_Type: 0
   m_Color: {r: .320339531, g: .369753718, b: .551470578, a: 1}
@@ -8921,7 +9103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
 --- !u!1 &1096395069
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,7 +9163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 150
+  m_RootOrder: 152
 --- !u!1 &1107771830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9206,7 +9388,7 @@ GameObject:
   - 4: {fileID: 1130724471}
   - 108: {fileID: 1130724472}
   m_Layer: 0
-  m_Name: Point light 1
+  m_Name: Point light mushroom 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9233,9 +9415,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: .382352948, g: .53995961, b: 1, a: 1}
-  m_Intensity: 1.60000002
-  m_Range: 10
+  m_Color: {r: .669117689, g: .931541502, b: 1, a: 1}
+  m_Intensity: .889999986
+  m_Range: 5.4000001
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -9471,7 +9653,7 @@ Transform:
   - {fileID: 332137805}
   - {fileID: 726135538}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!114 &1195082029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9601,7 +9783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 56
 --- !u!1 &1215163438
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,7 +9883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476406, guid: 8eaf988d87874514ca0a165912c79dfc, type: 2}
       propertyPath: m_RootOrder
-      value: 123
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 476406, guid: 8eaf988d87874514ca0a165912c79dfc, type: 2}
       propertyPath: m_LocalScale.x
@@ -9848,7 +10030,7 @@ GameObject:
   - 4: {fileID: 1229277769}
   - 108: {fileID: 1229277768}
   m_Layer: 0
-  m_Name: Point light 12
+  m_Name: Point light 12 cleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9897,7 +10079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 57
 --- !u!1 &1237272332
 GameObject:
   m_ObjectHideFlags: 0
@@ -10339,7 +10521,7 @@ Transform:
   m_Children:
   - {fileID: 1108887135}
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 91
 --- !u!1001 &1280187185
 Prefab:
   m_ObjectHideFlags: 0
@@ -10516,7 +10698,7 @@ GameObject:
   - 4: {fileID: 1301273399}
   - 108: {fileID: 1301273400}
   m_Layer: 0
-  m_Name: Point light 5
+  m_Name: Point light mushroom 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10543,7 +10725,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: .382352948, g: .53995961, b: 1, a: 1}
+  m_Color: {r: .669117689, g: .931541502, b: 1, a: 1}
   m_Intensity: 1.60000002
   m_Range: 10
   m_SpotAngle: 30
@@ -10783,7 +10965,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428004, guid: 03313d1adc135534782f6826a3c76843, type: 2}
       propertyPath: m_RootOrder
-      value: 95
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 428004, guid: 03313d1adc135534782f6826a3c76843, type: 2}
       propertyPath: m_LocalScale.x
@@ -10930,12 +11112,12 @@ Transform:
   m_PrefabParentObject: {fileID: 476990, guid: f3855c0c835ec714d95e78511f35eb61, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577090321}
-  m_LocalRotation: {x: .30414784, y: 0, z: 0, w: .952624857}
-  m_LocalPosition: {x: -81.3000031, y: 29.2999992, z: -58.7999992}
+  m_LocalRotation: {x: .146650359, y: .0881517008, z: -.0200132541, w: .985049486}
+  m_LocalPosition: {x: -102.349998, y: 30.6499996, z: -69.0299988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 143
+  m_RootOrder: 145
 --- !u!1001 &1357692010
 Prefab:
   m_ObjectHideFlags: 0
@@ -11411,7 +11593,7 @@ GameObject:
   - 4: {fileID: 1419969293}
   - 108: {fileID: 1419969292}
   m_Layer: 0
-  m_Name: Point light 2
+  m_Name: Point light 2 moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11460,7 +11642,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 140
+  m_RootOrder: 142
 --- !u!1 &1426101033
 GameObject:
   m_ObjectHideFlags: 0
@@ -11517,7 +11699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 148
+  m_RootOrder: 150
 --- !u!1 &1444399690
 GameObject:
   m_ObjectHideFlags: 0
@@ -11709,7 +11891,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 64
 --- !u!1 &1465610002
 GameObject:
   m_ObjectHideFlags: 0
@@ -11720,7 +11902,7 @@ GameObject:
   - 4: {fileID: 1465610004}
   - 108: {fileID: 1465610003}
   m_Layer: 0
-  m_Name: Point light 5
+  m_Name: Point light 5 beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11769,7 +11951,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 45
 --- !u!1001 &1468389914
 Prefab:
   m_ObjectHideFlags: 0
@@ -12055,7 +12237,7 @@ Transform:
   m_LocalScale: {x: .600000143, y: .600000143, z: .600000143}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 61
 --- !u!4 &1516070544 stripped
 Transform:
   m_PrefabParentObject: {fileID: 476574, guid: c28318a5ec0fb05419609ae0a705316d, type: 2}
@@ -12561,7 +12743,7 @@ GameObject:
   - 4: {fileID: 1562685871}
   - 108: {fileID: 1562685870}
   m_Layer: 0
-  m_Name: Point light 13
+  m_Name: Point light 13 grave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12573,7 +12755,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562685869}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: .588235259, g: .676267743, b: 1, a: 1}
@@ -12610,7 +12792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1 &1577090321
 GameObject:
   m_ObjectHideFlags: 0
@@ -12705,11 +12887,6 @@ MonoBehaviour:
       value: 0
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
-    - time: .854925156
-      value: .932919025
-      inSlope: .864863396
-      outSlope: .864863396
       tangentMode: 0
     - time: 1
       value: 1
@@ -13941,7 +14118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 54
 --- !u!1001 &1688684499
 Prefab:
   m_ObjectHideFlags: 0
@@ -14244,7 +14421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 48
 --- !u!1001 &1719007367
 Prefab:
   m_ObjectHideFlags: 0
@@ -14417,7 +14594,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 53
 --- !u!1 &1745809865
 GameObject:
   m_ObjectHideFlags: 0
@@ -14836,7 +15013,7 @@ GameObject:
   - 4: {fileID: 1810257231}
   - 108: {fileID: 1810257230}
   m_Layer: 0
-  m_Name: Point light 14
+  m_Name: Point light 14 cleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14885,7 +15062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 59
 --- !u!1 &1812398790
 GameObject:
   m_ObjectHideFlags: 0
@@ -14912,7 +15089,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 139
+  m_RootOrder: 141
 --- !u!1 &1825369176
 GameObject:
   m_ObjectHideFlags: 0
@@ -14970,7 +15147,7 @@ Transform:
   m_Children:
   - {fileID: 1841406290}
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 55
 --- !u!1 &1837651015
 GameObject:
   m_ObjectHideFlags: 0
@@ -15192,7 +15369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 39
 --- !u!1001 &1849985084
 Prefab:
   m_ObjectHideFlags: 0
@@ -15324,7 +15501,7 @@ Transform:
   - {fileID: 2074556521}
   - {fileID: 2099995601}
   m_Father: {fileID: 0}
-  m_RootOrder: 145
+  m_RootOrder: 147
 --- !u!1 &1860531810
 GameObject:
   m_ObjectHideFlags: 0
@@ -15680,7 +15857,7 @@ GameObject:
   - 4: {fileID: 1911737773}
   - 108: {fileID: 1911737772}
   m_Layer: 0
-  m_Name: Point light 9
+  m_Name: Point light 9 beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15729,7 +15906,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 30
 --- !u!1001 &1915830670
 Prefab:
   m_ObjectHideFlags: 0
@@ -16338,6 +16515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1130724471}
+  - {fileID: 180761074}
   m_Father: {fileID: 1986378860}
   m_RootOrder: 0
 --- !u!1 &1971286887
@@ -16372,7 +16550,7 @@ Transform:
   - {fileID: 2133859314}
   - {fileID: 658652950}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!114 &1971286889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16519,7 +16697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 100
+  m_RootOrder: 123
 --- !u!1001 &1981575266
 Prefab:
   m_ObjectHideFlags: 0
@@ -16665,7 +16843,7 @@ Transform:
   - {fileID: 64056169}
   - {fileID: 1942720643}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!1 &1987958311
 GameObject:
   m_ObjectHideFlags: 0
@@ -16887,7 +17065,7 @@ Transform:
   - {fileID: 639227848}
   - {fileID: 1077995382}
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 107
 --- !u!4 &2015795274 stripped
 Transform:
   m_PrefabParentObject: {fileID: 469176, guid: db21d15b429877c4ab2d705d14298c04, type: 2}
@@ -17006,7 +17184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!1001 &2042125580
 Prefab:
   m_ObjectHideFlags: 0
@@ -24807,7 +24985,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 41
 --- !u!1001 &2138589052
 Prefab:
   m_ObjectHideFlags: 0
