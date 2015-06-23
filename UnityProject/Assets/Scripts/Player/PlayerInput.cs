@@ -295,21 +295,27 @@ public class PlayerInput : MonoBehaviour
 
 			if( GWorld.isInvEnabled )
 			{
-				if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
+				if( EventSystem.current.IsPointerOverGameObject () == false )
 				{
-					if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
+					if( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 					{
+						if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
+						{
 
+						}
 					}
 				}
 			}
 			else
 			{	
-				if( traceHit && dragging == false )
+				if( EventSystem.current.IsPointerOverGameObject () == false )
 				{
-					if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
+					if( traceHit && dragging == false )
 					{
-						
+						if( !TryInspectOnObject( hitInfo.collider.gameObject, true ) )
+						{
+							
+						}
 					}
 				}
 			}
@@ -432,20 +438,20 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( Inventory.myInv.CurrentSelectedItem == -1 && traceHit && dragging == false )
 				{
-					if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
+					if( EventSystem.current.IsPointerOverGameObject() == false )
 					{
-						if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
+						if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
 						{
-							//if no interface on object and pointer is not over a UI element
-							if( EventSystem.current.IsPointerOverGameObject() == false )
+							if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 							{
+								//if no interface on object and pointer is not over a UI element
+
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
 									movementScript.WalkToLocation(hitInfo.point);
 								}
 
 							}
-
 						}
 					}
 				}
@@ -461,20 +467,21 @@ public class PlayerInput : MonoBehaviour
 			{
 				if ( traceHit && dragging == false )
 				{
-					if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
+					if( EventSystem.current.IsPointerOverGameObject() == false )
 					{
-						if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
+
+						if(!TryTalkToObject(hitInfo.collider.gameObject, hitInfo.point))
 						{
-							//if no interface on object and pointer is not over a UI element
-							if( EventSystem.current.IsPointerOverGameObject() == false )
+							if(!TryUseActionOnObject(hitInfo.collider.gameObject, hitInfo.point, true ) )
 							{
+								//if no interface on object and pointer is not over a UI element
+
 								if( hitInfo.collider.gameObject.CompareTag("Actor") == false && hitInfo.collider.gameObject.CompareTag("Player") == false )
 								{
 									movementScript.WalkToLocation(hitInfo.point);
 								}
-								
-							}
 							
+							}
 						}
 					}
 				}

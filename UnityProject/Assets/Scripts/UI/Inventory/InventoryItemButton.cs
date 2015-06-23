@@ -27,7 +27,7 @@ public class InventoryItemButton : MonoBehaviour {
 	public void OnMouseClick()
 	{
 		//On right click
-		if (Input.GetMouseButtonUp (1)) 
+		if (Input.GetMouseButtonUp (0)) 
 		{
 			Inventory.myInv.RunInventoryItemScript(index);
 		}
