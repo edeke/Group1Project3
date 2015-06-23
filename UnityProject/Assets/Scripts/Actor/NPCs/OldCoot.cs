@@ -80,19 +80,19 @@ public class OldCoot : NPCBase {
 	
 	void GottenFirstBottle(){
 		Dialoguer.SetGlobalBoolean (6, true);
-		DisplaySpeechBubble("Give me one more!");
+		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
 		GWorld.MarkEventDone (EventID);
 	}
 
 	void GottenSecondBottle(){
 		Dialoguer.SetGlobalBoolean (7, true);
-		DisplaySpeechBubble("I'm still thirsty.");
+		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
 		GWorld.MarkEventDone (EventID2);
 	}
 
 	void GottenThirdBottle(){
 		Dialoguer.SetGlobalBoolean (8, true);
-		DisplaySpeechBubble("Thank you! Take this bottle next to me!");
+		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
 		GWorld.MarkEventDone (EventID3);
 	}
 
