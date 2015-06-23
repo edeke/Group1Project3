@@ -24,6 +24,16 @@ public class InventoryItemButton : MonoBehaviour {
 
 	}
 
+	public void OnMouseClick()
+	{
+		//On right click
+		if (Input.GetMouseButtonUp (1)) 
+		{
+			Inventory.myInv.RunInventoryItemScript(index);
+		}
+
+	}
+
 	//set index of button to link it to the inventory item array
 	public void SetIndex(int newIndex)
 	{

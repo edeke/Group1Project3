@@ -43,14 +43,18 @@ public class Item : MonoBehaviour, IAction, IInspectInterface, IMouseCursor
 		itemData.onUseParticle = onUseParticle;
 		itemData.onPickupParticle = onPickupParticle;
 		itemData.itemDescription = itemDescription;
+		itemData.itemScriptName = this.GetType ();
 
+	}
 
+	virtual public void OnInventoryInspect()
+	{
+		Debug.Log ("Inspect Item");
 	}
 
 	virtual public MouseCursorInput OnMouseOverCursor()
 	{
 		EnableOutline (true);
-
 
 		if (mouseCursorOver == MouseCursorInput.Default) 
 		{

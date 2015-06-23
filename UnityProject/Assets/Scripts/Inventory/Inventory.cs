@@ -20,7 +20,8 @@ public enum EItem {
 	Bottle1,
 	Bottle2,
 	Bottle3,
-	Carpet
+	Carpet,
+	Letter1
 };
 
 public class ItemStruct
@@ -35,6 +36,7 @@ public class ItemStruct
 	public string itemDescription;
 	[HideInInspector]
 	public int numberOfItemsInStack;
+	public System.Type itemScriptName;
 
 }
 
@@ -116,6 +118,34 @@ public class Inventory : MonoBehaviour {
 
 		return itemInserted;
 	}
+
+	public bool RunInventoryItemScript(int index)
+	{
+
+		if (itemArray [index] == null) 
+		{
+			return false;
+		}
+		else
+		{
+			System.Type itemScript = itemArray [index].itemScriptName;
+
+			Item newItem = gameObject.AddComponent(itemScript) as Item;
+
+			if (newItem != null)
+			{
+				newItem.OnInventoryInspect ();
+
+				Destroy(newItem);
+
+				return true;
+			} 
+
+		}
+		return false;
+
+	}
+
 
 	bool RemoveItem(int index)
 	{
