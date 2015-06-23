@@ -17,7 +17,7 @@ MonoBehaviour:
     - id: 0
       name: Barnacle Bill
       startPage: 2
-      scrollPosition: {x: 343.758728, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
       - id: 10
         type: 0
         theme: 
-        position: {x: 814, y: 429}
+        position: {x: 809, y: 366}
         outs: 0d000000
         advanced: 0
         metadata: 
@@ -4742,7 +4742,7 @@ MonoBehaviour:
     - id: 12
       name: Billy
       startPage: 0
-      scrollPosition: {x: 267.300415, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 1
@@ -5013,7 +5013,7 @@ MonoBehaviour:
     - id: 13
       name: Old Coot
       startPage: 0
-      scrollPosition: {x: 56.1000252, y: 592.49939}
+      scrollPosition: {x: 289.300018, y: 1067.29932}
       phases:
       - id: 0
         type: 4
@@ -5049,8 +5049,8 @@ MonoBehaviour:
       - id: 1
         type: 4
         theme: 
-        position: {x: 167, y: 324}
-        outs: 040000001b000000
+        position: {x: 217, y: 688}
+        outs: 0400000022000000
         advanced: 0
         metadata: 
         text: 
@@ -5074,14 +5074,14 @@ MonoBehaviour:
         variableScrollPosition: {x: 0, y: 71}
         variableSetEquation: 0
         variableSetValue: true
-        variableGetEquation: 1
+        variableGetEquation: 0
         variableGetValue: true
         messageName: 
       - id: 2
         type: 4
         theme: 
-        position: {x: 168, y: 962}
-        outs: 0500000009000000
+        position: {x: 222, y: 1808}
+        outs: 050000001b000000
         advanced: 0
         metadata: 
         text: 
@@ -5111,7 +5111,7 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 524, y: 10}
+        position: {x: 1077, y: 22}
         outs: 08000000
         advanced: 0
         metadata: 
@@ -5142,7 +5142,7 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 531, y: 357}
+        position: {x: 683, y: 1090}
         outs: 06000000
         advanced: 0
         metadata: 
@@ -5173,12 +5173,12 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 536, y: 641}
-        outs: 06000000
+        position: {x: 586, y: 1580}
+        outs: 23000000
         advanced: 0
         metadata: 
-        text: First bottle delivered.
-        name: 
+        text: 'Oh heavensh! Great job, scallywag! '
+        name: Old Coot
         portrait: 
         audio: 
         audioDelay: 0
@@ -5204,7 +5204,7 @@ MonoBehaviour:
       - id: 6
         type: 6
         theme: 
-        position: {x: 1025, y: 378}
+        position: {x: 2679, y: 304}
         outs: 
         advanced: 0
         metadata: 
@@ -5235,7 +5235,7 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 581, y: 995}
+        position: {x: 586, y: 2647}
         outs: 11000000
         advanced: 0
         metadata: 
@@ -5267,7 +5267,7 @@ MonoBehaviour:
       - id: 8
         type: 3
         theme: 
-        position: {x: 873, y: 33}
+        position: {x: 2332, y: 10}
         outs: 06000000
         advanced: 0
         metadata: 
@@ -5298,7 +5298,7 @@ MonoBehaviour:
       - id: 9
         type: 4
         theme: 
-        position: {x: 167.000061, y: 1275}
+        position: {x: 227.000061, y: 2526}
         outs: 070000000a000000
         advanced: 0
         metadata: 
@@ -5329,7 +5329,7 @@ MonoBehaviour:
       - id: 10
         type: 1
         theme: 
-        position: {x: 529, y: 1391.29956}
+        position: {x: 580, y: 2792.29956}
         outs: 0b0000000c0000000d000000
         advanced: 0
         metadata: 
@@ -5346,9 +5346,9 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - Wha-? Me?
+        - "I see! I\u2019ll get the Ale for you!"
         - 'Just wanted to talk. '
-        - "Eeh, I don\u2019t have time, sorry!"
+        - "Why don\u2019t you get one from Barnacle Bill?"
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -5363,12 +5363,11 @@ MonoBehaviour:
       - id: 11
         type: 0
         theme: 
-        position: {x: 893, y: 1299.29956}
+        position: {x: 917, y: 2854.29956}
         outs: 0f000000
         advanced: 0
         metadata: 
-        text: "Nah, Napoleon\u2019s Nanny over there! Bwah, of course I mean you,
-          little white-fur! Hic!"
+        text: One of them rats may have left one on the pier maybe? Hic!
         name: Old Coot
         portrait: 
         audio: 
@@ -5395,7 +5394,7 @@ MonoBehaviour:
       - id: 12
         type: 0
         theme: 
-        position: {x: 892, y: 1436.29956}
+        position: {x: 917, y: 2993.29956}
         outs: 10000000
         advanced: 0
         metadata: 
@@ -5427,7 +5426,7 @@ MonoBehaviour:
       - id: 13
         type: 0
         theme: 
-        position: {x: 892, y: 1576.29956}
+        position: {x: 916, y: 3136.29956}
         outs: 0e000000
         advanced: 0
         metadata: 
@@ -5459,7 +5458,7 @@ MonoBehaviour:
       - id: 14
         type: 6
         theme: 
-        position: {x: 1346, y: 1635.29956}
+        position: {x: 1674, y: 3188.29956}
         outs: 
         advanced: 0
         metadata: 
@@ -5490,8 +5489,8 @@ MonoBehaviour:
       - id: 15
         type: 0
         theme: 
-        position: {x: 1218, y: 1298.29956}
-        outs: ffffffff
+        position: {x: 1259, y: 2880.29956}
+        outs: 0e000000
         advanced: 0
         metadata: 
         text: "Sorry, I didn\u2019t mean to bother you."
@@ -5521,7 +5520,7 @@ MonoBehaviour:
       - id: 16
         type: 0
         theme: 
-        position: {x: 1217, y: 1442.39917}
+        position: {x: 1252, y: 3021.39917}
         outs: 0e000000
         advanced: 0
         metadata: 
@@ -5552,7 +5551,7 @@ MonoBehaviour:
       - id: 17
         type: 0
         theme: 
-        position: {x: 858.699951, y: 832.69928}
+        position: {x: 894.699951, y: 2645.69922}
         outs: 12000000
         advanced: 0
         metadata: 
@@ -5584,7 +5583,7 @@ MonoBehaviour:
       - id: 18
         type: 0
         theme: 
-        position: {x: 1172, y: 832.699219}
+        position: {x: 1203, y: 2646.69922}
         outs: 13000000
         advanced: 0
         metadata: 
@@ -5615,7 +5614,7 @@ MonoBehaviour:
       - id: 19
         type: 1
         theme: 
-        position: {x: 1492, y: 805.699219}
+        position: {x: 1537, y: 2475.69922}
         outs: 18000000190000001a000000
         advanced: 0
         metadata: 
@@ -5650,7 +5649,7 @@ MonoBehaviour:
       - id: 20
         type: 1
         theme: 
-        position: {x: 2224, y: 805.998657}
+        position: {x: 2255, y: 2697.99854}
         outs: 150000001600000017000000
         advanced: 0
         metadata: 
@@ -5684,8 +5683,8 @@ MonoBehaviour:
       - id: 21
         type: 0
         theme: 
-        position: {x: 2673, y: 776.999023}
-        outs: ffffffff
+        position: {x: 2633, y: 2756.99902}
+        outs: 21000000
         advanced: 0
         metadata: 
         text: Yer enthusiasm almosht puts a tear right in me eye! Hic! Be ready for
@@ -5716,7 +5715,7 @@ MonoBehaviour:
       - id: 22
         type: 0
         theme: 
-        position: {x: 2676, y: 925.498901}
+        position: {x: 2631, y: 2892.49902}
         outs: 14000000
         advanced: 0
         metadata: 
@@ -5747,7 +5746,7 @@ MonoBehaviour:
       - id: 23
         type: 0
         theme: 
-        position: {x: 2676, y: 1091.09863}
+        position: {x: 2629, y: 3027.09863}
         outs: 14000000
         advanced: 0
         metadata: 
@@ -5779,7 +5778,7 @@ MonoBehaviour:
       - id: 24
         type: 0
         theme: 
-        position: {x: 1830, y: 779.599121}
+        position: {x: 1887, y: 2535.59912}
         outs: 14000000
         advanced: 0
         metadata: 
@@ -5810,7 +5809,7 @@ MonoBehaviour:
       - id: 25
         type: 0
         theme: 
-        position: {x: 1830.49976, y: 921.699646}
+        position: {x: 1884.49976, y: 2670.69971}
         outs: 14000000
         advanced: 0
         metadata: 
@@ -5841,7 +5840,7 @@ MonoBehaviour:
       - id: 26
         type: 0
         theme: 
-        position: {x: 1829.69897, y: 1064.19922}
+        position: {x: 1882.69897, y: 2809.19922}
         outs: 14000000
         advanced: 0
         metadata: 
@@ -5873,8 +5872,8 @@ MonoBehaviour:
       - id: 27
         type: 4
         theme: 
-        position: {x: 169.400024, y: 645.099915}
-        outs: ffffffff02000000
+        position: {x: 225.400024, y: 2183.09985}
+        outs: 1c00000009000000
         advanced: 0
         metadata: 
         text: 
@@ -5900,6 +5899,644 @@ MonoBehaviour:
         variableSetValue: true
         variableGetEquation: 0
         variableGetValue: true
+        messageName: 
+      - id: 28
+        type: 1
+        theme: 
+        position: {x: 589.400146, y: 2173.79932}
+        outs: 1e0000001d00000020000000
+        advanced: 0
+        metadata: 
+        text: "To hear me tall tale, you\u2019ll have to get me Razor Reef Ale, white-fur!
+          Hic!"
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - "I see! I\u2019ll get the Ale for you! "
+        - Do you know where I might find a Razor Reef Ale?
+        - Why couldn't you get one from Barnacle Bill?
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 29
+        type: 0
+        theme: 
+        position: {x: 925.7005, y: 2346.60205}
+        outs: 1c000000
+        advanced: 0
+        metadata: 
+        text: One of them rats may have left one on the pier maybe? Hic!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 30
+        type: 0
+        theme: 
+        position: {x: 926.2005, y: 2212.00195}
+        outs: 1f000000
+        advanced: 0
+        metadata: 
+        text: Splendid!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 31
+        type: 6
+        theme: 
+        position: {x: 3963, y: 1989.5}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 32
+        type: 0
+        theme: 
+        position: {x: 925.590698, y: 2482.39966}
+        outs: 1c000000
+        advanced: 0
+        metadata: 
+        text: "I am banned for life. They tell me I can\u2019t handle me juice, them
+          blaggardsh!"
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 33
+        type: 3
+        theme: 
+        position: {x: 2970, y: 2778.50171}
+        outs: 1f000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 14
+        variableScrollPosition: {x: 0, y: 223}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 34
+        type: 4
+        theme: 
+        position: {x: 225, y: 1238.90039}
+        outs: 2f00000002000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 15
+        variableScrollPosition: {x: 0, y: 223}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 35
+        type: 0
+        theme: 
+        position: {x: 895.499634, y: 1579.59814}
+        outs: 24000000
+        advanced: 0
+        metadata: 
+        text: "Gulp, gulp, gulp\u2026 Hic! Now hear this!"
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 36
+        type: 0
+        theme: 
+        position: {x: 1200.39966, y: 1579.7981}
+        outs: 25000000
+        advanced: 0
+        metadata: 
+        text: About half a lifetime ago, in and around these very sheas, there reigned
+          a King amongst pirates! A younger meself had the honor to service in his
+          crew. Hic!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 37
+        type: 0
+        theme: 
+        position: {x: 1506.29968, y: 1579.49805}
+        outs: 26000000
+        advanced: 0
+        metadata: 
+        text: Oh my!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 38
+        type: 0
+        theme: 
+        position: {x: 1812.49976, y: 1578.79858}
+        outs: 27000000
+        advanced: 0
+        metadata: 
+        text: Indeed! Hic! We sailed far and wide and plundered the rich and power-hungry,
+          and gave back what the poor and down-trodden had losht!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 39
+        type: 0
+        theme: 
+        position: {x: 2120.49976, y: 1578.79858}
+        outs: 28000000
+        advanced: 0
+        metadata: 
+        text: "The Pirate King was feared greatly, and when our giant ship, the Coralle
+          Lady\u2019s cannons thundered, souls in their watery grave could be heard
+          shrieking with heavy hearts and despair. "
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 40
+        type: 0
+        theme: 
+        position: {x: 2424.59961, y: 1579.59827}
+        outs: 29000000
+        advanced: 0
+        metadata: 
+        text: What happened next?
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 41
+        type: 0
+        theme: 
+        position: {x: 2731.59961, y: 1581.59827}
+        outs: 2a000000
+        advanced: 0
+        metadata: 
+        text: We amassed great treasuresh but the Pirate King wanted.. he, uh.. Pirate..
+          Where was I again, lad? I think I need more to drink! Hic!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 42
+        type: 0
+        theme: 
+        position: {x: 3041.20068, y: 1580.59912}
+        outs: 2b000000
+        advanced: 0
+        metadata: 
+        text: Aww! You told it really well!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 43
+        type: 1
+        theme: 
+        position: {x: 3354, y: 1582.49939}
+        outs: 2c0000002d000000
+        advanced: 0
+        metadata: 
+        text: "Well, in order to keep tellin\u2019 it, I\u2019ll need some Parrot\u2019s
+          Pinot Noir! It\u2019s a red wine!"
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - "I see! I\u2019ll get the Wine for you!"
+        - "Do you know where I might find a Parrot\u2019s Pinot Noir?"
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 44
+        type: 0
+        theme: 
+        position: {x: 3690, y: 1635.49939}
+        outs: 2e000000
+        advanced: 0
+        metadata: 
+        text: Good lad! Hic!
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 45
+        type: 0
+        theme: 
+        position: {x: 3689, y: 1777.99963}
+        outs: 2b000000
+        advanced: 0
+        metadata: 
+        text: I know some lizard likes to drink it under the moonlight on their balcony.
+          On the cliffs I think.
+        name: Old Coot
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 46
+        type: 3
+        theme: 
+        position: {x: 4035, y: 1628.7998}
+        outs: 1f000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 15
+        variableScrollPosition: {x: 0, y: 223}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 47
+        type: 1
+        theme: 
+        position: {x: 591.099976, y: 1246.49976}
+        outs: ffffffffffffffff
+        advanced: 0
+        metadata: 
+        text: "If I am to continue, you\u2019ll have to get me Parrot\u2019s Pinot
+          Noir, ye scallywag! Hic!"
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - 
+        - 
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
         messageName: 
       floats:
         variables: []
@@ -8183,7 +8820,7 @@ MonoBehaviour:
         - name: Asked for Bottle3
           variable: false
           id: 16
-        selection: 16
+        selection: 13
       floats:
         variables: []
         selection: 0
