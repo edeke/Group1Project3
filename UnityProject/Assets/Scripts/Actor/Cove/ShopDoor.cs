@@ -24,7 +24,7 @@ public class ShopDoor : CommentActorBase
 			GWorld.LoadScene (ZoneBase.AntiqueButique);
 		} else {
 			PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
-			movComp.DisplaySpeechBubble ("Looks like the shop is closed.");
+			movComp.DisplaySpeechBubble ("The sign says the shop is gonna open soon.");
 		}
 	}
 
