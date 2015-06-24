@@ -42,6 +42,8 @@ public class NPCBase : ClickOnActorBase
 	public bool disableAnimatons;
 	protected Animator anim;
 
+	public bool disableRotationWhenTalking;
+
 	public void Awake()
 	{
 		anim = GetComponentInChildren<Animator> ();
@@ -110,6 +112,11 @@ public class NPCBase : ClickOnActorBase
 
 	public void RotateTowards(Vector3 location)
 	{
+		if (disableRotationWhenTalking)
+		{
+			return;
+		}
+
 		if (!disableAnimatons) 
 		{
 
