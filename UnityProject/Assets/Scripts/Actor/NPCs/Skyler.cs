@@ -3,9 +3,24 @@ using System.Collections;
 
 public class Skyler : NPCBase {
 
+	string EventID = "FinishedWithSkyler";
+
 	public bool gottenFireflies = false;
 	
-	// Use this for initialization
+	void Start (){
+
+		if (!GWorld.TryRegisterEvent (EventID, "Hello")) 
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventID,ref tempData);
+			
+			if(tempData.hasEventOccured)
+			{
+				gottenFireflies = true;
+			}
+		}
+
+	}
 
 	public void DontTouchTheJar ()
 	{
@@ -37,8 +52,9 @@ public class Skyler : NPCBase {
 		{
 		case EItem.JarWithFireflies :
 			Dialoguer.SetGlobalBoolean(17, true);
+			Dialoguer.SetGlobalBoolean(13, true);
 			gottenFireflies = true;
-
+			GWorld.MarkEventDone (EventID);
 			OnTalkTo();
 			PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
 			moveComp.ForceSetTalkTo( gameObject, gameObject.transform.position);

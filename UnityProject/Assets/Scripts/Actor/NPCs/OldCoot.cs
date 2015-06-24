@@ -12,7 +12,39 @@ public class OldCoot : NPCBase {
 	// Use this for initialization
 	void Start () {
 
-	
+		if (!GWorld.TryRegisterEvent (EventID, "Hello")) 
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventID,ref tempData);
+			
+			if(tempData.hasEventOccured)
+			{
+				heldBottles = 1;
+			}
+		}
+
+		if (!GWorld.TryRegisterEvent (EventID2, "Hello")) 
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventID2,ref tempData);
+			
+			if(tempData.hasEventOccured)
+			{
+				heldBottles = 2;
+			}
+		}
+
+		if (!GWorld.TryRegisterEvent (EventID3, "Hello")) 
+		{
+			EventData tempData = new EventData();
+			GWorld.FindEvent(EventID3,ref tempData);
+			
+			if(tempData.hasEventOccured)
+			{
+				heldBottles = 3;
+			}
+		}
+
 	}
 
 	public void DontTouchTheJar ()
@@ -28,36 +60,44 @@ public class OldCoot : NPCBase {
 
 	override public bool UseItemOnObject(EItem itemType)
 	{
-		switch ( itemType )
-		{
-		case EItem.Bottle1 :
-			heldBottles ++;
-			GottenFirstBottle();
-			return true;
-			
-		case EItem.Bottle2 :
-			if(heldBottles == 1){
-				GottenSecondBottle();
+		if (Dialoguer.GetGlobalBoolean (17) == true) {
+			switch (itemType) {
+			case EItem.Bottle1:
 				heldBottles ++;
+				GottenFirstBottle ();
 				return true;
-			} else {
-				DisplaySpeechBubble ( "I need something else first!" );
-			}
-			break;
+				
+			case EItem.Bottle3:
+				if (heldBottles == 1) {
+					GottenSecondBottle ();
+					heldBottles ++;
+					return true;
+				} else {
+					DisplaySpeechBubble ("I need something else first!");
+				}
+				break;
 
-		case EItem.Bottle3 :
-			if(heldBottles == 2){
-				GottenThirdBottle();
-				heldBottles ++;
-				return true;
-				Dialoguer.SetGlobalBoolean(12, true);
-			} else {
-				DisplaySpeechBubble ( "I need something else first!" );
+			case EItem.Bottle2:
+				if (heldBottles == 2) {
+					GottenThirdBottle ();
+					heldBottles ++;
+					return true;
+					Dialoguer.SetGlobalBoolean (12, true);
+				} else {
+					DisplaySpeechBubble ("I need something else first!");
+				}
+				break;
 			}
-			break;
+			return false;
+
+		} else {
+
+			DisplaySpeechBubble ( "I don't need that now!" );
+
 		}
-		
+
 		return false;
+
 	}
 
 	override public EAnimationState AnimationOnItem(EItem itemType)
