@@ -13,6 +13,11 @@ public class PlayerAnimation : MonoBehaviour {
 	float playIdleAfterTime = 5.0f;
 	float currentIdleTime = 0.0f;
 
+	public AudioClip stepSound1;
+	public AudioClip stepSound2;
+	public AudioClip stepSound3;
+	public AudioClip stepSound4;
+
 	// Use this for initialization
 	void Start () {
 		currentIdleTime = playIdleAfterTime;
@@ -22,6 +27,31 @@ public class PlayerAnimation : MonoBehaviour {
 
 	}
 
+	void StepSound()
+	{	
+		int random = Random.Range (0, 4);
+
+		switch (random) 
+		{
+			case 0:
+				AudioSource.PlayClipAtPoint (stepSound1, transform.position, 0.1f);
+			break;
+
+			case 1:
+				AudioSource.PlayClipAtPoint (stepSound2, transform.position, 0.1f);
+			break;
+
+			case 2:
+				AudioSource.PlayClipAtPoint (stepSound3, transform.position, 0.1f);
+			break;
+
+			case 3:
+				AudioSource.PlayClipAtPoint (stepSound4, transform.position, 0.1f);
+			break;
+		}
+
+	}
+	
 	void AnimationUseItem()
 	{
 		movement.AnimationUseItem ();
