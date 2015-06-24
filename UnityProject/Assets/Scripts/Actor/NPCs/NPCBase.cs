@@ -108,22 +108,22 @@ public class NPCBase : ClickOnActorBase
 		switch (random) 
 		{
 		case 0:
-			audio = GWorld.PlayClipAt(stepSound1, transform.position);
+			audio = GWorld.PlayClipAt(stepSound1, transform.position, 0.1f);
 			//AudioSource.PlayClipAtPoint (stepSound1, transform.position, 0.1f);
 			break;
 			
 		case 1:
-			audio = GWorld.PlayClipAt(stepSound2, transform.position);
+			audio = GWorld.PlayClipAt(stepSound2, transform.position, 0.1f);
 			//AudioSource.PlayClipAtPoint (stepSound2, transform.position, 0.1f);
 			break;
 			
 		case 2:
-			audio = GWorld.PlayClipAt(stepSound3, transform.position);
+			audio = GWorld.PlayClipAt(stepSound3, transform.position, 0.1f);
 			//AudioSource.PlayClipAtPoint (stepSound3, transform.position, 0.1f);
 			break;
 			
 		case 3:
-			audio = GWorld.PlayClipAt(stepSound4, transform.position);
+			audio = GWorld.PlayClipAt(stepSound4, transform.position, 0.1f);
 			//AudioSource.PlayClipAtPoint (stepSound4, transform.position, 0.1f);
 			break;
 		}
