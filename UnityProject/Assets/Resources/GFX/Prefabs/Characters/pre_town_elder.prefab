@@ -1640,9 +1640,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182916}
-  m_LocalRotation: {x: 0, y: -.557483137, z: 0, w: .830188334}
-  m_LocalPosition: {x: 17.6800003, y: -7.76999998, z: .550000012}
-  m_LocalScale: {x: .681415677, y: .681415558, z: .681415558}
+  m_LocalRotation: {x: 0, y: -.799327374, z: 0, w: .600895822}
+  m_LocalPosition: {x: 314.91217, y: 8.24680328, z: 87.3158722}
+  m_LocalScale: {x: .361841559, y: .361841381, z: .361841381}
   m_Children:
   - {fileID: 405346}
   - {fileID: 401802}
@@ -2116,18 +2116,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8832dd245c69f40a4a52e0a6c4123d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: 11
+  dialog: 9
   actorName: Rat
   commentOffsetX: 0
   commentOffsetY: 0
   speechOrder: 0
   mouseCursorOver: 0
-  currentNPCState: 0
-  currentWalkMode: 1
-  wayPointIdleTime: 0
-  idleTimeMax: 2
-  walkToLocation: []
+  currentNPCState: 1
+  currentWalkMode: 2
+  wayPointIdleTime: 1
+  idleTimeMax: 5
+  walkToLocation:
+  - {x: 296.117828, y: 6.14645767, z: 96.254982}
+  - {x: 325.879364, y: 8.42426682, z: 89.8212967}
+  - {x: 308.853088, y: 8.40031815, z: 83.5150681}
+  - {x: 332.776825, y: 6.9635582, z: 103.49543}
   disableAnimatons: 0
+  disableRotationWhenTalking: 0
 --- !u!137 &13756354
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2138,7 +2143,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: d304a0b9590171d43934b0b55aeac51e, type: 2}
+  - {fileID: 2100000, guid: 8e9254fa491f28e4891f32508332054c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
