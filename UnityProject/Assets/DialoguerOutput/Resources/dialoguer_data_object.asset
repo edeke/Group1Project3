@@ -16,8 +16,8 @@ MonoBehaviour:
     dialogues:
     - id: 0
       name: Barnacle Bill
-      startPage: 2
-      scrollPosition: {x: 0, y: 0}
+      startPage: 18
+      scrollPosition: {x: 6.59999895, y: 351}
       phases:
       - id: 0
         type: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
       - id: 2
         type: 1
         theme: 
-        position: {x: 28, y: 136}
+        position: {x: 61, y: 160}
         outs: 0300000004000000070000000600000005000000
         advanced: 0
         metadata: 
@@ -499,6 +499,134 @@ MonoBehaviour:
         variableSetValue: 
         variableGetEquation: 0
         variableGetValue: 
+        messageName: 
+      - id: 15
+        type: 0
+        theme: 
+        position: {x: 995, y: 636}
+        outs: 11000000
+        advanced: 1
+        metadata: 
+        text: I think I saw some lights down by the waterfall on the beach when I
+          went there a couple of nights ago. Try down there.
+        name: Barnacle Bill
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 16
+        type: 1
+        theme: 
+        position: {x: 642, y: 639}
+        outs: 0f00000011000000
+        advanced: 0
+        metadata: 
+        text: Hi there!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Do you know where I can find a light? The light from the lighthouse flew
+          away...
+        - Sorry, gotta go!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 17
+        type: 6
+        theme: 
+        position: {x: 1363, y: 717}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 4
+        theme: 
+        position: {x: 258, y: 749}
+        outs: 1000000002000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 4
+        variableScrollPosition: {x: 0, y: 57.9374924}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
         messageName: 
       floats:
         variables: []
@@ -2881,7 +3009,7 @@ MonoBehaviour:
       - id: 2
         type: 0
         theme: 
-        position: {x: 468, y: 10}
+        position: {x: 482, y: 15}
         outs: 04000000
         advanced: 0
         metadata: 
@@ -3015,7 +3143,7 @@ MonoBehaviour:
     - id: 6
       name: Skyler
       startPage: 26
-      scrollPosition: {x: 0, y: 600}
+      scrollPosition: {x: 0, y: 28.7352028}
       phases:
       - id: 0
         type: 1
@@ -3277,7 +3405,7 @@ MonoBehaviour:
         theme: 
         position: {x: 1078, y: 146}
         outs: 09000000
-        advanced: 1
+        advanced: 0
         metadata: 
         text: Shiver me timbers! Yuuu are her child! I never thought this day would
           come.
@@ -3309,7 +3437,7 @@ MonoBehaviour:
         theme: 
         position: {x: 1383, y: 146}
         outs: 0a000000
-        advanced: 1
+        advanced: 0
         metadata: 
         text: Yes! So, do you know where I can find her?
         name: Ash
@@ -3340,7 +3468,7 @@ MonoBehaviour:
         theme: 
         position: {x: 1690, y: 146}
         outs: 0b000000
-        advanced: 1
+        advanced: 0
         metadata: 
         text: "I knew her, but I don\u2019t know where she is. However, I have something
           that belongs to you that might help you find her. Help me fix this lighthouse
@@ -3469,7 +3597,7 @@ MonoBehaviour:
         outs: 0f000000
         advanced: 0
         metadata: 
-        text: Not sure, but ye can always ask around in the bar.
+        text: Not sure, but ye can always ask ol' Bill in the bar.
         name: Skyler
         portrait: 
         audio: 
@@ -3914,9 +4042,9 @@ MonoBehaviour:
       - id: 0
         type: 1
         theme: 
-        position: {x: 164, y: 10}
+        position: {x: 209, y: 66}
         outs: 0100000002000000
-        advanced: 1
+        advanced: 0
         metadata: 
         text: Hi there!
         name: Greer
@@ -3948,9 +4076,9 @@ MonoBehaviour:
       - id: 1
         type: 0
         theme: 
-        position: {x: 530, y: 25}
+        position: {x: 561, y: 96}
         outs: 00000000
-        advanced: 1
+        advanced: 0
         metadata: 
         text: I think I saw some lights down by the waterfall on the beach when I
           went there a couple of nights ago. Try down there.
@@ -3980,7 +4108,7 @@ MonoBehaviour:
       - id: 2
         type: 6
         theme: 
-        position: {x: 468, y: 144}
+        position: {x: 600, y: 274}
         outs: 
         advanced: 0
         metadata: 
@@ -4018,146 +4146,19 @@ MonoBehaviour:
         variables: []
         selection: 0
     - id: 8
-      name: Random person in bar (3)
+      name: Deleted
       startPage: 0
-      scrollPosition: {x: 99.0000229, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
-        type: 1
-        theme: 
-        position: {x: 167, y: 10}
-        outs: 0200000001000000
-        advanced: 0
-        metadata: 
-        text: Hi there!
-        name: Keelin
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices:
-        - "Do you know what Barnacle Bill\u2019s middle name is?"
-        - Bye!
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 1
         type: 6
         theme: 
-        position: {x: 472, y: 239}
+        position: {x: 200, y: 100}
         outs: 
         advanced: 0
         metadata: 
         text: 
         name: 
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 2
-        type: 0
-        theme: 
-        position: {x: 473, y: 10}
-        outs: 03000000
-        advanced: 0
-        metadata: 
-        text: "I think it\u2019s written in very small letters on the diploma behind
-          the bar."
-        name: Keelin
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 3
-        type: 0
-        theme: 
-        position: {x: 777, y: 11}
-        outs: 04000000
-        advanced: 0
-        metadata: 
-        text: Do you know how I could distract him so I can get to the diploma?
-        name: Ash
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 4
-        type: 0
-        theme: 
-        position: {x: 1079, y: 11}
-        outs: 00000000
-        advanced: 0
-        metadata: 
-        text: I think he is afraid of bugs.
-        name: Keelin
         portrait: 
         audio: 
         audioDelay: 0
