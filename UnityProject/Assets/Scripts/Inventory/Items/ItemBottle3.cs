@@ -20,6 +20,8 @@ public class ItemBottle3 : Item {
 			if (Inventory.myInv.AddItem (itemData, transform.position)) 
 			{
 				GWorld.MarkEventDone (eventID);
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+				movComp.DisplaySpeechBubble ("I'll take that one.");
 				Destroy (gameObject);
 			} 
 		} 

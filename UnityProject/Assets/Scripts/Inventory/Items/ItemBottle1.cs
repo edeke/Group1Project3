@@ -4,11 +4,11 @@ using System.Collections;
 public class ItemBottle1 : Item {
 
 
-	override public void OnInventoryInspect()
-	{
-		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
-		moveComp.DisplaySpeechBubble ("Now I have one empty bottle.");
-	}
+//	override public void OnInventoryInspect()
+//	{
+//		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+//		moveComp.DisplaySpeechBubble ("Now I have one empty bottle.");
+//	}
 
 
 	override public void OnInspect()
@@ -25,6 +25,8 @@ public class ItemBottle1 : Item {
 			if (Inventory.myInv.AddItem (itemData, transform.position)) 
 			{
 				GWorld.MarkEventDone (eventID);
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+				movComp.DisplaySpeechBubble ("I'll take that one.");
 				Destroy (gameObject);
 			} 
 		} 
