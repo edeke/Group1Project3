@@ -80,19 +80,25 @@ public class OldCoot : NPCBase {
 	
 	void GottenFirstBottle(){
 		Dialoguer.SetGlobalBoolean (6, true);
-		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
+		OnTalkTo();
+		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+		moveComp.ForceSetTalkTo( gameObject, gameObject.transform.position);
 		GWorld.MarkEventDone (EventID);
 	}
 
 	void GottenSecondBottle(){
 		Dialoguer.SetGlobalBoolean (7, true);
-		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
+		OnTalkTo();
+		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+		moveComp.ForceSetTalkTo( gameObject, gameObject.transform.position);
 		GWorld.MarkEventDone (EventID2);
 	}
 
 	void GottenThirdBottle(){
 		Dialoguer.SetGlobalBoolean (8, true);
-		Dialoguer.StartDialogue (DialoguerDialogues.Old_Coot);
+		OnTalkTo();
+		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+		moveComp.ForceSetTalkTo( gameObject, gameObject.transform.position);
 		GWorld.MarkEventDone (EventID3);
 	}
 
