@@ -33,25 +33,26 @@ public class ItemMirror : Item {
 					case 1 :
 						camera.gameObject.SetActive(true);
 						camera.ActivateSeconds(4.0f);
-						FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("Hey, don't touch that !");
+						Invoke ("Speech1",0.1f);
 					break;
 
 					case 2 :
 						camera.gameObject.SetActive(true);
 						camera.ActivateSeconds(4.0f);
-						FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("I told you to no touch that!");
+						Invoke ("Speech2",0.1f);
 					break;
 
 					case 3 :
 						camera.gameObject.SetActive(true);
 						camera.ActivateSeconds(4.0f);
-						FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("If you touch that one more time...!");
+						Invoke ("Speech3",0.1f);
 					break;
 
 					case 4 :
 						camera.gameObject.SetActive(true);
 						camera.ActivateSeconds(4.0f);
-						FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That's it, I had it with you. Get out of my shop !!");
+						Invoke ("Speech4",0.1f);
+						
 						GWorld.myPlayer.GetComponent<PlayerMovement>().ForceMoveToLocation( forceLocation.transform.position );
 						Invoke ("LoadLevel", 3.0f);
 					break;
@@ -76,6 +77,26 @@ public class ItemMirror : Item {
 			DisplayComment("I need a backpack to hold this mirror.");
 		}
 
+	}
+
+	void Speech1()
+	{
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("Hey, don't touch that !");
+	}
+
+	void Speech2()
+	{
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("I told you to no touch that!");
+	}
+
+	void Speech3()
+	{
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("If you touch that one more time...!");
+	}
+
+	void Speech4()
+	{
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That's it, I had it with you. Get out of my shop !!!");
 	}
 
 }
