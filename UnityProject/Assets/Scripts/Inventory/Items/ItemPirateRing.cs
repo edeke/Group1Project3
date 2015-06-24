@@ -44,8 +44,8 @@ public class ItemPirateRing : Item {
 			{
 				if (Inventory.myInv.AddItem (itemData, transform.position)) 
 				{
-					PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
-					movComp.DisplaySpeechBubble("I should return the ring to to the soldier.");
+					//PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+					//movComp.DisplaySpeechBubble("I should return the ring to to the soldier.");
 
 
 					GWorld.MarkEventDone (eventID);
