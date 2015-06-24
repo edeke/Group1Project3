@@ -24,6 +24,15 @@ public class WaterfallSnake : ClickOnActorBase
 		
 	}
 
+	void Update(){
+
+		if(Input.GetKeyUp(KeyCode.Space)){
+			Debug.Log("Pressed space");
+			SnakeScared();
+		}
+
+	}
+
 	override public void OnInspect()
 	{
 
@@ -44,6 +53,11 @@ public class WaterfallSnake : ClickOnActorBase
 		movComp.DisplaySpeechBubble ("Maybe I should go talk to the surfer dude.");
 	}
 
+	public void Commentfromplayer2(){
+		PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+		movComp.DisplaySpeechBubble ("The snake is gone!");
+	}
+
 	override public bool UseItemOnObject(EItem itemType)
 	{
 		switch ( itemType )
@@ -58,9 +72,13 @@ public class WaterfallSnake : ClickOnActorBase
 
 	public void SnakeScared()
 	{
-		DisplaySpeechBubble("Arrrgh... !");
+		DisplaySpeechBubble("Arrrgh...!");
 		snakeScared = true;
+		Invoke ("Commentfromplayer2", 3f);
 		GWorld.MarkEventDone (EventID);
+		Vector3 startPoint = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
+		Vector3 endPoint = new Vector3 (transform.position.x, transform.position.y- 10, transform.position.z);
+		transform.position = Vector3.Lerp (startPoint, endPoint, Time.deltaTime);
 		//Destroy (gameObject);
 	}
 

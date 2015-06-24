@@ -31,6 +31,8 @@ public class Fireflies : CommentActorBase
 		{
 			case EItem.GlassJar :
 				Inventory.myInv.AddItem( ItemDatabase.GetItem("JarWithFireflies"), Vector3.zero, false);
+				PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+				movComp.DisplaySpeechBubble ("I got them!");
 				Destroy(gameObject);
 			return true;
 		}
