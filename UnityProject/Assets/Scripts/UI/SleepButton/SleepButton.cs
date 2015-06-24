@@ -6,9 +6,15 @@ public class SleepButton : MonoBehaviour {
 	
 	//bool active = false;
 	GameObject sleepMenu;
+	Image sleepButtonImage;
+
+	public Sprite texDay;
+	public Sprite texNight;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
+		sleepButtonImage = GetComponent<Image> ();
 
 	}
 
@@ -34,5 +40,21 @@ public class SleepButton : MonoBehaviour {
 	{
 
 	}
+
+	void Update()
+	{
+		if (GWorld.loadLevel == false) 
+		{
+			if (GWorld.GetTimeOfTheDay () == TimeOfDay.Day) 
+			{
+				sleepButtonImage.sprite = texDay;
+			} 
+			else 
+			{
+				sleepButtonImage.sprite = texNight;
+			}
+		}
+	}
+
 
 }

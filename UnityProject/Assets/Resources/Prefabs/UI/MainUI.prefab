@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0c25456734b5141bd6a320b37ce29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texDay: {fileID: 21300000, guid: 695af50e017462e41816c721d227ef63, type: 3}
+  texNight: {fileID: 21300000, guid: f1bcaf469aed47e4e852442734177848, type: 3}
 --- !u!114 &11422470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: a02641dc253c4bb46b9c5ee1185e8f8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 695af50e017462e41816c721d227ef63, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -652,13 +654,13 @@ RectTransform:
   m_GameObject: {fileID: 125772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .769149125, y: .769149303, z: .769149303}
   m_Children: []
   m_Father: {fileID: 22440038}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 202, y: 179}
+  m_AnchoredPosition: {x: 194, y: 161}
   m_SizeDelta: {x: 172, y: 172}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22424566
