@@ -18,4 +18,7 @@ public enum DialoguerDialogues{
 	Lizard_on_beach_Night_scene = 14,
 	Carey_Day = 15,
 	Carey_Night = 16,
+	Soldier_1_Night = 17,
+	Soldier_2_Night = 18,
+	Soldier_3_Night = 19,
 }
