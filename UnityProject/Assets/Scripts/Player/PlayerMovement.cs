@@ -67,9 +67,14 @@ public class PlayerMovement : MonoBehaviour {
 
 	bool dialogOpen = false;
 
+	float currentTimeActionState = 0.0f;
+	float maxTimeActionState = 1.0f;
+
 	// Use this for initialization
 	void Start () 
 	{
+		currentTimeActionState = maxTimeActionState;
+
 		currentAnimationState = EAnimationState.Idle;
 
 		currentState = new ActionData ();
@@ -514,9 +519,31 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 
-		//Debug.Log (currentState.state);
-
 		float distanceToActor = 0.0f;
+
+		//fix for on action stuff
+		if (currentState.state == EPlayerState.Action || currentState.state == EPlayerState.UseItem )
+		{
+			currentTimeActionState -= Time.deltaTime;
+
+			Debug.Log (currentTimeActionState);
+
+			if(currentTimeActionState <= 0.0f)
+			{
+
+				Debug.Log ("Changing State Idle Timeout");
+				actionList.Clear();
+				currentState.state = EPlayerState.Idle;
+				agent.ResetPath();
+			}
+
+		}
+		else
+		{
+			currentTimeActionState = maxTimeActionState;
+		}
+
+
 
 		switch (currentState.state) 
 		{
