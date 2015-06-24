@@ -5,6 +5,8 @@ public class SeenSnake : MonoBehaviour {
 
 	string EventID = "SeenSnake";
 
+	public GameObject waterFallSnake;
+
 	void Update(){
 
 		if (!GWorld.TryRegisterEvent (EventID, "Hello")) 
@@ -16,7 +18,10 @@ public class SeenSnake : MonoBehaviour {
 			{
 				Dialoguer.SetGlobalBoolean (3, true);
 			} 
-			else 
+			else if (waterFallSnake.GetComponentInChildren<WaterfallSnake>().snakeScared == true)
+			{
+				Dialoguer.SetGlobalBoolean (3, true);
+			} else
 			{
 				Dialoguer.SetGlobalBoolean (3, false);
 			}

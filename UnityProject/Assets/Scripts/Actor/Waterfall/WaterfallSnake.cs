@@ -5,7 +5,7 @@ using System.Collections;
 public class WaterfallSnake : ClickOnActorBase
 {
 	string EventID = "SnakeScaredAway";
-	private bool snakeScared = false;
+	public bool snakeScared = false;
 
 	public Transform startMarker;
 	public Transform endMarker;
@@ -63,7 +63,7 @@ public class WaterfallSnake : ClickOnActorBase
 
 	public void Commentfromplayer2(){
 		PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
-		movComp.DisplaySpeechBubble ("The snake is gone!");
+		movComp.DisplaySpeechBubble ("Phew. The snake is gone!");
 	}
 
 	override public bool UseItemOnObject(EItem itemType)
@@ -82,8 +82,9 @@ public class WaterfallSnake : ClickOnActorBase
 	{
 		DisplaySpeechBubble("Arrrgh...!");
 		snakeScared = true;
-		Invoke ("Commentfromplayer2", 3f);
+		Invoke ("Commentfromplayer2", 5f);
 		GWorld.MarkEventDone (EventID);
+		Dialoguer.SetGlobalBoolean (3, false);
 		//Destroy (gameObject);
 	}
 
