@@ -36,7 +36,7 @@ public class Skyler : NPCBase {
 		switch ( itemType )
 		{
 		case EItem.JarWithFireflies :
-			DisplaySpeechBubble ( "Thank you so much! Take this bottle next to me." );
+			Dialoguer.SetGlobalBoolean(17, true);
 			gottenFireflies = true;
 			return true;
 		}
