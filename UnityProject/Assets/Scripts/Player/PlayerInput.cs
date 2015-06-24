@@ -28,7 +28,8 @@ public class PlayerInput : MonoBehaviour
 
 	PlayerMovement movementScript;
 
-	Vector2 mouseHotSpot;
+	Vector2 mouseHotSpotNormal;
+	Vector2 mouseHotSpotInspect;
 
 	IMouseCursor currentMouseObject;
 
@@ -43,8 +44,8 @@ public class PlayerInput : MonoBehaviour
 	void Start () 
 	{
 		movementScript = GetComponentInChildren<PlayerMovement>();
-		mouseHotSpot = new Vector2 ( 32.0f, 32.0f);
-		//mouseHotSpot = new Vector2 (0.5f, 0.5f);
+		mouseHotSpotNormal = new Vector2 ( 10.0f, 0.0f);
+		mouseHotSpotInspect = new Vector2 (22.0f, 4.0f);
 
 	}
 
@@ -57,7 +58,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (GWorld.loadLevel == true) 
 		{
-			Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+			Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 			
 			if(currentMouseObject != null)
 			{
@@ -70,7 +71,8 @@ public class PlayerInput : MonoBehaviour
 
 		if (EventSystem.current.IsPointerOverGameObject () ) 
 		{
-			Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+			//Cursor.SetCursor( mouseTextureInspect, mouseHotSpotInspect, CursorMode.Auto );
+			Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 			
 			if(currentMouseObject != null)
 			{
@@ -117,31 +119,31 @@ public class PlayerInput : MonoBehaviour
 						switch(newCursor)
 						{
 							case MouseCursorInput.Inspect :
-								Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureInspect, mouseHotSpotInspect, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Normal :
-								Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Talk :
-								Cursor.SetCursor( mouseTextureTalk, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureTalk, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Pickup :
-								Cursor.SetCursor( mouseTexturePickup, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTexturePickup, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.AreaChange :
-								Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Use :
-								Cursor.SetCursor( mouseTextureUse, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureUse, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 
 							default :
-								Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 							break;
 						}
 					}
@@ -151,18 +153,18 @@ public class PlayerInput : MonoBehaviour
 
 						if(itemInterface != null)
 						{
-							Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpot, CursorMode.Auto );
+							Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpotNormal, CursorMode.Auto );
 						}
 						else
 						{
-							Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+							Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 						}
 					}
 
 				}
 				else
 				{
-					Cursor.SetCursor( mouseTextureNormal, mouseHotSpot, CursorMode.Auto );
+					Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 
 					if(currentMouseObject != null)
 					{	
@@ -178,11 +180,28 @@ public class PlayerInput : MonoBehaviour
 					}
 				}
 			}
+			else
+			{
+				Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
+				
+				if(currentMouseObject != null)
+				{	
+					try
+					{
+						currentMouseObject.OnMouseLeave();
+						currentMouseObject = null;
+					}
+					catch(MissingReferenceException e)
+					{
+						currentMouseObject = null;
+					}
+				}
+			}
 		}
 		else if ( Input.GetMouseButton(1) == true )
 		{
 			
-			Cursor.SetCursor( mouseTextureInspect, mouseHotSpot, CursorMode.Auto );
+			Cursor.SetCursor( mouseTextureInspect, mouseHotSpotInspect, CursorMode.Auto );
 
 			if( traceHit )
 			{
