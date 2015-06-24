@@ -38,6 +38,12 @@ public class Skyler : NPCBase {
 		case EItem.JarWithFireflies :
 			Dialoguer.SetGlobalBoolean(17, true);
 			gottenFireflies = true;
+
+			OnTalkTo();
+			PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement>();
+			moveComp.ForceSetTalkTo( gameObject, gameObject.transform.position);
+
+
 			return true;
 		}
 		

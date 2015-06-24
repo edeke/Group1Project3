@@ -119,7 +119,6 @@ public class PlayerMovement : MonoBehaviour {
 		spawning = true;
 
 		agent.enabled = false;
-
 	}
 
 	public bool ForceMoveToLocation(Vector3 location)
@@ -347,6 +346,39 @@ public class PlayerMovement : MonoBehaviour {
 				
 			default :
 				return;
+		}
+	}
+
+	public void ForceSetTalkTo( GameObject objectToTalkTo, Vector3 location )
+	{
+		switch (currentState.state)
+		{
+		case EPlayerState.WalkToObject :
+		case EPlayerState.Idle :
+		case EPlayerState.Talking :
+		case EPlayerState.UseItem :
+		case EPlayerState.WalkToLocation :
+		case EPlayerState.Action :
+
+				actionList.Clear();
+
+				ActionData newAction = new ActionData();
+				
+				newAction.state = EPlayerState.Talking;
+				newAction.location = location;
+				newAction.objectToUse = objectToTalkTo;
+				newAction.inventoryIndex = -1;
+				
+				actionList.Add(newAction);
+
+				currentState.state = EPlayerState.Idle;
+
+			
+			return;
+			
+			
+		default :
+			return;
 		}
 	}
 
