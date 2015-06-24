@@ -47,6 +47,11 @@ public class InventoryItemButton : MonoBehaviour {
 	{
 
 		ItemStruct itemData = new ItemStruct ();
+
+		if (Inventory.myInv.CurrentSelectedItem == -1) 
+		{
+			UI.enabled = true;
+		}
 		
 		if ( Inventory.myInv.GetItemFromIndex (index, ref itemData) ) 
 		{
@@ -221,7 +226,8 @@ public class InventoryItemButton : MonoBehaviour {
 		isDragged = false;
 
 		//make sure we have an item before enable again
-		if (Inventory.myInv.CheckIfItemExist (index)) {
+		if (Inventory.myInv.CheckIfItemExist (index)) 
+		{
 			imageComp.enabled = true;
 			
 		} 
