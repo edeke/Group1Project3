@@ -45,7 +45,7 @@ GameObject:
   - 65: {fileID: 6527810}
   - 208: {fileID: 20843390}
   m_Layer: 0
-  m_Name: Cylinder002
+  m_Name: MirrorOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123212}
   m_LocalRotation: {x: -.18471919, y: .0436344743, z: .008209683, w: .98178792}
-  m_LocalPosition: {x: -1.29999995, y: -45.7000008, z: -70.6999969}
+  m_LocalPosition: {x: -1.20000005, y: -44.2999992, z: -66.3000031}
   m_LocalScale: {x: 78.871666, y: 78.8717041, z: 78.8716888}
   m_Children: []
   m_Father: {fileID: 447218}
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180710}
   m_LocalRotation: {x: .107799158, y: .688987851, z: -.110788934, w: .708096683}
-  m_LocalPosition: {x: 77.7290115, y: 5.2238369, z: -133.786865}
+  m_LocalPosition: {x: 310.087006, y: 10.1300001, z: 185.408005}
   m_LocalScale: {x: .0126788216, y: .0126788188, z: .0126788188}
   m_Children:
   - {fileID: 404602}
@@ -142,7 +142,7 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: .852941155, g: .068987906, b: .068987906, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2.51999998
   m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -188,6 +188,7 @@ MonoBehaviour:
   commentOffsetX: 0
   commentOffsetY: 0
   mouseCursorOver: 4
+  forceLocation: {fileID: 0}
 --- !u!208 &20843390
 NavMeshObstacle:
   m_ObjectHideFlags: 1

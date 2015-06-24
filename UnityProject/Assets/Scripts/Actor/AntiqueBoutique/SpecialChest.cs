@@ -3,9 +3,7 @@ using System.Collections;
 
 public class SpecialChest : CommentActorBase
 {
-
-	public Shopkeeper shopkeeper;
-
+	
 	override public void OnInspect()
 	{		
 		DisplayComment ("That's not mine!");
@@ -14,8 +12,7 @@ public class SpecialChest : CommentActorBase
 	override public void OnAction()
 	{
 
-		shopkeeper.OnChest ();
-
+		FindObjectOfType<Shopkeeper> ().OnChest ();
 		//DisplayComment ("I'm not a thief!");
 	}
 

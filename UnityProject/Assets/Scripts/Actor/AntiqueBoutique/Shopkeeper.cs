@@ -4,10 +4,12 @@ using System.Collections;
 public class Shopkeeper : NPCBase 
 {
 
-	bool atStart = true;
+	public bool atStart = true;
 
 	float currentTime = 0.0f;
 	float timeBeforeWalkBack = 10.0f;
+
+	bool rugGone = false;
 
 	
 	// Use this for initialization
@@ -46,6 +48,18 @@ public class Shopkeeper : NPCBase
 			if(distance < 0.5f && atStart)
 			{
 				RotateTowards( walkToLocation[3] );
+
+				string eventID = "ShopRug";
+				EventData newData = new EventData();
+				
+				if (GWorld.FindEvent (eventID, ref newData)) 
+				{
+					if(newData.hasEventOccured && rugGone == false)
+					{
+						Invoke ("Speech2", 1.0f);
+						rugGone = true;
+					}
+				}
 			}
 		}
 
@@ -69,6 +83,17 @@ public class Shopkeeper : NPCBase
 
 		currentTime = timeBeforeWalkBack;
 
+		Invoke ("Speech1", 5.0f);
+
 	}
 
+	void Speech1()
+	{
+		DisplaySpeechBubble ( "Mumble... Filty Paws... Mumble..." );
+	}
+
+	void Speech2()
+	{
+		DisplaySpeechBubble("Huh ! Im sure there was a rug over there just a second ago..."); 
+	}
 }

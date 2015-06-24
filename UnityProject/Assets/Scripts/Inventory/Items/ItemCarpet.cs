@@ -15,11 +15,18 @@ public class ItemCarpet : Item {
 
 		if (GWorld.isInvEnabled == true) 
 		{
-			if (Inventory.myInv.AddItem (itemData, transform.position)) 
+			if( FindObjectOfType<Shopkeeper> ().atStart )
 			{
-				GWorld.MarkEventDone (eventID);
-				Destroy (gameObject);
-			} 
+				FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That is not for sale, don't touch it!");
+			}
+			else
+			{
+				if (Inventory.myInv.AddItem (itemData, transform.position)) 
+				{
+					GWorld.MarkEventDone (eventID);
+					Destroy (gameObject);
+				} 
+			}
 		} 
 		else 
 		{
