@@ -10,7 +10,7 @@ public class CaveVase : CommentActorBase {
 
 	override public void OnAction()
 	{
-		DisplayComment ("It's filled with dirty and to heavy to move.");
+		DisplayComment ("It's filled with dirt and to heavy to move.");
 	}
 
 }

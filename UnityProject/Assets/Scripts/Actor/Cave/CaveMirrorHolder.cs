@@ -43,7 +43,14 @@ public class CaveMirrorHolder : CommentActorBase
 		
 		if (tempData.hasEventOccured) 
 		{
-			DisplayComment ("It's reflecting the moonlight.");
+			if( GWorld.GetTimeOfTheDay() == TimeOfDay.Night )
+			{
+				DisplayComment ("It will reflect the moonlight at night.");
+			}
+			else
+			{
+				DisplayComment ("It's reflecting the moonlight.");
+			}
 		} 
 		else 
 		{
