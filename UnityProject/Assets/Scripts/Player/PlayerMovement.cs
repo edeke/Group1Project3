@@ -443,32 +443,44 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void AnimationUseItem()
 	{
-		switch (currentState.state)
+		try
 		{
-			case EPlayerState.UseItem :
-				IUseItem useObject = null;
+			switch (currentState.state)
+			{
+				case EPlayerState.UseItem :
+					IUseItem useObject = null;
+					
+					Inventory.myInv.TryUseItemOnActor(currentState.objectToUse, currentState.inventoryIndex);
 				
-				Inventory.myInv.TryUseItemOnActor(currentState.objectToUse, currentState.inventoryIndex);
-			
-				return;
+					return;
 
-			case EPlayerState.Action :
-				IAction actionObject = null;
+				case EPlayerState.Action :
+					IAction actionObject = null;
 
-				if( currentState.objectToUse != null )
-				{
-					actionObject = currentState.objectToUse.GetComponent<IAction>();
-				}
-				
-				if(actionObject != null)
-				{
-					actionObject.OnAction();
-				}
+					if( currentState.objectToUse != null )
+					{
+						actionObject = currentState.objectToUse.GetComponent<IAction>();
+					}
+					
+					if(actionObject != null)
+					{
+						actionObject.OnAction();
+					}
 
-				return;
-				
-			default :
-				return;
+					return;
+					
+				default :
+					return;
+			}
+		}
+		catch (UnityException e)
+		{
+			currentAnimationState = EAnimationState.Idle;
+			currentState.state = EPlayerState.Idle;
+			actionList.Clear();
+			agent.ResetPath();
+
+			return;
 		}
 	}
 
@@ -481,10 +493,13 @@ public class PlayerMovement : MonoBehaviour {
 			case EPlayerState.Talking :
 			case EPlayerState.UseItem :
 			case EPlayerState.WalkToLocation :
-			case EPlayerState.Action:
+			case EPlayerState.Action :
+			case EPlayerState.ForceIdle :
+			case EPlayerState.ForceWalkToLocation :
 
 				currentAnimationState = EAnimationState.Idle;
 				currentState.state = EPlayerState.Idle;
+
 				
 			return;
 				
@@ -530,7 +545,6 @@ public class PlayerMovement : MonoBehaviour {
 
 			if(currentTimeActionState <= 0.0f)
 			{
-
 				Debug.Log ("Changing State Idle Timeout");
 				actionList.Clear();
 				currentState.state = EPlayerState.Idle;
