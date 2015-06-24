@@ -9,6 +9,8 @@ public class InventoryItemButton : MonoBehaviour {
 	RawImage imageComp;
 	Text textComp;
 
+	GraphicRaycaster UI;
+
 	Animator anim;
 
 	bool isDragged = false;
@@ -103,6 +105,9 @@ public class InventoryItemButton : MonoBehaviour {
 					comp.color = newColor;
 				} 
 			}
+
+			UI.enabled = false;
+
 		}
 
 	}
@@ -134,6 +139,17 @@ public class InventoryItemButton : MonoBehaviour {
 		imageComp = GetComponentInChildren<RawImage> ();
 		textComp = GetComponentInChildren<Text> ();
 		anim = GetComponentInChildren<Animator> ();
+
+
+		GraphicRaycaster[] allComp = FindObjectsOfType<GraphicRaycaster> ();
+
+		foreach (GraphicRaycaster comp in allComp) 
+		{
+			if( comp.CompareTag("MainUI") )
+			{
+				UI = comp;
+			}
+		}
 
 	}
 
@@ -241,6 +257,7 @@ public class InventoryItemButton : MonoBehaviour {
 			} 
 		}
 
+		UI.enabled = true;
 
 	}
 
