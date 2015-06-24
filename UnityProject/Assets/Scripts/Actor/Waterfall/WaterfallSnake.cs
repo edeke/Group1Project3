@@ -7,6 +7,11 @@ public class WaterfallSnake : ClickOnActorBase
 	string EventID = "SnakeScaredAway";
 	private bool snakeScared = false;
 
+	public Transform startMarker;
+	public Transform endMarker;
+
+	private Transform targetTransform;
+
 	void Start () 
 	{
 		
@@ -21,16 +26,19 @@ public class WaterfallSnake : ClickOnActorBase
 			}
 			
 		}
+
+	}
+	
+	void FixedUpdate (){
+
+		targetTransform = snakeScared ? endMarker : startMarker;
 		
 	}
 
 	void Update(){
-
-		if(Input.GetKeyUp(KeyCode.Space)){
-			Debug.Log("Pressed space");
-			SnakeScared();
+		if (targetTransform != null) {
+			transform.position = Vector3.Lerp (transform.position, targetTransform.position, 0.05f);
 		}
-
 	}
 
 	override public void OnInspect()
@@ -76,9 +84,6 @@ public class WaterfallSnake : ClickOnActorBase
 		snakeScared = true;
 		Invoke ("Commentfromplayer2", 3f);
 		GWorld.MarkEventDone (EventID);
-		Vector3 startPoint = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-		Vector3 endPoint = new Vector3 (transform.position.x, transform.position.y- 10, transform.position.z);
-		transform.position = Vector3.Lerp (startPoint, endPoint, Time.deltaTime);
 		//Destroy (gameObject);
 	}
 

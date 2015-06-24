@@ -27,7 +27,7 @@ public class SnakeTorch : ClickOnActorBase
 		}
 		
 	}
-
+	
 	override public void OnInspect()
 	{
 
