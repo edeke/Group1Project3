@@ -1551,8 +1551,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101454}
-  m_LocalRotation: {x: 0, y: .758447707, z: 0, w: -.651733994}
-  m_LocalPosition: {x: 396.748322, y: 8.21251583, z: 69.4165649}
+  m_LocalRotation: {x: 0, y: .982164681, z: 0, w: .188022807}
+  m_LocalPosition: {x: 402.769989, y: 8.22999954, z: 61.0999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457618}
@@ -1808,17 +1808,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8832dd245c69f40a4a52e0a6c4123d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: 0
+  dialog: 22
   actorName: Frog
   commentOffsetX: 0
   commentOffsetY: 0
+  speechOrder: 0
   mouseCursorOver: 0
-  currentNPCState: 0
+  currentNPCState: 1
   currentWalkMode: 0
-  wayPointIdleTime: 0
-  idleTimeMax: 0
-  walkToLocation: []
+  wayPointIdleTime: 1
+  idleTimeMax: 5
+  walkToLocation:
+  - {x: 403.430481, y: 8.32299805, z: 85.2274017}
+  - {x: 399.072876, y: 8.97798157, z: 57.7625809}
+  - {x: 418.767548, y: 8.67189789, z: 27.6074619}
+  - {x: 415.437378, y: 8.22999954, z: 53.649826}
   disableAnimatons: 0
+  disableRotationWhenTalking: 0
 --- !u!137 &13769960
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1829,7 +1835,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 588e0cd54d4fffc49922dbcd77e94ffd, type: 2}
+  - {fileID: 2100000, guid: c9d53e46ba502454481049a2010c7e40, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
