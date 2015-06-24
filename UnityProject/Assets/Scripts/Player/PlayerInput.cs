@@ -30,6 +30,11 @@ public class PlayerInput : MonoBehaviour
 
 	Vector2 mouseHotSpotNormal;
 	Vector2 mouseHotSpotInspect;
+	Vector2 mouseHotSpotTalk;
+	Vector2 mouseHotSpotPickup;
+	Vector2 mouseHotSpotAreaChange;
+	Vector2 mouseHotSpotUse;
+	Vector2 mouseHotSpotGive;
 
 	IMouseCursor currentMouseObject;
 
@@ -46,7 +51,11 @@ public class PlayerInput : MonoBehaviour
 		movementScript = GetComponentInChildren<PlayerMovement>();
 		mouseHotSpotNormal = new Vector2 ( 10.0f, 0.0f);
 		mouseHotSpotInspect = new Vector2 (22.0f, 4.0f);
-
+		mouseHotSpotTalk = new Vector2 (13.0f, 16.0f);
+		mouseHotSpotPickup = new Vector2 (2.0f, 32.0f);
+		mouseHotSpotAreaChange = new Vector2 (16.0f, 16.0f);
+		mouseHotSpotUse = new Vector2 (16.0f, 16.0f);
+		mouseHotSpotGive = new Vector2 (16.0f, 16.0f);
 	}
 
 	void OnLevelWasLoaded()
@@ -71,7 +80,7 @@ public class PlayerInput : MonoBehaviour
 
 		if (EventSystem.current.IsPointerOverGameObject () ) 
 		{
-			//Cursor.SetCursor( mouseTextureInspect, mouseHotSpotInspect, CursorMode.Auto );
+			//Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpotGive, CursorMode.Auto );
 			Cursor.SetCursor( mouseTextureNormal, mouseHotSpotNormal, CursorMode.Auto );
 			
 			if(currentMouseObject != null)
@@ -127,19 +136,19 @@ public class PlayerInput : MonoBehaviour
 							break;
 
 							case MouseCursorInput.Talk :
-								Cursor.SetCursor( mouseTextureTalk, mouseHotSpotNormal, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureTalk, mouseHotSpotTalk, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Pickup :
-								Cursor.SetCursor( mouseTexturePickup, mouseHotSpotNormal, CursorMode.Auto );
+								Cursor.SetCursor( mouseTexturePickup, mouseHotSpotPickup, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.AreaChange :
-								Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpotNormal, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureAreaChange, mouseHotSpotAreaChange, CursorMode.Auto );
 							break;
 
 							case MouseCursorInput.Use :
-								Cursor.SetCursor( mouseTextureUse, mouseHotSpotNormal, CursorMode.Auto );
+								Cursor.SetCursor( mouseTextureUse, mouseHotSpotUse, CursorMode.Auto );
 							break;
 
 							default :
@@ -153,7 +162,7 @@ public class PlayerInput : MonoBehaviour
 
 						if(itemInterface != null)
 						{
-							Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpotNormal, CursorMode.Auto );
+							Cursor.SetCursor( mouseTextureGiveItem, mouseHotSpotGive, CursorMode.Auto );
 						}
 						else
 						{
