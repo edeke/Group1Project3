@@ -108,7 +108,7 @@ public class NPCBase : ClickOnActorBase
 		}
 	}
 
-	void RotateTowards(Vector3 location)
+	public void RotateTowards(Vector3 location)
 	{
 		if (!disableAnimatons) 
 		{
@@ -122,7 +122,7 @@ public class NPCBase : ClickOnActorBase
 	}
 
 
-	void Update (){
+	public void Update (){
 		
 		//calculate speed
 		CalculateSpeed ();
