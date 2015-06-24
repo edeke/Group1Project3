@@ -146,9 +146,5 @@ public class LeaderRat : NPCBase
 		}
 	}
 
-	void Update()
-	{
-		Debug.Log (stopEvent);
-	}
 
 }

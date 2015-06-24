@@ -9,7 +9,8 @@ public enum EPlayerState {
 	Action,
 	Talking,
 	ForceWalkToLocation,
-	Idle
+	Idle,
+	ForceIdle
 };
 
 public enum EAnimationState {
@@ -178,6 +179,19 @@ public class PlayerMovement : MonoBehaviour {
 			
 		default :
 			return false;
+		}
+	}
+
+	public void ForceIdle(bool enable)
+	{
+		if (enable) 
+		{
+			currentState.state = EPlayerState.ForceIdle;
+			actionList.Clear();
+		}
+		else
+		{
+			currentState.state = EPlayerState.Idle;
 		}
 	}
 
