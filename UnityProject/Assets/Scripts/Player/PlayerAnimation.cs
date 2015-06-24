@@ -31,22 +31,28 @@ public class PlayerAnimation : MonoBehaviour {
 	{	
 		int random = Random.Range (0, 4);
 
+		AudioSource audio;
+
 		switch (random) 
 		{
 			case 0:
-				AudioSource.PlayClipAtPoint (stepSound1, transform.position, 0.1f);
+				audio = GWorld.PlayClipAt(stepSound1, transform.position);
+				//AudioSource.PlayClipAtPoint (stepSound1, transform.position, 0.1f);
 			break;
 
 			case 1:
-				AudioSource.PlayClipAtPoint (stepSound2, transform.position, 0.1f);
+				audio = GWorld.PlayClipAt(stepSound2, transform.position);
+				//AudioSource.PlayClipAtPoint (stepSound2, transform.position, 0.1f);
 			break;
 
 			case 2:
-				AudioSource.PlayClipAtPoint (stepSound3, transform.position, 0.1f);
+				audio = GWorld.PlayClipAt(stepSound3, transform.position);
+				//AudioSource.PlayClipAtPoint (stepSound3, transform.position, 0.1f);
 			break;
 
 			case 3:
-				AudioSource.PlayClipAtPoint (stepSound4, transform.position, 0.1f);
+				audio = GWorld.PlayClipAt(stepSound4, transform.position);
+				//AudioSource.PlayClipAtPoint (stepSound4, transform.position, 0.1f);
 			break;
 		}
 

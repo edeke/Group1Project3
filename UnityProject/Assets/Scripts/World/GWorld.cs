@@ -547,6 +547,26 @@ public class GWorld : MonoBehaviour
 
 	}
 
+	public static AudioSource PlayClipAt(AudioClip clip, Vector3 pos, float volume = 1.0f, float maxDistance = 10.0f)
+	{
+		GameObject tempGO = new GameObject("TempAudio"); // create the temp object
+		tempGO.transform.position = pos; // set its position
+		AudioSource aSource = tempGO.AddComponent<AudioSource>(); // add an audio source
+		aSource.clip = clip; // define the clip
+		aSource.rolloffMode = AudioRolloffMode.Logarithmic;
+		aSource.volume = volume;
+		aSource.bypassEffects = false;
+		aSource.pitch = Random.Range (0.9f, 1.1f);
+		aSource.maxDistance = maxDistance;
+		aSource.dopplerLevel = 1.0f;
+		aSource.spatialBlend = 1.0f;
+
+		// set other aSource properties here, if desired
+		aSource.Play(); // start the sound
+		Destroy(tempGO, clip.length); // destroy object after clip duration
+		return aSource; // return the AudioSource reference
+	}
+
 }
 
 
