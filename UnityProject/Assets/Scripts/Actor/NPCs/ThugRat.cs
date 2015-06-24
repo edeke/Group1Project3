@@ -22,7 +22,7 @@ public class ThugRat : NPCBase {
 	
 	}
 
-	virtual public void OnTalkTo()
+	override public void OnTalkTo()
 	{
 		DisplayComment ("I don't think he wants to talk to me.");
 	}
