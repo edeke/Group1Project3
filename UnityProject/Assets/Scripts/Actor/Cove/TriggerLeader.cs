@@ -3,7 +3,8 @@ using System.Collections;
 
 public class TriggerLeader : MonoBehaviour {
 
-	public LeaderRat leader;
+	LeaderRat leader;
+	public GameObject forceMoveLocation;
 
 	string EventID = "LeaderSpeak";
 
@@ -42,11 +43,26 @@ public class TriggerLeader : MonoBehaviour {
 			
 			PlayerMovement movComp = other.GetComponent<PlayerMovement> ();
 			movComp.DisplaySpeechBubble ("Looks like there is some kind of meeting here.");
+			movComp.ForceMoveToLocation( forceMoveLocation.transform.position );
+			Invoke ("ForcePlayerIdle", 3.0f);
+			Invoke ("ForcePlayerUnIdle", 30.0f);
 			leader.StartSpeech();
 			GWorld.MarkEventDone(EventID);
 			
 		}
 
+	}
+
+	void ForcePlayerIdle()
+	{
+		PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+		movComp.ForceIdle (true);
+	}
+
+	void ForcePlayerUnIdle()
+	{
+		PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+		movComp.ForceIdle (false);
 	}
 
 }
