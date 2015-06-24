@@ -44,6 +44,11 @@ public class NPCBase : ClickOnActorBase
 
 	public bool disableRotationWhenTalking;
 
+	AudioClip stepSound1;
+	AudioClip stepSound2;
+	AudioClip stepSound3;
+	AudioClip stepSound4;
+
 	public void Awake()
 	{
 		anim = GetComponentInChildren<Animator> ();
@@ -59,6 +64,70 @@ public class NPCBase : ClickOnActorBase
 		{
 			anim.enabled = true;
 		}
+
+		string path = "SFX/Walking/Big Steps/big_step_01";
+		stepSound1  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!stepSound1)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/Walking/Big Steps/big_step_02";
+		stepSound2  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!stepSound2)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/Walking/Big Steps/big_step_03";
+		stepSound3  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!stepSound3)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/Walking/Big Steps/big_step_04";
+		stepSound4  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!stepSound4)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+	}
+
+	void StepSound()
+	{	
+		int random = UnityEngine.Random.Range (0, 4);
+		
+		AudioSource audio;
+		
+		switch (random) 
+		{
+		case 0:
+			audio = GWorld.PlayClipAt(stepSound1, transform.position);
+			//AudioSource.PlayClipAtPoint (stepSound1, transform.position, 0.1f);
+			break;
+			
+		case 1:
+			audio = GWorld.PlayClipAt(stepSound2, transform.position);
+			//AudioSource.PlayClipAtPoint (stepSound2, transform.position, 0.1f);
+			break;
+			
+		case 2:
+			audio = GWorld.PlayClipAt(stepSound3, transform.position);
+			//AudioSource.PlayClipAtPoint (stepSound3, transform.position, 0.1f);
+			break;
+			
+		case 3:
+			audio = GWorld.PlayClipAt(stepSound4, transform.position);
+			//AudioSource.PlayClipAtPoint (stepSound4, transform.position, 0.1f);
+			break;
+		}
+		
 	}
 
 	public Vector3 GetWalkLocation(int index)
