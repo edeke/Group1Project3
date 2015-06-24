@@ -541,11 +541,11 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			currentTimeActionState -= Time.deltaTime;
 
-			Debug.Log (currentTimeActionState);
+			//Debug.Log (currentTimeActionState);
 
 			if(currentTimeActionState <= 0.0f)
 			{
-				Debug.Log ("Changing State Idle Timeout");
+				//Debug.Log ("Changing State Idle Timeout");
 				actionList.Clear();
 				currentState.state = EPlayerState.Idle;
 				agent.ResetPath();
