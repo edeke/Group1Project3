@@ -88,7 +88,7 @@ MonoBehaviour:
       - id: 2
         type: 1
         theme: 
-        position: {x: 56, y: 31}
+        position: {x: 28, y: 136}
         outs: 0300000004000000070000000600000005000000
         advanced: 0
         metadata: 
@@ -282,7 +282,7 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 961, y: 21}
+        position: {x: 906, y: 14}
         outs: 0b000000
         advanced: 0
         metadata: 
@@ -3015,7 +3015,7 @@ MonoBehaviour:
     - id: 6
       name: Skyler
       startPage: 26
-      scrollPosition: {x: 0, y: 636.903076}
+      scrollPosition: {x: 0, y: 600}
       phases:
       - id: 0
         type: 1
@@ -4192,13 +4192,13 @@ MonoBehaviour:
     - id: 9
       name: Town elder
       startPage: 0
-      scrollPosition: {x: 338.643585, y: 0}
+      scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
         type: 1
         theme: 
-        position: {x: 164, y: 10}
-        outs: 02000000030000000100000004000000
+        position: {x: 175, y: 12}
+        outs: 020000000300000001000000
         advanced: 0
         metadata: 
         text: "Heeeello there young one\u2026"
@@ -4214,11 +4214,9 @@ MonoBehaviour:
           height: 0
         newWindow: 0
         choices:
-        - "Hiya! I\u2019m [...]. Who are you?"
-        - "I\u2019m looking for my family. Do you know [Mothers name]?"
+        - "Hiya! I\u2019m Ash. Who are you?"
+        - "I\u2019m looking for my family. Does the name Darya mean anything to you?"
         - Gotta go!
-        - Someone told me that I should bring you these letters. They said you could
-          help me find my family.
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -4233,7 +4231,7 @@ MonoBehaviour:
       - id: 1
         type: 6
         theme: 
-        position: {x: 468, y: 280}
+        position: {x: 561, y: 329}
         outs: 
         advanced: 0
         metadata: 
@@ -4264,7 +4262,7 @@ MonoBehaviour:
       - id: 2
         type: 0
         theme: 
-        position: {x: 469, y: 10}
+        position: {x: 509, y: 14}
         outs: 05000000
         advanced: 0
         metadata: 
@@ -4296,7 +4294,7 @@ MonoBehaviour:
       - id: 3
         type: 0
         theme: 
-        position: {x: 469, y: 155}
+        position: {x: 480, y: 172}
         outs: 06000000
         advanced: 0
         metadata: 
@@ -4327,12 +4325,12 @@ MonoBehaviour:
       - id: 4
         type: 0
         theme: 
-        position: {x: 463, y: 304}
+        position: {x: 447, y: 536}
         outs: 07000000
         advanced: 0
         metadata: 
         text: Oooh, so you have come at last my child. I have been waiting for you
-          for a long time. Come with me. Do you want me to take you to your parents?
+          for a long time. So... you are looking for your mother, are you?
         name: Town elder
         portrait: 
         audio: 
@@ -4359,12 +4357,12 @@ MonoBehaviour:
       - id: 5
         type: 0
         theme: 
-        position: {x: 773, y: 14}
+        position: {x: 838, y: 21}
         outs: 08000000
         advanced: 0
         metadata: 
         text: Whaaa? What are you talking about?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -4390,12 +4388,12 @@ MonoBehaviour:
       - id: 6
         type: 0
         theme: 
-        position: {x: 782, y: 161}
+        position: {x: 795, y: 176}
         outs: 00000000
         advanced: 0
         metadata: 
         text: Isn't that Shakespeare..?
-        name: Player
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -4421,11 +4419,11 @@ MonoBehaviour:
       - id: 7
         type: 0
         theme: 
-        position: {x: 774, y: 305}
+        position: {x: 758, y: 537}
         outs: 09000000
         advanced: 0
         metadata: 
-        text: "They\u2019re here?? Yes! Thank you! Thank you! "
+        text: Yes! Do you know where I can find her!?
         name: Ash
         portrait: 
         audio: 
@@ -4452,8 +4450,8 @@ MonoBehaviour:
       - id: 8
         type: 0
         theme: 
-        position: {x: 1076, y: 10}
-        outs: 0a000000
+        position: {x: 1144, y: 27}
+        outs: ffffffff
         advanced: 0
         metadata: 
         text: I am talking talking about peas of course! Black eyed peas!
@@ -4483,11 +4481,12 @@ MonoBehaviour:
       - id: 9
         type: 0
         theme: 
-        position: {x: 1079, y: 303}
-        outs: 0b000000
+        position: {x: 1076, y: 537}
+        outs: 0a000000
         advanced: 0
         metadata: 
-        text: Follow me child, and I will show you to them.
+        text: 'Speak to the shopkeeper in the Antique Boutique. The shop hides very
+          old secrets... '
         name: Town elder
         portrait: 
         audio: 
@@ -4512,40 +4511,9 @@ MonoBehaviour:
         variableGetValue: 
         messageName: 
       - id: 10
-        type: 0
-        theme: 
-        position: {x: 1380, y: 11}
-        outs: 00000000
-        advanced: 0
-        metadata: 
-        text: I am talking talking about peas of course! Black eyed peas!
-        name: Town elder
-        portrait: 
-        audio: 
-        audioDelay: 0
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        newWindow: 0
-        choices: []
-        waitType: 0
-        waitDuration: 0
-        variableScope: 0
-        variableType: 0
-        variableId: 0
-        variableScrollPosition: {x: 0, y: 0}
-        variableSetEquation: 0
-        variableSetValue: 
-        variableGetEquation: 0
-        variableGetValue: 
-        messageName: 
-      - id: 11
         type: 6
         theme: 
-        position: {x: 1383, y: 303}
+        position: {x: 1394, y: 544}
         outs: 
         advanced: 0
         metadata: 
@@ -4572,6 +4540,69 @@ MonoBehaviour:
         variableSetValue: 
         variableGetEquation: 0
         variableGetValue: 
+        messageName: 
+      - id: 11
+        type: 0
+        theme: 
+        position: {x: 116, y: 537}
+        outs: 04000000
+        advanced: 0
+        metadata: 
+        text: Hi, the Old Coot sent me. He told me you know something about my mother
+          Darya.
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 12
+        type: 4
+        theme: 
+        position: {x: 10, y: 781}
+        outs: 0b00000000000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 12
+        variableScrollPosition: {x: 0, y: 201}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
         messageName: 
       floats:
         variables: []
