@@ -4036,18 +4036,18 @@ MonoBehaviour:
         selection: 0
     - id: 7
       name: Random person in bar (2)
-      startPage: 0
+      startPage: 1
       scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
-        type: 1
+        type: 6
         theme: 
-        position: {x: 209, y: 66}
-        outs: 0100000002000000
+        position: {x: 1118, y: 143}
+        outs: 
         advanced: 0
         metadata: 
-        text: Hi there!
-        name: Greer
+        text: 
+        name: 
         portrait: 
         audio: 
         audioDelay: 0
@@ -4058,10 +4058,7 @@ MonoBehaviour:
           width: 0
           height: 0
         newWindow: 0
-        choices:
-        - 'Do you know where I can find a light? The light from the lighthouse flew
-          away... '
-        - Sorry, gotta go!
+        choices: []
         waitType: 0
         waitDuration: 0
         variableScope: 0
@@ -4076,13 +4073,12 @@ MonoBehaviour:
       - id: 1
         type: 0
         theme: 
-        position: {x: 561, y: 96}
-        outs: 00000000
-        advanced: 0
+        position: {x: 211, y: 10}
+        outs: 02000000
+        advanced: 1
         metadata: 
-        text: I think I saw some lights down by the waterfall on the beach when I
-          went there a couple of nights ago. Try down there.
-        name: Greer
+        text: Hi there!
+        name: Ash
         portrait: 
         audio: 
         audioDelay: 0
@@ -4106,14 +4102,14 @@ MonoBehaviour:
         variableGetValue: 
         messageName: 
       - id: 2
-        type: 6
+        type: 0
         theme: 
-        position: {x: 600, y: 274}
-        outs: 
-        advanced: 0
+        position: {x: 598, y: 15}
+        outs: 00000000
+        advanced: 1
         metadata: 
-        text: 
-        name: 
+        text: Pleeease keep your voice down... I'm soooo hangover...
+        name: Drunk
         portrait: 
         audio: 
         audioDelay: 0
