@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_rat_02
-  m_Shader: {fileID: 4800000, guid: 9b1c6c919dae7c0478718cf545c467ed, type: 3}
+  m_Shader: {fileID: 4800000, guid: c88d4ba83c771ff43b384a7d021751cb, type: 3}
   m_ShaderKeywords: _HARDSKINCOLOR_ON _USEBLUE_ON _USEMASKS_ON _USERED_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -102,7 +102,7 @@ Material:
         first:
           name: _Masks
         second:
-          m_Texture: {fileID: 2800000, guid: 3bf104cd84ae9e94484665bc4affb5cd, type: 3}
+          m_Texture: {fileID: 2800000, guid: e9b1afedad90f1d43bfb486b6a3eda0c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -140,10 +140,6 @@ Material:
         second: .000500000024
       data:
         first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -177,6 +173,10 @@ Material:
       data:
         first:
           name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
         second: 0
       data:
         first:
@@ -243,6 +243,10 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _RedColor

@@ -6,9 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_test_character_rat
+  m_Name: mat_rat_10_old
   m_Shader: {fileID: 4800000, guid: c88d4ba83c771ff43b384a7d021751cb, type: 3}
-  m_ShaderKeywords: _HARDSKINCOLOR_ON _USEBLUE_ON _USEMASKS_ON _USERED_ON
+  m_ShaderKeywords: _HARDSKINCOLOR_ON _USECYAN_ON _USEGREEN_ON _USEMASKS_ON _USERED_ON
+    _USEWHITE_ON _USEYELLOW_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -181,7 +182,7 @@ Material:
       data:
         first:
           name: _AOIntensity
-        second: .662
+        second: .646000028
       data:
         first:
           name: _UseMasks
@@ -193,11 +194,11 @@ Material:
       data:
         first:
           name: _UseCyan
-        second: 0
+        second: 1
       data:
         first:
           name: _UseYellow
-        second: 0
+        second: 1
       data:
         first:
           name: _UsePurple
@@ -205,7 +206,7 @@ Material:
       data:
         first:
           name: _UseWhite
-        second: 0
+        second: 1
       data:
         first:
           name: _UseRed
@@ -213,11 +214,11 @@ Material:
       data:
         first:
           name: _UseGreen
-        second: 0
+        second: 1
       data:
         first:
           name: _UseBlue
-        second: 1
+        second: 0
       data:
         first:
           name: _SkinColorOpacity
@@ -250,7 +251,7 @@ Material:
       data:
         first:
           name: _RedColor
-        second: {r: .720588207, g: .439770728, b: .439770728, a: 1}
+        second: {r: .492647052, g: .394842118, b: .441383779, a: 1}
       data:
         first:
           name: _BlackColor
@@ -258,23 +259,23 @@ Material:
       data:
         first:
           name: _CyanColor
-        second: {r: .134299293, g: .56429708, b: .676470578, a: 1}
+        second: {r: .45588237, g: .291630626, b: .356198579, a: 1}
       data:
         first:
           name: _YellowColor
-        second: {r: 1, g: .940770805, b: .463235289, a: 1}
+        second: {r: .345588207, g: .345588207, b: .345588207, a: 1}
       data:
         first:
           name: _PurpleColor
-        second: {r: .862631321, g: .504000783, b: .867647111, a: 1}
+        second: {r: .759509683, g: .387975782, b: .764705896, a: 1}
       data:
         first:
           name: _WhiteColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .602941155, g: .573344409, b: .407871962, a: 1}
       data:
         first:
           name: _GreenColor
-        second: {r: .448529422, g: .435337394, b: .435337394, a: 1}
+        second: {r: .338235319, g: .27108565, b: .330825686, a: 1}
       data:
         first:
           name: _BlueColor
@@ -298,8 +299,8 @@ Material:
       data:
         first:
           name: _HardSkinColor1
-        second: {r: .211613342, g: .228913635, b: .279411793, a: 1}
+        second: {r: .485294104, g: .335177779, b: .267625421, a: 1}
       data:
         first:
           name: _HardSkinColor2
-        second: {r: .628027618, g: .686552882, b: .705882311, a: 1}
+        second: {r: .558823526, g: .531845868, b: .41911763, a: 1}

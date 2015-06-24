@@ -38,20 +38,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Diffuse
-        second:
-          m_Texture: {fileID: 2800000, guid: 879ce83331cfb7541bac362c92a3f659, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Normals
-        second:
-          m_Texture: {fileID: 2800000, guid: 2a6467ca8c2640740b413c205c2246d2, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -94,6 +80,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: 879ce83331cfb7541bac362c92a3f659, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: 2a6467ca8c2640740b413c205c2246d2, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _AO
         second:
           m_Texture: {fileID: 2800000, guid: 20f6dd41129d7304fac05d970b82603e, type: 3}
@@ -123,22 +123,6 @@ Material:
         first:
           name: _DstBlend
         second: 0
-      data:
-        first:
-          name: _Reach
-        second: .524999976
-      data:
-        first:
-          name: _MinLight
-        second: .763000011
-      data:
-        first:
-          name: _MaxLight
-        second: 1
-      data:
-        first:
-          name: _Outline
-        second: .00999999978
       data:
         first:
           name: _Parallax
@@ -181,6 +165,22 @@ Material:
         second: 0
       data:
         first:
+          name: _Reach
+        second: .524999976
+      data:
+        first:
+          name: _MinLight
+        second: .763000011
+      data:
+        first:
+          name: _MaxLight
+        second: 1
+      data:
+        first:
+          name: _Outline
+        second: .00999999978
+      data:
+        first:
           name: _AOIntensity
         second: .662
       data:
@@ -219,6 +219,10 @@ Material:
         first:
           name: _UseBlue
         second: 1
+      data:
+        first:
+          name: _HardSkinColor
+        second: 0
     m_Colors:
       data:
         first:
@@ -230,12 +234,16 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
           name: _OutlineColor
         second: {r: .176470578, g: .176470578, b: .176470578, a: 0}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _RedColor
@@ -268,3 +276,11 @@ Material:
         first:
           name: _BlueColor
         second: {r: .91967535, g: .735294104, b: 1, a: 1}
+      data:
+        first:
+          name: _HardSkinColor1
+        second: {r: .0801254436, g: .286764711, b: .167056397, a: 1}
+      data:
+        first:
+          name: _HardSkinColor2
+        second: {r: .276384085, g: .529411793, b: .508471489, a: 1}
