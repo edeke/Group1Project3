@@ -227,7 +227,10 @@ public class GWorld : MonoBehaviour
 
 	void OnLevelWasLoaded(int level)
 	{
-		Inventory.myInv.CurrentSelectedItem = -1;
+		if (GWorld.isInvEnabled) 
+		{
+			Inventory.myInv.CurrentSelectedItem = -1;
+		}
 	}
 
 	void Update () 

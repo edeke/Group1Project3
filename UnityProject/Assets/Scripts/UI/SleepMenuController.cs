@@ -36,7 +36,7 @@ public class SleepMenuController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		currentTimeText.text = "Current Time :  " + GWorld.GetTimeInMinAsString ();
+		currentTimeText.text = "Time Of Day :  " + GWorld.GetTimeOfTheDay().ToString();
 	}
 
 	public void OnSleepClick()
