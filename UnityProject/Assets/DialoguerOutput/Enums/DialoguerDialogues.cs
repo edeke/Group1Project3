@@ -25,4 +25,6 @@ public enum DialoguerDialogues{
 	Random_NPC_1 = 21,
 	Random_NPC_2 = 22,
 	Soldier_5_Night = 23,
+	Billy_Night = 24,
+	Willy_Night = 25,
 }

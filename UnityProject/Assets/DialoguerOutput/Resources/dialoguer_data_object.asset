@@ -17,7 +17,7 @@ MonoBehaviour:
     - id: 0
       name: Barnacle Bill
       startPage: 18
-      scrollPosition: {x: 452.100189, y: 0}
+      scrollPosition: {x: 563.899902, y: 0}
       phases:
       - id: 0
         type: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
           that my mothers name is Derya."
         - "I don\u2019t drink. I\u2019m only 10 years old."
         - Gotta go. See ya!
-        - What was all that commotion outside about?
+        - What was all that commotion on the pier about?
         - "I\u2019ll have a bottle of rum!"
         waitType: 0
         waitDuration: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
         outs: 09000000
         advanced: 0
         metadata: 
-        text: Can I do something else for ya then?
+        text: Can I do somethin' else for ya then?
         name: Barnacle Bill
         portrait: 
         audio: 
@@ -640,7 +640,7 @@ MonoBehaviour:
     - id: 1
       name: Pirate on Beach
       startPage: 31
-      scrollPosition: {x: 2691.7019, y: 73.7000275}
+      scrollPosition: {x: 4150.30176, y: 106.699989}
       phases:
       - id: 0
         type: 6
@@ -998,7 +998,7 @@ MonoBehaviour:
         metadata: 
         text: "I have a slight problem you see. I have lost my wedding ring and I
           need it back before the old wench at home notices that it\u2019s gone. "
-        name: Pirate
+        name: Soldier
         portrait: 
         audio: 
         audioDelay: 0
@@ -3268,7 +3268,7 @@ MonoBehaviour:
     - id: 6
       name: Skyler
       startPage: 26
-      scrollPosition: {x: 49.5005722, y: 179.299973}
+      scrollPosition: {x: 1332.10034, y: 451.600647}
       phases:
       - id: 0
         type: 1
@@ -3936,11 +3936,11 @@ MonoBehaviour:
         type: 0
         theme: 
         position: {x: 762, y: 721}
-        outs: 19000000
+        outs: 1c000000
         advanced: 0
         metadata: 
-        text: Take this bottle. The letter inside will help ye find what yer lookin'
-          for.
+        text: 'Take this bottle. The letter inside will help ye find what yer lookin''
+          for. '
         name: Skyler
         portrait: 
         audio: 
@@ -4060,7 +4060,7 @@ MonoBehaviour:
       - id: 25
         type: 3
         theme: 
-        position: {x: 1149, y: 644}
+        position: {x: 2044, y: 651}
         outs: 1b000000
         advanced: 0
         metadata: 
@@ -4122,11 +4122,105 @@ MonoBehaviour:
       - id: 27
         type: 6
         theme: 
-        position: {x: 1464, y: 998}
+        position: {x: 1699, y: 1022}
         outs: 
         advanced: 0
         metadata: 
         text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 28
+        type: 0
+        theme: 
+        position: {x: 1071.6001, y: 722.00061}
+        outs: 1d000000
+        advanced: 0
+        metadata: 
+        text: Do you know who might know more about my family?
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 29
+        type: 0
+        theme: 
+        position: {x: 1384.6001, y: 723.00061}
+        outs: 1e000000
+        advanced: 0
+        metadata: 
+        text: The Old Coot down by the tavern clings to a bottle! And I've spied no
+          liquor inside, only a parchment. It may be the next letter!
+        name: Skyler
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 30
+        type: 0
+        theme: 
+        position: {x: 1693.10034, y: 724.600647}
+        outs: 19000000
+        advanced: 0
+        metadata: 
+        text: Oh! Then I'll go talk to him!
         name: 
         portrait: 
         audio: 
@@ -4337,7 +4431,7 @@ MonoBehaviour:
         newWindow: 0
         choices:
         - "Hiya! I\u2019m Ash. Who are you?"
-        - "I\u2019m looking for my family. Does the name Darya mean anything to you?"
+        - "I\u2019m looking for my family. Does the name Derya mean anything to you?"
         - Gotta go!
         waitType: 0
         waitDuration: 0
@@ -5446,7 +5540,7 @@ MonoBehaviour:
     - id: 13
       name: Old Coot
       startPage: 72
-      scrollPosition: {x: 2491.50122, y: 205.700378}
+      scrollPosition: {x: 2128.50146, y: 406.400452}
       phases:
       - id: 0
         type: 4
@@ -7784,7 +7878,7 @@ MonoBehaviour:
         advanced: 0
         metadata: 
         text: "She wandersh around town, she\u2019s really old so she's really tiny.
-          Hic!"
+          About your size! Hic!"
         name: Old Coot
         portrait: 
         audio: 
@@ -8039,7 +8133,7 @@ MonoBehaviour:
     - id: 14
       name: Lizard on beach Night scene
       startPage: 0
-      scrollPosition: {x: 306.899536, y: 0}
+      scrollPosition: {x: 728.199463, y: 0}
       phases:
       - id: 0
         type: 4
@@ -10481,7 +10575,7 @@ MonoBehaviour:
         outs: 03000000
         advanced: 0
         metadata: 
-        text: What are you guys doing here in Cove Towne?
+        text: What are you guys doing here in Covetowne?
         name: Ash
         portrait: 
         audio: 
@@ -10849,6 +10943,1205 @@ MonoBehaviour:
       booleans:
         variables: []
         selection: 0
+    - id: 24
+      name: Billy (Night)
+      startPage: 8
+      scrollPosition: {x: 801.538635, y: 0}
+      phases:
+      - id: 0
+        type: 1
+        theme: 
+        position: {x: 660, y: 29}
+        outs: 010000000400000003000000
+        advanced: 0
+        metadata: 
+        text: Oh hey! I don't think you should be here, little mouse. We're doing
+          shady business for the Admiral that I can't talk about so...
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - What kind of shady business? I hope you're not trying to break in or anything.
+          That's wrong!
+        - Well, I'm sorry but you just talked about it.
+        - Oh well, better not get involved then. Bye!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 1
+        type: 0
+        theme: 
+        position: {x: 1004, y: 29}
+        outs: 02000000
+        advanced: 0
+        metadata: 
+        text: Oh no, we ain't breaking in! Willy's just fiddling with the lock and-
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 2
+        type: 0
+        theme: 
+        position: {x: 1311, y: 30}
+        outs: 07000000
+        advanced: 0
+        metadata: 
+        text: Doh! I better say no more! I'll get into all kinds a' trouble. Good
+          bye, little mouse!
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 3
+        type: 6
+        theme: 
+        position: {x: 2331, y: 488}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 4
+        type: 0
+        theme: 
+        position: {x: 1003, y: 164}
+        outs: 05000000
+        advanced: 0
+        metadata: 
+        text: What? Who? When?
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 5
+        type: 0
+        theme: 
+        position: {x: 1310, y: 164}
+        outs: 06000000
+        advanced: 0
+        metadata: 
+        text: 'Yeah! You did. Juuust now. '
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 6
+        type: 0
+        theme: 
+        position: {x: 1617, y: 163}
+        outs: 07000000
+        advanced: 0
+        metadata: 
+        text: Aaw no, not again! Promise you won't tell Willy. He's gonna smack me
+          upside the head like he always does when I do bad. You best be leavin',
+          little mouse.
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 7
+        type: 3
+        theme: 
+        position: {x: 1968, y: 60}
+        outs: 03000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 20
+        variableScrollPosition: {x: 0, y: 299}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 8
+        type: 4
+        theme: 
+        position: {x: 293, y: 236}
+        outs: 0900000000000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 20
+        variableScrollPosition: {x: 0, y: 299}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 9
+        type: 0
+        theme: 
+        position: {x: 671.599792, y: 368}
+        outs: 03000000
+        advanced: 0
+        metadata: 
+        text: Stupid Billy, always talkin' too much.
+        name: Billy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      floats:
+        variables: []
+        selection: 0
+      strings:
+        variables: []
+        selection: 0
+      booleans:
+        variables: []
+        selection: 0
+    - id: 25
+      name: Willy (Night)
+      startPage: 3
+      scrollPosition: {x: 808.300049, y: 515.499329}
+      phases:
+      - id: 0
+        type: 0
+        theme: 
+        position: {x: 754, y: 217}
+        outs: 01000000
+        advanced: 0
+        metadata: 
+        text: Hey Billy, can you get me one of those crooked ones, I-
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 1
+        type: 1
+        theme: 
+        position: {x: 1060, y: 218}
+        outs: 070000000c0000000d0000000b000000
+        advanced: 0
+        metadata: 
+        text: Hey, how did you get here?! Billy's supposed to be the lookout! Stupid
+          rat!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - Billy told me you were doing shady business! Breaking in is a crime!
+        - What are you doing with this door?
+        - Well I'm tiny! So I sneaked past your friend.
+        - I'm sorry, I'll go away now!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 2
+        type: 4
+        theme: 
+        position: {x: 175, y: 323}
+        outs: 0000000005000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 20
+        variableScrollPosition: {x: 0, y: 299}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 3
+        type: 4
+        theme: 
+        position: {x: 176, y: 10}
+        outs: 0400000002000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 21
+        variableScrollPosition: {x: 0, y: 318}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 4
+        type: 0
+        theme: 
+        position: {x: 760.299927, y: 10}
+        outs: ffffffff
+        advanced: 0
+        metadata: 
+        text: Quit botherin' me, ya little brat!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 5
+        type: 0
+        theme: 
+        position: {x: 772, y: 838}
+        outs: 06000000
+        advanced: 0
+        metadata: 
+        text: Hey Billy, can you get me one of those crooked ones, I-
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 6
+        type: 1
+        theme: 
+        position: {x: 1075, y: 837}
+        outs: 130000001400000015000000
+        advanced: 0
+        metadata: 
+        text: Hey, how did you get here?! Billy's supposed to be the lookout! Stupid
+          rat!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices:
+        - What are you doing with this door?
+        - Well I'm tiny! So I sneaked past your friend.
+        - I'm sorry, I'll go away now!
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 7
+        type: 0
+        theme: 
+        position: {x: 1374, y: 187.199936}
+        outs: 08000000
+        advanced: 0
+        metadata: 
+        text: Oh that snitch! I'm gonna get him good this time, teach that half-wit
+          a lesson!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 8
+        type: 0
+        theme: 
+        position: {x: 1725, y: 187.499908}
+        outs: 09000000
+        advanced: 0
+        metadata: 
+        text: Hey, don't hurt him! He doesn't know any better, he just wanna do good!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 9
+        type: 0
+        theme: 
+        position: {x: 2082, y: 184.599884}
+        outs: 01000000
+        advanced: 0
+        metadata: 
+        text: I guess you're right. It's impossible to teach him anything! It don't
+          matter, no one's gonna     believe you anyway. I heard you're new in town!
+          Now get outta here, half-pint!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 10
+        type: 6
+        theme: 
+        position: {x: 3004, y: 664.19989}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 11
+        type: 0
+        theme: 
+        position: {x: 1407.30042, y: 637.399902}
+        outs: 0a000000
+        advanced: 0
+        metadata: 
+        text: Scram!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 12
+        type: 0
+        theme: 
+        position: {x: 1393.20044, y: 342.000122}
+        outs: 0e000000
+        advanced: 0
+        metadata: 
+        text: It's none of your business, half-pint! I don't have time for you, so
+          beat it!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 13
+        type: 0
+        theme: 
+        position: {x: 1404.70044, y: 493.500122}
+        outs: 0f000000
+        advanced: 0
+        metadata: 
+        text: Well you're right, you sure is small, kid. Might be able to help me,
+          once I get this door open.
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 14
+        type: 0
+        theme: 
+        position: {x: 1736.5, y: 342}
+        outs: 10000000
+        advanced: 0
+        metadata: 
+        text: I don't like you tone mister! But I guess I'll go away then.
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 15
+        type: 0
+        theme: 
+        position: {x: 1760.09949, y: 522.100098}
+        outs: 11000000
+        advanced: 0
+        metadata: 
+        text: Forget it! I'm not helping you with criminal activity! I'm outta here!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 16
+        type: 0
+        theme: 
+        position: {x: 2081.59521, y: 334.600098}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Well boo-hoo. That's right, run along!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 17
+        type: 0
+        theme: 
+        position: {x: 2084.5957, y: 503.300049}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Bah! Yeah, you better run!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 18
+        type: 3
+        theme: 
+        position: {x: 2648.29126, y: 709.40033}
+        outs: 0a000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 21
+        variableScrollPosition: {x: 0, y: 318}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 19
+        type: 0
+        theme: 
+        position: {x: 1421.59937, y: 827.900269}
+        outs: 17000000
+        advanced: 0
+        metadata: 
+        text: It's none of your business, half-pint! I don't have time for you, so
+          beat it!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 20
+        type: 0
+        theme: 
+        position: {x: 1419.40002, y: 977.499878}
+        outs: 18000000
+        advanced: 0
+        metadata: 
+        text: Well you're right, you sure is small, kid. Might be able to help me,
+          once I get this door open.
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 21
+        type: 0
+        theme: 
+        position: {x: 1422.69995, y: 1128.69983}
+        outs: 16000000
+        advanced: 0
+        metadata: 
+        text: Scram!
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 22
+        type: 6
+        theme: 
+        position: {x: 2681, y: 1169.69983}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 23
+        type: 0
+        theme: 
+        position: {x: 1756.79919, y: 828.199829}
+        outs: 19000000
+        advanced: 0
+        metadata: 
+        text: I don't like you tone mister! But I guess I'll go away then.
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 24
+        type: 0
+        theme: 
+        position: {x: 1753.19873, y: 980.499817}
+        outs: 1a000000
+        advanced: 0
+        metadata: 
+        text: Forget it! I'm not helping you with criminal activity! I'm outta here!
+        name: Ash
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 25
+        type: 0
+        theme: 
+        position: {x: 2083.29883, y: 828.499512}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Well boo-hoo. That's right, run along!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 26
+        type: 0
+        theme: 
+        position: {x: 2082.29883, y: 981.499512}
+        outs: 12000000
+        advanced: 0
+        metadata: 
+        text: Bah! Yeah, you better run!
+        name: Willy
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      floats:
+        variables: []
+        selection: 0
+      strings:
+        variables: []
+        selection: 0
+      booleans:
+        variables: []
+        selection: 0
     globals:
       booleans:
         variables:
@@ -10912,7 +12205,13 @@ MonoBehaviour:
         - name: Given ring to soldier
           variable: false
           id: 19
-        selection: 19
+        - name: TalkedToBillyNight
+          variable: false
+          id: 20
+        - name: TalkedToWillyNight
+          variable: false
+          id: 21
+        selection: 21
       floats:
         variables: []
         selection: 0
