@@ -248,7 +248,14 @@ public class GWorld : MonoBehaviour
 			if(currentTimeEnableUI <= 0.0f)
 			{
 				currentTimeEnableUI = 0.0f;
-				UI.enabled = true;
+				try
+				{
+					UI.enabled = true;
+				}
+				catch (System.NullReferenceException e)
+				{
+
+				}
 			}
 		}
 
