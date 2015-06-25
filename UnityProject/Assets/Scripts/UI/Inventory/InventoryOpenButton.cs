@@ -9,6 +9,9 @@ public class InventoryOpenButton : MonoBehaviour {
 
 	bool active = false;
 
+	public AudioClip openInventory;
+	public AudioClip closeInventory;
+
 	// Use this for initialization
 	void Start () {
 
@@ -32,12 +35,14 @@ public class InventoryOpenButton : MonoBehaviour {
 		{
 			if (active) 
 			{
+				AudioSource.PlayClipAtPoint(closeInventory, transform.position, 0.5f);
 				panel.SetActive (false);
 				active = false;
 
 			} 
 			else 
 			{
+				AudioSource.PlayClipAtPoint(openInventory, transform.position, 0.5f);
 				panel.SetActive (true);
 				active = true;
 			
