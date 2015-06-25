@@ -181,11 +181,28 @@ public class GWorld : MonoBehaviour
 				isInvEnabled = true;
 
 				InventoryOpenButton button = mainUI.GetComponentInChildren<InventoryOpenButton>();
-				button.ShowButton();
+				button.ShowButton(true);
 
 				myPlayer.GetComponent<PlayerMovement>().EnableBackpack(true);
 
 			}
+			
+		}
+	}
+
+	static public void DisableInventory()
+	{
+
+		InventoryOpenButton button = mainUI.GetComponentInChildren<InventoryOpenButton>();
+		button.ShowButton(false);
+		
+		myPlayer.GetComponent<PlayerMovement>().EnableBackpack(false);
+
+		if (myInv) 
+		{
+			Destroy(myInv);
+
+			isInvEnabled = false;
 			
 		}
 	}
@@ -538,7 +555,7 @@ public class GWorld : MonoBehaviour
 
 		dialogOpen = false;
 		currentZone = 0;
-		isInvEnabled = false;
+		DisableInventory ();
 		sceneAlreadyLoaded = false;
 		loadLevel = false;
 		currentTimeInMin = HOUR * 10 + 1;

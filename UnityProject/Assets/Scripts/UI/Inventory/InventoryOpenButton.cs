@@ -21,9 +21,9 @@ public class InventoryOpenButton : MonoBehaviour {
 	
 	}
 
-	public void ShowButton()
+	public void ShowButton(bool enable)
 	{
-		rend.enabled = true;
+		rend.enabled = enable;
 	}
 
 	public void OnClick()
