@@ -568,6 +568,27 @@ public class GWorld : MonoBehaviour
 	{
 		//reset game by destroying all objects
 
+		Dialoguer.SetGlobalBoolean (1, false);
+		Dialoguer.SetGlobalBoolean (2, false);
+		Dialoguer.SetGlobalBoolean (3, false);
+		Dialoguer.SetGlobalBoolean (4, false);
+		Dialoguer.SetGlobalBoolean (5, false);
+		Dialoguer.SetGlobalBoolean (6, false);
+		Dialoguer.SetGlobalBoolean (7, false);
+		Dialoguer.SetGlobalBoolean (8, false);
+		Dialoguer.SetGlobalBoolean (9, false);
+		Dialoguer.SetGlobalBoolean (10, false);
+		Dialoguer.SetGlobalBoolean (11, false);
+		Dialoguer.SetGlobalBoolean (12, false);
+		Dialoguer.SetGlobalBoolean (13, false);
+		Dialoguer.SetGlobalBoolean (14, false);
+		Dialoguer.SetGlobalBoolean (15, false);
+		Dialoguer.SetGlobalBoolean (16, false);
+		Dialoguer.SetGlobalBoolean (17, false);
+		Dialoguer.SetGlobalBoolean (18, false);
+		Dialoguer.SetGlobalBoolean (19, false);
+
+
 		if (myPlayer != null)
 		{
 			Destroy(myPlayer);
