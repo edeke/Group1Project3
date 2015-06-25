@@ -35,14 +35,14 @@ public class InventoryOpenButton : MonoBehaviour {
 		{
 			if (active) 
 			{
-				AudioSource.PlayClipAtPoint(closeInventory, transform.position, 0.3f);
+				AudioSource.PlayClipAtPoint(closeInventory, transform.position, 0.2f);
 				panel.SetActive (false);
 				active = false;
 
 			} 
 			else 
 			{
-				AudioSource.PlayClipAtPoint(openInventory, transform.position, 0.3f);
+				AudioSource.PlayClipAtPoint(openInventory, transform.position, 0.2f);
 				panel.SetActive (true);
 				active = true;
 			
