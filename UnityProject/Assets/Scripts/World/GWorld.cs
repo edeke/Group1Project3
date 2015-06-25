@@ -559,7 +559,7 @@ public class GWorld : MonoBehaviour
 		aSource.pitch = Random.Range (0.9f, 1.1f);
 		aSource.maxDistance = maxDistance;
 		aSource.dopplerLevel = 1.0f;
-		aSource.spatialBlend = 0.9f;
+		aSource.spatialBlend = 0.90f;
 
 		// set other aSource properties here, if desired
 		aSource.Play(); // start the sound
