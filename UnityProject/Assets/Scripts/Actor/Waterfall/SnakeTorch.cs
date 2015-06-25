@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class SnakeTorch : ClickOnActorBase
+public class SnakeTorch : CommentActorBase
 {
 	string EventIDLit = "TorchLit";
 
@@ -47,7 +47,7 @@ public class SnakeTorch : ClickOnActorBase
 				return true;
 
 			case EItem.UnlitTorch :
-				DisplayComment("I need to light the torch first");
+				DisplayComment("I need to light the torch first.");
 				return false;
 		}
 
