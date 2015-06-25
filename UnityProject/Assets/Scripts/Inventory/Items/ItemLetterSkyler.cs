@@ -46,7 +46,7 @@ public class ItemLetterSkyler : Item {
 	override public void OnInspect()
 	{
 		
-		DisplayComment ("A bottle, it looks like it contains a letter.");
+		DisplayComment ("A bottle. Looks like it contains a letter.");
 	}
 	
 	override public void OnAction( ) 

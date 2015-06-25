@@ -11,7 +11,7 @@ public class ItemMirror : Item {
 
 	override public void OnInspect()
 	{
-		DisplayComment("It looks like an old mirror!");
+		DisplayComment("It looks like an old Mayan mirror!");
 	}
 
 	public void LoadLevel()
@@ -81,29 +81,29 @@ public class ItemMirror : Item {
 		} 
 		else 
 		{
-			DisplayComment("I need a backpack to hold this mirror.");
+			DisplayComment("I need something to carry this in.");
 		}
 
 	}
 
 	void Speech1()
 	{
-		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("Hey, don't touch that !");
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("Hey, don't touch that!");
 	}
 
 	void Speech2()
 	{
-		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("I told you to no touch that!");
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("I told you not to touch that!");
 	}
 
 	void Speech3()
 	{
-		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("If you touch that one more time...!");
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("If you touch it one more time...");
 	}
 
 	void Speech4()
 	{
-		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That's it, I had it with you. Get out of my shop !!!");
+		FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That's it! I have had it with you. Get out of my shop!!!");
 	}
 
 }

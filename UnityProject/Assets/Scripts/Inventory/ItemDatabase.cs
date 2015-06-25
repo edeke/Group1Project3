@@ -40,7 +40,7 @@ static public class ItemDatabase
 		banan.onUseParticle = null;
 		banan.soundOnPickup = null;
 		banan.soundOnUse = null;
-		banan.itemDescription = "It's a banana";
+		banan.itemDescription = "It's a banana.";
 		items.Add ("Banana", banan );
 
 		//Add Item to Itemdb

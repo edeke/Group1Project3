@@ -6,7 +6,7 @@ public class ItemCloth : Item {
 	override public void OnInventoryInspect()
 	{
 		PlayerMovement moveComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
-		moveComp.DisplaySpeechBubble ("It's a nice piece of cloth");
+		moveComp.DisplaySpeechBubble ("It's a nice piece of cloth.");
 	}
 
 	override public void OnInspect()

@@ -17,7 +17,7 @@ public class ItemCarpet : Item {
 		{
 			if( FindObjectOfType<Shopkeeper> ().atStart )
 			{
-				FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("That is not for sale, don't touch it!");
+				FindObjectOfType<Shopkeeper> ().DisplaySpeechBubble("Don't touch that! It's not for sale.");
 			}
 			else
 			{
