@@ -7,7 +7,7 @@ public class CaveCrack : InspectBase {
 	{	
 		if (GWorld.GetTimeOfTheDay () == TimeOfDay.Night)
 		{
-			DisplayComment ("It's a small opening in the cave, with some moonlight shining through. ");
+			DisplayComment ("It's a small opening in the cave, with some moonlight shining through.");
 		} 
 		else 
 		{

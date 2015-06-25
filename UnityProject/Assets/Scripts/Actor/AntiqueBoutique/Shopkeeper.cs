@@ -68,7 +68,7 @@ public class Shopkeeper : NPCBase
 	override public void OnInspect()
 	{	
 
-		DisplaySpeechBubble ( "Hey, please don't touch anything" );
+		DisplaySpeechBubble ( "Please don't touch anything!" );
 		
 	}
 
@@ -76,7 +76,7 @@ public class Shopkeeper : NPCBase
 	public void OnChest()
 	{
 
-		DisplaySpeechBubble ( "Hey! Don't touch that" );
+		DisplaySpeechBubble ( "Hey! Don't touch that!" );
 		agent.SetDestination ( walkToLocation[0] );
 
 		atStart = false;
@@ -94,6 +94,6 @@ public class Shopkeeper : NPCBase
 
 	void Speech2()
 	{
-		DisplaySpeechBubble("Huh ! Im sure there was a rug over there just a second ago..."); 
+		DisplaySpeechBubble("Huh?! Where did my carpet go...?"); 
 	}
 }
