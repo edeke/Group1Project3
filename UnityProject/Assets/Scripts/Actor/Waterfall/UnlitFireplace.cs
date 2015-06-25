@@ -22,6 +22,11 @@ public class UnlitFireplace : CommentActorBase
 			case EItem.UnlitTorch :
 				DisplayComment("There is something missing here. Fire..");
 				return false;
+
+		default :
+			DisplayComment("That wont work.");
+			return false;
+		 
 		}
 		
 		return false;
