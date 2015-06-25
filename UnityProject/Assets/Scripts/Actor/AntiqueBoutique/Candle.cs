@@ -30,7 +30,7 @@ public class Candle : InspectBase
 	override public void OnInspect()
 	{	
 
-		DisplayComment("Candles are to nice to look at.");
+		DisplayComment("It's nice to look at.");
 
 	}
 

@@ -5,12 +5,12 @@ public class CaveForbidden : CommentActorBase {
 
 	override public void OnInspect()
 	{		
-		DisplayComment ("The area looks to be closed");
+		DisplayComment ("The area looks closed.");
 	}
 
 	override public void OnAction()
 	{
-		DisplayComment ("No, It's to dangerous to go any further");
+		DisplayComment ("No, it's to dangerous to go any further.");
 	}
 
 }

@@ -54,7 +54,7 @@ public class CaveMirrorHolder : CommentActorBase
 		} 
 		else 
 		{
-			DisplayComment ("Looks like something was supposed to be attached here.");
+			DisplayComment ("Looks like something is supposed to be attached here.");
 		}
 
 	}
@@ -70,7 +70,7 @@ public class CaveMirrorHolder : CommentActorBase
 		} 
 		else 
 		{
-			DisplayComment("It's stuck to the wall");
+			DisplayComment("It's stuck to the wall.");
 		}
 	}
 	

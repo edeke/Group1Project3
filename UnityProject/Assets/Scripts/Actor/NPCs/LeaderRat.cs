@@ -32,7 +32,7 @@ public class LeaderRat : NPCBase
 
 	override public void OnInspect()
 	{	
-		DisplayComment ("Looks like he is the leader");
+		DisplayComment ("Looks like he is the leader.");
 		
 	}
 

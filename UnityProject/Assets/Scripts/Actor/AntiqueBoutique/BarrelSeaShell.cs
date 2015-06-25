@@ -6,12 +6,12 @@ public class BarrelSeaShell : CommentActorBase
 
 	override public void OnInspect()
 	{		
-		DisplayComment ("It's a barrel full of sea shells.");
+		DisplayComment ("It's a barrel of sea shells.");
 	}
 
 	override public void OnAction()
 	{
-		DisplayComment ("There is only a bunch of sea shells.");
+		DisplayComment ("Na, it's only sea shells.");
 	}
 
 }
