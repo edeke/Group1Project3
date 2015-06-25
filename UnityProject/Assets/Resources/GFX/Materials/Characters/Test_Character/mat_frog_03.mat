@@ -219,6 +219,10 @@ Material:
         first:
           name: _UseBlue
         second: 1
+      data:
+        first:
+          name: _HardSkinColor
+        second: 0
     m_Colors:
       data:
         first:
@@ -231,11 +235,15 @@ Material:
       data:
         first:
           name: _OutlineColor
-        second: {r: .176470578, g: .176470578, b: .176470578, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Highlight
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _RedColor
@@ -268,3 +276,11 @@ Material:
         first:
           name: _BlueColor
         second: {r: 1, g: .860294104, b: .944117725, a: 1}
+      data:
+        first:
+          name: _HardSkinColor1
+        second: {r: .0801254436, g: .286764711, b: .167056397, a: 1}
+      data:
+        first:
+          name: _HardSkinColor2
+        second: {r: .276384085, g: .529411793, b: .508471489, a: 1}

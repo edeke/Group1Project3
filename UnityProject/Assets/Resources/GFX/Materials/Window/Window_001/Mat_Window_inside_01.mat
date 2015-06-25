@@ -133,14 +133,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Autotiletoscale
-        second: 0
-      data:
-        first:
-          name: _BaseScale
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -181,6 +173,18 @@ Material:
         second: 0
       data:
         first:
+          name: _Autotiletoscale
+        second: 0
+      data:
+        first:
+          name: _BaseScale
+        second: 1
+      data:
+        first:
+          name: _DistanceFade
+        second: .352941185
+      data:
+        first:
           name: _FadeDistance
         second: 10
       data:
@@ -189,12 +193,8 @@ Material:
         second: 0
       data:
         first:
-          name: _DistanceFade
-        second: .352941185
-      data:
-        first:
           name: _EmissiveIntensity
-        second: 5
+        second: 1.25999999
     m_Colors:
       data:
         first:
@@ -214,13 +214,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _DistanceColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
           name: _Highlight
         second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
+          name: _DistanceColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
           name: _EmissiveColor
-        second: {r: 1, g: .839655161, b: .316176474, a: 1}
+        second: {r: 1, g: .66752547, b: .308823526, a: 1}
