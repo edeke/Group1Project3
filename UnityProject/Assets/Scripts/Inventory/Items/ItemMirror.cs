@@ -72,6 +72,8 @@ public class ItemMirror : Item {
 				{
 					GWorld.MarkEventDone (eventID);
 					Destroy (gameObject);
+					PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+					movComp.DisplaySpeechBubble ("I don't think he'll notice.");
 				} 
 			}
 
