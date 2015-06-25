@@ -30,12 +30,12 @@ public class ItemLetterOldCoot : Item {
 		if( letter.Length == 0 )
 		{
 
-			string path = "Prefabs/UI/Letter/Letter1";
+			string path = "Prefabs/UI/Letter/Letter2";
 			GameObject letter1 = (GameObject) Instantiate(Resources.Load(path));
 			
 			if(!letter1)
 			{
-				Debug.Log ("Failed to Load Letter1 - " + path);
+				Debug.Log ("Failed to Load Letter2 - " + path);
 			}
 
 		}
