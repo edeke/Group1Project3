@@ -66,6 +66,8 @@ public class NPCBase : ClickOnActorBase
 
 		defaultNPCState = currentNPCState;
 
+		currentSpeechAudio.volume = 0.5f;
+
 		if (disableAnimatons)
 		{
 			anim.enabled = false;
