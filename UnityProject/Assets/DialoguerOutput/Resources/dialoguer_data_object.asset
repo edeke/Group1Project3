@@ -639,7 +639,7 @@ MonoBehaviour:
         selection: 0
     - id: 1
       name: Pirate on Beach
-      startPage: 16
+      startPage: 31
       scrollPosition: {x: 0, y: 0}
       phases:
       - id: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
       - id: 16
         type: 4
         theme: 
-        position: {x: 99, y: 106}
+        position: {x: 128, y: 102}
         outs: 1100000016000000
         advanced: 0
         metadata: 
@@ -1554,6 +1554,99 @@ MonoBehaviour:
         type: 6
         theme: 
         position: {x: 1440.00024, y: 499}
+        outs: 
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 30
+        type: 0
+        theme: 
+        position: {x: 479, y: 601}
+        outs: 20000000
+        advanced: 0
+        metadata: 
+        text: You can enter now.
+        name: Soldier
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 0
+        variableScrollPosition: {x: 0, y: 0}
+        variableSetEquation: 0
+        variableSetValue: 
+        variableGetEquation: 0
+        variableGetValue: 
+        messageName: 
+      - id: 31
+        type: 4
+        theme: 
+        position: {x: 48, y: 472}
+        outs: 1e00000010000000
+        advanced: 0
+        metadata: 
+        text: 
+        name: 
+        portrait: 
+        audio: 
+        audioDelay: 0
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        newWindow: 0
+        choices: []
+        waitType: 0
+        waitDuration: 0
+        variableScope: 0
+        variableType: 0
+        variableId: 19
+        variableScrollPosition: {x: 0, y: 280}
+        variableSetEquation: 0
+        variableSetValue: true
+        variableGetEquation: 0
+        variableGetValue: true
+        messageName: 
+      - id: 32
+        type: 6
+        theme: 
+        position: {x: 835, y: 627}
         outs: 
         advanced: 0
         metadata: 
@@ -10753,7 +10846,10 @@ MonoBehaviour:
         - name: Given fireflies and recieved letter
           variable: false
           id: 18
-        selection: 13
+        - name: Given ring to soldier
+          variable: false
+          id: 19
+        selection: 19
       floats:
         variables: []
         selection: 0

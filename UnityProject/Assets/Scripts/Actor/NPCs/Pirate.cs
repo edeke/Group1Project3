@@ -59,6 +59,7 @@ public class Pirate : NPCBase
 	{
 		DisplaySpeechBubble("Oh my preeeeecious! Okey, you can enter now.");
 		ringGiven = true;
+		Dialoguer.SetGlobalBoolean (19, true);
 		GWorld.MarkEventDone (EventID);
 	}
 
