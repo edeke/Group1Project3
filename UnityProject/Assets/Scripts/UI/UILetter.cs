@@ -26,6 +26,18 @@ public class UILetter : MonoBehaviour
 
 	void Destroy()
 	{
+
+		string path = "Prefabs/UI/Chapters/ChapterEndUI";
+		GameObject comp = (GameObject) Instantiate(Resources.Load(path));
+		
+		if(!comp)
+		{
+			Debug.Log ("Failed to Load Letter1 - " + path);
+		}
+
+		GWorld.FadeToBlack (true);
 		Destroy (gameObject);
+
 	}
+
 }
