@@ -321,9 +321,9 @@ public class PlayerInput : MonoBehaviour
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 			bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
 
-			Debug.Log (hitInfo.collider.gameObject.name);
+			//Debug.Log (hitInfo.collider.gameObject.name);
 
-			Debug.DrawLine( mouseRay.GetPoint(0.0f) , mouseRay.GetPoint( hitInfo.distance), Color.red, 10.0f);
+			//Debug.DrawLine( mouseRay.GetPoint(0.0f) , mouseRay.GetPoint( hitInfo.distance), Color.red, 10.0f);
 
 
 
