@@ -547,7 +547,7 @@ public class GWorld : MonoBehaviour
 
 	}
 
-	public static AudioSource PlayClipAt(AudioClip clip, Vector3 pos, float volume = 1.0f, float maxDistance = 10.0f)
+	public static AudioSource PlayClipAt(AudioClip clip, Vector3 pos, float volume = 1.0f, float maxDistance = 50.0f)
 	{
 		GameObject tempGO = new GameObject("TempAudio"); // create the temp object
 		tempGO.transform.position = pos; // set its position
@@ -559,7 +559,7 @@ public class GWorld : MonoBehaviour
 		aSource.pitch = Random.Range (0.9f, 1.1f);
 		aSource.maxDistance = maxDistance;
 		aSource.dopplerLevel = 1.0f;
-		aSource.spatialBlend = 1.0f;
+		aSource.spatialBlend = 0.9f;
 
 		// set other aSource properties here, if desired
 		aSource.Play(); // start the sound
