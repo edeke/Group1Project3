@@ -222,7 +222,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 
 		if(speechSound != null)
 		{
-			AudioSource.PlayClipAtPoint( speechSound, objectToFollow.transform.position );
+			//AudioSource.PlayClipAtPoint( speechSound, objectToFollow.transform.position );
 		}
 	}
 

@@ -183,7 +183,7 @@ public class CommentController : MonoBehaviour {
 
 		if(speechSound != null)
 		{
-			AudioSource.PlayClipAtPoint( speechSound, transform.localPosition );
+			//AudioSource.PlayClipAtPoint( speechSound, transform.localPosition );
 		}
 	}
 
