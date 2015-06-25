@@ -366,13 +366,13 @@ public class PlayerInput : MonoBehaviour
 			Vector3 deltaMousePosition = mouseLocationStartFrame - Input.mousePosition;
 			if(deltaMousePosition.magnitude > mouseDragDeadZone)
 			{
-				dragging = true;
+				//dragging = true;
 			}
 
 			if(dragging == true)
 			{
 
-				RaycastHit hitInfo = new RaycastHit ();
+				/*RaycastHit hitInfo = new RaycastHit ();
 				Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 				
 				bool traceHit = Physics.Raycast (mouseRay, out hitInfo);
@@ -410,7 +410,7 @@ public class PlayerInput : MonoBehaviour
 							}
 						}
 					}
-				}
+				}*/
 			}
 			/*RaycastHit hitInfo = new RaycastHit ();
 			Ray mouseRay = Camera.main.ScreenPointToRay (Input.mousePosition);
