@@ -11,7 +11,6 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	Image speechBubbleComp;
 	Canvas mainCanvas;
 
-	Camera mainCamera;
 	GameObject objectToFollow;
 
 	public AudioClip speechSound;
@@ -41,8 +40,6 @@ public class SpeechBubbleScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-
-		mainCamera = FindObjectOfType<Camera> ();
 
 		Canvas[] tempComp = gameObject.GetComponentsInChildren<Canvas> ();
 		foreach (Canvas comp in tempComp)
@@ -114,7 +111,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		offsetVectorWorldSpace.y += objectSetOffset_y + 5;
 		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 		
-		screenLocation = mainCamera.WorldToScreenPoint (offsetVectorWorldSpace);
+		screenLocation = Camera.main.WorldToScreenPoint (offsetVectorWorldSpace);
 
 		int offsetY = Mathf.FloorToInt( sizeOfText.y );
 		int offsetX = Mathf.FloorToInt( (sizeOfText.x / 2) );

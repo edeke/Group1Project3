@@ -20,8 +20,7 @@ public class CommentController : MonoBehaviour {
 
 	const float textOpenTimeBase = 3.0f;
 	const float textOpenTimePerLetter = 0.1f;
-
-	Camera mainCamera;
+	
 	GameObject objectToFollow;
 
 	Vector2 sizeOfText;
@@ -35,7 +34,6 @@ public class CommentController : MonoBehaviour {
 	void Awake()
 	{
 		currentOpenTime = textOpenTimeBase;
-		mainCamera = FindObjectOfType<Camera> ();
 
 		myStyle = new GUIStyle ();
 
@@ -103,7 +101,7 @@ public class CommentController : MonoBehaviour {
 		offsetVectorWorldSpace.y += objectSetOffset_y + 1;
 		offsetVectorWorldSpace += objectToFollow.transform.forward * (objectSetOffset_x);
 
-		screenLocation = mainCamera.WorldToScreenPoint (offsetVectorWorldSpace);
+		screenLocation = Camera.main.WorldToScreenPoint (offsetVectorWorldSpace);
 
 		//Clamp X location to within screen
 		if (screenLocation.x + (sizeOfText.x / 2) > Screen.width) 
