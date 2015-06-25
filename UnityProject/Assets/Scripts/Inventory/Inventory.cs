@@ -201,7 +201,7 @@ public class Inventory : MonoBehaviour {
 
 				if(newCombineData.playOnCombine != null)
 				{
-					AudioSource.PlayClipAtPoint( newCombineData.playOnCombine , Vector3.zero );
+					AudioSource.PlayClipAtPoint( newCombineData.playOnCombine , Vector3.zero, 0.5f);
 				}
 
 				RemoveItem(CurrentSelectedItem);

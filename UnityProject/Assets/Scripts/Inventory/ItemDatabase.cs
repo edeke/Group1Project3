@@ -110,7 +110,7 @@ static public class ItemDatabase
 		items.Add ("LitTorch", litTorch );
 
 		//Add combine data to array
-		path = "SFX/ItemSounds/EnemyLaugh2";
+		path = "SFX/InventorySounds/combine";
 		AudioClip newAudio = (AudioClip)Resources.Load(path,typeof(AudioClip));
 
 		if (!newAudio)
@@ -126,7 +126,7 @@ static public class ItemDatabase
 		combineItemsList.Add ( newCombine );
 
 		//Add combine data to array
-		path = "SFX/ItemSounds/EnemyLaugh2";
+		path = "SFX/InventorySounds/combine";
 		newAudio = (AudioClip)Resources.Load(path,typeof(AudioClip));
 		
 		if (!newAudio)
