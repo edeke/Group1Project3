@@ -49,8 +49,18 @@ public class NPCBase : ClickOnActorBase
 	AudioClip stepSound3;
 	AudioClip stepSound4;
 
+	AudioClip dialog1;
+	AudioClip dialog2;
+	AudioClip dialog3;
+	AudioClip dialog4;
+	AudioClip dialog5;
+	AudioClip dialog6;
+	
+	AudioSource currentSpeechAudio;
+
 	public void Awake()
 	{
+		currentSpeechAudio = gameObject.AddComponent<AudioSource> ();
 		anim = GetComponentInChildren<Animator> ();
 		agent = GetComponent<NavMeshAgent> ();
 
@@ -93,6 +103,54 @@ public class NPCBase : ClickOnActorBase
 		stepSound4  = (AudioClip)Resources.Load(path,typeof(AudioClip));
 		
 		if (!stepSound4)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog1";
+		dialog1  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog1)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog2";
+		dialog2  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog2)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog3";
+		dialog3  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog3)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog4";
+		dialog4  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog4)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog5";
+		dialog5  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog5)
+		{
+			Debug.Log("Failed to Load Audio - " + path);
+		}
+
+		path = "SFX/NPC/Dialog6";
+		dialog6  = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if (!dialog6)
 		{
 			Debug.Log("Failed to Load Audio - " + path);
 		}
@@ -237,6 +295,11 @@ public class NPCBase : ClickOnActorBase
 			}
 		}
 
+		if (currentSpeechAudio.isPlaying == true)
+		{
+			currentSpeechAudio.Stop();
+		}
+
 	}
 
 	public void ItemGivenLogic()
@@ -254,6 +317,10 @@ public class NPCBase : ClickOnActorBase
 
 	public void WalkToWaypointLogic()
 	{
+		if (currentSpeechAudio.isPlaying == true)
+		{
+			currentSpeechAudio.Stop();
+		}
 
 		if( walkToLocation.Length > 0 && agent)
 		{
@@ -362,6 +429,43 @@ public class NPCBase : ClickOnActorBase
 			}
 
 			currentNPCState = defaultNPCState;
+		}
+
+		if (currentSpeechAudio.isPlaying == false) 
+		{
+			int random = UnityEngine.Random.Range (0, 6);
+			
+			AudioSource audio;
+			
+			switch (random) 
+			{
+				case 0:
+					currentSpeechAudio.clip = dialog1;
+				break;
+					
+				case 1:
+					currentSpeechAudio.clip = dialog2;
+				break;
+					
+				case 2:
+					currentSpeechAudio.clip = dialog3;
+				break;
+					
+				case 3:
+					currentSpeechAudio.clip = dialog4;
+				break;
+
+				case 4:
+					currentSpeechAudio.clip = dialog5;
+				break;
+
+				case 5:
+					currentSpeechAudio.clip = dialog6;
+				break;
+			}
+
+
+			currentSpeechAudio.Play ();
 		}
 
 	}
