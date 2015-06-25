@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public enum TimeOfDay
@@ -74,6 +75,11 @@ public class GWorld : MonoBehaviour
 	static float loadLevelCountdownCurrentTime;
 	static float loadLevelCountdownTimerMax = 1.0f;
 
+	GraphicRaycaster UI;
+
+	float currentTimeEnableUI = 0.0f;
+	float maxTimeEnableUI = 1.0f;
+
 
 	void Start()
 	{
@@ -82,6 +88,8 @@ public class GWorld : MonoBehaviour
 
 	void Awake()
 	{
+		currentTimeEnableUI = maxTimeEnableUI;
+
 		BuildSceneLoadTable ();
 
 		if (!currentWorld) 
@@ -153,6 +161,16 @@ public class GWorld : MonoBehaviour
 		//fade in when starting game
 		mainUI.GetComponent<MainUI> ().GoBlack ( false );
 
+		GraphicRaycaster[] allComp = FindObjectsOfType<GraphicRaycaster> ();
+		
+		foreach (GraphicRaycaster comp in allComp) 
+		{
+			if( comp.CompareTag("MainUI") )
+			{
+				UI = comp;
+			}
+		}
+
 	}
 
 	static public void FadeToBlack( bool enable )
@@ -207,8 +225,30 @@ public class GWorld : MonoBehaviour
 		}
 	}
 
+	void OnLevelWasLoaded(int level)
+	{
+		Inventory.myInv.CurrentSelectedItem = -1;
+	}
+
 	void Update () 
 	{
+			
+		if (Input.GetMouseButton (0) == true) 
+		{
+			currentTimeEnableUI = maxTimeEnableUI;
+		} 
+		else 
+		{
+			//Debug.Log(currentTimeEnableUI);
+			currentTimeEnableUI -= Time.deltaTime;
+
+			if(currentTimeEnableUI <= 0.0f)
+			{
+				currentTimeEnableUI = 0.0f;
+				UI.enabled = true;
+			}
+		}
+
 		/*currentTime += Time.deltaTime;
 
 		if ( currentTime >= SECONDS_PER_MIN ) 
