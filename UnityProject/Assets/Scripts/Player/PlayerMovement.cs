@@ -457,6 +457,16 @@ public class PlayerMovement : MonoBehaviour {
 				case EPlayerState.Action :
 					IAction actionObject = null;
 
+					if( currentState == null)
+					{
+						currentAnimationState = EAnimationState.Idle;
+						currentState.state = EPlayerState.Idle;
+						actionList.Clear();
+						agent.ResetPath();
+
+						return;
+					}
+
 					if( currentState.objectToUse != null )
 					{
 						actionObject = currentState.objectToUse.GetComponent<IAction>();
@@ -473,7 +483,7 @@ public class PlayerMovement : MonoBehaviour {
 					return;
 			}
 		}
-		catch (UnityException e)
+		catch (System.NullReferenceException e)
 		{
 			currentAnimationState = EAnimationState.Idle;
 			currentState.state = EPlayerState.Idle;

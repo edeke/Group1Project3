@@ -114,7 +114,7 @@ public class PlayerInput : MonoBehaviour
 							currentMouseObject.OnMouseLeave();
 							currentMouseObject = null;
 						}
-						catch(MissingReferenceException e)
+						catch(System.NullReferenceException e)
 						{
 							currentMouseObject = null;
 						}
@@ -182,7 +182,7 @@ public class PlayerInput : MonoBehaviour
 							currentMouseObject.OnMouseLeave();
 							currentMouseObject = null;
 						}
-						catch(MissingReferenceException e)
+						catch(System.NullReferenceException e)
 						{
 							currentMouseObject = null;
 						}
@@ -200,7 +200,7 @@ public class PlayerInput : MonoBehaviour
 						currentMouseObject.OnMouseLeave();
 						currentMouseObject = null;
 					}
-					catch(MissingReferenceException e)
+					catch(System.NullReferenceException e)
 					{
 						currentMouseObject = null;
 					}
@@ -227,7 +227,7 @@ public class PlayerInput : MonoBehaviour
 							currentMouseObject.OnMouseLeave();
 							currentMouseObject = null;
 						}
-						catch(MissingReferenceException e)
+						catch(System.NullReferenceException e)
 						{
 							currentMouseObject = null;
 						}
@@ -246,7 +246,7 @@ public class PlayerInput : MonoBehaviour
 							currentMouseObject.OnMouseLeave();
 							currentMouseObject = null;
 						}
-						catch(MissingReferenceException e)
+						catch(System.NullReferenceException e)
 						{
 							currentMouseObject = null;
 						}
