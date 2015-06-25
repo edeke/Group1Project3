@@ -56,6 +56,7 @@ public class Inventory : MonoBehaviour {
 
 	public static Inventory myInv;
 
+	public AudioClip pickupSound;
 
 	bool particlePlaying = false;
 	ParticleSystem pS;
@@ -100,7 +101,7 @@ public class Inventory : MonoBehaviour {
 
 			if(newItem.soundOnPickup != null)
 			{
-				AudioSource.PlayClipAtPoint( newItem.soundOnPickup, location );
+				AudioSource.PlayClipAtPoint( pickupSound, location );
 			}
 
 			if(newItem.onPickupParticle != null && useParticle)
@@ -111,7 +112,7 @@ public class Inventory : MonoBehaviour {
 		}
 		else
 		{
-			AudioSource.PlayClipAtPoint( soundUnableToPickup, location );
+			AudioSource.PlayClipAtPoint( pickupSound, location );
 		}
 
 		SortArray();
