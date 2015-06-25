@@ -9,7 +9,7 @@ public class ItemBottle2 : Item {
 	override public void OnInspect()
 	{
 
-		DisplayComment ("A bottle. They might be of some use.");
+		DisplayComment ("A bottle. It might be of some use.");
 	}
 
 	override public void OnAction( ) 
