@@ -34,7 +34,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
 --- !u!127 &3
@@ -14381,6 +14381,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 224910024}
+    - target: {fileID: 11434948, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 97968944}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
   m_IsPrefabParent: 0

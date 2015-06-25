@@ -34,7 +34,7 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
 --- !u!127 &3
@@ -14303,6 +14303,10 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 224910024}
+    - target: {fileID: 11434948, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 97968944}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52f79520fa6de5b48902e724547f48cf, type: 2}
   m_IsPrefabParent: 0
@@ -29983,7 +29987,7 @@ Transform:
   m_LocalScale: {x: 1.82447124, y: 1.82447195, z: 1.82447124}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 86
 --- !u!1 &1478969736
 GameObject:
   m_ObjectHideFlags: 0
@@ -40354,7 +40358,7 @@ Transform:
   m_LocalScale: {x: 1.82447124, y: 1.82447195, z: 1.82447124}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_RootOrder: 83
 --- !u!4 &2067939628 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458848, guid: feca2b645068a08499428bbdb597b0fe, type: 2}

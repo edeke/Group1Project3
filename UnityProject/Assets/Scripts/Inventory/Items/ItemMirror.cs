@@ -7,6 +7,7 @@ public class ItemMirror : Item {
 
 	public GameObject forceLocation;
 	public ShopkeeperCamera camera;
+	public Camera mainCamera;
 
 	override public void OnInspect()
 	{
@@ -32,24 +33,28 @@ public class ItemMirror : Item {
 				{
 					case 1 :
 						camera.gameObject.SetActive(true);
+						mainCamera.gameObject.SetActive(false);
 						camera.ActivateSeconds(4.0f);
 						Invoke ("Speech1",0.1f);
 					break;
 
 					case 2 :
 						camera.gameObject.SetActive(true);
+						mainCamera.gameObject.SetActive(false);
 						camera.ActivateSeconds(4.0f);
 						Invoke ("Speech2",0.1f);
 					break;
 
 					case 3 :
 						camera.gameObject.SetActive(true);
+						mainCamera.gameObject.SetActive(false);
 						camera.ActivateSeconds(4.0f);
 						Invoke ("Speech3",0.1f);
 					break;
 
 					case 4 :
 						camera.gameObject.SetActive(true);
+						mainCamera.gameObject.SetActive(false);
 						camera.ActivateSeconds(4.0f);
 						Invoke ("Speech4",0.1f);
 						

@@ -5,6 +5,7 @@ public class ShopkeeperCamera : MonoBehaviour
 {
 
 	public Camera standardCamera;
+
 	bool active = false;
 	float activateTime = 0.0f;
 
