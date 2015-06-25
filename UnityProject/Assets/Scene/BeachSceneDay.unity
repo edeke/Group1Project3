@@ -1710,6 +1710,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &127696799
 Prefab:
   m_ObjectHideFlags: 0
@@ -5353,6 +5354,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &345351965
 Prefab:
   m_ObjectHideFlags: 0
@@ -7097,6 +7099,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!136 &475161484
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8652,6 +8655,10 @@ Prefab:
       propertyPath: rucksack
       value: 
       objectReference: {fileID: 1268034768}
+    - target: {fileID: 11429960, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
+      propertyPath: hittingTree
+      value: 
+      objectReference: {fileID: 8300000, guid: ef4131eb4b835014f8a531de81a33ecb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
   m_IsPrefabParent: 0
@@ -11303,6 +11310,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &815756825
 Prefab:
   m_ObjectHideFlags: 0
@@ -12308,6 +12316,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &933087474
 Prefab:
   m_ObjectHideFlags: 0
@@ -13538,6 +13547,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!208 &983723499
 NavMeshObstacle:
   m_ObjectHideFlags: 0

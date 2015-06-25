@@ -13,6 +13,8 @@ public class TreeOnBeach : CommentActorBase
 
 	private ParticleSystem part;
 
+	public AudioClip hittingTree;
+
 	void Start () 
 	{
 
@@ -80,6 +82,7 @@ public class TreeOnBeach : CommentActorBase
 		}
 
 		part.Play ();
+		AudioSource.PlayClipAtPoint (hittingTree, transform.position, 1.0f );
 		currentTimeShaking = timeShaking;
 		shaking = true;
 	}

@@ -354,7 +354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 113
+  m_RootOrder: 114
 --- !u!1 &22229424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1857,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &127696799
 Prefab:
   m_ObjectHideFlags: 0
@@ -5498,6 +5499,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &345351965
 Prefab:
   m_ObjectHideFlags: 0
@@ -5710,7 +5712,7 @@ Transform:
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 39
 --- !u!1001 &351360257
 Prefab:
   m_ObjectHideFlags: 0
@@ -5891,7 +5893,7 @@ Transform:
   m_LocalScale: {x: 6.60492325, y: 14.0422068, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 84
 --- !u!1 &355722496
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,6 +7297,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!136 &475161484
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10208,7 +10211,7 @@ Transform:
   m_Children:
   - {fileID: 1526183115}
   m_Father: {fileID: 0}
-  m_RootOrder: 86
+  m_RootOrder: 87
 --- !u!1 &557109401
 GameObject:
   m_ObjectHideFlags: 0
@@ -10799,7 +10802,7 @@ Transform:
   m_Children:
   - {fileID: 22465603}
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 77
 --- !u!114 &614772558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10970,6 +10973,10 @@ Prefab:
       propertyPath: rucksack
       value: 
       objectReference: {fileID: 1268034768}
+    - target: {fileID: 11429960, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
+      propertyPath: hittingTree
+      value: 
+      objectReference: {fileID: 8300000, guid: ef4131eb4b835014f8a531de81a33ecb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6a8d4963ae58644ebb1c74e5bba67c5, type: 2}
   m_IsPrefabParent: 0
@@ -11234,7 +11241,7 @@ Transform:
   - {fileID: 1140314565}
   - {fileID: 707438059}
   m_Father: {fileID: 0}
-  m_RootOrder: 111
+  m_RootOrder: 112
 --- !u!114 &645827321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12295,7 +12302,7 @@ Transform:
   - {fileID: 1153641205}
   - {fileID: 98767348}
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 71
 --- !u!1001 &725983794
 Prefab:
   m_ObjectHideFlags: 0
@@ -13683,6 +13690,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &815756825
 Prefab:
   m_ObjectHideFlags: 0
@@ -14730,6 +14738,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!1001 &933087474
 Prefab:
   m_ObjectHideFlags: 0
@@ -16006,6 +16015,7 @@ MonoBehaviour:
   commentOffsetY: 0
   mouseCursorOver: 0
   rucksack: {fileID: 121922, guid: cec8af59735d53c4499aefc3cd524e5b, type: 2}
+  hittingTree: {fileID: 0}
 --- !u!208 &983723499
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18004,7 +18014,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 120
+  m_RootOrder: 124
 --- !u!4 &1140314565 stripped
 Transform:
   m_PrefabParentObject: {fileID: 450928, guid: c7afdc4fc8263aa4eb890032a73e39b0, type: 2}
@@ -22780,7 +22790,7 @@ Transform:
   - {fileID: 147717199}
   - {fileID: 725983795}
   m_Father: {fileID: 0}
-  m_RootOrder: 101
+  m_RootOrder: 105
 --- !u!1 &1552883061
 GameObject:
   m_ObjectHideFlags: 0
@@ -26933,7 +26943,7 @@ Transform:
   - {fileID: 547917320}
   - {fileID: 994895324}
   m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_RootOrder: 73
 --- !u!208 &1737803992
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -28633,7 +28643,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
 --- !u!1 &1842984833 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 108052, guid: 41e219415fba5124e93b3eb6af349d3b, type: 2}
@@ -29409,7 +29419,7 @@ Transform:
   m_LocalScale: {x: 359.441467, y: 196.886566, z: 1169.51709}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
 --- !u!1 &1904345012
 GameObject:
   m_ObjectHideFlags: 0
@@ -29490,7 +29500,7 @@ Transform:
   - {fileID: 342342706}
   - {fileID: 1509617587}
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 53
 --- !u!1001 &1905626738
 Prefab:
   m_ObjectHideFlags: 0
