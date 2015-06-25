@@ -12,11 +12,20 @@ public class Shopkeeper : NPCBase
 	bool rugGone = false;
 
 	public AudioClip huhClip;
+	public AudioClip heyClip;
 
 	
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 
+		string path = "SFX/NPC/hey";
+		heyClip = (AudioClip)Resources.Load(path,typeof(AudioClip));
+
+		if (!heyClip)
+		{
+			Debug.Log("Unable to load Audio - " + path);
+		}
 	
 	}
 
@@ -77,7 +86,7 @@ public class Shopkeeper : NPCBase
 
 	public void OnChest()
 	{
-
+		AudioSource.PlayClipAtPoint (heyClip, transform.position);
 		DisplaySpeechBubble ( "Hey! Don't touch that!" );
 		agent.SetDestination ( walkToLocation[0] );
 
