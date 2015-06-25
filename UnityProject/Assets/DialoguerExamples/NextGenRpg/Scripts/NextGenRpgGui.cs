@@ -152,8 +152,13 @@ public class NextGenRpgGui : MonoBehaviour {
 			}
 		}
 		
-		GUI.color = GUI.contentColor;
+		//GUI.color = GUI.contentColor;
+
+		bool isAsh = text.StartsWith ("Ash:");
+
+		GUI.color = isAsh?highlightColor:GUI.contentColor;
 		GUI.Label(rect, text, style);
+		GUI.color = Color.white;
 	}
 	
 	private void drawChoiceRing(){
