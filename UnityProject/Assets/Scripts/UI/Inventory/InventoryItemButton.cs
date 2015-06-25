@@ -15,6 +15,8 @@ public class InventoryItemButton : MonoBehaviour {
 
 	bool isDragged = false;
 	int animMouseOverHash = Animator.StringToHash("isMouseOver");
+
+	AudioClip clickSound;
 	
 	public void OnMouseUp()
 	{
@@ -156,6 +158,14 @@ public class InventoryItemButton : MonoBehaviour {
 			}
 		}
 
+		string path = "SFX/InventorySounds/click";
+		clickSound = (AudioClip)Resources.Load(path,typeof(AudioClip));
+		
+		if ( !clickSound)
+		{
+			Debug.Log("Unable to load sound - " + path);
+		}
+
 	}
 
 	public void OnMouseOver()
@@ -211,6 +221,9 @@ public class InventoryItemButton : MonoBehaviour {
 
 		if (Inventory.myInv.itemArray [index] != null) 
 		{
+
+			AudioSource.PlayClipAtPoint(clickSound, transform.position);
+
 			anim.SetBool (animMouseOverHash, true);
 			isDragged = true;
 			Inventory.myInv.SelectItem (index);
@@ -224,6 +237,8 @@ public class InventoryItemButton : MonoBehaviour {
 	{
 		anim.SetBool (animMouseOverHash, false);
 		isDragged = false;
+
+		AudioSource.PlayClipAtPoint(clickSound, transform.position);
 
 		//make sure we have an item before enable again
 		if (Inventory.myInv.CheckIfItemExist (index)) 
