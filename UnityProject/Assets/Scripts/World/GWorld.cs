@@ -635,7 +635,7 @@ public class GWorld : MonoBehaviour
 
 	}
 
-	public static AudioSource PlayClipAt(AudioClip clip, Vector3 pos, float volume = 1.0f, float maxDistance = 50.0f)
+	public static AudioSource PlayClipAt(AudioClip clip, Vector3 pos, float volume = 1.0f, float maxDistance = 25.0f, float spartialBlend = 1.0f)
 	{
 		GameObject tempGO = new GameObject("TempAudio"); // create the temp object
 		tempGO.transform.position = pos; // set its position

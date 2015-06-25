@@ -6,7 +6,7 @@ public class LizardBeach : NPCBase {
 	float currentTime;
 	float timeBetweenZZ = 6.0f;
 
-
+	public AudioClip snoring;
 
 	void Update()
 	{
@@ -14,6 +14,7 @@ public class LizardBeach : NPCBase {
 
 		if (currentTime <= 0.0f) 
 		{
+			GWorld.PlayClipAt( snoring, transform.position);
 			DisplaySpeechBubble ( "Zzzz..." );
 
 			currentTime = timeBetweenZZ;
