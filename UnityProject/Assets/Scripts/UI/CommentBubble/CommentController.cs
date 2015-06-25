@@ -31,6 +31,8 @@ public class CommentController : MonoBehaviour {
 	int objectSetOffset_x = 0;
 	int objectSetOffset_y = 0;
 
+	bool disableAudio = false;
+
 	void Awake()
 	{
 		currentOpenTime = textOpenTimeBase;
@@ -86,6 +88,11 @@ public class CommentController : MonoBehaviour {
 			Destroy(gameObject);
 		}
 
+	}
+
+	public void DisableAudio(bool disable)
+	{
+		disableAudio = disable;
 	}
 
 	public void SetPosition()
@@ -169,6 +176,11 @@ public class CommentController : MonoBehaviour {
 
 	void PlaySpeechAudio()
 	{
+		if (disableAudio == true) 
+		{
+			return;
+		}
+
 		if(speechSound != null)
 		{
 			AudioSource.PlayClipAtPoint( speechSound, transform.localPosition );

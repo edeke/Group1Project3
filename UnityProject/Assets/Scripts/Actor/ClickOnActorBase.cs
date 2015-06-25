@@ -22,6 +22,8 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 
 	bool isOutlineEnabled = false;
 
+	public bool disableSpeechAudio = false;
+
 	public void Awake()
 	{
 		Dialoguer.Initialize ();
@@ -102,6 +104,12 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		comment = commentObject.GetComponentInChildren<CommentController> ();
 		comment.SetObjectFollow (gameObject);
 		comment.SetOffset (commentOffsetX, commentOffsetY);
+
+		if (disableSpeechAudio) 
+		{
+			comment.DisableAudio(true);
+		}
+
 		
 		if (comment != null) 
 		{
@@ -124,6 +132,11 @@ public class ClickOnActorBase : MonoBehaviour, IUseItem, IInspectInterface, ITal
 		speech.SetObjectFollow (gameObject);
 		speech.SetOffset (commentOffsetX, commentOffsetY);
 		speech.SetSortOrder(speechOrder);
+
+		if (disableSpeechAudio) 
+		{
+			speech.DisableAudio(true);
+		}
 		
 		if (speech != null) 
 		{

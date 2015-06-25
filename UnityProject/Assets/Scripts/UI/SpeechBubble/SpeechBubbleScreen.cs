@@ -18,8 +18,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	Animator anim;
 
 	float currentOpenTime;
-
-
+	
 	const float textOpenTimeBase = 2.0f;
 	const float textOpenTimePerLetter = 0.07f;
 	
@@ -38,8 +37,11 @@ public class SpeechBubbleScreen : MonoBehaviour {
 	int objectSetOffset_x;
 	int objectSetOffset_y;
 
+	bool disableAudio = false;
+
 	// Use this for initialization
-	void Awake () {
+	void Awake ()
+	{
 
 		Canvas[] tempComp = gameObject.GetComponentsInChildren<Canvas> ();
 		foreach (Canvas comp in tempComp)
@@ -73,7 +75,7 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		myStyle.fontStyle = textComp.fontStyle;
 		myStyle.fontSize = textComp.fontSize;
 		myStyle.font = textComp.font;
-	
+
 	}
 	
 	// Update is called once per frame
@@ -195,6 +197,11 @@ public class SpeechBubbleScreen : MonoBehaviour {
 		} 
 	}
 
+	public void DisableAudio(bool disable)
+	{
+		disableAudio = disable;
+	}
+
 	public void SetObjectFollow(GameObject worldObject)
 	{
 		objectToFollow = worldObject;
@@ -208,9 +215,14 @@ public class SpeechBubbleScreen : MonoBehaviour {
 
 	void PlaySpeechAudio()
 	{
+		if (disableAudio == true) 
+		{
+			return;
+		}
+
 		if(speechSound != null)
 		{
-			AudioSource.PlayClipAtPoint( speechSound, transform.localPosition );
+			AudioSource.PlayClipAtPoint( speechSound, objectToFollow.transform.position );
 		}
 	}
 
