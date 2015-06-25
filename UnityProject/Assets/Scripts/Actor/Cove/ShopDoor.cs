@@ -20,12 +20,12 @@ public class ShopDoor : CommentActorBase
 
 	override public void OnAction()
 	{
-		if (skyler.GetComponent<Skyler> ().gottenFireflies == true && Dialoguer.GetGlobalBoolean (12) == true) {
+//		if (skyler.GetComponent<Skyler> ().gottenFireflies == true && Dialoguer.GetGlobalBoolean (12) == true) {
 			GWorld.LoadScene (ZoneBase.AntiqueButique);
-		} else {
-			PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
-			movComp.DisplaySpeechBubble ("It's closed for maintenance. I'll try again later.");
-		}
+//		} else {
+//			PlayerMovement movComp = GWorld.myPlayer.GetComponent<PlayerMovement> ();
+//			movComp.DisplaySpeechBubble ("It's closed for maintenance. I'll try again later.");
+//		}
 	}
 
 }

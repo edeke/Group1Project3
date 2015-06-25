@@ -7,7 +7,7 @@ public class OldCoot : NPCBase {
 	string EventID2 = "GottenSecondBottle";
 	string EventID3 = "GottenThirdBottle";
 
-	int heldBottles = 0;
+	public int heldBottles = 0;
 	
 	// Use this for initialization
 	void Start () {
