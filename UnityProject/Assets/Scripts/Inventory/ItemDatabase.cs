@@ -46,7 +46,7 @@ static public class ItemDatabase
 		//Add Item to Itemdb
 		ItemStruct JarWithFireflies = new ItemStruct ();
 		
-		path = "Textures/ItemTextures/JarWithFireflies";
+		path = "Textures/ItemTextures/inventory_jar_fireflies";
 		newTex = (Texture)Resources.Load(path,typeof(Texture));
 		
 		if (!newTex)
