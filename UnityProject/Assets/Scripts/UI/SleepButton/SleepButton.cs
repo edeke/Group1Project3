@@ -11,6 +11,8 @@ public class SleepButton : MonoBehaviour {
 	public Sprite texDay;
 	public Sprite texNight;
 
+	public AudioClip click;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -22,11 +24,13 @@ public class SleepButton : MonoBehaviour {
 	{
 		if (sleepMenu == null && GWorld.LoadingLevel() == false) 
 		{
+			AudioSource.PlayClipAtPoint(click, transform.position);
 			string path = "Prefabs/UI/SleepMenu/SleepMenu";
 			sleepMenu = (GameObject)Instantiate (Resources.Load (path));
 		}
 		else
 		{
+			AudioSource.PlayClipAtPoint(click, transform.position);
 			Destroy(sleepMenu);
 		}
 	}

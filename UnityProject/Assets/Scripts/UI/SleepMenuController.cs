@@ -10,6 +10,8 @@ public class SleepMenuController : MonoBehaviour {
 	private Text sleepText;
 	private Text currentTimeText;
 
+	public AudioClip click;
+
 
 	// Use this for initialization
 	void Awake () {
@@ -46,6 +48,7 @@ public class SleepMenuController : MonoBehaviour {
 
 		if (GWorld.LoadingLevel () == false) 
 		{
+			AudioSource.PlayClipAtPoint(click, transform.position);
 			GWorld.FastForwardTime (12);
 			Destroy (gameObject);
 		} 
@@ -57,6 +60,7 @@ public class SleepMenuController : MonoBehaviour {
 
 	public void OnCancelClick()
 	{
+		AudioSource.PlayClipAtPoint(click, transform.position);
 		Destroy (gameObject);
 	}
 
