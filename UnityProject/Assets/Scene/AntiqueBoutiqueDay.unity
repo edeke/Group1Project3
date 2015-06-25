@@ -11081,6 +11081,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11448410, guid: c7c5de4f751b60748adf8e47a985b4ad, type: 2}
+      propertyPath: disableSpeechAudio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448410, guid: c7c5de4f751b60748adf8e47a985b4ad, type: 2}
+      propertyPath: huhClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c7ef286cf8695645a07fdc84d973609, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c5de4f751b60748adf8e47a985b4ad, type: 2}
   m_IsPrefabParent: 0
@@ -40359,7 +40367,7 @@ Transform:
   m_LocalScale: {x: 1.82447124, y: 1.82447195, z: 1.82447124}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 91
+  m_RootOrder: 96
 --- !u!4 &2067939628 stripped
 Transform:
   m_PrefabParentObject: {fileID: 458848, guid: feca2b645068a08499428bbdb597b0fe, type: 2}

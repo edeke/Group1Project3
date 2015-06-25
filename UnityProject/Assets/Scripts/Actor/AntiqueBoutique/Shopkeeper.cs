@@ -11,6 +11,8 @@ public class Shopkeeper : NPCBase
 
 	bool rugGone = false;
 
+	public AudioClip huhClip;
+
 	
 	// Use this for initialization
 	void Start () {
@@ -94,6 +96,7 @@ public class Shopkeeper : NPCBase
 
 	void Speech2()
 	{
+		AudioSource.PlayClipAtPoint (huhClip, transform.position);
 		DisplaySpeechBubble("Huh?! Where did my carpet go...?"); 
 	}
 }
