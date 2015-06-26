@@ -235,7 +235,7 @@ public class GWorld : MonoBehaviour
 
 	void Update () 
 	{
-			
+	
 		if (Input.GetMouseButton (0) == true) 
 		{
 			currentTimeEnableUI = maxTimeEnableUI;
@@ -575,6 +575,7 @@ public class GWorld : MonoBehaviour
 	{
 		//reset game by destroying all objects
 
+		Dialoguer.SetGlobalBoolean (0, false);
 		Dialoguer.SetGlobalBoolean (1, false);
 		Dialoguer.SetGlobalBoolean (2, false);
 		Dialoguer.SetGlobalBoolean (3, false);
@@ -594,6 +595,8 @@ public class GWorld : MonoBehaviour
 		Dialoguer.SetGlobalBoolean (17, false);
 		Dialoguer.SetGlobalBoolean (18, false);
 		Dialoguer.SetGlobalBoolean (19, false);
+		Dialoguer.SetGlobalBoolean (20, false);
+		Dialoguer.SetGlobalBoolean (21, false);
 
 
 		if (myPlayer != null)
